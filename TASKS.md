@@ -15,11 +15,13 @@ Last updated: 2026-05-27
 - Verify project URLs, routes, backend connection, auth, database tables, roles, and integrations.
 - Create first QA checklist in `09-exports/` after Lovable returns enough project detail.
 - Document verified modules in `PRODUCT_SPEC.md`.
-- Decide how GitHub will be created/connected without `gh` installed locally.
+- Create a blank GitHub repo or provide the existing official repo URL/full name.
+- Add GitHub remote to local repo and push `main`.
 
 ## Blocked
 
-- GitHub push and GitHub handoff links are blocked until an official repo exists and the local folder has a configured remote or a connector-supported repository target.
+- GitHub push and GitHub handoff links are blocked until an official repo exists and the local folder has a configured remote.
+- Creating a GitHub repo directly from this shell is blocked because `gh` is not installed.
 
 ## Completed
 
@@ -28,3 +30,4 @@ Last updated: 2026-05-27
 - 2026-05-27: Created/updated required memory files.
 - 2026-05-27: Created required `docs/handoffs/` and `09-exports/` folders.
 - 2026-05-27: Prepared first Codex-to-Lovable audit/intake handoff.
+- 2026-05-27: Initialized local Git repo on `main` and committed the official project memory baseline.

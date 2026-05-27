@@ -18,12 +18,19 @@ Filesystem findings:
 - Official ClinicPilotX folder detected and expanded: `D:\BUZZOOKA WORKSPACE\02-PRODUCTS\ClinicPilotX`
 - A separate spaced folder also exists at `D:\BUZZOOKA WORKSPACE\Products\ClinicPilot X`; do not use or compare it unless Ross explicitly asks.
 
+## Git State
+
+- Local Git repo initialized in the official workspace.
+- Branch: `main`
+- Initial baseline commit: `71d4010 Initialize official ClinicPilotX project memory`
+- Local Git identity for this repo: `Codex <codex@buzzooka.local>`
+- Remote: none connected yet.
+
 ## GitHub State
 
-- Local Git status: not connected when setup began.
 - GitHub CLI status: `gh` is not installed in the local shell.
-- Global Git identity is not configured in this environment.
-- GitHub repository still needs to be created or identified before handoff links can use GitHub URLs.
+- GitHub connector currently available to Codex can read/write files in an existing repository, but no repo creation tool is available in this session.
+- GitHub repository still needs to be created manually or identified by repo URL/full name before the local folder can be connected and pushed.
 
 ## Current Rule
 
