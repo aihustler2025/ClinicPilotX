@@ -69,3 +69,28 @@ Durable concepts to carry forward into ClinicPilotX:
 - Automation Center with per-clinic settings for channels, timing, quiet hours, deposits, reminders, and scoring weights.
 
 Architecture caveat: source docs often assume n8n plus Google Sheets. The current Lovable project must be audited before choosing or changing architecture. Do not assume the old stack is the right stack for the new official build.
+
+## Live App Inventory - 2026-06-02 Pre-Login
+
+Current deployed app: `https://clinic-pilot-x.lovable.app`
+Lovable project ID: `8b4d9031-af8d-4faf-81d3-135c41ad73b7`
+Backend evidence: standalone Supabase project `imuyfbvsombbpgdgkhrb`.
+
+Current left-nav modules found in deployed bundle:
+
+- Dashboard
+- Leads
+- Patients
+- Appointments
+- Communication Hub
+- Video Consultation
+- Payments & Billing
+- Analytics & Reporting
+- Staff Management
+- Automation Center
+- Auto-Assignment Rules
+- Subscription
+- Settings
+- Profile
+
+Status: module presence is verified from the deployed bundle, but live behavior is not yet verified because login is required. See `09-exports/live-app-inventory-prelogin-2026-06-02.md`.

@@ -61,3 +61,15 @@ Ross provided 30 Word/PDF/XLSX source materials from `D:\PROJECTS\CLINICPILOT X 
 High-level finding: the durable product intent is an AI-powered clinic front desk system with unified lead capture, acknowledgments, staff alerts, appointment request handling, reminders, deposits/payments, outgoing follow-up, review requests, PriorityBook scoring, Automation Center settings, and optional voice/chat/social integrations.
 
 Caveat: many docs assume an older n8n/Google Sheets architecture. Current Lovable backend and database must be audited before any build decisions.
+
+## 2026-06-02 Live App Pre-Login Inventory
+
+Codex audited https://clinic-pilot-x.lovable.app without login. Lovable project ID resolved as `8b4d9031-af8d-4faf-81d3-135c41ad73b7`; Lovable connector reports status `ready`.
+
+The deployed app is protected and redirects protected routes to `/auth`, so Codex does not yet have full access. Valid admin login is needed for click-by-click QA.
+
+Backend evidence from deployed bundle shows standalone Supabase project `imuyfbvsombbpgdgkhrb` at `https://imuyfbvsombbpgdgkhrb.supabase.co`. UI copy also mentions Lovable Cloud secrets for integration credentials, so the current assumption is standalone Supabase for DB/auth plus Lovable-managed secrets for integrations until Lovable confirms.
+
+Pre-login report saved at `09-exports/live-app-inventory-prelogin-2026-06-02.md`. Next Lovable handoff saved at `docs/handoffs/Codex-to-Dashboard-Lovable-002-live-app-inventory-and-security-questions.md`.
+
+High-priority findings: public anon read access appears too broad on some operational tables, and internal chat tables return an RLS infinite recursion error.

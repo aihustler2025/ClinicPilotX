@@ -26,3 +26,12 @@
 - Reviewed 30 provided ClinicPilot source materials from the old source-document folder.
 - Saved source-material review at `09-exports/source-material-review-2026-06-02.md`.
 - Added durable product concepts to `PRODUCT_SPEC.md` with an architecture caveat about older n8n/Google Sheets assumptions.
+
+## 2026-06-02 Live App Pre-Login Audit
+
+- Audited deployed app at `https://clinic-pilot-x.lovable.app` without login.
+- Resolved Lovable project ID `8b4d9031-af8d-4faf-81d3-135c41ad73b7` and confirmed Lovable connector status `ready`.
+- Identified standalone Supabase backend `imuyfbvsombbpgdgkhrb` from deployed bundle.
+- Captured route/nav inventory and Supabase table inventory.
+- Found public anon readability concerns on operational tables and RLS infinite recursion on internal chat tables.
+- Created pre-login inventory report and Lovable handoff 002.

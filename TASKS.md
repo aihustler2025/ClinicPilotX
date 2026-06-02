@@ -51,3 +51,26 @@ Last updated: 2026-05-27
 - [x] Add durable product concepts to `PRODUCT_SPEC.md` as reference-only until verified against the live Lovable app.
 - [ ] Compare live Lovable modules against source-material feature map.
 - [ ] Convert verified modules into official `PRODUCT_SPEC.md` entries after QA.
+
+## Live App QA Tasks Added 2026-06-02
+
+- [x] Resolve deployed app Lovable project ID.
+- [x] Confirm protected routes redirect to login without session.
+- [x] Identify backend Supabase project from deployed bundle.
+- [x] Inventory deployed app routes/nav from bundle.
+- [x] Perform read-only anon Supabase table accessibility checks.
+- [x] Identify Automation Center workflow rows and safe status summary.
+- [x] Create Lovable handoff 002 with backend/security questions.
+- [ ] Get valid admin login/session for `https://clinic-pilot-x.lovable.app`.
+- [ ] Click-test Dashboard.
+- [ ] Click-test Leads create/edit/delete/convert/persistence.
+- [ ] Click-test Patients create/edit/persistence.
+- [ ] Click-test Appointments create/status/reminder/payment request/persistence.
+- [ ] Click-test Communication Hub external messages and internal chat after RLS issue is resolved.
+- [ ] Click-test Video Consultation and define compliant future-state requirements.
+- [ ] Click-test Payments & Billing without activating paid integrations.
+- [ ] Click-test Analytics & Reporting and define visual upgrade plan.
+- [ ] Click-test Staff Management and roles.
+- [ ] Click-test Automation Center workflows without triggering paid sends/calls.
+- [ ] Review Lovable response to handoff 002.
+- [ ] Approve or revise RLS/security fix plan before build mode.
