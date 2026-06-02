@@ -13,3 +13,10 @@
 ## 2026-05-22
 
 - Created initial ClinicPilotX workspace memory skeleton.
+
+## 2026-06-02
+
+- Confirmed official workspace is `D:\BUZZOOKA WORKSPACE\02-PRODUCTS\ClinicPilotX`.
+- Marked `D:\BUZZOOKA WORKSPACE\Products\ClinicPilot X` and GitHub repo `aihustler2025/clinicpilot-x` as old/reference-only for this new project.
+- Inventoried non-Markdown files in the old/reference folder; no Word/PDF source materials were found.
+- Revised first Lovable audit handoff to explicitly avoid old repo/project assumptions.

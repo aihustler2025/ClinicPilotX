@@ -1,6 +1,6 @@
-﻿# Codex-to-Dashboard-Lovable-001: Project Audit Intake
+﻿# Codex-to-Dashboard-Lovable-001: Official ClinicPilotX Project Audit Intake
 
-Date: 2026-05-27
+Date: 2026-06-02
 Project: ClinicPilotX
 From: Codex
 To: Lovable
@@ -9,9 +9,17 @@ Purpose: Audit/intake only. Do not build yet.
 
 ## Context
 
-We are starting the official ClinicPilotX project-management and QA process. ClinicPilotX is a Buzzooka product for clinics, plastic surgery practices, dental clinics, med spas, beauty/wellness businesses, salons, and other appointment-based/service businesses.
+We are starting the official ClinicPilotX project-management, QA, and launch-prep process.
 
-The project is already far along in Lovable, but before approving any new build work, Codex needs a complete current-state audit. Please do not make code, database, integration, auth, or deployment changes in response to this message. This is an intake request only.
+ClinicPilotX is a Buzzooka product for clinics, plastic surgery practices, dental clinics, med spas, beauty/wellness businesses, salons, and other appointment-based/service businesses.
+
+Important: there is an older GitHub repo named `aihustler2025/clinicpilot-x` and older local material from May 2026. That repo/folder is from the wrong/older project workflow and must not be treated as the current source of truth for this audit.
+
+For this official project, please audit the current Lovable project that this chat belongs to. Do not import assumptions from any old repo, old Markdown docs, old handoffs, or old ClinicPilot/ClinicPilot X project history unless we explicitly provide a specific source file later.
+
+## Strict Instruction
+
+Please do not make code, database, auth, deployment, integration, billing, or configuration changes in response to this message. This is an intake request only.
 
 ## Please Reply With The Current Project Facts
 
@@ -35,9 +43,10 @@ Please answer each item clearly and specifically. If you do not know something, 
 16. What known bugs, warnings, broken flows, console errors, or incomplete features exist right now?
 17. Is this Lovable project connected to GitHub?
 18. If it is connected to GitHub, what is the repository URL, branch, and sync status?
-19. Has the project been published yet?
-20. If it has been published, what deployment/public URL is live?
-21. What should Codex verify first before approving any new build work?
+19. If this project is connected to `aihustler2025/clinicpilot-x`, please say so clearly. Do not assume that repo should remain the official repo.
+20. Has the project been published yet?
+21. If it has been published, what deployment/public URL is live?
+22. What should Codex verify first before approving any new build work?
 
 ## Response Format Requested
 
