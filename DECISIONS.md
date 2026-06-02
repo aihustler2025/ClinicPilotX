@@ -19,3 +19,17 @@
 
 - GitHub is intended to become the online source of truth, with the external-drive folder as working backup/mirror.
   - Rationale: Codex, Lovable, Ross's PC, and Ross's laptop need a shared source of truth.
+
+## 2026-06-02
+
+- Confirmed `D:\BUZZOOKA WORKSPACE\02-PRODUCTS\ClinicPilotX` is the official workspace for the new ClinicPilotX project.
+  - Rationale: Ross confirmed this is the current project folder created by Codex for the new official run.
+
+- Treat `D:\BUZZOOKA WORKSPACE\Products\ClinicPilot X` as old/reference-only material, not the active project.
+  - Rationale: Ross clarified this folder contains work from the wrong Lovable project and should not drive the new project.
+
+- Do not use Markdown files from the old/reference folder as the source of truth for the new project.
+  - Rationale: Those `.md` files are prior Codex-generated project-management history for the wrong project.
+
+- Only user-provided source materials from the old/reference folder may be considered as optional reference, especially Word/PDF/office documents or marketing/product explanation materials.
+  - Rationale: Product explanation and marketing source material may still be valuable, but old project-management decisions should not contaminate the new official project.

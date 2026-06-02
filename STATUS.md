@@ -43,3 +43,13 @@ Send the first Lovable audit/intake message from:
 `docs/handoffs/Codex-to-Dashboard-Lovable-001-project-audit-intake.md`
 
 After Lovable replies, save the response as the next matching `Dashboard-Lovable-to-Codex-001-...md` file, then review the claims and create a verification plan.
+
+## 2026-06-02 Clarification
+
+Ross confirmed the official new ClinicPilotX workspace is `D:\BUZZOOKA WORKSPACE\02-PRODUCTS\ClinicPilotX`.
+
+The old folder `D:\BUZZOOKA WORKSPACE\Products\ClinicPilot X` is not the active project. It contains 118 files and is connected to the old GitHub repo `aihustler2025/clinicpilot-x`, with May 2026 project-management history from the wrong Lovable project. Do not use that repo or its Markdown files as the new source of truth.
+
+A scan of the old/reference folder found no Word or PDF source documents. The only non-Markdown files found were old n8n JSON workflow exports and one CSV inventory. Inventory saved at `09-exports/old-reference-non-md-inventory-2026-06-02.md`.
+
+Next step: wait for Ross to provide/login to the new Lovable preview so Codex can perform live QA across every left-navigation module, inspect behavior, collect bugs, and prepare the next Lovable inventory/audit message.
