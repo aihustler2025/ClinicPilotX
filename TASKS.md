@@ -43,3 +43,11 @@ Last updated: 2026-05-27
 - [ ] Perform live QA across every left-navigation module/page.
 - [ ] Ask Lovable for current project inventory, backend/database structure, auth roles, routes, real vs mock data, integrations, and known gaps.
 - [ ] Build a QA/bug tracker in `09-exports/` after first live walkthrough.
+
+## Source Review Tasks Added 2026-06-02
+
+- [x] Review provided Word/PDF/XLSX ClinicPilot source materials.
+- [x] Save source-material review in `09-exports/`.
+- [x] Add durable product concepts to `PRODUCT_SPEC.md` as reference-only until verified against the live Lovable app.
+- [ ] Compare live Lovable modules against source-material feature map.
+- [ ] Convert verified modules into official `PRODUCT_SPEC.md` entries after QA.

@@ -20,3 +20,9 @@
 - Marked `D:\BUZZOOKA WORKSPACE\Products\ClinicPilot X` and GitHub repo `aihustler2025/clinicpilot-x` as old/reference-only for this new project.
 - Inventoried non-Markdown files in the old/reference folder; no Word/PDF source materials were found.
 - Revised first Lovable audit handoff to explicitly avoid old repo/project assumptions.
+
+## 2026-06-02 Source Review
+
+- Reviewed 30 provided ClinicPilot source materials from the old source-document folder.
+- Saved source-material review at `09-exports/source-material-review-2026-06-02.md`.
+- Added durable product concepts to `PRODUCT_SPEC.md` with an architecture caveat about older n8n/Google Sheets assumptions.

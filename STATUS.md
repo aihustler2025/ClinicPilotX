@@ -53,3 +53,11 @@ The old folder `D:\BUZZOOKA WORKSPACE\Products\ClinicPilot X` is not the active 
 A scan of the old/reference folder found no Word or PDF source documents. The only non-Markdown files found were old n8n JSON workflow exports and one CSV inventory. Inventory saved at `09-exports/old-reference-non-md-inventory-2026-06-02.md`.
 
 Next step: wait for Ross to provide/login to the new Lovable preview so Codex can perform live QA across every left-navigation module, inspect behavior, collect bugs, and prepare the next Lovable inventory/audit message.
+
+## 2026-06-02 Source Document Review
+
+Ross provided 30 Word/PDF/XLSX source materials from `D:\PROJECTS\CLINICPILOT X (Old)`. Codex extracted and reviewed them as product reference inputs. Summary saved at `09-exports/source-material-review-2026-06-02.md`.
+
+High-level finding: the durable product intent is an AI-powered clinic front desk system with unified lead capture, acknowledgments, staff alerts, appointment request handling, reminders, deposits/payments, outgoing follow-up, review requests, PriorityBook scoring, Automation Center settings, and optional voice/chat/social integrations.
+
+Caveat: many docs assume an older n8n/Google Sheets architecture. Current Lovable backend and database must be audited before any build decisions.

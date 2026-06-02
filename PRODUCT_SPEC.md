@@ -51,3 +51,21 @@ No module is verified yet. Add modules here only after review and verification.
 | Module | Status | Evidence | Notes |
 | --- | --- | --- | --- |
 | TBD | Unknown | Pending Lovable audit | Do not mark complete until verified. |
+
+## Source Material Review - 2026-06-02
+
+Ross provided old/source ClinicPilot documents from `D:\PROJECTS\CLINICPILOT X (Old)`. These were reviewed as reference material only. Review saved at `09-exports/source-material-review-2026-06-02.md`.
+
+Durable concepts to carry forward into ClinicPilotX:
+
+- AI-powered front desk and growth assistant for clinics and appointment-based service businesses.
+- Unified lead capture across email, forms, chatbot, voice/phone, manual entry, social leads, and future messaging channels.
+- Fast patient/prospect acknowledgments and staff alerts.
+- Leads pipeline with source, status, qualification/classification, and follow-up tracking.
+- Appointment request workflow that collects preferred times and supports staff-confirmed scheduling.
+- Payment/deposit concept, with paid integrations requiring explicit approval before activation.
+- Reminder, no-show, outgoing follow-up, review request, missed-call recovery, and voice assistant concepts.
+- PriorityBook scoring/prioritization for high-value or time-sensitive requests.
+- Automation Center with per-clinic settings for channels, timing, quiet hours, deposits, reminders, and scoring weights.
+
+Architecture caveat: source docs often assume n8n plus Google Sheets. The current Lovable project must be audited before choosing or changing architecture. Do not assume the old stack is the right stack for the new official build.
