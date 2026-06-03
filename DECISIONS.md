@@ -33,3 +33,11 @@
 
 - Only user-provided source materials from the old/reference folder may be considered as optional reference, especially Word/PDF/office documents or marketing/product explanation materials.
   - Rationale: Product explanation and marketing source material may still be valuable, but old project-management decisions should not contaminate the new official project.
+
+## 2026-06-03
+
+- Do not reinstall n8n as the immediate first move.
+  - Rationale: current deployed app evidence points to Supabase tables plus Edge/server functions as the live automation layer; no direct n8n references were found in the frontend bundle. n8n can be introduced later if it solves a specific orchestration need.
+
+- Treat Automation Center testing as high-risk until sandbox/live credential status is confirmed.
+  - Rationale: deployed code can invoke email, SMS, payment-link, AI, and appointment-confirmation functions.

@@ -74,3 +74,20 @@ Last updated: 2026-05-27
 - [ ] Click-test Automation Center workflows without triggering paid sends/calls.
 - [ ] Review Lovable response to handoff 002.
 - [ ] Approve or revise RLS/security fix plan before build mode.
+
+## Platform Investigation Tasks Added 2026-06-03
+
+- [x] Attempt to connect to Ross's authenticated in-app browser session.
+- [x] Document browser-control connector blocker.
+- [x] Deep-audit deployed app bundle for backend/function/table references.
+- [x] Confirm no direct n8n references in deployed frontend bundle.
+- [x] Summarize Automation Center workflow configuration keys and UI coverage.
+- [x] Check whether official `aihustler2025/ClinicPilotX` GitHub repo exists.
+- [ ] Create/connect official `ClinicPilotX` GitHub repo.
+- [ ] Get Codex-controllable authenticated app access for UI QA.
+- [ ] Confirm Supabase Edge Function list and secrets/sandbox status with Lovable/Supabase.
+- [ ] Confirm whether public anon RLS exposure is intentional.
+- [ ] Fix internal chat RLS recursion after approved plan.
+- [ ] Resolve missing `assignment_rules` and `signatures` schema issues.
+- [ ] Prepare Automation Center safe-testing protocol before clicking test-send actions.
+- [ ] Decide whether to keep Supabase Edge Functions only or add fresh n8n after core audit.

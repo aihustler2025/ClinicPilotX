@@ -35,3 +35,12 @@
 - Captured route/nav inventory and Supabase table inventory.
 - Found public anon readability concerns on operational tables and RLS infinite recursion on internal chat tables.
 - Created pre-login inventory report and Lovable handoff 002.
+
+## 2026-06-03 Platform Investigation
+
+- Attempted to connect to authenticated in-app browser session; connector still fails in Windows sandbox.
+- Performed deeper deployed-code/backend investigation instead.
+- Identified Supabase Edge/server functions referenced by frontend.
+- Confirmed no direct n8n references in deployed frontend bundle.
+- Summarized Automation Center workflow configuration coverage.
+- Saved platform investigation report at `09-exports/platform-investigation-2026-06-03.md`.

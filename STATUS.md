@@ -73,3 +73,18 @@ Backend evidence from deployed bundle shows standalone Supabase project `imuyfbv
 Pre-login report saved at `09-exports/live-app-inventory-prelogin-2026-06-02.md`. Next Lovable handoff saved at `docs/handoffs/Codex-to-Dashboard-Lovable-002-live-app-inventory-and-security-questions.md`.
 
 High-priority findings: public anon read access appears too broad on some operational tables, and internal chat tables return an RLS infinite recursion error.
+
+## 2026-06-03 Platform Investigation Update
+
+Ross logged into Supabase, GitHub, and Lovable in the in-app browser, but Codex's browser-control connector still crashes in this Windows sandbox and cannot use the authenticated tab. Codex therefore performed a deeper deployed-code/backend investigation instead.
+
+Report saved at `09-exports/platform-investigation-2026-06-03.md`.
+
+Key additions:
+
+- Current app uses standalone Supabase project `imuyfbvsombbpgdgkhrb` for DB/auth/realtime/storage.
+- Edge/server functions referenced by frontend: `ai-assistant`, `ai-suggestions`, `auto-assign-leads`, `calculate-lead-score`, `create-payment-link`, `send-email`, `send-sms`, `test-workflow-message`, and `workflow-appointment-confirmation`.
+- No literal n8n references were found in the deployed frontend bundle.
+- Automation Center has 19 workflow rows, with 7 enabled and several config UIs present.
+- Do not test Automation Center sends/payments until sandbox/live credential status is confirmed.
+- GitHub repo `aihustler2025/ClinicPilotX` still does not exist; old `aihustler2025/clinicpilot-x` remains old/reference-only.
