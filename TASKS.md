@@ -91,3 +91,22 @@ Last updated: 2026-05-27
 - [ ] Resolve missing `assignment_rules` and `signatures` schema issues.
 - [ ] Prepare Automation Center safe-testing protocol before clicking test-send actions.
 - [ ] Decide whether to keep Supabase Edge Functions only or add fresh n8n after core audit.
+## Authenticated QA Tasks Added 2026-06-03
+
+- [x] Restore Codex-controllable authenticated app access using Chrome QA browser plus Playwright.
+- [x] Create simple Playwright/Chrome QA tutorial for Ross.
+- [x] Perform authenticated read-only navigation across all left-nav routes.
+- [x] Capture authenticated route screenshots and JSON notes locally.
+- [x] Save first authenticated platform audit in `09-exports/`.
+- [x] Verify Automation Center Activity Logs tab opens.
+- [x] Verify Communication Hub External Messages and Internal Chat tabs open.
+- [x] Verify Appointments Calendar View opens.
+- [x] Verify Settings tabs open.
+- [ ] Deep-test Leads create/edit/delete/convert/persistence in a controlled test-data pass.
+- [ ] Deep-test Patients create/edit/persistence in a controlled test-data pass.
+- [ ] Deep-test Appointments create/status/reminder/payment request/persistence without paid sends.
+- [ ] Audit Automation Center workflow configs and create safe-testing protocol before clicking send/test actions.
+- [ ] Investigate `assignment_rules` missing table/schema error.
+- [ ] Investigate subscription state inconsistency between `Professional` and `No Plan`.
+- [ ] Investigate Hostinger account for old n8n data/workflows before deciding whether to recreate n8n.
+- [ ] Research cheapest viable n8n hosting path using current SiteGround/available hosting constraints.

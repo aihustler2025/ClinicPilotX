@@ -44,3 +44,9 @@
 - Confirmed no direct n8n references in deployed frontend bundle.
 - Summarized Automation Center workflow configuration coverage.
 - Saved platform investigation report at `09-exports/platform-investigation-2026-06-03.md`.
+## 2026-06-03
+
+- Restored authenticated UI QA path using dedicated Chrome QA browser and Playwright after in-app browser connector failures.
+- Added `09-exports/playwright-chrome-qa-tutorial.md` for Ross.
+- Added `09-exports/authenticated-platform-audit-2026-06-03.md` with first authenticated module inventory and QA findings.
+- Documented verified early bugs: missing `assignment_rules` backend support, inconsistent plan state, Video Consultation/Profile coming soon, and empty Internal Chat state.

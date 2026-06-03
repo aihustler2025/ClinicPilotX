@@ -88,3 +88,25 @@ Key additions:
 - Automation Center has 19 workflow rows, with 7 enabled and several config UIs present.
 - Do not test Automation Center sends/payments until sandbox/live credential status is confirmed.
 - GitHub repo `aihustler2025/ClinicPilotX` still does not exist; old `aihustler2025/clinicpilot-x` remains old/reference-only.
+## 2026-06-03 Authenticated Browser QA Access Restored
+
+Codex fixed the authenticated UI QA blocker by bypassing the crashing in-app browser connector and attaching Playwright to a dedicated Chrome QA browser through local Chrome remote debugging on port `9222`.
+
+Ross logged into the Chrome QA browser, and Codex successfully performed authenticated read-only navigation across every left-navigation module.
+
+New reports saved:
+
+- `09-exports/playwright-chrome-qa-tutorial.md`
+- `09-exports/authenticated-platform-audit-2026-06-03.md`
+
+Key authenticated findings:
+
+- Dashboard, Leads, Patients, Appointments, Communication Hub, Payments, Analytics, Staff, Automation Center, Subscription, and Settings load behind admin login.
+- Automation Activity Logs are present and show prior workflow executions.
+- Auto-Assignment Rules is currently broken because `assignment_rules` is referenced by the frontend but missing/unavailable in Supabase schema cache.
+- Video Consultation and main Profile route are currently "Coming Soon".
+- Subscription state appears inconsistent, sometimes showing `Professional` and sometimes `No Plan` for the same logged-in session.
+- Communication Hub external inbox and internal chat tabs open; internal chat currently shows an empty select-channel state.
+- Settings tabs open, including Integrations, Email Logs, and Audit Log.
+
+Current next step: continue authenticated QA module by module, starting with Automation Center safe-testing protocol and Supabase/backend verification before triggering any send/test/payment actions.
