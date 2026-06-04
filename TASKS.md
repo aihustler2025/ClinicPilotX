@@ -121,3 +121,14 @@ Last updated: 2026-05-27
 - [ ] Determine which automations still require n8n.
 - [ ] If n8n is required, evaluate local dev import, n8n Cloud trial, Oracle Always Free, or low-cost VPS with billing guardrails.
 - [ ] Do not renew Hostinger unless local exports are proven incomplete or missing critical data.
+## GitHub / Laptop Transfer Tasks Added 2026-06-04
+
+- [x] Create official GitHub repo `aihustler2025/ClinicPilotX`.
+- [x] Verify old lowercase repo `aihustler2025/clinicpilot-x` is not the official project.
+- [x] Connect official D-drive local repo to new GitHub remote.
+- [ ] Push local `main` to GitHub.
+- [ ] Verify required memory/docs files exist on GitHub.
+- [ ] Clone official GitHub repo onto laptop.
+- [ ] Set up laptop local n8n for workflow import/review only.
+- [ ] Copy or commit old n8n workflow exports into an approved reference folder after credential-safety review.
+- [ ] Create B-drive backup mirror after GitHub push is verified.

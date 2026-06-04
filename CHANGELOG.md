@@ -56,3 +56,8 @@
 - Found local old n8n workflow exports for email, SMS/Twilio, VAPI inbound calling, outbound outreach, notifications, and daily reporting.
 - Added `09-exports/n8n-hostinger-recovery-options-2026-06-03.md`.
 - Recommended not renewing Hostinger until local workflow exports are mapped and proven insufficient.
+## 2026-06-04 GitHub Setup
+
+- Verified official GitHub repository `aihustler2025/ClinicPilotX` exists and is empty.
+- Added `https://github.com/aihustler2025/ClinicPilotX.git` as the official local repo remote.
+- Recorded laptop/local n8n transfer plan and no-paid-hosting decision.

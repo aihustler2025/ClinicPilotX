@@ -121,3 +121,16 @@ Codex found local old/reference n8n workflow exports at `D:\BUZZOOKA WORKSPACE\P
 Report saved at `09-exports/n8n-hostinger-recovery-options-2026-06-03.md`.
 
 Current recommendation: do not renew Hostinger yet. First map the local n8n workflow exports against the current ClinicPilotX Automation Center and decide which automations can run through existing Supabase/Lovable infrastructure. n8n hosting should be added only if there is a confirmed need.
+## 2026-06-04 GitHub / Laptop Transfer Status
+
+Ross confirmed no hosted n8n account will be purchased. Hostinger renewal, n8n Cloud, Oracle Cloud, and new paid VPS options are rejected for this stage.
+
+Official GitHub repo created and verified:
+
+`https://github.com/aihustler2025/ClinicPilotX`
+
+The old repo `aihustler2025/clinicpilot-x` exists but remains old/wrong-project history and must not be used as the official source of truth.
+
+Transfer plan saved at `09-exports/github-laptop-n8n-local-transfer-plan-2026-06-04.md`.
+
+Next step: push local `main` from `D:\BUZZOOKA WORKSPACE\02-PRODUCTS\ClinicPilotX` to GitHub, then clone the repo onto the laptop for local n8n review/testing.
