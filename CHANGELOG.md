@@ -50,3 +50,9 @@
 - Added `09-exports/playwright-chrome-qa-tutorial.md` for Ross.
 - Added `09-exports/authenticated-platform-audit-2026-06-03.md` with first authenticated module inventory and QA findings.
 - Documented verified early bugs: missing `assignment_rules` backend support, inconsistent plan state, Video Consultation/Profile coming soon, and empty Internal Chat state.
+## 2026-06-03 n8n Recovery
+
+- Investigated Hostinger status read-only: old VPS is offline and renewal prompt shows approximately `$28.99/mo`.
+- Found local old n8n workflow exports for email, SMS/Twilio, VAPI inbound calling, outbound outreach, notifications, and daily reporting.
+- Added `09-exports/n8n-hostinger-recovery-options-2026-06-03.md`.
+- Recommended not renewing Hostinger until local workflow exports are mapped and proven insufficient.

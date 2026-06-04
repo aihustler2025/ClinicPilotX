@@ -110,3 +110,14 @@ Last updated: 2026-05-27
 - [ ] Investigate subscription state inconsistency between `Professional` and `No Plan`.
 - [ ] Investigate Hostinger account for old n8n data/workflows before deciding whether to recreate n8n.
 - [ ] Research cheapest viable n8n hosting path using current SiteGround/available hosting constraints.
+## n8n Recovery Tasks Added 2026-06-03
+
+- [x] Inspect Hostinger hPanel visible status without clicking renew/payment actions.
+- [x] Confirm old Hostinger VPS is offline and renewal would not be cheap.
+- [x] Inventory local old n8n workflow exports without opening credential contents.
+- [x] Create `09-exports/n8n-hostinger-recovery-options-2026-06-03.md`.
+- [ ] Map each old n8n workflow to current ClinicPilotX Automation Center workflows.
+- [ ] Determine which automations can stay in Supabase/Lovable functions.
+- [ ] Determine which automations still require n8n.
+- [ ] If n8n is required, evaluate local dev import, n8n Cloud trial, Oracle Always Free, or low-cost VPS with billing guardrails.
+- [ ] Do not renew Hostinger unless local exports are proven incomplete or missing critical data.

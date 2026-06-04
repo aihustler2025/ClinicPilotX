@@ -110,3 +110,14 @@ Key authenticated findings:
 - Settings tabs open, including Integrations, Email Logs, and Audit Log.
 
 Current next step: continue authenticated QA module by module, starting with Automation Center safe-testing protocol and Supabase/backend verification before triggering any send/test/payment actions.
+## 2026-06-03 n8n / Hostinger Recovery Investigation
+
+Ross asked for the cheapest/free path to recover or replace the old n8n setup.
+
+Hostinger hPanel was visible in the Chrome QA browser. The old VPS `srv841701.hstgr.cloud` is shown as offline on KVM 4, with a renewal prompt showing 12 days remaining and a visible discounted renewal price of `$28.99/mo`. No paid action was clicked.
+
+Codex found local old/reference n8n workflow exports at `D:\BUZZOOKA WORKSPACE\Products\ClinicPilot X\04-automations\old-n8n-workflows`. The credentials file was not opened. Safe metadata confirms reusable workflow exports for Gmail/email agent, SMS/Twilio, VAPI inbound calling, outbound reachout, notifications, and daily clinic-member reporting.
+
+Report saved at `09-exports/n8n-hostinger-recovery-options-2026-06-03.md`.
+
+Current recommendation: do not renew Hostinger yet. First map the local n8n workflow exports against the current ClinicPilotX Automation Center and decide which automations can run through existing Supabase/Lovable infrastructure. n8n hosting should be added only if there is a confirmed need.
