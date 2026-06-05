@@ -134,3 +134,20 @@ The old repo `aihustler2025/clinicpilot-x` exists but remains old/wrong-project 
 Transfer plan saved at `09-exports/github-laptop-n8n-local-transfer-plan-2026-06-04.md`.
 
 Next step: push local `main` from `D:\BUZZOOKA WORKSPACE\02-PRODUCTS\ClinicPilotX` to GitHub, then clone the repo onto the laptop for local n8n review/testing.
+## 2026-06-05 Laptop n8n Transfer Plan
+
+Ross confirmed ClinicPilotX will need n8n for automation review/testing, but no paid hosted n8n path will be used right now.
+
+Current direction:
+
+- GitHub source of truth: `https://github.com/aihustler2025/ClinicPilotX`
+- PC working mirror: `D:\BUZZOOKA WORKSPACE\02-PRODUCTS\ClinicPilotX`
+- Laptop target folder: `%USERPROFILE%\Documents\ClinicPilotX`
+- Laptop n8n role: local review/testing/import only
+- Production rule: do not make commercial ClinicPilotX depend on laptop-hosted n8n for client-facing workflows.
+
+New handoff saved at:
+
+`docs/handoffs/Codex-to-Laptop-Codex-001-clinicpilotx-local-n8n-transfer.md`
+
+Recommendation: use a hybrid automation strategy. Supabase/Lovable should carry core product automations that must be reliable for clients. Local n8n should be used to import, inspect, and map old workflows. Later, if n8n is clearly required for production, move it to proper hosted infrastructure after cost/security/backups are solved.

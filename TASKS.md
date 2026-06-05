@@ -132,3 +132,16 @@ Last updated: 2026-05-27
 - [ ] Set up laptop local n8n for workflow import/review only.
 - [ ] Copy or commit old n8n workflow exports into an approved reference folder after credential-safety review.
 - [ ] Create B-drive backup mirror after GitHub push is verified.
+## Laptop n8n Transfer Tasks Added 2026-06-05
+
+- [x] Verify GitHub remote is connected and `main` tracks `origin/main`.
+- [x] Create laptop Codex handoff/master prompt for local n8n setup.
+- [ ] Clone official GitHub repo onto laptop at `%USERPROFILE%\Documents\ClinicPilotX`.
+- [ ] Install Docker Desktop on laptop if missing.
+- [ ] Run local n8n Docker container on laptop as `clinicpilotx-n8n`.
+- [ ] Verify `http://localhost:5678` opens on laptop.
+- [ ] Create local-only n8n owner account.
+- [ ] Copy old non-credential n8n workflow JSON files to laptop.
+- [ ] Import workflows into local n8n and keep inactive.
+- [ ] Create imported workflow inventory and ClinicPilotX Automation Center mapping.
+- [ ] Decide workflow-by-workflow: Supabase/Lovable rebuild, n8n retained, or discard.

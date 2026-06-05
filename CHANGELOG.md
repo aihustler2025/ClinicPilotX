@@ -61,3 +61,8 @@
 - Verified official GitHub repository `aihustler2025/ClinicPilotX` exists and is empty.
 - Added `https://github.com/aihustler2025/ClinicPilotX.git` as the official local repo remote.
 - Recorded laptop/local n8n transfer plan and no-paid-hosting decision.
+## 2026-06-05 Laptop n8n Handoff
+
+- Added `docs/handoffs/Codex-to-Laptop-Codex-001-clinicpilotx-local-n8n-transfer.md`.
+- Confirmed local laptop n8n will be used for review/testing/import only.
+- Recorded hybrid automation strategy: Supabase/Lovable for core reliable product automations, n8n for workflow review and optional future orchestration.
