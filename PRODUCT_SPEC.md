@@ -38,11 +38,24 @@ Until the audit is complete, every major claim should be marked as one of:
 
 ## Backend To Audit
 
-- Backend provider: unknown until Lovable responds.
-- Database schema: unknown until Lovable responds.
-- Auth provider and roles: unknown until Lovable responds.
-- Integrations: unknown until Lovable responds.
-- Real data vs mock/demo data: unknown until Lovable responds.
+- Backend provider: evidence points to standalone Supabase project `imuyfbvsombbpgdgkhrb` plus Lovable-managed deployment/secrets, but Lovable must confirm the exact Lovable Cloud/Supabase relationship.
+- Database schema: partially inferred from deployed app behavior and Supabase errors, but not fully verified.
+- Auth provider and roles: Supabase auth is evidenced by deployed app behavior; role model still requires verification.
+- Integrations: Automation Center and backend functions reference email, SMS, payment, AI, and appointment workflows; sandbox/live credential status must be confirmed before testing.
+- Real data vs mock/demo data: partially assessed through authenticated QA, but still requires module-by-module verification.
+
+## Architecture Direction - 2026-06-05
+
+ClinicPilotX should treat Lovable Cloud/Lovable hosting/Supabase as the preferred production path before considering new paid backend or hosting platforms, because Ross already has Lovable package benefits.
+
+Local n8n is approved only for review/testing/import of old workflow blueprints on the laptop. It must not become production infrastructure for commercial ClinicPilotX workflows unless Ross later approves a reliable hosting, monitoring, backup, security, and cost plan.
+
+There may be two Lovable projects:
+
+- Main ClinicPilotX CRM/dashboard.
+- Separate partially built ClinicPilotX marketing website.
+
+Do not assume they are merged. Lovable must clarify project IDs, URLs, GitHub connections, Supabase/backends, hosting status, and merge readiness before build decisions.
 
 ## Module Registry
 
@@ -51,6 +64,26 @@ No module is verified yet. Add modules here only after review and verification.
 | Module | Status | Evidence | Notes |
 | --- | --- | --- | --- |
 | TBD | Unknown | Pending Lovable audit | Do not mark complete until verified. |
+
+## Automation Center / n8n Blueprint Mapping
+
+Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
+
+Initial known old workflow categories:
+
+- Daily clinic/staff reporting.
+- Email agent or email automation.
+- Notifications.
+- Outbound voice calling.
+- Outbound reachout/follow-up.
+- SMS messaging.
+- VAPI inbound calling scenario.
+
+Each workflow should be mapped to one of:
+
+- Rebuild in Lovable/Supabase as app-native production automation.
+- Retain as n8n orchestration only after a production-grade n8n plan is approved.
+- Discard if obsolete or duplicated by current Automation Center behavior.
 
 ## Source Material Review - 2026-06-02
 

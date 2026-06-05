@@ -72,3 +72,11 @@
 - Added Lovable Cloud/Supabase preference because Ross's Lovable package includes backend/hosting benefits.
 - Added note that a separate partially built marketing website exists in Lovable and may need coordination or merging with the main CRM/dashboard project.
 - Clarified that laptop file references are available through the GitHub clone, not through this PC's D-drive.
+## 2026-06-05 Laptop Clone and Docker Check
+
+- Cloned the official GitHub repo to `C:\Users\user\Documents\ClinicPilotX`.
+- Verified Git is installed on the laptop.
+- Confirmed Docker Desktop is not currently installed or available on PATH.
+- Added `09-exports/laptop-local-n8n-setup-status-2026-06-05.md`.
+- Added Lovable clarification handoff 003 for dashboard, marketing website, Lovable Cloud, Supabase, hosting, GitHub, and Automation Center questions.
+- Updated `STATUS.md`, `TASKS.md`, and `PRODUCT_SPEC.md` for the laptop n8n blocker and architecture direction.

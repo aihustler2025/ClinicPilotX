@@ -136,7 +136,9 @@ Last updated: 2026-05-27
 
 - [x] Verify GitHub remote is connected and `main` tracks `origin/main`.
 - [x] Create laptop Codex handoff/master prompt for local n8n setup.
-- [ ] Clone official GitHub repo onto laptop at `%USERPROFILE%\Documents\ClinicPilotX`.
+- [x] Clone official GitHub repo onto laptop at `%USERPROFILE%\Documents\ClinicPilotX`.
+- [x] Verify Git is installed on laptop.
+- [x] Check whether Docker Desktop is installed on laptop.
 - [ ] Install Docker Desktop on laptop if missing.
 - [ ] Run local n8n Docker container on laptop as `clinicpilotx-n8n`.
 - [ ] Verify `http://localhost:5678` opens on laptop.
@@ -145,10 +147,12 @@ Last updated: 2026-05-27
 - [ ] Import workflows into local n8n and keep inactive.
 - [ ] Create imported workflow inventory and ClinicPilotX Automation Center mapping.
 - [ ] Decide workflow-by-workflow: Supabase/Lovable rebuild, n8n retained, or discard.
+- [x] Create laptop local n8n setup status report in `09-exports/`.
 ## Lovable Architecture Tasks Added 2026-06-05
 
 - [x] Revise laptop handoff to include Lovable Cloud/Supabase and marketing website context.
 - [x] Clarify that laptop paths are repo-relative after cloning GitHub, not PC D-drive paths.
+- [x] Draft Lovable clarification handoff for main dashboard, marketing website, backend, hosting, Supabase, Lovable Cloud, and GitHub connections.
 - [ ] Ask Lovable to identify the main CRM/dashboard project ID, backend, Supabase connection, Lovable Cloud status, hosting status, and GitHub connection.
 - [ ] Ask Lovable to identify the separate marketing website project ID, URL, backend status, hosting status, and merge readiness.
 - [ ] Decide how marketing website and dashboard should be connected: same Lovable app, linked apps, subdomain structure, or future merge.

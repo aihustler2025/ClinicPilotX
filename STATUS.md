@@ -162,3 +162,31 @@ The laptop handoff now explicitly states that repo-relative paths like `docs/han
 Updated handoff:
 
 `docs/handoffs/Codex-to-Laptop-Codex-001-clinicpilotx-local-n8n-transfer.md`
+
+## 2026-06-05 Laptop Clone and Docker Check
+
+Laptop Codex cloned the official GitHub repo to:
+
+`C:\Users\user\Documents\ClinicPilotX`
+
+Verified Git is installed at:
+
+`C:\Program Files\Git\cmd\git.exe`
+
+Verified the required repo-relative files are available after clone, including `AGENTS.md`, `STATUS.md`, `TASKS.md`, `PRODUCT_SPEC.md`, `docs/handoffs/`, and `09-exports/`.
+
+Docker Desktop is not currently available on this laptop:
+
+- `docker` command not found on PATH.
+- `C:\Program Files\Docker\Docker\Docker Desktop.exe` not found.
+- `com.docker.service` not found.
+
+Local n8n setup is therefore blocked until Ross installs and starts Docker Desktop for Windows. Status report saved at:
+
+`09-exports/laptop-local-n8n-setup-status-2026-06-05.md`
+
+Lovable clarification handoff created at:
+
+`docs/handoffs/Codex-to-Dashboard-Lovable-003-project-backend-marketing-cloud-clarification.md`
+
+Current next step: Ross installs Docker Desktop with WSL 2 backend, starts Docker, then Codex can create the persistent n8n volume and run `clinicpilotx-n8n` on port `5678`.
