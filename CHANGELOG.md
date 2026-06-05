@@ -66,3 +66,9 @@
 - Added `docs/handoffs/Codex-to-Laptop-Codex-001-clinicpilotx-local-n8n-transfer.md`.
 - Confirmed local laptop n8n will be used for review/testing/import only.
 - Recorded hybrid automation strategy: Supabase/Lovable for core reliable product automations, n8n for workflow review and optional future orchestration.
+## 2026-06-05 Handoff Revision
+
+- Revised laptop Codex handoff to include broader Lovable architecture context.
+- Added Lovable Cloud/Supabase preference because Ross's Lovable package includes backend/hosting benefits.
+- Added note that a separate partially built marketing website exists in Lovable and may need coordination or merging with the main CRM/dashboard project.
+- Clarified that laptop file references are available through the GitHub clone, not through this PC's D-drive.

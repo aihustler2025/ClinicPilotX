@@ -24,6 +24,31 @@ If the Windows username is different, use:
 
 `%USERPROFILE%\Documents\ClinicPilotX`
 
+## How the Laptop Can Read These Files
+
+The laptop does not need access to the PC D-drive.
+
+All project memory and handoff files are pushed to GitHub. After the laptop clones:
+
+`https://github.com/aihustler2025/ClinicPilotX`
+
+the laptop will have its own local copy of:
+
+- `AGENTS.md`
+- `STATUS.md`
+- `TASKS.md`
+- `DECISIONS.md`
+- `PRODUCT_SPEC.md`
+- `CHANGELOG.md`
+- `docs/handoffs/`
+- `09-exports/`
+
+When this handoff says `docs/handoffs/...`, it means the path inside the cloned GitHub repo on the laptop, for example:
+
+`%USERPROFILE%\Documents\ClinicPilotX\docs\handoffs\Codex-to-Laptop-Codex-001-clinicpilotx-local-n8n-transfer.md`
+
+The old PC D-drive paths are reference-only until Ross copies specific files over or commits approved files to GitHub.
+
 ## First Instructions for Laptop Codex
 
 Read these files first:
@@ -40,13 +65,59 @@ Read these files first:
 
 Then continue from the current task list.
 
+## Product Context
+
+ClinicPilotX is a Buzzooka product for clinics, plastic surgery practices, dental clinics, med spas, beauty/wellness businesses, salons, and other appointment-based/service businesses.
+
+This is not only an n8n setup project. It is part of a larger commercial software build that includes:
+
+- Main CRM/dashboard application.
+- Admin/staff/user portal behavior.
+- Automation Center.
+- Marketing website.
+- Possible chatbot.
+- Possible mobile app.
+- Future external APIs so other tools or partners can interact with ClinicPilotX.
+- Integrations such as email, Gmail/Outlook, Google Calendar, Calendly, Stripe, Twilio, VAPI, WhatsApp, Messenger, Meta/Facebook, OpenAI, n8n, and related tools where appropriate.
+
+The project is being built primarily in Lovable.
+
+Known Lovable app:
+
+- Live app: `https://clinic-pilot-x.lovable.app`
+- Lovable project ID: `8b4d9031-af8d-4faf-81d3-135c41ad73b7`
+
+Important: Ross also has a marketing website partially built in Lovable. That marketing website is expected to be merged or coordinated with the main ClinicPilotX CRM/dashboard project later. Do not start by rebuilding the marketing website. Product/dashboard functionality comes first, but keep the marketing site in the architecture notes.
+
+The laptop Codex must be aware that there may be multiple Lovable projects/accounts involved:
+
+1. Main ClinicPilotX CRM/dashboard Lovable project.
+2. ClinicPilotX marketing website Lovable project.
+
+Do not assume the two projects are already merged. Ask Ross or Lovable for exact project IDs, URLs, and GitHub/Supabase links before making merge decisions.
+
+## Lovable Cloud / Supabase Direction
+
+Ross has a Lovable package that includes Lovable Cloud/back-end/hosting benefits. Use that before recommending paid hosting or unrelated backend platforms.
+
+Current evidence from the live dashboard project shows a standalone Supabase project:
+
+`imuyfbvsombbpgdgkhrb`
+
+But Ross reports that Lovable Cloud/Supabase backend access is included in his Lovable package. Therefore:
+
+- Prefer Lovable Cloud, Lovable-managed backend, Lovable hosting, and the connected Supabase setup where possible.
+- Do not move backend hosting to Cloudflare, Oracle, Hostinger, n8n Cloud, or paid VPS unless Ross explicitly approves.
+- Before building new backend infrastructure, ask Lovable to clarify exactly what backend is connected, what Lovable Cloud includes for this project, and how it relates to Supabase.
+- Treat Lovable and Supabase as the primary production path until proven otherwise.
+
 ## Business/Architecture Decision
 
 ClinicPilotX should use a hybrid automation strategy:
 
-1. Supabase/Lovable handles core product automation that must be reliable for all users.
+1. Lovable Cloud/Supabase handles core product automation that must be reliable for all users.
 2. Local n8n is used for review, testing, blueprint import, and automation design.
-3. n8n should not become the production dependency for client-facing workflows until hosting, security, backups, monitoring, and cost controls are solved.
+3. n8n may become part of production later only if it has a reliable hosting path, monitoring, backups, security, and cost controls.
 
 Reason:
 
@@ -54,6 +125,14 @@ Reason:
 - A laptop can lose internet, reboot, sleep, change IP, or have webhook problems.
 - For commercialization, critical automations should not depend on a personal laptop.
 - Old n8n workflows can still save time as blueprints.
+- Lovable Cloud/back-end/hosting is already part of Ross's package, so use that value before adding new cost.
+
+Business advice:
+
+- Use n8n now to preserve speed and reuse existing workflow design.
+- Use Lovable/Supabase as the production backbone for client-facing reliability.
+- Use n8n as an orchestration layer only after each workflow proves it actually needs n8n.
+- Avoid building a fragile business where client automations depend on a laptop being awake.
 
 ## Local n8n Decision
 
@@ -179,19 +258,31 @@ Coming soon:
 - Video Consultation
 - Main Profile route
 
+Known product priority:
+
+1. Audit current dashboard/product functionality.
+2. Fix verified backend/security/schema issues.
+3. Map old n8n automations to current Automation Center.
+4. Clarify Lovable Cloud/Supabase backend structure.
+5. Coordinate the marketing website merge later.
+6. Plan chatbot/mobile/API expansion after core dashboard workflows are stable.
+
 ## Immediate Laptop Task List
 
 1. Clone `https://github.com/aihustler2025/ClinicPilotX`.
 2. Read the memory files listed above.
-3. Install Docker Desktop if not installed.
-4. Start local n8n with Docker.
-5. Verify `http://localhost:5678` opens.
-6. Create a local-only n8n owner account.
-7. Import old non-credential n8n workflow JSON files.
-8. Do not activate imported workflows.
-9. Create an inventory report of imported workflows.
-10. Update `STATUS.md`, `TASKS.md`, and `PRODUCT_SPEC.md`.
-11. Commit and push changes to GitHub.
+3. Confirm the repo-relative file paths are available after clone.
+4. Install Docker Desktop if not installed.
+5. Start local n8n with Docker.
+6. Verify `http://localhost:5678` opens.
+7. Create a local-only n8n owner account.
+8. Import old non-credential n8n workflow JSON files.
+9. Do not activate imported workflows.
+10. Create an inventory report of imported workflows.
+11. Map each imported workflow to the current ClinicPilotX Automation Center.
+12. Ask Lovable for backend/project clarification before approving new build work.
+13. Update `STATUS.md`, `TASKS.md`, and `PRODUCT_SPEC.md`.
+14. Commit and push changes to GitHub.
 
 ## Master Prompt to Paste Into Laptop Codex
 
@@ -203,6 +294,9 @@ https://github.com/aihustler2025/ClinicPilotX
 
 Clone this repo into:
 %USERPROFILE%\Documents\ClinicPilotX
+
+Important file-access note:
+After cloning, all paths like AGENTS.md, STATUS.md, docs/handoffs, and 09-exports are inside the cloned GitHub repo on this laptop. Do not try to read the PC D-drive unless Ross separately copies those files over.
 
 After cloning, read:
 - AGENTS.md
@@ -216,19 +310,44 @@ After cloning, read:
 - 09-exports/github-laptop-n8n-local-transfer-plan-2026-06-04.md
 - docs/handoffs/Codex-to-Laptop-Codex-001-clinicpilotx-local-n8n-transfer.md
 
+Project context:
+ClinicPilotX is a Buzzooka product being built primarily in Lovable for clinics, plastic surgery practices, dental clinics, med spas, salons, beauty/wellness businesses, and other appointment-based/service businesses.
+
+This is part of a larger commercial product build. It includes the main CRM/dashboard, Automation Center, staff/admin/user workflows, a partially built marketing website in Lovable that may need to merge or coordinate with the dashboard project, possible chatbot, possible mobile app, future APIs, and integrations.
+
+Lovable context:
+Ross has a Lovable package that includes Lovable Cloud/back-end/hosting benefits. Use Lovable Cloud, Lovable hosting, and the connected Supabase setup before recommending paid hosting or unrelated backend platforms.
+
+Known dashboard app:
+https://clinic-pilot-x.lovable.app
+Lovable project ID:
+8b4d9031-af8d-4faf-81d3-135c41ad73b7
+
+Known Supabase project ref from deployed app:
+imuyfbvsombbpgdgkhrb
+
+There may be multiple Lovable projects/accounts involved:
+1. Main CRM/dashboard project.
+2. Partially built marketing website project.
+
+Do not assume they are already merged. Ask Ross or Lovable for exact project IDs, URLs, GitHub links, Supabase links, and merge status before making build decisions.
+
 Your first mission:
-Set up local n8n on this laptop using Docker Desktop, for review/testing only.
+Set up local n8n on this laptop using Docker Desktop for review/testing only, then use it to import and inspect old non-credential n8n workflow JSON files. Keep all workflows inactive.
 
 Rules:
 - Do not buy hosting.
 - Do not use n8n Cloud.
 - Do not use Oracle Cloud.
 - Do not renew Hostinger.
+- Do not recommend Cloudflare/new VPS/paid backend hosting unless Ross explicitly approves.
+- Prefer Lovable Cloud/Lovable hosting/Supabase because those are already part of Ross's Lovable package.
 - Do not activate paid integrations.
 - Do not connect live credentials unless Ross explicitly approves.
 - Do not import/open services credentials JSON unless Ross explicitly approves.
 - Keep workflows inactive until reviewed.
 - Keep GitHub updated after meaningful documentation changes.
+- Do not build or approve new Lovable work until the current dashboard/backend/project structure is audited.
 
 Install/verify steps:
 1. Check whether Git is installed.
@@ -241,10 +360,10 @@ Install/verify steps:
 8. Ask Ross to provide/copy the old non-credential n8n workflow JSON files.
 9. Import the old workflows into local n8n but keep them inactive.
 10. Create an inventory report mapping each imported n8n workflow to ClinicPilotX Automation Center.
-11. Update STATUS.md, TASKS.md, PRODUCT_SPEC.md, and 09-exports.
-12. Commit and push changes to GitHub.
+11. Ask Lovable to clarify the dashboard project, marketing website project, Lovable Cloud backend, Supabase setup, hosting, and GitHub connection before approving merge/build work.
+12. Update STATUS.md, TASKS.md, PRODUCT_SPEC.md, and 09-exports.
+13. Commit and push changes to GitHub.
 
 Business guidance:
-Use n8n locally to preserve and understand old automations. Do not make the commercial ClinicPilotX app depend on laptop-hosted n8n for production. For launch, core automations should eventually run inside reliable hosted backend infrastructure, likely Supabase/Lovable functions first, with n8n used where it clearly saves time and can be hosted safely later.
+Use n8n locally to preserve and understand old automations. Do not make the commercial ClinicPilotX app depend on laptop-hosted n8n for production. For launch, core automations should run inside reliable hosted backend infrastructure, preferably Lovable Cloud/Supabase first because Ross already has that through Lovable. Use n8n where it clearly saves time, but only move it into production after a reliable hosting, monitoring, backup, security, and cost plan exists.
 ```
-

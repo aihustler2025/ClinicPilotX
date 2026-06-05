@@ -151,3 +151,14 @@ New handoff saved at:
 `docs/handoffs/Codex-to-Laptop-Codex-001-clinicpilotx-local-n8n-transfer.md`
 
 Recommendation: use a hybrid automation strategy. Supabase/Lovable should carry core product automations that must be reliable for clients. Local n8n should be used to import, inspect, and map old workflows. Later, if n8n is clearly required for production, move it to proper hosted infrastructure after cost/security/backups are solved.
+## 2026-06-05 Handoff Revision: Lovable Cloud, Marketing Site, and Laptop File Access
+
+Ross clarified that ClinicPilotX is primarily a Lovable-based project and that his Lovable package includes Lovable Cloud/back-end/hosting benefits. Future planning should prefer Lovable Cloud/Lovable hosting/Supabase before recommending unrelated paid hosting or backend platforms.
+
+Ross also clarified that there is a separate, partially built ClinicPilotX marketing website in Lovable that may need to merge or coordinate with the main CRM/dashboard Lovable project. Product/dashboard functionality remains the priority, but the marketing website must be tracked as part of the broader architecture.
+
+The laptop handoff now explicitly states that repo-relative paths like `docs/handoffs/...`, `AGENTS.md`, `STATUS.md`, and `09-exports/...` are available only after cloning GitHub onto the laptop. The laptop does not need access to this PC's D-drive to read project memory.
+
+Updated handoff:
+
+`docs/handoffs/Codex-to-Laptop-Codex-001-clinicpilotx-local-n8n-transfer.md`

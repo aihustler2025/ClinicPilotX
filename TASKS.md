@@ -145,3 +145,12 @@ Last updated: 2026-05-27
 - [ ] Import workflows into local n8n and keep inactive.
 - [ ] Create imported workflow inventory and ClinicPilotX Automation Center mapping.
 - [ ] Decide workflow-by-workflow: Supabase/Lovable rebuild, n8n retained, or discard.
+## Lovable Architecture Tasks Added 2026-06-05
+
+- [x] Revise laptop handoff to include Lovable Cloud/Supabase and marketing website context.
+- [x] Clarify that laptop paths are repo-relative after cloning GitHub, not PC D-drive paths.
+- [ ] Ask Lovable to identify the main CRM/dashboard project ID, backend, Supabase connection, Lovable Cloud status, hosting status, and GitHub connection.
+- [ ] Ask Lovable to identify the separate marketing website project ID, URL, backend status, hosting status, and merge readiness.
+- [ ] Decide how marketing website and dashboard should be connected: same Lovable app, linked apps, subdomain structure, or future merge.
+- [ ] Document chatbot, mobile app, external API, and integration roadmap in PRODUCT_SPEC.md after core dashboard audit.
+- [ ] Confirm which automations should run in Lovable Cloud/Supabase versus n8n.
