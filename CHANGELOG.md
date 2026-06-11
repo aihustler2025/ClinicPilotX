@@ -89,3 +89,11 @@
 - Ran elevated WSL setup commands.
 - Docker/n8n remains blocked because WSL 2 reports virtualization is not enabled on this machine.
 - Next required step is restart and, if still blocked, enabling CPU virtualization in BIOS/UEFI.
+
+## 2026-06-11 Local n8n Running
+
+- Verified Docker Desktop is running with WSL 2 backend.
+- Created persistent Docker volume `clinicpilotx_n8n_data`.
+- Started local n8n container `clinicpilotx-n8n` on port `5678`.
+- Verified `http://localhost:5678` returns HTTP `200 OK`.
+- Confirmed next step is local-only n8n owner account creation, with no live credentials and no active workflows.

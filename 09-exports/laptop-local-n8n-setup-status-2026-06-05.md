@@ -63,17 +63,26 @@ WSL / virtualization:
 
 ## Current Blocker
 
-n8n cannot be started until Docker Desktop's engine is running.
+2026-06-11 update: Docker Desktop is now running and local n8n has been started.
 
-Docker Desktop has been installed, but WSL 2 is blocked by virtualization.
+Resolved setup items:
 
-Next manual Windows step:
+- Docker Desktop engine is running.
+- WSL default distribution is `docker-desktop`.
+- WSL default version is 2.
+- Persistent Docker volume `clinicpilotx_n8n_data` has been created.
+- n8n container `clinicpilotx-n8n` has been created and started.
+- n8n is mapped to local port `5678`.
+- `http://localhost:5678` returned HTTP `200 OK`.
 
-1. Restart the laptop.
-2. Open Docker Desktop after the restart.
-3. If Docker or Windows still says virtualization is disabled, enter the laptop BIOS/UEFI settings and enable CPU virtualization. The setting may be named Intel VT-x, Intel Virtualization Technology, AMD-V, SVM Mode, or Virtualization Technology depending on the laptop.
-4. After virtualization is enabled, open Docker Desktop and wait until it says Docker is running.
-5. Re-open PowerShell and verify:
+Current next step:
+
+1. Create the first local-only n8n owner account in the browser.
+2. Do not connect live credentials.
+3. Do not activate any imported workflows.
+4. Copy only non-credential old n8n workflow JSON files to the laptop when available.
+
+Verification commands:
 
 ```powershell
 & "$env:LOCALAPPDATA\Programs\DockerDesktop\resources\bin\docker.exe" version
@@ -82,7 +91,7 @@ Next manual Windows step:
 
 ## n8n Start Commands After Docker Is Running
 
-Use this local-only container:
+Local-only container created:
 
 ```powershell
 docker volume create clinicpilotx_n8n_data
@@ -109,7 +118,7 @@ Open:
 
 `http://localhost:5678`
 
-Create a local-only n8n owner account.
+Create a local-only n8n owner account if this is the first time opening n8n.
 
 ## Workflow Import Status
 

@@ -214,3 +214,33 @@ Current blocker:
 - Docker Desktop is installed, but the Docker engine cannot run until virtualization is enabled and Docker Desktop starts successfully.
 
 Next step: restart the laptop, then open Docker Desktop. If Docker/WSL still reports virtualization disabled, enable CPU virtualization in BIOS/UEFI before continuing n8n setup.
+
+## 2026-06-11 Local n8n Running
+
+Ross created/sign-in to Docker Personal and restarted the laptop.
+
+Docker Desktop is now running successfully:
+
+- Docker Desktop version: `4.77.0`
+- Docker engine version: `29.5.3`
+- Docker context: `desktop-linux`
+- WSL default distribution: `docker-desktop`
+- WSL default version: `2`
+
+Codex created the persistent n8n Docker volume:
+
+`clinicpilotx_n8n_data`
+
+Codex started the local n8n container:
+
+`clinicpilotx-n8n`
+
+Container status:
+
+- Running.
+- Image: `docker.n8n.io/n8nio/n8n`
+- Port mapping: `0.0.0.0:5678->5678/tcp`
+- n8n version from logs: `2.25.7`
+- Local URL verified with HTTP `200 OK`: `http://localhost:5678`
+
+Current next step: Ross creates the first local-only n8n owner account in the browser. Do not connect live credentials and do not activate workflows.
