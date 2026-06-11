@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-05-27
+Last updated: 2026-06-11
 
 ## In Progress
 
@@ -171,9 +171,14 @@ Last updated: 2026-05-27
 - [x] Record Ross's BUZZOOKA Work System operating model for ClinicPilotX.
 - [x] Clarify Codex role as project manager/auditor/QA/documentation/automation architect.
 - [x] Create durable ClinicPilotX takeover operating model document.
-- [ ] Complete authenticated module-by-module dashboard audit.
-- [ ] Create module readiness matrix.
-- [ ] Create Automation Center workflow readiness matrix.
-- [ ] Confirm browser-control path for repeatable dashboard QA.
+- [x] Confirm browser-control path for repeatable dashboard QA.
+- [x] Complete first authenticated read-only left-nav dashboard audit.
+- [x] Create first module readiness matrix.
+- [x] Create first Automation Center workflow readiness notes.
 - [ ] Confirm how Lovable responses will be saved back into `docs/handoffs/`.
 - [ ] Update Product Spec with verified dashboard module behavior after audit.
+- [ ] Retest Settings > Audit Log tab.
+- [ ] Open Automation Center Configure panels read-only and document available settings.
+- [ ] Create safe controlled test-data plan before CRUD/send/payment testing.
+- [ ] Investigate why Automation Center counts differ between earlier 19-row evidence and current `7 / 13 Active` UI.
+- [ ] Investigate subscription state inconsistency between `Professional` and `No Plan`.

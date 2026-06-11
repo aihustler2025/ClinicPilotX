@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-05-27
+Last updated: 2026-06-11
 
 ## Product Purpose
 
@@ -59,11 +59,26 @@ Do not assume they are merged. Lovable must clarify project IDs, URLs, GitHub co
 
 ## Module Registry
 
-No module is verified yet. Add modules here only after review and verification.
+First authenticated read-only module audit completed on 2026-06-11. See:
+
+`09-exports/authenticated-dashboard-module-audit-2026-06-11.md`
 
 | Module | Status | Evidence | Notes |
 | --- | --- | --- | --- |
-| TBD | Unknown | Pending Lovable audit | Do not mark complete until verified. |
+| Dashboard | Partially verified | Authenticated browser audit | Loads with dashboard metrics and sections, but metrics need data-source validation. |
+| Leads | Partially verified | Authenticated browser audit | 11 leads visible with filters/search/export/Add Lead; CRUD and conversion need controlled test data. |
+| Patients | Partially verified | Authenticated browser audit | Patient list, statuses, visits/revenue, search/filter/export/Add Patient visible; CRUD/linkage not yet tested. |
+| Appointments | Partially verified | Authenticated browser audit | 26 appointments visible; list and calendar views open. Booking/editing/reminders need safe test plan. |
+| Communication Hub | Partially verified | Authenticated browser audit | External Messages and Internal Chat tabs open; message sending not tested. |
+| Video Consultation | Incomplete | Authenticated browser audit | Route shows `Coming Soon`. |
+| Payments & Billing | Partially verified | Authenticated browser audit | Payment/invoice UI visible; payment link/Stripe flows not tested. |
+| Analytics & Reporting | Partially verified | Authenticated browser audit | Reporting UI visible; values require validation against source data. |
+| Staff Management | Partially verified | Authenticated browser audit | Staff list and role controls visible; permissions/invites not tested. |
+| Automation Center | Partially verified / high priority | Authenticated browser audit | Workflows and Activity Logs tabs open; activity logs show completed Appointment Confirmation runs. |
+| Auto-Assignment Rules | Broken / blocked | Authenticated browser audit | Route remains on `Loading assignment rules...`, consistent with missing/unavailable backend table. |
+| Subscription | Partially verified | Authenticated browser audit | Professional plan UI visible; entitlement consistency still suspect. |
+| Settings | Partially verified | Authenticated browser audit | General, Notifications, Integrations, Profile, Email Logs verified; Audit Log needs retest. |
+| Profile | Incomplete | Authenticated browser audit | Main route shows `Coming Soon`. |
 
 ## Automation Center / n8n Blueprint Mapping
 

@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-05-27
+Last updated: 2026-06-11
 
 ## Current State
 
@@ -294,3 +294,30 @@ New operating model document:
 `docs/clinicpilotx-project-takeover-operating-model.md`
 
 Current next step: complete authenticated dashboard audit, send/collect Lovable project clarification, and create module/workflow readiness matrices before approving build work.
+
+## 2026-06-11 In-App Browser Control Restored and Dashboard Audit Started
+
+Codex connected browser control to the authenticated in-app browser on the laptop. No separate Playwright install is currently needed for the in-app audit path.
+
+Read-only authenticated audit completed across the live left-navigation modules at:
+
+`https://clinic-pilot-x.lovable.app`
+
+New report saved:
+
+`09-exports/authenticated-dashboard-module-audit-2026-06-11.md`
+
+Key verified points:
+
+- Dashboard, Leads, Patients, Appointments, Communication Hub, Payments, Analytics, Staff, Automation Center, Subscription, and Settings load behind login.
+- Video Consultation and main Profile route still show `Coming Soon`.
+- Auto-Assignment Rules still appears broken/stuck at `Loading assignment rules...`.
+- Automation Center Workflows and Activity Logs tabs open.
+- Automation Center shows current plan `Professional` and `7 / 13 Active` during this pass.
+- Activity Logs show completed `Appointment Confirmation` workflow executions from about 15 days earlier.
+- Settings tabs verified: General, Notifications, Integrations, Profile, Email Logs.
+- Settings > Integrations includes Twilio, Facebook Messenger, Viber, Google Calendar, Stripe, and email test fields, and states API credentials are managed via Lovable Cloud secrets.
+
+Current rules remain unchanged: do not trigger send/call/payment/workflow actions and do not approve new Lovable build work until backend, secrets, Supabase, and project structure are confirmed.
+
+Current next step: perform a second safe Automation Center configuration audit, then create the first controlled test-data plan for Leads, Patients, Appointments, Communication, and Payments.
