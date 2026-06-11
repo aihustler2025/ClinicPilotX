@@ -13,6 +13,8 @@ ClinicPilotX is the official Buzzooka product workspace for appointment-based cl
 
 - Do not build new product functionality until the current Lovable project has been audited.
 - Do not assume Lovable is correct. Lovable claims must be verified through code, app behavior, database state, screenshots, logs, or direct project evidence.
+- Treat Codex as the ClinicPilotX project manager and technical auditor. Codex coordinates Lovable prompts, QA, documentation, GitHub state, n8n review/testing, and readiness decisions.
+- Treat GitHub as the cross-device project brain. Laptop, PC, and future Codex sessions must be able to resume from repo memory.
 - Product/dashboard functionality comes first. Do not start with the marketing website unless Ross redirects the priority.
 - Do not activate paid integrations or make billable service changes without Ross approval.
 - Keep costs low where possible.
@@ -54,3 +56,7 @@ Use the next number each time and keep the sequence clear.
 - `09-exports/`: QA scripts, handoff docs, testing docs, and files intended for people outside Codex.
 - `app/`: application code only if this folder later owns or mirrors code.
 - `prompts/`: reusable prompts that are not one-off Lovable handoffs.
+
+## Takeover Model
+
+Read `docs/clinicpilotx-project-takeover-operating-model.md` before making build decisions. ClinicPilotX is an existing Lovable product with dashboard, backend, Automation Center, future chatbot/API/mobile needs, and local n8n review/testing. Do not treat it as a blank n8n project.

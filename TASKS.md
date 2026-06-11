@@ -165,3 +165,15 @@ Last updated: 2026-05-27
 - [ ] Decide how marketing website and dashboard should be connected: same Lovable app, linked apps, subdomain structure, or future merge.
 - [ ] Document chatbot, mobile app, external API, and integration roadmap in PRODUCT_SPEC.md after core dashboard audit.
 - [ ] Confirm which automations should run in Lovable Cloud/Supabase versus n8n.
+
+## Project Management Tasks Added 2026-06-11
+
+- [x] Record Ross's BUZZOOKA Work System operating model for ClinicPilotX.
+- [x] Clarify Codex role as project manager/auditor/QA/documentation/automation architect.
+- [x] Create durable ClinicPilotX takeover operating model document.
+- [ ] Complete authenticated module-by-module dashboard audit.
+- [ ] Create module readiness matrix.
+- [ ] Create Automation Center workflow readiness matrix.
+- [ ] Confirm browser-control path for repeatable dashboard QA.
+- [ ] Confirm how Lovable responses will be saved back into `docs/handoffs/`.
+- [ ] Update Product Spec with verified dashboard module behavior after audit.

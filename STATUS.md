@@ -269,3 +269,28 @@ Codex also searched common laptop folders for old non-credential `.json` exports
 `09-exports/n8n-local-workflow-inventory-2026-06-11.md`
 
 Current direction: Codex can build workflows directly from Ross's plain-English automation descriptions. Old n8n JSON recovery remains useful if Ross can provide/copy the files, but it is not required to begin safe local prototyping.
+
+## 2026-06-11 Project Manager Reorientation
+
+Ross clarified that Codex's core role is to manage the whole existing ClinicPilotX project, not start from n8n or rebuild from scratch.
+
+Operating model confirmed:
+
+- GitHub is the cross-device project brain.
+- PC and laptop are workstations/mirrors.
+- Lovable is the main app build partner.
+- Codex is project manager, auditor, QA lead, documentation keeper, and automation architect.
+- Google Drive/cloud storage is for large client assets and deliverables.
+- n8n is local review/testing/import support, not the center of the product.
+
+Ross logged into the live dashboard in the in-app browser at:
+
+`https://clinic-pilot-x.lovable.app/dashboard`
+
+Current limitation: this Codex session can see the current in-app browser URL from context, but no direct browser-control tool is currently exposed. If direct click-by-click inspection remains unavailable, Codex must use Lovable/GitHub/deployed-bundle evidence and ask Ross for screenshots or a controllable browser session for module QA.
+
+New operating model document:
+
+`docs/clinicpilotx-project-takeover-operating-model.md`
+
+Current next step: complete authenticated dashboard audit, send/collect Lovable project clarification, and create module/workflow readiness matrices before approving build work.

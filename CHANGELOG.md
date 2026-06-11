@@ -105,3 +105,10 @@
 - Imported `ClinicPilotX - Test Lead Intake Webhook` into local n8n.
 - Verified the imported workflow is inactive and uses no credentials.
 - Added `09-exports/n8n-local-workflow-inventory-2026-06-11.md`.
+
+## 2026-06-11 Project Manager Reorientation
+
+- Ross clarified that Codex should manage the entire existing ClinicPilotX Lovable project, not begin from n8n or rebuild from scratch.
+- Reviewed Ross's BUZZOOKA Work System diagrams and adopted GitHub as cross-device project brain for laptop/PC continuity.
+- Added `docs/clinicpilotx-project-takeover-operating-model.md`.
+- Updated `AGENTS.md`, `STATUS.md`, and `TASKS.md` with the project-manager operating model and next audit tasks.
