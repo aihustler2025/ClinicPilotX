@@ -97,6 +97,8 @@ Open product/engineering issues:
 - Editing a lead's service/notes changed status and temperature without an explicit status/temperature edit.
 - The app intermittently displays `No Plan` where `Professional` is expected, while still showing protected CRM data.
 - Appointment booking for a converted dummy patient did not visibly persist or confirm success.
+- Leads `Show Converted` can display confusing count/table behavior and needs clear converted-lead handling.
+- Leads export should support explicit export scope, current filters, statuses, date range, source, file type, column selection, estimated row count, and clear filenames.
 
 These issues should be clarified or fixed before writing final customer-facing tutorials for lead conversion and appointment booking.
 

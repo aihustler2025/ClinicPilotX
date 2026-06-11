@@ -135,3 +135,5 @@
 - Verified the converted patient appears in Patients.
 - Attempted a dummy appointment booking for the converted patient and logged a likely no-confirmation/no-persistence issue.
 - Expanded controlled CRM QA notes for future user-guide/tutorial documentation.
+- Added `docs/qa/leads-human-qa-script.md` so Ross's assistant can repeat the Leads test flow.
+- Logged Leads status filter and export UX concerns, including confusing `Show Converted` count behavior.

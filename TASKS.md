@@ -194,7 +194,12 @@ Last updated: 2026-06-11
 - [x] Test lead Convert to Patient with dummy record.
 - [x] Verify converted patient appears in Patients.
 - [x] Attempt dummy appointment booking for converted patient.
+- [x] Create Leads human QA script for Ross's assistant.
+- [x] Test Leads status filter pills at a first-pass level.
 - [ ] Investigate why editing dummy lead changed status/temperature automatically.
+- [ ] Investigate Leads `Show Converted` count/table inconsistency.
+- [ ] Improve Leads export UX: scope, filters, file type, columns, filename.
+- [ ] Have human tester verify Leads export file contents.
 - [ ] Investigate why appointment booking closes without visible success or new appointment row.
 - [ ] Test patient record editing.
 - [ ] Retest appointment booking after backend/UI issue is understood.

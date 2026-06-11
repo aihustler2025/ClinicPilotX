@@ -44,6 +44,14 @@ Verified in the live app on 2026-06-11:
 
 The lead search box can find a lead by name. During testing, searching `CPX TEST Lead June 11` returned only that dummy lead.
 
+## Status Filters
+
+The Leads page includes quick status filters for All Leads, New, Contacted, Qualified, Booked, Lost, and Show Converted.
+
+Working draft note: these filters should let staff focus on a specific pipeline stage. During QA, status filtering changed the visible table and showed `Clear Filters`, but the summary cards continued to show overall counts rather than filtered counts.
+
+Open issue: `Show Converted` displayed confusing count behavior during QA. This needs Lovable review before final documentation.
+
 ## Edit Lead
 
 The row action menu includes `Edit Lead`. The edit form prefilled the existing lead values and saved an updated service/notes change.
@@ -83,7 +91,7 @@ Open issue: the final user guide should explain whether converted leads remain a
 - Delete Lead.
 - Bulk selection/actions.
 - CSV import, if available.
-- Export file contents.
+- Export file contents by a human tester, because the in-app browser cannot inspect downloaded files directly.
 - Staff assignment.
 - Lead scoring explanation.
 - Lead source automation from chatbot, contact forms, email, or phone.

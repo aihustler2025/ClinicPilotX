@@ -368,3 +368,20 @@ New concerns:
 - Appointment booking attempt for `CPX TEST Appointment Audit` closed the modal but showed no clear success message; the total stayed at 26 and the new appointment was not visible. Treat as a likely booking persistence/confirmation issue until Lovable/backend logs confirm the cause.
 
 Current next step: document these findings, commit/push the QA docs, then continue with patient edit testing, Dashboard/Analytics validation, and a Lovable fix prompt for the appointment booking and plan-state inconsistencies.
+
+## 2026-06-11 Leads Human QA Script Added
+
+Ross clarified that each module audit should produce a repeatable human tester script after Codex performs its own testing.
+
+Created:
+
+- `docs/qa/leads-human-qa-script.md`
+
+Additional Leads findings:
+
+- Status pills are clickable and change table/filter state.
+- Summary cards appear to remain overall totals instead of reflecting the active status filter.
+- `Show Converted 0` produced confusing count/table behavior during QA and needs Lovable review.
+- Export is currently too opaque from a UX standpoint. It should become an export dialog with scope, status/date/source filters, file type, column selection, estimated row count, and clear filename.
+
+Current browser limitation: Codex cannot inspect downloaded export files inside the in-app browser, so human QA must verify downloaded CSV/XLSX contents.

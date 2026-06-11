@@ -30,6 +30,8 @@ This log records safe dummy-data CRM testing after the first authenticated dashb
 | Leads | Edit dummy lead | Pass with concern | Edit dialog prefilled existing values and saved changes. Service changed to `CPX TEST Botox Consultation - Edited`. Concern: after saving, status changed from `NEW LEAD` to `CONTACTED` and temperature changed from cold to hot without an explicit status/temperature edit. |
 | Leads | View Details | Pass | Details dialog opened for the dummy lead. It showed status, temperature, response time, score area, contact info, service requested, notes, created/updated timeline, and buttons for Call, Email, Message, Edit Lead, Calculate Score, Mark as Lost, and Convert to Patient. No live communication buttons were clicked. |
 | Leads | Convert to Patient | Pass | Conversion showed success text: `CPX TEST Lead June 11 has been converted to a patient`. Lead count returned to the prior value and search no longer found the lead in the default active lead list. |
+| Leads | Status filter pills | Pass with concerns | All/New/Contacted/Qualified/Booked/Lost/Show Converted pills were clickable and changed table/filter state. Concern: summary cards still show overall counts rather than filtered counts. `Show Converted 0` displayed confusing count behavior, including Total Leads changing to 14 while the table showed no rows. |
+| Leads | Export | Needs human download verification | Export appears as a single button with no visible scope/format selector. Codex in-app browser cannot inspect downloaded files directly. Human QA should confirm whether it exports all leads or current filters and what columns/file type are included. |
 | Patients | Verify converted patient | Pass with concern | Patient appeared in Patients search with name, email, phone, active status, 0 visits, and $0.00. Concern: page header briefly showed `No Plan` before returning to `Professional`. |
 | Appointments | Book dummy appointment | Fail / inconclusive | Booking form listed the converted patient, auto-filled patient contact fields, accepted service/fee/notes, and accepted time after direct time-field fill. After submit, modal closed but no success message appeared, total remained 26, and the `CPX TEST Appointment Audit` record was not visible in the appointment list. |
 | Communication Hub | Read-only conversation review | Pending | Do not send. |
@@ -79,3 +81,16 @@ Attempted appointment:
 - Notes: controlled QA dummy appointment note
 
 Result: no visible success confirmation and no visible new appointment row. This should be treated as a blocking UX/data-persistence issue until verified from backend logs or fixed by Lovable.
+
+## Leads UX Improvement Notes
+
+Export should be more explicit and user-friendly. Recommended behavior:
+
+- Clicking `Export` opens an export dialog.
+- User can choose `All leads`, `Current filters`, or `Selected leads`.
+- User can choose statuses: New, Contacted, Qualified, Booked, Lost, Converted.
+- User can choose date range and source.
+- User can choose CSV or XLSX.
+- User can choose columns.
+- Dialog should show an estimated record count before download.
+- Exported filename should include scope and date, for example `clinicpilotx-leads-new-2026-06-11.csv`.
