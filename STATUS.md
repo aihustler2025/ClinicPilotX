@@ -244,3 +244,28 @@ Container status:
 - Local URL verified with HTTP `200 OK`: `http://localhost:5678`
 
 Current next step: Ross creates the first local-only n8n owner account in the browser. Do not connect live credentials and do not activate workflows.
+
+## 2026-06-11 First Local n8n Workflow Imported
+
+Ross completed local n8n owner setup.
+
+Codex created and imported the first safe local n8n workflow:
+
+`ClinicPilotX - Test Lead Intake Webhook`
+
+Workflow file:
+
+`09-exports/n8n-workflows/clinicpilotx-test-lead-intake-webhook.json`
+
+Verified by n8n export:
+
+- Workflow exists in local n8n.
+- `active: false`
+- No credentials.
+- Nodes: webhook intake, field normalization, JSON confirmation response.
+
+Codex also searched common laptop folders for old non-credential `.json` exports and did not find obvious ClinicPilotX workflow exports. A workflow inventory was created at:
+
+`09-exports/n8n-local-workflow-inventory-2026-06-11.md`
+
+Current direction: Codex can build workflows directly from Ross's plain-English automation descriptions. Old n8n JSON recovery remains useful if Ross can provide/copy the files, but it is not required to begin safe local prototyping.

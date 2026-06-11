@@ -1,0 +1,135 @@
+{
+  "id": "clinicpilotx-test-lead-intake-webhook",
+  "name": "ClinicPilotX - Test Lead Intake Webhook",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "clinicpilotx/test-lead-intake",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "b4975cf8-bd74-478a-9277-c4a6f4076722",
+      "name": "Receive Test Lead",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -520,
+        0
+      ],
+      "webhookId": "clinicpilotx-test-lead-intake"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "lead-name",
+              "name": "lead_name",
+              "value": "={{ $json.body?.name || $json.body?.full_name || $json.name || 'Unknown lead' }}",
+              "type": "string"
+            },
+            {
+              "id": "lead-email",
+              "name": "lead_email",
+              "value": "={{ $json.body?.email || $json.email || '' }}",
+              "type": "string"
+            },
+            {
+              "id": "lead-phone",
+              "name": "lead_phone",
+              "value": "={{ $json.body?.phone || $json.body?.mobile || $json.phone || '' }}",
+              "type": "string"
+            },
+            {
+              "id": "lead-service",
+              "name": "requested_service",
+              "value": "={{ $json.body?.service || $json.body?.treatment || $json.service || 'Not provided' }}",
+              "type": "string"
+            },
+            {
+              "id": "lead-message",
+              "name": "message",
+              "value": "={{ $json.body?.message || $json.body?.notes || $json.message || '' }}",
+              "type": "string"
+            },
+            {
+              "id": "lead-source",
+              "name": "source",
+              "value": "={{ $json.body?.source || 'local-n8n-test' }}",
+              "type": "string"
+            },
+            {
+              "id": "received-at",
+              "name": "received_at",
+              "value": "={{ new Date().toISOString() }}",
+              "type": "string"
+            },
+            {
+              "id": "test-mode",
+              "name": "test_mode",
+              "value": true,
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f38e9231-8562-4efd-ac2e-08ed11315c2a",
+      "name": "Normalize Lead Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: true, mode: 'local-test-only', workflow: 'ClinicPilotX - Test Lead Intake Webhook', lead: $json } }}",
+        "options": {}
+      },
+      "id": "45c938bf-0558-4368-a71e-6c4ce16a29af",
+      "name": "Return Test Confirmation",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Receive Test Lead": {
+      "main": [
+        [
+          {
+            "node": "Normalize Lead Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Lead Fields": {
+      "main": [
+        [
+          {
+            "node": "Return Test Confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [],
+  "pinData": {},
+  "versionId": "260f2aa8-079e-42bc-8c85-bf09c24d1438",
+  "triggerCount": 0
+}

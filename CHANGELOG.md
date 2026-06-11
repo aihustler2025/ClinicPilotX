@@ -97,3 +97,11 @@
 - Started local n8n container `clinicpilotx-n8n` on port `5678`.
 - Verified `http://localhost:5678` returns HTTP `200 OK`.
 - Confirmed next step is local-only n8n owner account creation, with no live credentials and no active workflows.
+
+## 2026-06-11 First n8n Workflow Import
+
+- Ross completed local n8n owner setup.
+- Created `09-exports/n8n-workflows/clinicpilotx-test-lead-intake-webhook.json`.
+- Imported `ClinicPilotX - Test Lead Intake Webhook` into local n8n.
+- Verified the imported workflow is inactive and uses no credentials.
+- Added `09-exports/n8n-local-workflow-inventory-2026-06-11.md`.

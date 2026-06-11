@@ -146,12 +146,15 @@ Last updated: 2026-05-27
 - [x] Create persistent Docker volume `clinicpilotx_n8n_data`.
 - [x] Run local n8n Docker container on laptop as `clinicpilotx-n8n`.
 - [x] Verify `http://localhost:5678` opens on laptop.
-- [ ] Create local-only n8n owner account.
-- [ ] Copy old non-credential n8n workflow JSON files to laptop.
+- [x] Create local-only n8n owner account.
+- [x] Create and import first safe local n8n test workflow.
+- [x] Verify first imported workflow is inactive.
+- [ ] Copy old non-credential n8n workflow JSON files to laptop if Ross can locate/provide them.
 - [ ] Import workflows into local n8n and keep inactive.
 - [ ] Create imported workflow inventory and ClinicPilotX Automation Center mapping.
 - [ ] Decide workflow-by-workflow: Supabase/Lovable rebuild, n8n retained, or discard.
 - [x] Create laptop local n8n setup status report in `09-exports/`.
+- [x] Create local n8n workflow inventory report.
 ## Lovable Architecture Tasks Added 2026-06-05
 
 - [x] Revise laptop handoff to include Lovable Cloud/Supabase and marketing website context.
