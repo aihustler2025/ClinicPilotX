@@ -321,3 +321,50 @@ Key verified points:
 Current rules remain unchanged: do not trigger send/call/payment/workflow actions and do not approve new Lovable build work until backend, secrets, Supabase, and project structure are confirmed.
 
 Current next step: perform a second safe Automation Center configuration audit, then create the first controlled test-data plan for Leads, Patients, Appointments, Communication, and Payments.
+
+## 2026-06-11 Controlled CRM QA Started
+
+Ross approved safe dummy-data testing and emphasized that QA notes must become future product documentation/tutorial material.
+
+Codex created:
+
+- `docs/user-guide/README.md`
+- `docs/user-guide/leads.md`
+- `docs/qa/controlled-test-data-plan.md`
+- `09-exports/controlled-crm-test-log-2026-06-11.md`
+
+First dummy record:
+
+- Lead: `CPX TEST Lead June 11`
+- Email: `cpx.test+lead-20260611@example.com`
+
+Verified:
+
+- Add Lead form works.
+- Created lead persisted in the lead table.
+- Lead count increased from 11 to 12 after creation.
+- Search found the dummy lead and filtered unrelated leads out.
+- Edit Lead dialog prefilled existing values.
+- Edited service/notes saved successfully.
+
+New concern:
+
+- Editing the dummy lead changed status/temperature from `NEW LEAD`/cold to `CONTACTED`/hot without an explicit status/temperature edit. This may be intentional scoring/status logic or an unintended side effect and needs investigation before final documentation.
+
+## 2026-06-11 Controlled CRM QA Continued
+
+Additional verified flow:
+
+- Lead Details opened successfully for the dummy lead.
+- The details view showed contact info, service, notes, timeline, Details/Communication/Activity sections, and action buttons.
+- No live Call, Email, Message, Calculate Score, or Mark as Lost action was triggered.
+- Converted `CPX TEST Lead June 11` to a patient.
+- Verified the converted patient appears in Patients with the same email and phone, active status, 0 visits, and $0.00 value.
+- Verified Appointments booking form lists the converted patient and auto-fills name/email/phone.
+
+New concerns:
+
+- Subscription/entitlement display still flickers between `Professional` and `No Plan` on CRM pages.
+- Appointment booking attempt for `CPX TEST Appointment Audit` closed the modal but showed no clear success message; the total stayed at 26 and the new appointment was not visible. Treat as a likely booking persistence/confirmation issue until Lovable/backend logs confirm the cause.
+
+Current next step: document these findings, commit/push the QA docs, then continue with patient edit testing, Dashboard/Analytics validation, and a Lovable fix prompt for the appointment booking and plan-state inconsistencies.

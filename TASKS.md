@@ -182,3 +182,20 @@ Last updated: 2026-06-11
 - [ ] Create safe controlled test-data plan before CRUD/send/payment testing.
 - [ ] Investigate why Automation Center counts differ between earlier 19-row evidence and current `7 / 13 Active` UI.
 - [ ] Investigate subscription state inconsistency between `Professional` and `No Plan`.
+
+## Controlled CRM QA Tasks Added 2026-06-11
+
+- [x] Create product/user-guide documentation structure.
+- [x] Create controlled test-data plan.
+- [x] Create dummy lead.
+- [x] Verify dummy lead search.
+- [x] Edit dummy lead and verify persistence.
+- [x] Test lead View Details.
+- [x] Test lead Convert to Patient with dummy record.
+- [x] Verify converted patient appears in Patients.
+- [x] Attempt dummy appointment booking for converted patient.
+- [ ] Investigate why editing dummy lead changed status/temperature automatically.
+- [ ] Investigate why appointment booking closes without visible success or new appointment row.
+- [ ] Test patient record editing.
+- [ ] Retest appointment booking after backend/UI issue is understood.
+- [ ] Verify Dashboard and Analytics update after dummy data changes.

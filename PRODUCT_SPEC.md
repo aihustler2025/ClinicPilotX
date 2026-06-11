@@ -67,8 +67,8 @@ First authenticated read-only module audit completed on 2026-06-11. See:
 | --- | --- | --- | --- |
 | Dashboard | Partially verified | Authenticated browser audit | Loads with dashboard metrics and sections, but metrics need data-source validation. |
 | Leads | Partially verified | Authenticated browser audit | 11 leads visible with filters/search/export/Add Lead; CRUD and conversion need controlled test data. |
-| Patients | Partially verified | Authenticated browser audit | Patient list, statuses, visits/revenue, search/filter/export/Add Patient visible; CRUD/linkage not yet tested. |
-| Appointments | Partially verified | Authenticated browser audit | 26 appointments visible; list and calendar views open. Booking/editing/reminders need safe test plan. |
+| Patients | Partially verified | Authenticated browser audit + controlled CRM QA | Patient list, statuses, visits/revenue, search/filter/export/Add Patient visible. Lead-to-patient conversion verified with dummy record. Patient editing still needs testing. |
+| Appointments | Partially verified / issue found | Authenticated browser audit + controlled CRM QA | 26 appointments visible; list and calendar views open. Booking form lists converted patient and auto-fills contact info, but dummy booking attempt closed without visible success and did not show a new row. |
 | Communication Hub | Partially verified | Authenticated browser audit | External Messages and Internal Chat tabs open; message sending not tested. |
 | Video Consultation | Incomplete | Authenticated browser audit | Route shows `Coming Soon`. |
 | Payments & Billing | Partially verified | Authenticated browser audit | Payment/invoice UI visible; payment link/Stripe flows not tested. |
@@ -81,6 +81,24 @@ First authenticated read-only module audit completed on 2026-06-11. See:
 | Profile | Incomplete | Authenticated browser audit | Main route shows `Coming Soon`. |
 
 ## Automation Center / n8n Blueprint Mapping
+
+## Controlled CRM QA Notes - 2026-06-11
+
+Verified lead lifecycle behavior:
+
+- A manual dummy lead can be created.
+- Lead search can isolate that dummy lead by name.
+- Lead edit saves service/notes changes.
+- Lead Details view opens and shows contact, service, notes, timeline, and action controls.
+- Converting a lead to a patient creates a patient record with matching name, email, and phone.
+
+Open product/engineering issues:
+
+- Editing a lead's service/notes changed status and temperature without an explicit status/temperature edit.
+- The app intermittently displays `No Plan` where `Professional` is expected, while still showing protected CRM data.
+- Appointment booking for a converted dummy patient did not visibly persist or confirm success.
+
+These issues should be clarified or fixed before writing final customer-facing tutorials for lead conversion and appointment booking.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

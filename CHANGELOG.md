@@ -121,3 +121,17 @@
 - Verified first module readiness matrix across Dashboard, Leads, Patients, Appointments, Communication Hub, Video Consultation, Payments, Analytics, Staff, Automation Center, Auto-Assignment Rules, Subscription, Settings, and Profile.
 - Verified Automation Center Workflows and Activity Logs tabs open, with recent Appointment Confirmation executions visible.
 - Recorded safety rule to avoid send/call/payment/workflow actions until credentials and sandbox/live status are confirmed.
+
+## 2026-06-11 Controlled CRM QA
+
+- Added user-guide and QA documentation structure.
+- Added controlled dummy-data plan.
+- Created and edited dummy lead `CPX TEST Lead June 11`.
+- Verified Leads create, search, and edit behavior.
+- Added `docs/user-guide/leads.md`.
+- Added `09-exports/controlled-crm-test-log-2026-06-11.md`.
+- Logged concern that editing a lead appears to change status/temperature automatically.
+- Verified Lead Details and Convert to Patient for the dummy lead.
+- Verified the converted patient appears in Patients.
+- Attempted a dummy appointment booking for the converted patient and logged a likely no-confirmation/no-persistence issue.
+- Expanded controlled CRM QA notes for future user-guide/tutorial documentation.
