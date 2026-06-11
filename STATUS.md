@@ -385,3 +385,30 @@ Additional Leads findings:
 - Export is currently too opaque from a UX standpoint. It should become an export dialog with scope, status/date/source filters, file type, column selection, estimated row count, and clear filename.
 
 Current browser limitation: Codex cannot inspect downloaded export files inside the in-app browser, so human QA must verify downloaded CSV/XLSX contents.
+
+## 2026-06-11 Leads Improvement Direction
+
+Ross reviewed the Create New Lead modal and confirmed Leads is not done yet.
+
+New requirements captured:
+
+- Phone should use a country code picker and auto-format from digits-only typing.
+- For U.S./Canada-style numbers, display should be like `+1 (555) 123-4567`.
+- Service Requested should become a searchable dropdown/combobox with custom service support.
+- Leads should eventually receive records from chatbot, website contact forms, email inquiry automation, phone/voice assistant, manual entry, and social channels.
+- Lead Details should eventually show the full relationship timeline: conversations, files/photos, follow-ups, assignment, status changes, appointment booking, and conversion.
+
+Created Lovable handoff:
+
+- `docs/handoffs/Codex-to-Dashboard-Lovable-004-leads-module-improvements.md`
+
+Do not build chatbot/email/social automations yet. For now, make Leads data/UI ready for those future intake sources.
+
+Additional dummy data added:
+
+- `CPX TEST Chatbot Lead 01` / `cpx.test+chatbot-lead-01@example.com`
+- `CPX TEST Email Lead 01` / `cpx.test+email-lead-01@example.com`
+
+New confirmed concern:
+
+- After creating `CPX TEST Email Lead 01`, the previously created `CPX TEST Chatbot Lead 01` changed from `NEW LEAD`/Cold to `CONTACTED`/Hot without explicit editing. The status/temperature mutation bug is broader than the earlier edit-flow concern.

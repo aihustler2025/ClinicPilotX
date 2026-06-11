@@ -137,3 +137,5 @@
 - Expanded controlled CRM QA notes for future user-guide/tutorial documentation.
 - Added `docs/qa/leads-human-qa-script.md` so Ross's assistant can repeat the Leads test flow.
 - Logged Leads status filter and export UX concerns, including confusing `Show Converted` count behavior.
+- Added Lovable handoff 004 for Leads module improvements: phone formatting, service selector, source fields, richer details/timeline, export dialog, and future chatbot/email/contact-form intake readiness.
+- Added two more controlled dummy leads for future chatbot/email intake testing and confirmed status/temperature can mutate unexpectedly after later lead creation.

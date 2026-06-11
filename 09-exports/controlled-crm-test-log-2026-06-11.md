@@ -19,6 +19,8 @@ This log records safe dummy-data CRM testing after the first authenticated dashb
 | Record Type | Name/Identifier | Status | Cleanup Needed |
 | --- | --- | --- | --- |
 | Lead | `CPX TEST Lead June 11` / `cpx.test+lead-20260611@example.com` | Created, edited, and converted to patient | Lead is no longer visible in the default active lead list after conversion. |
+| Lead | `CPX TEST Chatbot Lead 01` / `cpx.test+chatbot-lead-01@example.com` | Created for future chatbot intake testing | Keep temporarily. Do not send live communications. |
+| Lead | `CPX TEST Email Lead 01` / `cpx.test+email-lead-01@example.com` | Created for future email inquiry testing | Keep temporarily. Do not send live communications. |
 | Patient | `CPX TEST Lead June 11` / `cpx.test+lead-20260611@example.com` | Created through lead conversion and verified in Patients | Keep temporarily for downstream appointment testing. |
 
 ## Module Test Results
@@ -26,6 +28,7 @@ This log records safe dummy-data CRM testing after the first authenticated dashb
 | Module | Test | Result | Notes |
 | --- | --- | --- | --- |
 | Leads | Create dummy lead | Pass | Created `CPX TEST Lead June 11`; total leads increased from 11 to 12 and New Leads increased from 5 to 6 immediately after creation. |
+| Leads | Create additional dummy leads | Pass with concern | Created `CPX TEST Chatbot Lead 01` and `CPX TEST Email Lead 01`. Concern: after the second new lead was created, `CPX TEST Chatbot Lead 01` changed from `NEW LEAD`/Cold to `CONTACTED`/Hot without an explicit edit. This confirms the status/temperature mutation is not limited to the edit flow. |
 | Leads | Search dummy lead | Pass | Search for `CPX TEST Lead June 11` filtered the table to only the dummy lead and hid unrelated leads such as Sarah Martinez. |
 | Leads | Edit dummy lead | Pass with concern | Edit dialog prefilled existing values and saved changes. Service changed to `CPX TEST Botox Consultation - Edited`. Concern: after saving, status changed from `NEW LEAD` to `CONTACTED` and temperature changed from cold to hot without an explicit status/temperature edit. |
 | Leads | View Details | Pass | Details dialog opened for the dummy lead. It showed status, temperature, response time, score area, contact info, service requested, notes, created/updated timeline, and buttons for Call, Email, Message, Edit Lead, Calculate Score, Mark as Lost, and Convert to Patient. No live communication buttons were clicked. |
@@ -55,7 +58,7 @@ To manually add a lead, staff should open Leads, click `Add Lead`, enter at mini
 
 Open product question:
 
-Editing a lead's service/notes appears to trigger status/temperature changes. Confirm whether this is expected lead scoring behavior or a bug before documenting it as final user behavior.
+Editing a lead's service/notes and creating subsequent leads appears to trigger status/temperature changes on existing dummy leads. Confirm whether this is expected lead scoring/status behavior or a bug before documenting it as final user behavior.
 
 ## Patient Conversion Notes
 

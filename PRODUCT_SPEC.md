@@ -94,11 +94,15 @@ Verified lead lifecycle behavior:
 
 Open product/engineering issues:
 
-- Editing a lead's service/notes changed status and temperature without an explicit status/temperature edit.
+- Editing a lead's service/notes and creating later leads changed existing dummy lead status/temperature without an explicit status/temperature edit.
 - The app intermittently displays `No Plan` where `Professional` is expected, while still showing protected CRM data.
 - Appointment booking for a converted dummy patient did not visibly persist or confirm success.
 - Leads `Show Converted` can display confusing count/table behavior and needs clear converted-lead handling.
 - Leads export should support explicit export scope, current filters, statuses, date range, source, file type, column selection, estimated row count, and clear filenames.
+- Leads manual creation should use a proper international phone input with country selector, digits-only typing, display formatting such as `+1 (555) 123-4567`, and normalized storage.
+- Leads manual creation should use a searchable service selector with custom service entry and future clinic-specific service lists.
+- Leads should be ready for future intake sources: chatbot, email inquiry parser, website contact forms, phone/voice assistant, manual entry, Facebook, Instagram, and referrals.
+- Lead details should become the full record of the relationship, including communication history, uploaded photos/files, timeline activity, staff assignment, follow-up context, and conversion history.
 
 These issues should be clarified or fixed before writing final customer-facing tutorials for lead conversion and appointment booking.
 

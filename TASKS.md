@@ -196,9 +196,14 @@ Last updated: 2026-06-11
 - [x] Attempt dummy appointment booking for converted patient.
 - [x] Create Leads human QA script for Ross's assistant.
 - [x] Test Leads status filter pills at a first-pass level.
+- [x] Create additional dummy leads for chatbot/email intake testing.
 - [ ] Investigate why editing dummy lead changed status/temperature automatically.
 - [ ] Investigate Leads `Show Converted` count/table inconsistency.
 - [ ] Improve Leads export UX: scope, filters, file type, columns, filename.
+- [ ] Improve Leads phone input with country picker, auto-formatting, validation, and normalized storage.
+- [ ] Improve Leads service requested field with searchable service dropdown and custom service support.
+- [ ] Improve Leads details view with richer timeline/communication/files/follow-up context.
+- [ ] Prepare Leads for future chatbot, website contact form, email inquiry, phone, and social intake sources.
 - [ ] Have human tester verify Leads export file contents.
 - [ ] Investigate why appointment booking closes without visible success or new appointment row.
 - [ ] Test patient record editing.

@@ -32,6 +32,10 @@ Verified in the live app on 2026-06-11:
 5. Click `Create Lead`.
 6. Confirm the lead appears in the lead table.
 
+Planned improvement: the phone field should format automatically from digits-only input, with a country code picker. For United States and Canada numbers, the display should look like `+1 (555) 123-4567` while storing a normalized number behind the scenes.
+
+Planned improvement: service requested should become a searchable service dropdown/combobox with support for custom services and future clinic-specific service lists.
+
 ## Verified Add Lead Fields
 
 - Full Name
@@ -72,6 +76,8 @@ The row action menu includes `View Details`. During testing, the details view sh
 - Action buttons for Call, Email, Message, Edit Lead, Calculate Score, Mark as Lost, and Convert to Patient.
 
 Safety note: Call, Email, Message, Calculate Score, and Mark as Lost were not clicked during this controlled pass.
+
+Planned improvement: Lead Details should become the complete interaction record for a lead, including timeline, communication history, uploaded/shared photos or files, staff assignment, source, follow-up context, and conversion history.
 
 ## Convert Lead To Patient
 
