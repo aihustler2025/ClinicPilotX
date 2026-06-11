@@ -47,27 +47,37 @@ Git:
 
 Docker Desktop:
 
-- Docker CLI was not found on PATH.
-- `C:\Program Files\Docker\Docker\Docker Desktop.exe` was not found.
-- `com.docker.service` was not found.
-- Result: Docker Desktop appears not installed or not available to this Windows user.
+- Initial check: Docker CLI was not found on PATH and Docker Desktop was not installed.
+- 2026-06-10 update: Docker Desktop installer was downloaded from Docker and run in per-user mode.
+- Docker Desktop app now exists at `C:\Users\user\AppData\Local\Programs\DockerDesktop\Docker Desktop.exe`.
+- Docker CLI now exists at `C:\Users\user\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe`.
+- Docker engine is not usable yet because WSL 2 cannot start.
+
+WSL / virtualization:
+
+- `wsl --install` was run through an elevated Windows prompt.
+- `wsl --install --no-distribution` was run through an elevated Windows prompt to enable the Virtual Machine Platform feature.
+- `wsl --status` now reports default WSL version 2.
+- Current blocker: WSL 2 cannot start because virtualization is not enabled on this machine.
+- Result: Docker Desktop is installed, but n8n cannot run until Windows/firmware virtualization is enabled and Docker Desktop can start its engine.
 
 ## Current Blocker
 
-n8n cannot be started until Docker Desktop for Windows is installed and running.
+n8n cannot be started until Docker Desktop's engine is running.
 
-Recommended official Docker Desktop path:
+Docker Desktop has been installed, but WSL 2 is blocked by virtualization.
 
-1. Open Docker's Windows install docs: `https://docs.docker.com/desktop/setup/install/windows-install/`
-2. Download Docker Desktop for Windows.
-3. Install using the recommended per-user install unless Ross has a reason to install for all users.
-4. Use the WSL 2 backend when prompted.
-5. Start Docker Desktop and wait until it says the engine is running.
-6. Re-open PowerShell and verify:
+Next manual Windows step:
+
+1. Restart the laptop.
+2. Open Docker Desktop after the restart.
+3. If Docker or Windows still says virtualization is disabled, enter the laptop BIOS/UEFI settings and enable CPU virtualization. The setting may be named Intel VT-x, Intel Virtualization Technology, AMD-V, SVM Mode, or Virtualization Technology depending on the laptop.
+4. After virtualization is enabled, open Docker Desktop and wait until it says Docker is running.
+5. Re-open PowerShell and verify:
 
 ```powershell
-docker --version
-docker ps
+& "$env:LOCALAPPDATA\Programs\DockerDesktop\resources\bin\docker.exe" version
+& "$env:LOCALAPPDATA\Programs\DockerDesktop\resources\bin\docker.exe" ps
 ```
 
 ## n8n Start Commands After Docker Is Running

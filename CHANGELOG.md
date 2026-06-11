@@ -80,3 +80,12 @@
 - Added `09-exports/laptop-local-n8n-setup-status-2026-06-05.md`.
 - Added Lovable clarification handoff 003 for dashboard, marketing website, Lovable Cloud, Supabase, hosting, GitHub, and Automation Center questions.
 - Updated `STATUS.md`, `TASKS.md`, and `PRODUCT_SPEC.md` for the laptop n8n blocker and architecture direction.
+
+## 2026-06-10 Docker Desktop Install Attempt
+
+- Downloaded Docker Desktop for Windows from Docker's official installer URL.
+- Ran Docker Desktop installer in per-user mode.
+- Verified Docker Desktop and Docker CLI files now exist under `C:\Users\user\AppData\Local\Programs\DockerDesktop`.
+- Ran elevated WSL setup commands.
+- Docker/n8n remains blocked because WSL 2 reports virtualization is not enabled on this machine.
+- Next required step is restart and, if still blocked, enabling CPU virtualization in BIOS/UEFI.

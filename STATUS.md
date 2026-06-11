@@ -190,3 +190,27 @@ Lovable clarification handoff created at:
 `docs/handoffs/Codex-to-Dashboard-Lovable-003-project-backend-marketing-cloud-clarification.md`
 
 Current next step: Ross installs Docker Desktop with WSL 2 backend, starts Docker, then Codex can create the persistent n8n volume and run `clinicpilotx-n8n` on port `5678`.
+
+## 2026-06-10 Docker Desktop Install Progress
+
+Ross asked Codex to handle Docker Desktop/n8n setup directly because he is not a developer.
+
+Codex downloaded Docker Desktop for Windows from Docker's official desktop installer URL and ran the installer in per-user mode.
+
+Current installed paths:
+
+- Docker Desktop app: `C:\Users\user\AppData\Local\Programs\DockerDesktop\Docker Desktop.exe`
+- Docker CLI: `C:\Users\user\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe`
+
+Codex also ran elevated WSL setup commands:
+
+- `wsl --install`
+- `wsl --install --no-distribution`
+
+Current blocker:
+
+- `wsl --status` reports WSL default version 2.
+- WSL 2 still cannot start because virtualization is not enabled on this machine.
+- Docker Desktop is installed, but the Docker engine cannot run until virtualization is enabled and Docker Desktop starts successfully.
+
+Next step: restart the laptop, then open Docker Desktop. If Docker/WSL still reports virtualization disabled, enable CPU virtualization in BIOS/UEFI before continuing n8n setup.

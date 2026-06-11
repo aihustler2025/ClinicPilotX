@@ -139,7 +139,11 @@ Last updated: 2026-05-27
 - [x] Clone official GitHub repo onto laptop at `%USERPROFILE%\Documents\ClinicPilotX`.
 - [x] Verify Git is installed on laptop.
 - [x] Check whether Docker Desktop is installed on laptop.
-- [ ] Install Docker Desktop on laptop if missing.
+- [x] Download and run Docker Desktop installer on laptop.
+- [x] Run elevated WSL setup commands for Docker Desktop.
+- [ ] Restart laptop after Docker/WSL setup.
+- [ ] Enable CPU virtualization in BIOS/UEFI if Windows still reports virtualization disabled.
+- [ ] Confirm Docker Desktop engine starts successfully.
 - [ ] Run local n8n Docker container on laptop as `clinicpilotx-n8n`.
 - [ ] Verify `http://localhost:5678` opens on laptop.
 - [ ] Create local-only n8n owner account.
