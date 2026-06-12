@@ -198,11 +198,17 @@ Last updated: 2026-06-11
 - [x] Test Leads status filter pills at a first-pass level.
 - [x] Create additional dummy leads for chatbot/email intake testing.
 - [ ] Investigate why editing dummy lead changed status/temperature automatically.
+- [x] Ask Lovable to improve Leads phone input, service selector, export UX, details timeline/files placeholders, and edit safety.
+- [x] Publish-test Lovable Leads v2 improvement build.
+- [ ] Fix remaining Leads temperature mutation: notes-only edit must not change `Cold` to `Hot`.
+- [ ] Add visible phone validation errors for invalid phone numbers.
+- [ ] Adjust U.S./Canada phone display toward `+1 (213) 555-0199` while keeping E.164 storage.
+- [ ] Retest Leads export dialog after the blocking temperature issue is fixed.
 - [ ] Investigate Leads `Show Converted` count/table inconsistency.
 - [ ] Improve Leads export UX: scope, filters, file type, columns, filename.
-- [ ] Improve Leads phone input with country picker, auto-formatting, validation, and normalized storage.
-- [ ] Improve Leads service requested field with searchable service dropdown and custom service support.
-- [ ] Improve Leads details view with richer timeline/communication/files/follow-up context.
+- [x] Improve Leads phone input with country picker, auto-formatting, validation, and normalized storage.
+- [x] Improve Leads service requested field with searchable service dropdown and custom service support.
+- [x] Improve Leads details view with richer timeline/communication/files/follow-up context.
 - [ ] Prepare Leads for future chatbot, website contact form, email inquiry, phone, and social intake sources.
 - [ ] Have human tester verify Leads export file contents.
 - [ ] Investigate why appointment booking closes without visible success or new appointment row.

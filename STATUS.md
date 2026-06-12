@@ -412,3 +412,40 @@ Additional dummy data added:
 New confirmed concern:
 
 - After creating `CPX TEST Email Lead 01`, the previously created `CPX TEST Chatbot Lead 01` changed from `NEW LEAD`/Cold to `CONTACTED`/Hot without explicit editing. The status/temperature mutation bug is broader than the earlier edit-flow concern.
+
+## 2026-06-11 Published Leads v2 QA After Lovable Build
+
+Ross approved and published Lovable's Leads module improvement build. Codex tested the live published app at:
+
+`https://clinic-pilot-x.lovable.app/leads`
+
+New dummy lead created:
+
+- `CPX TEST Leads V2 20260611-19504`
+- `cpx.test+leads-v2-20260611-19504@example.com`
+
+Verified:
+
+- Add Lead dialog now includes contact, phone country selector, service selector, source, preferred contact, urgency, consent, and notes fields.
+- Phone accepts digits-only input and stores normalized E.164 value, verified as `+12135550199`.
+- Service selector saved `Botox`.
+- New dummy lead initially saved as `NEW LEAD` and `Cold`.
+- Lead Details tabs now include Overview, Timeline, Comms, Files, and Activity.
+- Timeline logs `Lead created` and `Lead edited`.
+- Files tab correctly shows a disabled future storage/upload placeholder and no live upload path.
+
+Blocking issue still present:
+
+- Editing only the notes on the new dummy lead changed temperature from `Cold` to `Hot` while status stayed `NEW LEAD`. Lovable's response claimed edit safety and scoped temperature triggers, but live QA shows temperature is still being recalculated/mutated by a safe edit.
+
+Additional polish issues:
+
+- Invalid phone entry such as `5551234567` kept the create dialog open without an obvious visible validation message during QA.
+- U.S. phone display currently appears like `+1 213 555 0199`; Ross requested the cleaner display style `+1 (213) 555-0199` for U.S./Canada-style numbers.
+- Export dialog could not be fully verified from the active detail-panel state in this pass and still needs retest after Lovable fixes the blocking temperature issue.
+
+New Lovable fix request saved at:
+
+`docs/handoffs/Lovable-paste-message-005-leads-v2-qa-fixes.md`
+
+Current next step: send the above GitHub handoff link to Lovable in Plan mode and do not treat Leads as complete until the notes-only edit preserves both status and temperature.

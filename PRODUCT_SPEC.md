@@ -106,6 +106,24 @@ Open product/engineering issues:
 
 These issues should be clarified or fixed before writing final customer-facing tutorials for lead conversion and appointment booking.
 
+## Leads Published v2 QA - 2026-06-11
+
+After Lovable's Leads improvement build was approved and published, Codex verified the following live behavior:
+
+- Manual lead creation supports expanded lead intake fields: contact info, country-aware phone input, service selector, source, preferred contact, urgency, consent, and notes.
+- Phone storage normalizes to E.164, verified with `+12135550199`.
+- Service selection saved a catalog value, verified with `Botox`.
+- Lead Details now has Overview, Timeline, Comms, Files, and Activity tabs.
+- Timeline records created and edited events.
+- Files tab is intentionally disabled for now and explains that future file/photo uploads require a storage backend.
+
+Still incomplete:
+
+- A notes-only lead edit changed the test lead temperature from `Cold` to `Hot`. Lead status stayed `NEW LEAD`, but temperature mutation on safe edits is not acceptable for final behavior.
+- Invalid phone input needs a visible validation message.
+- U.S./Canada display formatting should be improved toward `+1 (213) 555-0199`, while keeping normalized E.164 database storage.
+- Export dialog still needs a clean retest after the blocking temperature issue is fixed.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:
