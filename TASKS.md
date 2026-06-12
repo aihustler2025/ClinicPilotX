@@ -211,10 +211,23 @@ Last updated: 2026-06-12
 - [x] Improve Leads details view with richer timeline/communication/files/follow-up context.
 - [ ] Prepare Leads for future chatbot, website contact form, email inquiry, phone, and social intake sources.
 - [ ] Verify Leads export downloaded CSV contents in a normal browser: filename, row count, headers, selected columns, filtered scope, and phone format.
-- [ ] Investigate why appointment booking closes without visible success or new appointment row.
-- [ ] Test patient record editing.
+- [x] Investigate why appointment booking closes without visible success or new appointment row.
+- [x] Test patient record editing path availability.
 - [ ] Retest appointment booking after backend/UI issue is understood.
 - [ ] Verify Dashboard and Analytics update after dummy data changes.
+
+## Patients / Appointments QA Tasks Added 2026-06-12
+
+- [x] Open converted dummy patient from Patients list.
+- [x] Verify patient detail panel content.
+- [x] Check for visible patient edit/update action.
+- [x] Test patient-detail `Book Appointment` button without live sends.
+- [x] Create Lovable plan-mode handoff for patient edit and appointment booking issues.
+- [ ] Send Lovable handoff 006 in Plan mode.
+- [ ] Review Lovable response before approving build.
+- [ ] After approved build/publish, retest patient edit persistence.
+- [ ] After approved build/publish, retest patient-detail booking modal.
+- [ ] After approved build/publish, retest appointment creation persistence and success/error feedback.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 

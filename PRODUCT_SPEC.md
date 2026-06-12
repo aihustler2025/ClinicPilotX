@@ -167,6 +167,30 @@ Still pending:
 
 - Downloaded CSV content verification, including filename, headers, row count, filtered scope, selected columns, and phone format. The Codex in-app browser cannot save downloads, and Chrome extension control was not available in this session.
 
+## Patients / Appointments QA - 2026-06-12
+
+Codex tested the converted dummy patient `CPX TEST Lead June 11`.
+
+Verified:
+
+- Converted patient appears in Patients.
+- Patient detail panel opens.
+- Detail panel includes patient identity, contact information, medical information, appointments, transactions, notes, and action buttons.
+
+Current issues:
+
+- No clear patient edit/update action is visible from the detail panel.
+- Patient-detail `Book Appointment` did not open a booking modal or visible booking state.
+- Appointment creation persistence remains suspect from the earlier Appointments module test, where a dummy booking closed the form without visible success or a new row.
+
+Expected future behavior:
+
+- Staff can edit patient details safely from the patient profile.
+- Patient edits persist after close/reopen and refresh.
+- Patient-detail booking opens a prefilled appointment booking flow.
+- Appointment save shows clear success or clear error feedback.
+- Booking must not trigger SMS/email/payment/reminder side effects unless explicitly enabled and approved.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

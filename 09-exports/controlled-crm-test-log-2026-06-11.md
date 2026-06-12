@@ -43,6 +43,29 @@ Additional issue reconfirmed:
 
 Detailed note: `09-exports/leads-export-qa-2026-06-12.md`.
 
+## 2026-06-12 Patients / Appointments Retest
+
+Dummy patient:
+
+- `CPX TEST Lead June 11`
+- `cpx.test+lead-20260611@example.com`
+- UI patient ID: `#PT00024`
+
+Verified:
+
+- Patient appears in Patients list.
+- Clicking the patient opens the patient detail panel.
+- Detail panel shows contact info, medical information, appointments, transactions, and notes.
+- No live Call, Message, Video, payment, reminder, or workflow action was triggered.
+
+Issues:
+
+- No visible patient edit/update action was found.
+- Clicking `Book Appointment` from the patient detail panel did not open a booking dialog or visible booking state.
+- Prior Appointments module booking persistence issue remains open.
+
+Detailed note: `09-exports/patients-appointments-qa-2026-06-12.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.
@@ -81,7 +104,10 @@ This log records safe dummy-data CRM testing after the first authenticated dashb
 | Leads v2 publish | Edit notes-only lead | Fail | Edited only notes on `CPX TEST Leads V2 20260611-19504`. Save succeeded and Timeline logged `Lead edited`, but temperature changed from `Cold` to `Hot`. Status stayed `NEW LEAD`. This contradicts the expected edit-safety behavior. |
 | Leads v2 publish | Details tabs | Pass | Lead Details includes Overview, Timeline, Comms, Files, and Activity. Timeline showed `Lead edited` and `Lead created`. Files tab shows disabled future upload/storage placeholder. |
 | Leads v2 publish | Export dialog | Not completed | Export could not be fully verified from the active detail-panel state during this pass. Retest after the blocking temperature mutation issue is fixed. |
-| Patients | Verify converted patient | Pass with concern | Patient appeared in Patients search with name, email, phone, active status, 0 visits, and $0.00. Concern: page header briefly showed `No Plan` before returning to `Professional`. |
+| Patients | Verify converted patient | Pass with concern | Patient appeared in Patients list/search with name, email, phone, active status, 0 visits, and $0.00. Concern: page header can briefly show `No Plan` before returning to `Professional`. |
+| Patients | Open converted patient detail | Pass | Detail panel opened for `CPX TEST Lead June 11` and showed contact info, medical info, appointments, transactions, and notes. |
+| Patients | Edit patient path | Fail / missing UX | No obvious `Edit Patient`, `Update`, or `Save` action was visible from the patient detail panel. |
+| Patients | Book appointment from patient detail | Fail / no visible response | Clicking `Book Appointment` from the patient detail panel did not open a booking dialog or visible booking state. |
 | Appointments | Book dummy appointment | Fail / inconclusive | Booking form listed the converted patient, auto-filled patient contact fields, accepted service/fee/notes, and accepted time after direct time-field fill. After submit, modal closed but no success message appeared, total remained 26, and the `CPX TEST Appointment Audit` record was not visible in the appointment list. |
 | Communication Hub | Read-only conversation review | Pending | Do not send. |
 | Payments | Read-only/draft-only invoice review | Pending | Do not create live payment link. |

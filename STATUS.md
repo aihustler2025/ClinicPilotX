@@ -507,3 +507,34 @@ Detailed QA note saved at:
 `09-exports/leads-export-qa-2026-06-12.md`
 
 Current next step: continue the controlled CRM audit with Patients edit and Appointments booking persistence. Leads export file-content QA remains pending for a normal browser download.
+
+## 2026-06-12 Patients / Appointments QA
+
+Codex continued controlled QA using the converted dummy patient:
+
+- `CPX TEST Lead June 11`
+- `cpx.test+lead-20260611@example.com`
+- UI patient ID: `#PT00024`
+
+Verified:
+
+- Patients page loads with `Professional` visible.
+- Converted dummy patient appears in the Patients list.
+- Clicking the dummy patient opens a patient detail panel.
+- Detail panel shows contact information, medical information, appointments, transactions, notes, and action buttons.
+
+Issues found:
+
+- No obvious `Edit Patient` / update action is exposed from the patient detail panel.
+- Clicking `Book Appointment` from the patient detail panel did not open a booking dialog or visible booking state.
+- This compounds the prior appointment issue where booking from the Appointments module closed without visible success or a new appointment row.
+
+New detailed QA note:
+
+`09-exports/patients-appointments-qa-2026-06-12.md`
+
+New Lovable plan-mode handoff:
+
+`docs/handoffs/Lovable-paste-message-006-patients-appointments-qa-fixes.md`
+
+Current next step: send the Lovable handoff in Plan mode only, then review Lovable's plan before approving any build.
