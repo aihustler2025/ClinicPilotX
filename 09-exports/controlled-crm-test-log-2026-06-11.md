@@ -66,6 +66,34 @@ Issues:
 
 Detailed note: `09-exports/patients-appointments-qa-2026-06-12.md`.
 
+## 2026-06-12 Patients / Appointments Fix Retest
+
+Result: pass for the tested fix path.
+
+Dummy patient:
+
+- `CPX TEST Lead June 11`
+- `cpx.test+lead-20260611@example.com`
+- UI patient ID: `#PT00024`
+
+Verified:
+
+- Patient detail now includes an `Edit` button.
+- Editing patient notes saved successfully and persisted after reopening the detail panel.
+- Patient detail `Book Appointment` now opens the Appointments booking modal with the selected patient prefilled.
+- TEST toggle was checked by default.
+- TEST warning text was visible.
+- Blank service/time submission stayed in the modal and showed validation errors.
+- Valid TEST booking saved successfully.
+- Success toast said: `Appointment created for CPX TEST Lead June 11 on Jun 12, 2026 at 14:45 (TEST - no sends)`.
+- Appointments total increased to 27.
+- Appointment list showed `CPX TEST Appointment Audit 2026-06-12` with date `Jun 12, 2026`, time `2:45 PM`, status `Pending`, and a `TEST` badge.
+- Returning to Patients showed the appointment details from the patient side.
+
+No live Call, Message, Video, payment, reminder, SMS, email, or workflow action was triggered.
+
+Detailed note: `09-exports/patients-appointments-fix-qa-2026-06-12.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.
@@ -87,6 +115,7 @@ This log records safe dummy-data CRM testing after the first authenticated dashb
 | Lead | `CPX TEST Email Lead 01` / `cpx.test+email-lead-01@example.com` | Created for future email inquiry testing | Keep temporarily. Do not send live communications. |
 | Lead | `CPX TEST Leads V2 20260611-19504` / `cpx.test+leads-v2-20260611-19504@example.com` | Created after Lovable Leads v2 publish; edited for QA | Keep temporarily. Do not send live communications. |
 | Patient | `CPX TEST Lead June 11` / `cpx.test+lead-20260611@example.com` | Created through lead conversion and verified in Patients | Keep temporarily for downstream appointment testing. |
+| Appointment | `CPX TEST Appointment Audit 2026-06-12` for `CPX TEST Lead June 11` | Created as TEST appointment after Lovable fix; visible in Appointments and from patient side | Keep temporarily. Do not trigger live reminders/payments/sends. |
 
 ## Module Test Results
 
@@ -109,6 +138,10 @@ This log records safe dummy-data CRM testing after the first authenticated dashb
 | Patients | Edit patient path | Fail / missing UX | No obvious `Edit Patient`, `Update`, or `Save` action was visible from the patient detail panel. |
 | Patients | Book appointment from patient detail | Fail / no visible response | Clicking `Book Appointment` from the patient detail panel did not open a booking dialog or visible booking state. |
 | Appointments | Book dummy appointment | Fail / inconclusive | Booking form listed the converted patient, auto-filled patient contact fields, accepted service/fee/notes, and accepted time after direct time-field fill. After submit, modal closed but no success message appeared, total remained 26, and the `CPX TEST Appointment Audit` record was not visible in the appointment list. |
+| Patients/Appointments fix | Edit patient notes | Pass | Patient detail now has an `Edit` button. Notes-only edit saved and persisted after reopening. |
+| Patients/Appointments fix | Book appointment from patient detail | Pass | Button opened `/appointments` booking modal with `CPX TEST Lead June 11 (#PT00024)` prefilled. |
+| Patients/Appointments fix | Appointment required-field validation | Pass | Blank service/time submission stayed in the modal and showed validation errors. |
+| Patients/Appointments fix | Create TEST appointment | Pass | TEST toggle was on by default. Saved appointment showed success toast, increased total appointments to 27, appeared in list with TEST badge, and appeared from the patient side. |
 | Communication Hub | Read-only conversation review | Pending | Do not send. |
 | Payments | Read-only/draft-only invoice review | Pending | Do not create live payment link. |
 | Automation Center | Configure-panel read-only review | Pending | Do not save/send/activate. |

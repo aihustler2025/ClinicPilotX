@@ -538,3 +538,32 @@ New Lovable plan-mode handoff:
 `docs/handoffs/Lovable-paste-message-006-patients-appointments-qa-fixes.md`
 
 Current next step: send the Lovable handoff in Plan mode only, then review Lovable's plan before approving any build.
+
+## 2026-06-12 Patients / Appointments Fix QA After Lovable Publish
+
+Ross approved and published Lovable's Patients/Appointments fix build.
+
+Codex retested the live published app with the converted dummy patient:
+
+- `CPX TEST Lead June 11`
+- `cpx.test+lead-20260611@example.com`
+- UI patient ID: `#PT00024`
+
+Verified:
+
+- Patient detail now exposes an `Edit` button.
+- Patient notes edit saved and persisted after reopening the patient detail panel.
+- Patient detail `Book Appointment` now opens a prefilled booking modal on `/appointments`.
+- TEST toggle is on by default for this patient-detail booking path.
+- Required-field validation keeps the booking modal open and shows visible errors.
+- A valid TEST appointment saved successfully.
+- Success toast explicitly included `TEST - no sends`.
+- Appointments count increased to 27.
+- The new appointment row appeared with service `CPX TEST Appointment Audit 2026-06-12`, date `Jun 12, 2026`, time `2:45 PM`, status `Pending`, and a `TEST` badge.
+- Returning to Patients showed the appointment details from the patient side.
+
+Detailed note saved at:
+
+`09-exports/patients-appointments-fix-qa-2026-06-12.md`
+
+Current next step: continue broader Appointments QA, including calendar behavior, status changes, dashboard/analytics updates, and Lovable/Supabase confirmation that TEST rows cannot trigger live sends even when workflows are active.

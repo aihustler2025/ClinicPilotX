@@ -67,8 +67,8 @@ First authenticated read-only module audit completed on 2026-06-11. See:
 | --- | --- | --- | --- |
 | Dashboard | Partially verified | Authenticated browser audit | Loads with dashboard metrics and sections, but metrics need data-source validation. |
 | Leads | Partially verified | Authenticated browser audit | 11 leads visible with filters/search/export/Add Lead; CRUD and conversion need controlled test data. |
-| Patients | Partially verified | Authenticated browser audit + controlled CRM QA | Patient list, statuses, visits/revenue, search/filter/export/Add Patient visible. Lead-to-patient conversion verified with dummy record. Patient editing still needs testing. |
-| Appointments | Partially verified / issue found | Authenticated browser audit + controlled CRM QA | 26 appointments visible; list and calendar views open. Booking form lists converted patient and auto-fills contact info, but dummy booking attempt closed without visible success and did not show a new row. |
+| Patients | Partially verified | Authenticated browser audit + controlled CRM QA | Patient list, statuses, visits/revenue, search/filter/export/Add Patient visible. Lead-to-patient conversion verified with dummy record. Patient detail edit now exists and persisted notes in QA. |
+| Appointments | Partially verified | Authenticated browser audit + controlled CRM QA | List and calendar views open. Patient-detail booking now opens a prefilled appointment form, validates required fields, and successfully saved a TEST appointment with TEST badge. Broader calendar/status/reminder/payment behavior still needs QA. |
 | Communication Hub | Partially verified | Authenticated browser audit | External Messages and Internal Chat tabs open; message sending not tested. |
 | Video Consultation | Incomplete | Authenticated browser audit | Route shows `Coming Soon`. |
 | Payments & Billing | Partially verified | Authenticated browser audit | Payment/invoice UI visible; payment link/Stripe flows not tested. |
@@ -190,6 +190,29 @@ Expected future behavior:
 - Patient-detail booking opens a prefilled appointment booking flow.
 - Appointment save shows clear success or clear error feedback.
 - Booking must not trigger SMS/email/payment/reminder side effects unless explicitly enabled and approved.
+
+## Patients / Appointments Fix QA - 2026-06-12
+
+After Lovable's Patients/Appointments fix was approved and published, Codex retested the converted dummy patient.
+
+Verified:
+
+- Patient detail now includes an `Edit` action.
+- Patient notes edit saved and remained visible after reopening the detail panel.
+- Patient detail `Book Appointment` now opens a booking modal on `/appointments`.
+- The booking modal prefilled the selected patient.
+- TEST mode is checked by default in this QA path.
+- Required field validation is visible and prevents incomplete appointment creation.
+- A valid TEST appointment saved successfully.
+- The success toast explicitly stated `TEST - no sends`.
+- The Appointments list showed the new row with a `TEST` badge.
+- The new appointment details were visible from the patient side.
+
+Current Patients/Appointments status:
+
+- The previously blocking patient edit and patient-detail booking issues are resolved for the tested dummy-data path.
+- Patients and Appointments remain partially verified overall until broader calendar, status, reminder, payment, dashboard/analytics, and workflow-safety checks are complete.
+- TEST-row automation safety should still be confirmed by Lovable/Supabase code or log review before real client testing with active workflows.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

@@ -223,11 +223,18 @@ Last updated: 2026-06-12
 - [x] Check for visible patient edit/update action.
 - [x] Test patient-detail `Book Appointment` button without live sends.
 - [x] Create Lovable plan-mode handoff for patient edit and appointment booking issues.
-- [ ] Send Lovable handoff 006 in Plan mode.
-- [ ] Review Lovable response before approving build.
-- [ ] After approved build/publish, retest patient edit persistence.
-- [ ] After approved build/publish, retest patient-detail booking modal.
-- [ ] After approved build/publish, retest appointment creation persistence and success/error feedback.
+- [x] Send Lovable handoff 006 in Plan mode.
+- [x] Review Lovable response before approving build.
+- [x] After approved build/publish, retest patient edit persistence.
+- [x] After approved build/publish, retest patient-detail booking modal.
+- [x] After approved build/publish, retest appointment creation persistence and success/error feedback.
+- [x] Verify TEST toggle defaults on for patient-detail booking QA path.
+- [x] Verify new TEST appointment appears in the Appointments list with TEST badge.
+- [x] Verify the new appointment is visible from the patient side.
+- [ ] Confirm through Lovable/Supabase code/log review that TEST appointment rows cannot trigger SMS/email/payment/reminder workflows.
+- [ ] Retest Appointments calendar view after new test appointment creation.
+- [ ] Retest appointment status changes using dummy TEST appointment only.
+- [ ] Verify Dashboard and Analytics update after dummy appointment changes.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 
