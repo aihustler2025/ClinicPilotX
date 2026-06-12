@@ -203,14 +203,14 @@ Last updated: 2026-06-12
 - [x] Fix remaining Leads temperature mutation: notes-only edit must not change `Cold` to `Hot`.
 - [x] Add visible phone validation errors for invalid phone numbers.
 - [x] Adjust U.S./Canada phone display toward `+1 (213) 555-0199` while keeping E.164 storage in Lead Details.
-- [ ] Retest Leads export dialog after the blocking temperature issue is fixed.
+- [x] Retest Leads export dialog after the blocking temperature issue is fixed.
 - [ ] Investigate Leads `Show Converted` count/table inconsistency.
 - [ ] Improve Leads export UX: scope, filters, file type, columns, filename.
 - [x] Improve Leads phone input with country picker, auto-formatting, validation, and normalized storage.
 - [x] Improve Leads service requested field with searchable service dropdown and custom service support.
 - [x] Improve Leads details view with richer timeline/communication/files/follow-up context.
 - [ ] Prepare Leads for future chatbot, website contact form, email inquiry, phone, and social intake sources.
-- [ ] Have human tester verify Leads export file contents.
+- [ ] Verify Leads export downloaded CSV contents in a normal browser: filename, row count, headers, selected columns, filtered scope, and phone format.
 - [ ] Investigate why appointment booking closes without visible success or new appointment row.
 - [ ] Test patient record editing.
 - [ ] Retest appointment booking after backend/UI issue is understood.
@@ -226,4 +226,5 @@ Last updated: 2026-06-12
 - [x] Verify Timeline records created/edited events.
 - [x] Verify Lead Details includes formatted U.S. phone display.
 - [ ] Decide whether main Leads table should also display formatted phone numbers instead of E.164.
-- [ ] Retest Export dialog with scope/column selection and downloaded CSV contents.
+- [x] Retest Export dialog UI with scope and column selection.
+- [ ] Retest Export downloaded CSV contents in a browser that supports downloads.

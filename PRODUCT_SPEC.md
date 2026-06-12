@@ -147,6 +147,25 @@ Remaining Leads polish:
 
 - The main Leads table still shows E.164 phone values such as `+12135550199`; detail formatting is fixed, but table formatting should be reviewed.
 - Invalid-phone helper copy should ideally match the preferred display format.
+- Export dialog UI now supports scope, column selection, and estimated row count, but downloaded CSV contents are not yet verified.
+
+## Leads Export QA - 2026-06-12
+
+Codex retested the live Leads export dialog after the Leads v2 fixes.
+
+Verified:
+
+- Export opens a CSV-specific dialog.
+- Scope choices include all leads, current filters, and selected-only leads.
+- Current filters were selected by default.
+- Selected-only was disabled when no rows were selected.
+- Column picker includes key lead fields.
+- Column toggles work.
+- Dialog shows the number of rows that will export.
+
+Still pending:
+
+- Downloaded CSV content verification, including filename, headers, row count, filtered scope, selected columns, and phone format. The Codex in-app browser cannot save downloads, and Chrome extension control was not available in this session.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

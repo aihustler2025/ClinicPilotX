@@ -20,6 +20,29 @@ Results:
 
 Decision: previous Leads temperature mutation blocker is resolved for the tested path. Continue Leads export, Patients edit, and Appointments booking QA next.
 
+## 2026-06-12 Leads Export Retest
+
+Result: partially verified.
+
+Verified:
+
+- Leads export now opens an `Export Leads to CSV` dialog.
+- Dialog offers `All leads (15)`, `Current filters (15)`, and disabled `Selected only (0)` when no rows are selected.
+- `Current filters (15)` is selected by default.
+- Dialog offers column toggles for Name, Email, Phone, Source, Service, Status, Temperature, Score, Preferred Contact, Urgency, Notes, and Created.
+- Column picker works. Codex unchecked `Phone` and verified it changed to unchecked.
+- Dialog showed `15 rows will be exported`.
+
+Not verified:
+
+- Downloaded CSV file contents, because the Codex in-app browser does not support downloads and Chrome extension control was unavailable in this session.
+
+Additional issue reconfirmed:
+
+- Leads briefly showed `No Plan` and 0 leads until the page Refresh control restored `Professional` and 15 leads.
+
+Detailed note: `09-exports/leads-export-qa-2026-06-12.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.
@@ -53,7 +76,7 @@ This log records safe dummy-data CRM testing after the first authenticated dashb
 | Leads | View Details | Pass | Details dialog opened for the dummy lead. It showed status, temperature, response time, score area, contact info, service requested, notes, created/updated timeline, and buttons for Call, Email, Message, Edit Lead, Calculate Score, Mark as Lost, and Convert to Patient. No live communication buttons were clicked. |
 | Leads | Convert to Patient | Pass | Conversion showed success text: `CPX TEST Lead June 11 has been converted to a patient`. Lead count returned to the prior value and search no longer found the lead in the default active lead list. |
 | Leads | Status filter pills | Pass with concerns | All/New/Contacted/Qualified/Booked/Lost/Show Converted pills were clickable and changed table/filter state. Concern: summary cards still show overall counts rather than filtered counts. `Show Converted 0` displayed confusing count behavior, including Total Leads changing to 14 while the table showed no rows. |
-| Leads | Export | Needs human download verification | Export appears as a single button with no visible scope/format selector. Codex in-app browser cannot inspect downloaded files directly. Human QA should confirm whether it exports all leads or current filters and what columns/file type are included. |
+| Leads | Export | Partial pass; CSV download still pending | Export now opens a CSV dialog with scope selection, column picker, and estimated row count. Column toggles work. Codex could not verify the downloaded CSV file because the in-app browser does not support downloads. |
 | Leads v2 publish | Create lead with new form | Pass with notes | Created `CPX TEST Leads V2 20260611-19504`. Verified country-aware phone input, digits-only entry, E.164 storage `+12135550199`, service selector value `Botox`, default source `Manual`, initial status `NEW LEAD`, and initial temperature `Cold`. Invalid fake number `5551234567` appeared to fail without a visible validation message. |
 | Leads v2 publish | Edit notes-only lead | Fail | Edited only notes on `CPX TEST Leads V2 20260611-19504`. Save succeeded and Timeline logged `Lead edited`, but temperature changed from `Cold` to `Hot`. Status stayed `NEW LEAD`. This contradicts the expected edit-safety behavior. |
 | Leads v2 publish | Details tabs | Pass | Lead Details includes Overview, Timeline, Comms, Files, and Activity. Timeline showed `Lead edited` and `Lead created`. Files tab shows disabled future upload/storage placeholder. |

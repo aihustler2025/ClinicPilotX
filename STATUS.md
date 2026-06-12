@@ -479,4 +479,31 @@ Remaining non-blocking polish:
 - The invalid-phone helper example still uses spaced format rather than the preferred U.S./Canada display style.
 - Export dialog still needs a focused retest.
 
-Current next step: update tasks/spec/test log, commit/push this QA record, then continue the controlled CRM audit with Leads export, Patients edit, and Appointments booking persistence.
+## 2026-06-12 Leads Export QA
+
+Codex performed a focused Leads export retest on the live published app.
+
+Verified:
+
+- Leads page returned to `Professional` state and 15 leads after using the page Refresh control.
+- Export now opens an `Export Leads to CSV` dialog.
+- Dialog includes scope choices for all leads, current filters, and selected-only leads.
+- `Current filters (15)` is selected by default.
+- `Selected only (0)` is disabled when no rows are selected.
+- Dialog includes a column picker for lead fields.
+- Column toggles are interactive; Codex unchecked `Phone` and verified the unchecked state.
+- Dialog shows an estimated export count: `15 rows will be exported`.
+
+Not verified:
+
+- Actual CSV file contents, filename, row count, headers, and column inclusion/exclusion, because the Codex in-app browser reports downloads are not supported and Chrome extension control was unavailable in this session.
+
+Additional issue reconfirmed:
+
+- The `No Plan` / 0-lead subscription/data-load flicker still appears before page Refresh restores `Professional` / 15 leads.
+
+Detailed QA note saved at:
+
+`09-exports/leads-export-qa-2026-06-12.md`
+
+Current next step: continue the controlled CRM audit with Patients edit and Appointments booking persistence. Leads export file-content QA remains pending for a normal browser download.
