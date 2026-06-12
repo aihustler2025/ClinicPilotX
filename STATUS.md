@@ -567,3 +567,26 @@ Detailed note saved at:
 `09-exports/patients-appointments-fix-qa-2026-06-12.md`
 
 Current next step: continue broader Appointments QA, including calendar behavior, status changes, dashboard/analytics updates, and Lovable/Supabase confirmation that TEST rows cannot trigger live sends even when workflows are active.
+
+## 2026-06-12 QA Process Clarification and Patients Polish Direction
+
+Ross clarified that every module needs both:
+
+- Codex-run QA, where Codex directly tests the module.
+- Human-assistant QA scripts, so Ross or a future assistant can repeat the same checks step by step.
+
+Codex added:
+
+- `docs/qa/patients-human-qa-script.md`
+- `docs/qa/appointments-human-qa-script.md`
+- `docs/phone-number-standard.md`
+- `docs/handoffs/Lovable-paste-message-007-patients-module-and-phone-standard.md`
+
+Product decision:
+
+- Store canonical phone numbers in E.164 for Twilio/VAPI readiness, for example `+15558878888`.
+- Display phone numbers in friendly localized format, for example `+1 (555) 887-8888` for U.S./Canada.
+- Staff should type digits only after choosing a country; they should not type parentheses, spaces, or dashes.
+- Leads and Patients should use the same shared phone input behavior.
+
+Current next step: send Lovable handoff 007 in Plan mode only for Patients export and shared phone input polish.

@@ -57,6 +57,22 @@ There may be two Lovable projects:
 
 Do not assume they are merged. Lovable must clarify project IDs, URLs, GitHub connections, Supabase/backends, hosting status, and merge readiness before build decisions.
 
+## Phone Number Standard
+
+ClinicPilotX should store phone numbers in E.164 format for integrations and display them in user-friendly localized format in the UI.
+
+Product requirement:
+
+- U.S./Canada user input: staff can type digits only, such as `5558878888`.
+- U.S./Canada display: `+1 (555) 887-8888`.
+- Canonical database/API value: `+15558878888`.
+- Use libphonenumber-style parsing, formatting, and validation rather than custom regex.
+- Reuse the same phone input behavior across Leads, Patients, Staff, Settings, and future intake forms.
+
+Detailed standard:
+
+`docs/phone-number-standard.md`
+
 ## Module Registry
 
 First authenticated read-only module audit completed on 2026-06-11. See:
@@ -146,7 +162,7 @@ Current Leads status:
 Remaining Leads polish:
 
 - The main Leads table still shows E.164 phone values such as `+12135550199`; detail formatting is fixed, but table formatting should be reviewed.
-- Invalid-phone helper copy should ideally match the preferred display format.
+- Invalid-phone helper copy and phone field display should match the preferred U.S./Canada display format.
 - Export dialog UI now supports scope, column selection, and estimated row count, but downloaded CSV contents are not yet verified.
 
 ## Leads Export QA - 2026-06-12
@@ -213,6 +229,19 @@ Current Patients/Appointments status:
 - The previously blocking patient edit and patient-detail booking issues are resolved for the tested dummy-data path.
 - Patients and Appointments remain partially verified overall until broader calendar, status, reminder, payment, dashboard/analytics, and workflow-safety checks are complete.
 - TEST-row automation safety should still be confirmed by Lovable/Supabase code or log review before real client testing with active workflows.
+
+## Patients Module Polish Requirements - 2026-06-12
+
+Patients needs its own module polish pass separate from the patient-to-appointment cross-module workflow.
+
+Required improvements:
+
+- Add Patient and Edit Patient should use the same shared country-aware phone input standard as Leads.
+- Staff should type digits only and see friendly U.S./Canada formatting such as `+1 (555) 887-8888`.
+- Patient phone values should be stored canonically in E.164 for Twilio/VAPI readiness.
+- Patients export should open a scoped export dialog similar to Leads export, with all/current-filter/selected scope, column selection, row count, and clear filename.
+- Patients delete must require clear confirmation and should be tested only with dummy records.
+- Human QA script exists at `docs/qa/patients-human-qa-script.md`.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

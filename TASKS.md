@@ -235,6 +235,15 @@ Last updated: 2026-06-12
 - [ ] Retest Appointments calendar view after new test appointment creation.
 - [ ] Retest appointment status changes using dummy TEST appointment only.
 - [ ] Verify Dashboard and Analytics update after dummy appointment changes.
+- [x] Create Patients human QA script for Ross's assistant.
+- [x] Create Appointments human QA script for Ross's assistant.
+- [x] Document ClinicPilotX phone number standard for UI display and E.164 storage.
+- [x] Create Lovable plan-mode handoff for Patients export and shared phone input polish.
+- [ ] Send Lovable handoff 007 in Plan mode.
+- [ ] Review Lovable response before approving any Patients module polish build.
+- [ ] Improve Patients Add/Edit phone input to match Leads/shared phone standard.
+- [ ] Improve Patients export UX to match Leads export dialog pattern.
+- [ ] Fully test Patients module as its own module: add, view, edit, export, filters/sort, delete confirmation.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 
@@ -245,6 +254,8 @@ Last updated: 2026-06-12
 - [x] Perform notes-only edit and verify status/temperature stay unchanged.
 - [x] Verify Timeline records created/edited events.
 - [x] Verify Lead Details includes formatted U.S. phone display.
-- [ ] Decide whether main Leads table should also display formatted phone numbers instead of E.164.
+- [x] Decide whether main Leads table should also display formatted phone numbers instead of E.164.
+- [ ] Adjust Leads phone field display so U.S./Canada formatting appears as `+1 (213) 555-0199` while typing/displaying, with E.164 storage underneath.
+- [ ] Update Leads main table phone display to use friendly formatted phone numbers instead of raw E.164.
 - [x] Retest Export dialog UI with scope and column selection.
 - [ ] Retest Export downloaded CSV contents in a browser that supports downloads.
