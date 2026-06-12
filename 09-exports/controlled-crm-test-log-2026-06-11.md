@@ -2,6 +2,24 @@
 
 Date: 2026-06-11
 
+## 2026-06-12 Leads v2 Fix Retest
+
+Dummy lead:
+
+- `CPX TEST Leads V2 fixB-678321`
+- `cpx.test+leads-v2-fixb-678321@example.com`
+
+Results:
+
+- Invalid phone validation is now visible and blocks creation.
+- Valid U.S. digits create a normalized E.164 phone value.
+- New lead started `NEW LEAD` and `Cold`.
+- Notes-only edit preserved `NEW LEAD` and `Cold`.
+- Timeline showed `Lead created` and `Lead edited`.
+- Detail panel showed `+1 (213) 555-0199`.
+
+Decision: previous Leads temperature mutation blocker is resolved for the tested path. Continue Leads export, Patients edit, and Appointments booking QA next.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

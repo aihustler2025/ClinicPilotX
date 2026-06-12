@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-11
+Last updated: 2026-06-12
 
 ## Current State
 
@@ -449,3 +449,34 @@ New Lovable fix request saved at:
 `docs/handoffs/Lovable-paste-message-005-leads-v2-qa-fixes.md`
 
 Current next step: send the above GitHub handoff link to Lovable in Plan mode and do not treat Leads as complete until the notes-only edit preserves both status and temperature.
+
+## 2026-06-12 Leads v2 Fix QA After Lovable Publish
+
+Ross approved and published Lovable's Leads v2 QA fix build.
+
+Codex retested the live published app at:
+
+`https://clinic-pilot-x.lovable.app/leads`
+
+New dummy lead created:
+
+- `CPX TEST Leads V2 fixB-678321`
+- `cpx.test+leads-v2-fixb-678321@example.com`
+
+Verified:
+
+- Invalid phone input now shows a visible inline validation message and blocks creation.
+- Replacing invalid phone input with valid U.S. digits clears the validation message.
+- Lead creation with valid phone succeeds after consent is checked.
+- New lead starts as `NEW LEAD` and `Cold`.
+- Notes-only edit preserves `NEW LEAD` and `Cold`; the previous temperature mutation blocker is resolved for this QA path.
+- Timeline shows both `Lead created` and `Lead edited`.
+- Lead detail panel includes the formatted U.S. phone display `+1 (213) 555-0199`.
+
+Remaining non-blocking polish:
+
+- The main Leads table still displays the normalized E.164 phone value `+12135550199`; consider formatting the table display too.
+- The invalid-phone helper example still uses spaced format rather than the preferred U.S./Canada display style.
+- Export dialog still needs a focused retest.
+
+Current next step: update tasks/spec/test log, commit/push this QA record, then continue the controlled CRM audit with Leads export, Patients edit, and Appointments booking persistence.

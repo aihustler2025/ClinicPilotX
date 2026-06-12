@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-11
+Last updated: 2026-06-12
 
 ## Product Purpose
 
@@ -123,6 +123,30 @@ Still incomplete:
 - Invalid phone input needs a visible validation message.
 - U.S./Canada display formatting should be improved toward `+1 (213) 555-0199`, while keeping normalized E.164 database storage.
 - Export dialog still needs a clean retest after the blocking temperature issue is fixed.
+
+## Leads v2 Fix QA - 2026-06-12
+
+After Lovable's QA fix build was approved and published, Codex retested the live Leads workflow.
+
+Verified final behavior for this pass:
+
+- Invalid phone numbers block lead creation and show an inline validation message.
+- Valid U.S. digits can be typed without punctuation and are accepted.
+- Manual lead creation still normalizes stored phone data to E.164.
+- Lead Details displays U.S./Canada-style phone formatting such as `+1 (213) 555-0199`.
+- A newly created lead starts as `NEW LEAD` and `Cold`.
+- Editing notes only no longer changes lead status or temperature.
+- Timeline records both `Lead created` and `Lead edited` events.
+
+Current Leads status:
+
+- Leads v2 critical temperature mutation blocker is resolved for the tested create/edit path.
+- Leads remains `Partially verified`, because export behavior, converted-lead filtering, patient/appointment continuation, and future intake-source readiness still need deeper QA.
+
+Remaining Leads polish:
+
+- The main Leads table still shows E.164 phone values such as `+12135550199`; detail formatting is fixed, but table formatting should be reviewed.
+- Invalid-phone helper copy should ideally match the preferred display format.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

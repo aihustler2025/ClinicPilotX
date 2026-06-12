@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-11
+Last updated: 2026-06-12
 
 ## In Progress
 
@@ -200,9 +200,9 @@ Last updated: 2026-06-11
 - [ ] Investigate why editing dummy lead changed status/temperature automatically.
 - [x] Ask Lovable to improve Leads phone input, service selector, export UX, details timeline/files placeholders, and edit safety.
 - [x] Publish-test Lovable Leads v2 improvement build.
-- [ ] Fix remaining Leads temperature mutation: notes-only edit must not change `Cold` to `Hot`.
-- [ ] Add visible phone validation errors for invalid phone numbers.
-- [ ] Adjust U.S./Canada phone display toward `+1 (213) 555-0199` while keeping E.164 storage.
+- [x] Fix remaining Leads temperature mutation: notes-only edit must not change `Cold` to `Hot`.
+- [x] Add visible phone validation errors for invalid phone numbers.
+- [x] Adjust U.S./Canada phone display toward `+1 (213) 555-0199` while keeping E.164 storage in Lead Details.
 - [ ] Retest Leads export dialog after the blocking temperature issue is fixed.
 - [ ] Investigate Leads `Show Converted` count/table inconsistency.
 - [ ] Improve Leads export UX: scope, filters, file type, columns, filename.
@@ -215,3 +215,15 @@ Last updated: 2026-06-11
 - [ ] Test patient record editing.
 - [ ] Retest appointment booking after backend/UI issue is understood.
 - [ ] Verify Dashboard and Analytics update after dummy data changes.
+
+## Leads v2 Fix QA Tasks Added 2026-06-12
+
+- [x] Approve and publish Lovable's Leads temperature/phone validation fix.
+- [x] Retest invalid phone entry with visible inline validation.
+- [x] Create a fresh dummy lead after the fix.
+- [x] Verify the fresh dummy lead starts `NEW LEAD` and `Cold`.
+- [x] Perform notes-only edit and verify status/temperature stay unchanged.
+- [x] Verify Timeline records created/edited events.
+- [x] Verify Lead Details includes formatted U.S. phone display.
+- [ ] Decide whether main Leads table should also display formatted phone numbers instead of E.164.
+- [ ] Retest Export dialog with scope/column selection and downloaded CSV contents.
