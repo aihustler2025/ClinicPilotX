@@ -130,6 +130,33 @@ No live sends/calls/payments/workflows were triggered.
 
 Detailed note: `09-exports/patients-phone-export-qa-repeat-2026-06-14.md`.
 
+## 2026-06-14 Patients Phone / Export Corrected Publish Retest
+
+Result: partial pass.
+
+Dummy patient created:
+
+- `CPX TEST Patient Phone QA 20260614`
+
+Verified:
+
+- Patients Add/Edit now uses shared country-aware phone inputs.
+- Valid U.S. digits were accepted and saved.
+- Invalid short phone values show validation.
+- The new dummy patient's main phone appears as `+1 (213) 555-0199`.
+- Patient detail shows formatted main and emergency phone values.
+- Edit Patient prefilled the shared phone inputs with the stored values.
+- Patients Export now opens `Export Patients to CSV` with all/current/selected scope, selected-only disabled at 0 selected, row count, and separate display/E.164 phone columns.
+- Leads Add Lead still opens with the shared phone input after the import refactor.
+
+Issues:
+
+- Optional Emergency Contact Phone defaults to `+1` and can block saving if staff leaves it untouched.
+- While typing, U.S. values display as `+1 213 555 0199` rather than the requested `+1 (213) 555-0199`.
+- CSV download contents are still unverified because the in-app browser does not support downloads.
+
+Detailed note: `09-exports/patients-phone-export-fix-qa-2026-06-14.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

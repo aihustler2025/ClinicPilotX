@@ -253,6 +253,16 @@ Last updated: 2026-06-14
 - [x] Create Lovable plan-mode fix request 009 for Patients publish mismatch.
 - [ ] Send Lovable handoff 009 in Plan mode.
 - [ ] Re-approve only after Lovable confirms the correct dashboard project, GitHub repo, publish target, and exact Patients phone/export implementation files.
+- [x] Review corrected Lovable Patients phone/export implementation after publish.
+- [x] Verify Patients Add/Edit now uses shared phone input.
+- [x] Verify Patients Export dialog now exists with scope, row count, and display/E.164 phone columns.
+- [x] Create Patients phone/export fix QA report after successful corrected publish.
+- [x] Create Lovable handoff 010 for remaining optional-phone/input-mask polish.
+- [ ] Send Lovable handoff 010 in Plan mode.
+- [ ] Fix optional phone fields so blank optional phones do not default to validation-blocking `+1`.
+- [ ] Retest Add Patient with valid main phone and blank emergency phone.
+- [ ] Retest Add Lead with blank optional phone.
+- [ ] Verify Patients exported CSV contents in a normal browser that supports downloads.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 

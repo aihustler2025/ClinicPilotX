@@ -647,3 +647,35 @@ New Lovable plan-mode fix request:
 `docs/handoffs/Lovable-paste-message-009-patients-publish-mismatch.md`
 
 Current next step: send Lovable handoff 009 in Plan mode only. Ask Lovable to confirm correct project, publish target, GitHub connection, and exact files before any further build approval.
+
+## 2026-06-14 Patients Phone / Export Fix QA Partial Pass
+
+Ross approved and published Lovable's corrected Patients phone/export implementation for the active ClinicPilotX dashboard.
+
+Codex QA-tested the live Patients module and confirmed the previous publish/workstream mismatch is resolved for this feature pass.
+
+Verified:
+
+- Patients Add/Edit now uses the shared country-aware phone input.
+- Existing and newly created patient phones display in friendly U.S./Canada format such as `+1 (213) 555-0199`.
+- Valid U.S. digits save successfully and persist.
+- Invalid short phone numbers show visible validation.
+- Patient detail shows formatted main and emergency phone values.
+- Patients Export now opens an `Export Patients to CSV` dialog with scope, row count, column picker, and separate display/E.164 phone columns.
+
+Remaining issues:
+
+- Optional phone fields can default to validation-blocking `+1`, especially Emergency Contact Phone in Add Patient.
+- U.S./Canada typing currently shows `+1 213 555 0199` inside the input rather than Ross's preferred `+1 (213) 555-0199`.
+- Export downloaded CSV contents still require a normal-browser download check because the Codex in-app browser cannot save downloads.
+- Leads may inherit the same optional `+1` behavior and should be checked/fixed at the shared component level.
+
+New QA report:
+
+`09-exports/patients-phone-export-fix-qa-2026-06-14.md`
+
+New Lovable plan-mode follow-up:
+
+`docs/handoffs/Lovable-paste-message-010-patients-phone-polish-followup.md`
+
+Current next step: send Lovable handoff 010 in Plan mode only. Do not mark Patients phone/export as complete until optional phone handling and export CSV content verification are resolved.

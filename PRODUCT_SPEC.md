@@ -271,6 +271,27 @@ Product status remains:
 - Patients phone/export polish is incomplete.
 - The correct Lovable dashboard project, publish target, GitHub connection, and branch/source context must be confirmed before another Patients build is approved.
 
+## Patients Phone / Export Fix QA - 2026-06-14
+
+After Lovable's corrected Patients phone/export implementation was approved and published, Codex verified that the feature is now landing on the active ClinicPilotX dashboard.
+
+Verified behavior:
+
+- Patients Add/Edit uses the shared international phone input.
+- Patient list and detail display U.S./Canada phone values in friendly format, such as `+1 (213) 555-0199`.
+- Patient phone values can be entered as digits and saved for integration-ready storage.
+- Invalid phone numbers show visible validation.
+- Patients Export now opens a scoped CSV dialog with row count and column picker.
+- Export columns separate friendly display phone values from canonical E.164 phone values.
+
+Remaining requirements:
+
+- Optional phone fields must not default to `+1` in a way that blocks saving when staff leaves them blank.
+- U.S./Canada input display should be polished toward `+1 (213) 555-0199` while typing, not only after save/display.
+- Exported CSV file contents still need browser-download verification.
+
+Current status: Patients phone/export is partially verified, not complete.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:
