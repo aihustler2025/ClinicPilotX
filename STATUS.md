@@ -590,3 +590,32 @@ Product decision:
 - Leads and Patients should use the same shared phone input behavior.
 
 Current next step: send Lovable handoff 007 in Plan mode only for Patients export and shared phone input polish.
+
+## 2026-06-14 Patients Phone / Export QA Failed After Publish
+
+Ross approved and published Lovable's revised Patients module polish / shared phone standard build.
+
+Codex QA-tested the live published Patients module at:
+
+`https://clinic-pilot-x.lovable.app/patients`
+
+Result: fail. The live app does not appear to include the planned Patients phone/export changes.
+
+Findings:
+
+- `Add Patient > Phone` is still a plain text input with placeholder `+1 (555) 123-4567`.
+- `Add Patient > Emergency Contact Phone` is still plain.
+- `Edit Patient > Phone` is still plain and showed raw E.164 for the dummy patient: `+15005550111`.
+- No country picker, flag, or `+1` selector was visible in Add/Edit Patient.
+- Clicking Patients `Export` did not open an export dialog with scope/columns/row count.
+- Patient list phone display remains mixed: friendly formatted values, raw E.164 values, and legacy hyphenated values.
+
+New QA report:
+
+`09-exports/patients-phone-export-qa-2026-06-14.md`
+
+New Lovable plan-mode fix request:
+
+`docs/handoffs/Lovable-paste-message-008-patients-phone-export-qa-failed.md`
+
+Current next step: send Lovable handoff 008 in Plan mode only. Do not treat Patients phone/export polish as complete.

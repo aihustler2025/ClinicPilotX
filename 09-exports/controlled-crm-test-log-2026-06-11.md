@@ -94,6 +94,24 @@ No live Call, Message, Video, payment, reminder, SMS, email, or workflow action 
 
 Detailed note: `09-exports/patients-appointments-fix-qa-2026-06-12.md`.
 
+## 2026-06-14 Patients Phone / Export Polish Retest
+
+Result: fail.
+
+Codex tested the live published Patients module after Ross approved and published Lovable's Patients phone/export polish build.
+
+Findings:
+
+- Add Patient phone fields are still plain inputs, not the shared country-aware phone component.
+- Edit Patient phone fields are still plain inputs.
+- Existing dummy patient `CPX TEST Lead June 11` still showed raw E.164 `+15005550111` in the edit form.
+- Patients Export did not open an export dialog with scope, columns, and row count.
+- Patient list phone display remains mixed across friendly, raw E.164, and legacy hyphenated formats.
+
+No new dummy patient was created because the requested form behavior was visibly missing.
+
+Detailed note: `09-exports/patients-phone-export-qa-2026-06-14.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

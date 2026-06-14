@@ -243,6 +243,23 @@ Required improvements:
 - Patients delete must require clear confirmation and should be tested only with dummy records.
 - Human QA script exists at `docs/qa/patients-human-qa-script.md`.
 
+## Patients Phone / Export QA Failure - 2026-06-14
+
+After Lovable's Patients phone/export polish build was approved and published, Codex tested the live Patients module and found the requested behavior was not present.
+
+Observed:
+
+- Add Patient phone fields remain plain text inputs.
+- Edit Patient phone fields remain plain text inputs.
+- Existing E.164 values can still display raw, such as `+15005550111`.
+- Patients Export did not open a scoped export dialog.
+- Patient list phone formatting remains inconsistent across records.
+
+Status:
+
+- Patients phone/export polish is not complete.
+- Patients remains partially verified and requires a Lovable follow-up before deeper Add/Edit/Export human QA can be marked ready.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

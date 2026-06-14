@@ -239,11 +239,16 @@ Last updated: 2026-06-12
 - [x] Create Appointments human QA script for Ross's assistant.
 - [x] Document ClinicPilotX phone number standard for UI display and E.164 storage.
 - [x] Create Lovable plan-mode handoff for Patients export and shared phone input polish.
-- [ ] Send Lovable handoff 007 in Plan mode.
-- [ ] Review Lovable response before approving any Patients module polish build.
+- [x] Send Lovable handoff 007 in Plan mode.
+- [x] Review Lovable response before approving any Patients module polish build.
 - [ ] Improve Patients Add/Edit phone input to match Leads/shared phone standard.
 - [ ] Improve Patients export UX to match Leads export dialog pattern.
 - [ ] Fully test Patients module as its own module: add, view, edit, export, filters/sort, delete confirmation.
+- [x] QA-test Lovable's published Patients phone/export polish build.
+- [x] Document failed Patients phone/export QA after publish.
+- [x] Create Lovable plan-mode fix request for failed Patients phone/export publish.
+- [ ] Send Lovable handoff 008 in Plan mode.
+- [ ] Re-approve only after Lovable explains why the published app still showed old Patients phone/export behavior.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 
