@@ -112,6 +112,24 @@ No new dummy patient was created because the requested form behavior was visibly
 
 Detailed note: `09-exports/patients-phone-export-qa-2026-06-14.md`.
 
+## 2026-06-14 Repeat Patients Publish Retest / Workstream Mismatch
+
+Result: fail / likely project or workstream mismatch.
+
+Ross published after Lovable reported Financial Transparency wording, volunteer waiver language, three handoff docs, and an internal `/handoff` page. Codex checked the active ClinicPilotX app and official repo.
+
+Findings:
+
+- `/handoff` on `https://clinic-pilot-x.lovable.app` returns a 404 page.
+- The official local repo does not contain `docs/QA_TESTING.md`, `docs/CONTENT_EDITING.md`, or `docs/RUNBOOK.md`.
+- Patients Add form still uses plain phone inputs.
+- Patients Export still does not show the expected export dialog.
+- Patient phone display remains mixed, including raw values such as `+15005550111`.
+
+No live sends/calls/payments/workflows were triggered.
+
+Detailed note: `09-exports/patients-phone-export-qa-repeat-2026-06-14.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

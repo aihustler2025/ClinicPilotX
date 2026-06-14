@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-12
+Last updated: 2026-06-14
 
 ## Product Purpose
 
@@ -259,6 +259,17 @@ Status:
 
 - Patients phone/export polish is not complete.
 - Patients remains partially verified and requires a Lovable follow-up before deeper Add/Edit/Export human QA can be marked ready.
+
+## Patients Publish Mismatch - 2026-06-14
+
+A repeat publish QA found that Lovable's reported changes did not match the active ClinicPilotX dashboard workstream.
+
+Lovable reported Financial Transparency wording, volunteer waiver language, handoff docs, and an internal `/handoff` page. On the active ClinicPilotX app, `/handoff` returned 404, the claimed docs were not present in the official local GitHub clone, and the Patients phone/export behavior was still unchanged.
+
+Product status remains:
+
+- Patients phone/export polish is incomplete.
+- The correct Lovable dashboard project, publish target, GitHub connection, and branch/source context must be confirmed before another Patients build is approved.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

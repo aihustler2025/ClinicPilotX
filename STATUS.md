@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-12
+Last updated: 2026-06-14
 
 ## Current State
 
@@ -619,3 +619,31 @@ New Lovable plan-mode fix request:
 `docs/handoffs/Lovable-paste-message-008-patients-phone-export-qa-failed.md`
 
 Current next step: send Lovable handoff 008 in Plan mode only. Do not treat Patients phone/export polish as complete.
+
+## 2026-06-14 Repeat Publish QA / Lovable Workstream Mismatch
+
+Ross published after Lovable reported changes involving Financial Transparency wording, volunteer waiver language, `docs/QA_TESTING.md`, `docs/CONTENT_EDITING.md`, `docs/RUNBOOK.md`, and an internal `/handoff` page.
+
+Codex QA-tested the active ClinicPilotX dashboard again at:
+
+`https://clinic-pilot-x.lovable.app`
+
+Result: fail / likely project or build mismatch.
+
+Findings:
+
+- `/handoff` returns a 404 page on the active ClinicPilotX app.
+- The official local ClinicPilotX GitHub clone does not contain `docs/QA_TESTING.md`, `docs/CONTENT_EDITING.md`, or `docs/RUNBOOK.md`.
+- Patients `Add Patient > Phone` and `Emergency Contact Phone` are still plain text inputs.
+- Patients Export still does not show the expected scope/columns/row-count dialog.
+- Patient phone display remains mixed, including raw E.164-like values such as `+15005550111`.
+
+New QA report:
+
+`09-exports/patients-phone-export-qa-repeat-2026-06-14.md`
+
+New Lovable plan-mode fix request:
+
+`docs/handoffs/Lovable-paste-message-009-patients-publish-mismatch.md`
+
+Current next step: send Lovable handoff 009 in Plan mode only. Ask Lovable to confirm correct project, publish target, GitHub connection, and exact files before any further build approval.

@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-12
+Last updated: 2026-06-14
 
 ## In Progress
 
@@ -247,8 +247,12 @@ Last updated: 2026-06-12
 - [x] QA-test Lovable's published Patients phone/export polish build.
 - [x] Document failed Patients phone/export QA after publish.
 - [x] Create Lovable plan-mode fix request for failed Patients phone/export publish.
-- [ ] Send Lovable handoff 008 in Plan mode.
-- [ ] Re-approve only after Lovable explains why the published app still showed old Patients phone/export behavior.
+- [x] Send Lovable handoff 008 in Plan mode.
+- [x] QA-test repeat publish after Lovable response/publish.
+- [x] Document repeat failure / likely workstream mismatch after Lovable reported unrelated Financial Transparency / volunteer waiver / handoff docs changes.
+- [x] Create Lovable plan-mode fix request 009 for Patients publish mismatch.
+- [ ] Send Lovable handoff 009 in Plan mode.
+- [ ] Re-approve only after Lovable confirms the correct dashboard project, GitHub repo, publish target, and exact Patients phone/export implementation files.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 
