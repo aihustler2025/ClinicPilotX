@@ -331,6 +331,23 @@ Remaining issue:
 
 - Invalid short Add Patient phone values currently close the modal without visible validation and without creating a visible patient. The modal should remain open and show inline validation.
 
+## Patients Invalid Phone Final QA - 2026-06-19
+
+After Lovable's Request 012 invalid-phone UX fix, Codex verified the final phone-validation gap is resolved.
+
+Verified:
+
+- Add Patient with invalid short phone `123` keeps the modal open.
+- Approved helper text appears with `+1 (213) 555-0199`.
+- Invalid patient row is not created.
+- Valid Add Patient still works with main phone `2135550199` and blank emergency phone.
+- Leads invalid-phone behavior also keeps the modal open and shows the same helper.
+
+Current Patients phone/export status:
+
+- Complete for tested Add/Edit/Export/phone-validation paths.
+- Still requires separate broader Patients module QA for delete confirmation, filters/sort, detail tabs, and patient-to-appointment downstream workflows.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

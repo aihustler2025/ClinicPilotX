@@ -750,3 +750,25 @@ New Lovable plan-mode follow-up:
 `docs/handoffs/Lovable-paste-message-012-patients-invalid-phone-ux.md`
 
 Current next step: send handoff 012 to Lovable in Plan mode only for the small invalid-phone UX fix. Patients phone/export is otherwise close to complete for the tested Add/Edit/Export paths.
+
+## 2026-06-19 Patients Invalid Phone Final QA
+
+Ross approved and published Lovable's Request 012 invalid-phone UX fix. Codex retested the live app.
+
+Result: pass.
+
+Verified:
+
+- Add Patient with invalid short phone `123` keeps the modal open.
+- Inline helper appears with the approved example: `+1 (213) 555-0199`.
+- No invalid patient row is created.
+- Valid Add Patient regression still passes with `CPX TEST Patient Valid Phone Final 20260619`.
+- Valid patient row displays `+1 (213) 555-0199`.
+- Blank emergency phone remains non-blocking.
+- Leads invalid-phone regression also passes: invalid lead phone keeps the modal open, shows helper text, and does not create a lead row.
+
+New QA report:
+
+`09-exports/patients-invalid-phone-final-qa-2026-06-19.md`
+
+Current status: Patients phone/export polish is complete for the tested Add/Edit/Export/phone-validation paths. Broader Patients module QA still remains for delete confirmation, filters/sort, full detail tabs, and downstream appointment regressions.

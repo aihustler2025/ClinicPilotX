@@ -220,6 +220,39 @@ Remaining issue:
 
 Detailed note: `09-exports/patients-phone-id-fix-qa-2026-06-19.md`.
 
+## 2026-06-19 Patients Invalid Phone Final Retest
+
+Result: pass.
+
+Patients invalid phone test:
+
+- Full name: `CPX TEST Invalid Phone Final 20260619`
+- Main phone: `123`
+
+Verified:
+
+- Add Patient modal stayed open.
+- Inline helper appeared with approved example `+1 (213) 555-0199`.
+- No invalid patient row was created.
+
+Patients valid regression:
+
+- Created `CPX TEST Patient Valid Phone Final 20260619`.
+- Email: `cpx.test+patient-valid-final-20260619@example.com`.
+- Main phone saved from `2135550199`.
+- Emergency phone left blank.
+- Patient row displays `+1 (213) 555-0199`.
+
+Leads invalid regression:
+
+- Full name: `CPX TEST Lead Invalid Phone Final 20260619`.
+- Main phone: `123`.
+- Lead modal stayed open.
+- Inline helper appeared with approved example `+1 (213) 555-0199`.
+- No invalid lead row was created.
+
+Detailed note: `09-exports/patients-invalid-phone-final-qa-2026-06-19.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

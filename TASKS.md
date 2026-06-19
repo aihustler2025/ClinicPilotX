@@ -268,8 +268,11 @@ Last updated: 2026-06-19
 - [x] Fix optional phone fields so blank optional phones do not default to validation-blocking `+1`.
 - [x] Polish Patients Add/Edit U.S./Canada phone input display toward `+1 (213) 555-0199`.
 - [x] Verify Patients exported CSV contents in a normal browser that supports downloads.
-- [ ] Fix invalid Add Patient phone UX so short phone values keep the modal open with visible validation.
-- [ ] Send Lovable handoff 012 in Plan mode.
+- [x] Send Lovable handoff 012 in Plan mode.
+- [x] Fix invalid Add Patient phone UX so short phone values keep the modal open with visible validation.
+- [x] Retest Patients invalid phone UX after Request 012 publish.
+- [x] Retest valid Add Patient regression after Request 012 publish.
+- [x] Retest Leads invalid phone regression after Request 012 publish.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 
