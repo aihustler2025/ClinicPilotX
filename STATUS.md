@@ -798,3 +798,22 @@ New QA report:
 `09-exports/patients-broader-module-qa-2026-06-19.md`
 
 Current next step: start a fresh browser QA pass for patient-detail `Book Appointment` regression and delete cancel/confirm behavior using a disposable dummy patient only.
+
+## 2026-06-19 Patient Profile / Leads Intake Direction Captured
+
+Ross clarified that the Patients side panel should be treated as the patient profile surface, not a throwaway demo panel.
+
+Near-term patient profile work:
+
+- Continue QA on open/view/edit behavior.
+- Retest `Book Appointment` from the patient profile with TEST mode on.
+- Treat `Call`, `Message`, and `Video` as dependent on Communication Hub and Video Consultation audits before activation.
+- Later expand profile content into a fuller patient record with communication history, files/photos, appointments, transactions, notes, and follow-up context.
+
+Ross also clarified again that Leads is not close to done. Manual lead creation is only the foundation. Future lead sources include contact form/email, AI-filtered inbox intake, chatbot, SMS, phone/AI voice, Facebook, WhatsApp, Viber, and other social/messaging sources.
+
+New roadmap document:
+
+`docs/patient-profile-and-leads-intake-roadmap.md`
+
+Current next step remains: fresh browser QA pass for patient-profile `Book Appointment`, then continue Appointments and Communication Hub audit before connecting live actions.

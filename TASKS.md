@@ -210,6 +210,11 @@ Last updated: 2026-06-19
 - [x] Improve Leads service requested field with searchable service dropdown and custom service support.
 - [x] Improve Leads details view with richer timeline/communication/files/follow-up context.
 - [ ] Prepare Leads for future chatbot, website contact form, email inquiry, phone, and social intake sources.
+- [x] Capture full Leads intake roadmap: email/contact forms, AI filtering, chatbot, SMS, calls, Facebook, WhatsApp, Viber, and social/messaging sources.
+- [ ] Design lead intake API/webhook payload contract for chatbot/contact form/email automation.
+- [ ] Design AI email/contact-form filtering workflow before building live intake.
+- [ ] Define duplicate/spam handling rules for multi-channel lead intake.
+- [ ] Map future lead sources to Automation Center controls.
 - [ ] Verify Leads export downloaded CSV contents in a normal browser: filename, row count, headers, selected columns, filtered scope, and phone format.
 - [x] Investigate why appointment booking closes without visible success or new appointment row.
 - [x] Test patient record editing path availability.
@@ -278,6 +283,9 @@ Last updated: 2026-06-19
 - [ ] Test Patients delete cancel behavior on a disposable dummy patient.
 - [ ] Test Patients delete confirm behavior only on a disposable dummy patient after Ross approval.
 - [ ] Consider replacing native browser delete confirm with an in-app confirmation modal for better admin UX and QA reliability.
+- [x] Document patient profile direction for the Patients side panel.
+- [ ] Expand Patient Profile QA checklist: profile sections, appointments tab, transactions tab, notes, edit persistence, and future files/communications placeholders.
+- [ ] Define patient profile build requirements before connecting Call, Message, Video, files, or live communications.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 

@@ -363,6 +363,27 @@ Current product note:
 - Patient delete is guarded by a native browser confirmation. This is safer than instant delete, but a future in-app confirmation modal would be more polished and easier to QA.
 - Delete cancel/confirm and patient-to-appointment regression still need a fresh controlled QA pass.
 
+## Patient Profiles And Leads Intake Direction - 2026-06-19
+
+Patient profiles:
+
+- The Patients side panel is the working patient profile surface.
+- It should eventually combine identity, contact details, treatment interests, notes, appointments, transactions, files/photos, communication history, and follow-up context.
+- `Edit` and `Book Appointment` are near-term safe QA/build areas.
+- `Call`, `Message`, and `Video` should remain gated until Communication Hub and Video Consultation workflows are audited.
+
+Leads intake:
+
+- The Leads module is not complete. Current manual-entry improvements are only the foundation.
+- Future lead sources include website contact forms, direct email inquiries, AI-filtered inbox intake, chatbot submissions, SMS, phone/AI voice, Facebook, WhatsApp, Viber, and other messaging/social channels.
+- All intake channels should normalize phone numbers to E.164 while preserving friendly display formatting.
+- Leads should preserve source channel, original message/conversation, preferred contact time, consent/contact permission, AI filtering/classification notes, attachments/photos when available, and timeline history.
+- Automation Center should eventually expose settings for enabled channels, AI filtering, staff notifications, auto-assignment, follow-up timing, and channel-specific templates.
+
+Planning document:
+
+`docs/patient-profile-and-leads-intake-roadmap.md`
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:
