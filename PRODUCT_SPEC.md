@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-14
+Last updated: 2026-06-19
 
 ## Product Purpose
 
@@ -291,6 +291,27 @@ Remaining requirements:
 - Exported CSV file contents still need browser-download verification.
 
 Current status: Patients phone/export is partially verified, not complete.
+
+## Patients Phone Polish QA - 2026-06-19
+
+After Lovable's Patients phone polish follow-up was approved and published, Codex retested the live app.
+
+Verified:
+
+- Patients list/detail can display friendly U.S./Canada numbers such as `+1 (213) 555-0199`.
+- Patients Export opens a scoped CSV dialog with row count, selectable columns, and separate display/E.164 phone columns.
+- Invalid patient phone entry shows inline validation and blocks submit.
+- Leads blank-phone behavior is fixed for the tested path: leaving the phone input at its default `+1` saved a lead with blank phone, not bare `+1`.
+
+Current blocker:
+
+- Add Patient fails with `permission denied for function generate_patient_id`.
+- Until this is fixed, Patients Add/Edit/Export phone polish remains partially verified, not complete.
+
+Remaining product requirement:
+
+- Staff-facing U.S./Canada phone input should display as `+1 (213) 555-0199` wherever feasible, while storage remains canonical E.164.
+- Invalid phone helper text should use the same friendly example.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

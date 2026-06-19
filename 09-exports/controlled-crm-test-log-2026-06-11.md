@@ -157,6 +157,35 @@ Issues:
 
 Detailed note: `09-exports/patients-phone-export-fix-qa-2026-06-14.md`.
 
+## 2026-06-19 Patients Phone Polish Retest
+
+Result: partial pass / fail due to Add Patient database permission blocker.
+
+Dummy lead created for regression QA:
+
+- `CPX TEST Lead Blank Phone 20260619`
+- `cpx.test+lead-blank-phone-20260619@example.com`
+
+Verified:
+
+- Patients page loads.
+- Existing patient list/detail display includes friendly phone formatting such as `+1 (213) 555-0199`.
+- Patients Export opens a scoped CSV dialog with row count, column picker, and display/E.164 phone columns.
+- Invalid Patients phone input blocks submit and shows inline validation.
+- Leads blank-phone regression passes: leaving the Add Lead phone input untouched at `+1` saved the lead with blank phone.
+
+Failed:
+
+- Add Patient with valid main phone and untouched emergency phone failed with `permission denied for function generate_patient_id`.
+- Add/Edit Patient phone inputs still show spaced values such as `+1 213 555 0199` inside the form instead of the preferred `+1 (213) 555-0199`.
+- Invalid phone helper copy still uses spaced example text.
+
+Not verified:
+
+- Patients exported CSV file contents, because the Codex in-app browser cannot save downloads.
+
+Detailed note: `09-exports/patients-phone-polish-qa-2026-06-19.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

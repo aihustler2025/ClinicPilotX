@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-14
+Last updated: 2026-06-19
 
 ## In Progress
 
@@ -259,9 +259,15 @@ Last updated: 2026-06-14
 - [x] Create Patients phone/export fix QA report after successful corrected publish.
 - [x] Create Lovable handoff 010 for remaining optional-phone/input-mask polish.
 - [ ] Send Lovable handoff 010 in Plan mode.
+- [x] Send Lovable handoff 010 in Plan mode.
+- [x] Retest Lovable's Patients phone polish follow-up after publish.
+- [x] Retest Add Lead with blank optional phone.
+- [ ] Fix Add Patient database permission blocker: `permission denied for function generate_patient_id`.
 - [ ] Fix optional phone fields so blank optional phones do not default to validation-blocking `+1`.
-- [ ] Retest Add Patient with valid main phone and blank emergency phone.
-- [ ] Retest Add Lead with blank optional phone.
+- [ ] Retest Add Patient with valid main phone and blank emergency phone after `generate_patient_id` permission fix.
+- [ ] Polish Patients Add/Edit U.S./Canada phone input display toward `+1 (213) 555-0199`.
+- [ ] Update invalid-phone helper examples to use `+1 (213) 555-0199`.
+- [ ] Send Lovable handoff 011 in Plan mode.
 - [ ] Verify Patients exported CSV contents in a normal browser that supports downloads.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12

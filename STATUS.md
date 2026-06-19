@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-14
+Last updated: 2026-06-19
 
 ## Current State
 
@@ -679,3 +679,38 @@ New Lovable plan-mode follow-up:
 `docs/handoffs/Lovable-paste-message-010-patients-phone-polish-followup.md`
 
 Current next step: send Lovable handoff 010 in Plan mode only. Do not mark Patients phone/export as complete until optional phone handling and export CSV content verification are resolved.
+
+## 2026-06-19 Patients Phone Polish QA After Lovable Publish
+
+Ross approved and published Lovable's Patients phone polish follow-up. Codex retested the authenticated live app.
+
+Result: partial pass / fail due to one blocker.
+
+Verified:
+
+- Patients still loads behind login.
+- Existing patient list/detail phone display can show friendly U.S./Canada values such as `+1 (213) 555-0199`.
+- Patients Export opens a scoped `Export Patients to CSV` dialog with row count, column picker, and display/E.164 phone columns.
+- Invalid Patients phone entry is blocked with visible inline validation.
+- Leads blank-phone regression passes: `CPX TEST Lead Blank Phone 20260619` was created with phone left untouched at default `+1`, and the saved lead shows blank phone instead of bare `+1`.
+
+Blocking issue:
+
+- Add Patient failed for a normal authenticated user with `permission denied for function generate_patient_id`.
+- This blocks final Add Patient QA and must be fixed before Patients phone/export polish can be considered complete.
+
+Remaining polish:
+
+- Add/Edit Patient phone inputs still show spaced values such as `+1 213 555 0199` inside the form instead of the preferred `+1 (213) 555-0199`.
+- Invalid phone helper copy still uses spaced example text.
+- CSV file contents remain unverified because the Codex in-app browser does not support downloads.
+
+New QA report:
+
+`09-exports/patients-phone-polish-qa-2026-06-19.md`
+
+New Lovable plan-mode fix request:
+
+`docs/handoffs/Lovable-paste-message-011-patients-phone-polish-qa-fixes.md`
+
+Current next step: send handoff 011 to Lovable in Plan mode only. Do not treat Patients as complete until Add Patient works, form phone formatting is polished, and CSV export contents are confirmed.
