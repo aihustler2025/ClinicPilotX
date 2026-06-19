@@ -772,3 +772,29 @@ New QA report:
 `09-exports/patients-invalid-phone-final-qa-2026-06-19.md`
 
 Current status: Patients phone/export polish is complete for the tested Add/Edit/Export/phone-validation paths. Broader Patients module QA still remains for delete confirmation, filters/sort, full detail tabs, and downstream appointment regressions.
+
+## 2026-06-19 Patients Broader Module QA
+
+Codex continued broader Patients module QA on the live authenticated app after the phone/export validation passed.
+
+Verified:
+
+- Patients search can isolate `CPX TEST Patient Valid Phone Final 20260619` and hide unrelated patients.
+- Status filter options are present: `All Statuses`, `Active`, `Inactive`, `Archived`.
+- Selecting `Inactive` filtered the list to inactive patient results during this pass.
+- Sort options are present: `Name (A-Z)`, `Recently Added`, `Most Visits`, `Highest Spent`.
+- `Most Visits` and `Highest Spent` produced plausible ranked ordering.
+- Patient detail for `CPX TEST Patient Valid Phone Final 20260619` opens and shows contact details, formatted phone, summary metrics, action buttons, Appointments tab, and Transactions tab.
+
+Delete QA status:
+
+- The row action menu exposes `View Details`, `Edit Patient`, and `Delete Patient`.
+- `Delete Patient` triggers a native browser confirmation dialog.
+- Codex did not intentionally accept deletion.
+- The native confirmation caused the browser automation connector to hang before a controlled cancel/confirm verification could be completed.
+
+New QA report:
+
+`09-exports/patients-broader-module-qa-2026-06-19.md`
+
+Current next step: start a fresh browser QA pass for patient-detail `Book Appointment` regression and delete cancel/confirm behavior using a disposable dummy patient only.

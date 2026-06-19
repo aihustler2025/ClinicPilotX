@@ -273,6 +273,11 @@ Last updated: 2026-06-19
 - [x] Retest Patients invalid phone UX after Request 012 publish.
 - [x] Retest valid Add Patient regression after Request 012 publish.
 - [x] Retest Leads invalid phone regression after Request 012 publish.
+- [x] Test Patients search, status filters, sort controls, and detail panel in broader Patients QA pass.
+- [ ] Retest patient-detail `Book Appointment` path after latest Patients phone/export fixes.
+- [ ] Test Patients delete cancel behavior on a disposable dummy patient.
+- [ ] Test Patients delete confirm behavior only on a disposable dummy patient after Ross approval.
+- [ ] Consider replacing native browser delete confirm with an in-app confirmation modal for better admin UX and QA reliability.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 

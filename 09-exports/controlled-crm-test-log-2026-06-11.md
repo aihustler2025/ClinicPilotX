@@ -253,6 +253,24 @@ Leads invalid regression:
 
 Detailed note: `09-exports/patients-invalid-phone-final-qa-2026-06-19.md`.
 
+## Patients Broader Module QA - 2026-06-19
+
+Detailed note: `09-exports/patients-broader-module-qa-2026-06-19.md`.
+
+Verified:
+
+- Patients search isolated `CPX TEST Patient Valid Phone Final 20260619`.
+- Status filter options are present and `Inactive` filtering worked during this pass.
+- Sort options are present and `Most Visits` / `Highest Spent` produced plausible ordering.
+- Patient detail panel opened for the dummy patient and showed contact information, formatted phone, summary metrics, Appointments and Transactions tabs, and action buttons.
+
+Delete QA:
+
+- The row action menu exposes `View Details`, `Edit Patient`, and `Delete Patient`.
+- `Delete Patient` triggers a native browser confirmation dialog.
+- Codex did not intentionally accept the deletion.
+- Browser automation became unstable after the native confirmation, so delete cancel/confirm verification and downstream patient-to-appointment regression remain pending.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

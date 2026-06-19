@@ -348,6 +348,21 @@ Current Patients phone/export status:
 - Complete for tested Add/Edit/Export/phone-validation paths.
 - Still requires separate broader Patients module QA for delete confirmation, filters/sort, detail tabs, and patient-to-appointment downstream workflows.
 
+## Patients Broader Module QA - 2026-06-19
+
+Verified Patients behavior:
+
+- Search can isolate a named patient and hide unrelated patient rows.
+- Status filter supports `All Statuses`, `Active`, `Inactive`, and `Archived`.
+- Sort supports `Name (A-Z)`, `Recently Added`, `Most Visits`, and `Highest Spent`.
+- `Most Visits` and `Highest Spent` sorting behaved plausibly with the visible patient dataset.
+- Patient detail panel includes contact information, formatted phone display, summary metrics, medical information, Appointments tab, Transactions tab, and action buttons for `Call`, `Message`, `Video`, `Edit`, and `Book Appointment`.
+
+Current product note:
+
+- Patient delete is guarded by a native browser confirmation. This is safer than instant delete, but a future in-app confirmation modal would be more polished and easier to QA.
+- Delete cancel/confirm and patient-to-appointment regression still need a fresh controlled QA pass.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:
