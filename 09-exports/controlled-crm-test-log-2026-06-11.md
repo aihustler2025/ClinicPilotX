@@ -186,6 +186,40 @@ Not verified:
 
 Detailed note: `09-exports/patients-phone-polish-qa-2026-06-19.md`.
 
+## 2026-06-19 Patients Phone / ID Fix Retest
+
+Result: pass for the prior Add Patient blocker and main phone/export paths.
+
+Dummy patient created:
+
+- `CPX TEST Patient ID Fix 20260619`
+- `cpx.test+patient-id-fix-20260619@example.com`
+
+Dummy lead created:
+
+- `CPX TEST Lead Blank Phone PostID 20260619`
+- `cpx.test+lead-blank-postid-20260619@example.com`
+
+Verified:
+
+- Add Patient with valid main phone `2135550199` and untouched emergency phone saved successfully.
+- The previous `permission denied for function generate_patient_id` error did not recur.
+- Patient list shows `+1 (213) 555-0199`.
+- Edit Patient opens with main phone `(213) 555-0199` and blank emergency phone.
+- Edit Patient save succeeds without touching emergency phone.
+- Leads blank-phone regression passes and does not store/display bare `+1`.
+- Patients export downloaded as `patients-filtered-2026-06-19.csv`.
+- CSV row count is 26.
+- CSV includes `Phone (Display)`, `Phone (E.164)`, `Emergency Phone (Display)`, and `Emergency Phone (E.164)`.
+- New dummy patient CSV row includes `Phone (Display)=+1 (213) 555-0199` and `Phone (E.164)=+12135550199`.
+- New dummy patient CSV emergency phone fields are blank.
+
+Remaining issue:
+
+- Invalid Add Patient phone `123` closed the modal without visible validation and did not create a visible patient row. Expected behavior is to keep the modal open and show inline validation.
+
+Detailed note: `09-exports/patients-phone-id-fix-qa-2026-06-19.md`.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

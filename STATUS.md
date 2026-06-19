@@ -714,3 +714,39 @@ New Lovable plan-mode fix request:
 `docs/handoffs/Lovable-paste-message-011-patients-phone-polish-qa-fixes.md`
 
 Current next step: send handoff 011 to Lovable in Plan mode only. Do not treat Patients as complete until Add Patient works, form phone formatting is polished, and CSV export contents are confirmed.
+
+## 2026-06-19 Patients Phone / ID Fix QA After Lovable Publish
+
+Ross approved and published Lovable's Patient ID / phone polish fix. Codex retested the authenticated live app through Chrome.
+
+Result: pass for the prior blocker and main Patients phone/export requirements.
+
+Verified:
+
+- Add Patient now succeeds for a normal authenticated staff user.
+- The previous `permission denied for function generate_patient_id` blocker did not recur.
+- Created patient `CPX TEST Patient ID Fix 20260619` with valid main phone and untouched blank emergency phone.
+- Patient list displays `+1 (213) 555-0199`.
+- Edit Patient pre-fills main phone as `(213) 555-0199` with a separate `+1` country chip.
+- Blank emergency phone remains blank in Edit Patient.
+- Updating the patient without touching emergency phone succeeds.
+- Leads blank-phone regression passes with `CPX TEST Lead Blank Phone PostID 20260619`.
+- Patients CSV export downloaded in Chrome and was verified:
+  - 26 rows.
+  - Display and E.164 phone columns present.
+  - New dummy patient exported with `Phone (Display)=+1 (213) 555-0199` and `Phone (E.164)=+12135550199`.
+  - Emergency phone export fields were blank.
+
+Remaining issue:
+
+- Invalid Add Patient phone UX is still wrong. A short phone value `123` closed the modal without visible validation and did not create a visible patient row. The modal should stay open and show inline validation.
+
+New QA report:
+
+`09-exports/patients-phone-id-fix-qa-2026-06-19.md`
+
+New Lovable plan-mode follow-up:
+
+`docs/handoffs/Lovable-paste-message-012-patients-invalid-phone-ux.md`
+
+Current next step: send handoff 012 to Lovable in Plan mode only for the small invalid-phone UX fix. Patients phone/export is otherwise close to complete for the tested Add/Edit/Export paths.

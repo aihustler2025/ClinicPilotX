@@ -262,13 +262,14 @@ Last updated: 2026-06-19
 - [x] Send Lovable handoff 010 in Plan mode.
 - [x] Retest Lovable's Patients phone polish follow-up after publish.
 - [x] Retest Add Lead with blank optional phone.
-- [ ] Fix Add Patient database permission blocker: `permission denied for function generate_patient_id`.
-- [ ] Fix optional phone fields so blank optional phones do not default to validation-blocking `+1`.
-- [ ] Retest Add Patient with valid main phone and blank emergency phone after `generate_patient_id` permission fix.
-- [ ] Polish Patients Add/Edit U.S./Canada phone input display toward `+1 (213) 555-0199`.
-- [ ] Update invalid-phone helper examples to use `+1 (213) 555-0199`.
-- [ ] Send Lovable handoff 011 in Plan mode.
-- [ ] Verify Patients exported CSV contents in a normal browser that supports downloads.
+- [x] Send Lovable handoff 011 in Plan mode.
+- [x] Fix Add Patient database permission blocker: `permission denied for function generate_patient_id`.
+- [x] Retest Add Patient with valid main phone and blank emergency phone after `generate_patient_id` permission fix.
+- [x] Fix optional phone fields so blank optional phones do not default to validation-blocking `+1`.
+- [x] Polish Patients Add/Edit U.S./Canada phone input display toward `+1 (213) 555-0199`.
+- [x] Verify Patients exported CSV contents in a normal browser that supports downloads.
+- [ ] Fix invalid Add Patient phone UX so short phone values keep the modal open with visible validation.
+- [ ] Send Lovable handoff 012 in Plan mode.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 

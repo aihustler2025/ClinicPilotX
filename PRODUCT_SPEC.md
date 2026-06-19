@@ -313,6 +313,24 @@ Remaining product requirement:
 - Staff-facing U.S./Canada phone input should display as `+1 (213) 555-0199` wherever feasible, while storage remains canonical E.164.
 - Invalid phone helper text should use the same friendly example.
 
+## Patients Phone / ID Fix QA - 2026-06-19
+
+After Lovable's Patient ID / phone polish fix, Codex verified the prior blocker is resolved.
+
+Verified:
+
+- Add Patient works for an authenticated staff user.
+- Valid main phone plus untouched blank emergency phone saves successfully.
+- Patient list displays friendly U.S./Canada phone format.
+- Edit Patient shows main phone as `(213) 555-0199` with separate `+1` country chip.
+- Blank emergency phone remains blank and does not block Edit Patient save.
+- Patients CSV export was downloaded and verified with display/E.164 phone columns and 26 rows.
+- Leads blank-phone behavior still passes.
+
+Remaining issue:
+
+- Invalid short Add Patient phone values currently close the modal without visible validation and without creating a visible patient. The modal should remain open and show inline validation.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:
