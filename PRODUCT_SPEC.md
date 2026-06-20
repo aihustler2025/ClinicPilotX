@@ -405,6 +405,27 @@ Current delete UX note:
 - This protects against instant deletion, but it blocks reliable automated QA.
 - Product direction is to replace it with an in-app confirmation modal showing the selected patient and explicit Cancel/Delete actions.
 
+## Request 013 Fix QA - 2026-06-20
+
+Verified:
+
+- Patient-profile booking path now works for a TEST appointment using time `15:30`.
+- TEST appointment appears in Appointments with a TEST badge.
+- Patient profile Appointments tab displays the new appointment.
+- Patient delete uses an in-app confirmation dialog with name, email, and patient ID.
+- Delete cancel keeps the patient.
+- Delete confirm removes the patient from Patients after reload/search.
+
+Open product decision:
+
+- Deleting a patient with related appointments currently leaves the related appointment visible in Appointments with the deleted patient's name and phone.
+- ClinicPilotX needs a safe deletion policy before this behavior is treated as complete. Strong candidate: archive/deactivate patients with historical records instead of hard-deleting them.
+
+Polish issues:
+
+- Appointment list phone display can show raw E.164, for example `+12135550199`.
+- Patient profile appointment time can show trailing seconds, for example `15:30:00`.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

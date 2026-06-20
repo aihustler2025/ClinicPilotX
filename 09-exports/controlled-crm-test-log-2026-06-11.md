@@ -304,6 +304,30 @@ Reconfirmed:
 
 - Patients page can briefly show `No Plan` and `No patients found`; reload restored `Professional` and real patient data.
 
+## Request 013 Fix QA - 2026-06-20
+
+Detailed note: `09-exports/patient-profile-booking-delete-fix-qa-2026-06-20.md`.
+
+Verified:
+
+- Patient-profile `Book Appointment` now opens with patient prefilled.
+- TEST checkbox is checked and no-send warning is visible.
+- Time `15:30` saves successfully.
+- Appointment count increased from `27` to `28`.
+- New appointment appears in Appointments with TEST badge.
+- Patient profile Appointments tab shows the new appointment.
+- Native delete confirm is gone.
+- In-app delete dialog appears with patient name/email/ID.
+- Cancel closes dialog and leaves patient intact.
+- Confirm delete shows success toast and removes the patient after reload/search.
+
+New issues found:
+
+- Stale patient profile panel stays open after deleting the selected patient.
+- Related TEST appointment remains visible after deleting the patient.
+- Appointment row phone display remains raw E.164 for the test patient.
+- Patient profile appointment time displays with trailing seconds.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

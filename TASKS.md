@@ -286,6 +286,17 @@ Last updated: 2026-06-19
 - [x] Create Lovable handoff 013 for patient-profile booking time validation and delete confirmation UX.
 - [ ] Send Lovable handoff 013 in Plan mode.
 - [ ] Replace native browser delete confirm with an in-app confirmation modal for better admin UX and QA reliability.
+- [x] Retest Request 013 after publish.
+- [x] Verify patient-profile booking with `15:30` saves as a TEST appointment.
+- [x] Verify in-app delete dialog cancel path.
+- [x] Verify in-app delete dialog confirm path on disposable patient.
+- [ ] Decide safe product behavior for deleting patients with related appointments.
+- [ ] Fix stale patient profile panel remaining open after delete.
+- [ ] Fix/define related appointment behavior after patient delete.
+- [ ] Format appointment row phone display as friendly phone where possible.
+- [ ] Format patient profile appointment time without trailing seconds.
+- [x] Create Lovable handoff 014 for patient delete related-record behavior and appointment display polish.
+- [ ] Send Lovable handoff 014 in Plan mode.
 - [x] Document patient profile direction for the Patients side panel.
 - [ ] Expand Patient Profile QA checklist: profile sections, appointments tab, transactions tab, notes, edit persistence, and future files/communications placeholders.
 - [ ] Define patient profile build requirements before connecting Call, Message, Video, files, or live communications.

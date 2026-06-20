@@ -861,3 +861,38 @@ New Lovable plan-mode handoff:
 `docs/handoffs/Lovable-paste-message-013-patient-profile-booking-delete-fixes.md`
 
 Current next step: send Request 013 to Lovable in Plan mode only. Do not continue Appointments module completion until the patient-profile booking time validation bug is fixed.
+
+## 2026-06-20 Request 013 Fix QA
+
+Ross approved and published Lovable's Request 013 fix. Codex retested the live app.
+
+Passed:
+
+- Patient-profile `Book Appointment` now opens `/appointments` with booking modal open.
+- Disposable patient `CPX TEST Disposable Patient Delete QA 20260620 (#PT00028)` was prefilled.
+- TEST checkbox was on and no-send warning was visible.
+- Time input retained `15:30`.
+- Submit succeeded.
+- Appointment count increased from `27` to `28`.
+- New appointment appeared with TEST badge.
+- Patient profile Appointments tab showed the new appointment.
+- Patient delete now uses an in-app AlertDialog instead of native browser confirm.
+- Delete cancel leaves patient intact.
+- Delete confirm removed the disposable patient; reload/search showed `No patients found`.
+
+New issues:
+
+- After delete, stale patient profile panel remained open until reload.
+- Deleting the patient did not remove or otherwise resolve the related TEST appointment; Appointments still shows the deleted patient name/phone.
+- Appointment row phone display still shows raw E.164 `+12135550199`.
+- Patient profile appointment time displays as `15:30:00`.
+
+New QA report:
+
+`09-exports/patient-profile-booking-delete-fix-qa-2026-06-20.md`
+
+New Lovable plan-mode handoff:
+
+`docs/handoffs/Lovable-paste-message-014-patient-delete-related-records-polish.md`
+
+Current next step: send Request 014 to Lovable in Plan mode only. Need a product-safe decision on whether deleting patients with related appointments should be blocked, archived, or cascade/anonymize related records.
