@@ -124,10 +124,25 @@ Open product/data question:
 Observed:
 
 - Appointment row for the test patient showed `+12135550199`.
+- Ross also provided screenshots of the Appointments Calendar/detail drawer showing older appointment phone display as raw `+15005550111`.
 
 Expected:
 
 - Staff-facing appointment rows should use the same friendly display standard as Leads/Patients where possible: `+1 (213) 555-0199`.
+- The same formatting should apply to Appointments list rows, calendar/detail drawers, and patient profile appointment summaries.
+
+### Issue 4: Appointment Detail Drawer Has Live-Looking Actions
+
+Ross's screenshots also show appointment detail actions:
+
+- `Confirm`
+- `Cancel`
+- `Send Reminder`
+- `Add to Google Calendar`
+
+These were not clicked during this QA pass.
+
+Future Appointments QA must treat reminder/calendar actions as potentially live integrations unless confirmed otherwise. Do not test live sends or external calendar writes without explicit approval.
 
 ## Current Assessment
 
@@ -141,4 +156,3 @@ New follow-up is needed before treating patient delete behavior as complete:
 - Decide and implement related-record behavior for patient deletion.
 - Close stale profile panel after delete.
 - Polish appointment display values for profile and list.
-

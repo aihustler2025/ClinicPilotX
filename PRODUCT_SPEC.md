@@ -424,7 +424,9 @@ Open product decision:
 Polish issues:
 
 - Appointment list phone display can show raw E.164, for example `+12135550199`.
+- Appointment calendar/detail drawer can show raw E.164, for example `+150055501111`.
 - Patient profile appointment time can show trailing seconds, for example `15:30:00`.
+- Appointment detail actions such as `Send Reminder` and `Add to Google Calendar` must remain gated until Appointments/Communication/Integration safety is reviewed.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

@@ -886,6 +886,8 @@ New issues:
 - Deleting the patient did not remove or otherwise resolve the related TEST appointment; Appointments still shows the deleted patient name/phone.
 - Appointment row phone display still shows raw E.164 `+12135550199`.
 - Patient profile appointment time displays as `15:30:00`.
+- Ross provided Appointments calendar/detail drawer screenshots showing the same raw-phone issue on an older appointment: `+150055501111`.
+- Appointment detail drawer includes action buttons such as `Confirm`, `Cancel`, `Send Reminder`, and `Add to Google Calendar`; these remain untested because live reminder/calendar side effects require explicit safety review.
 
 New QA report:
 

@@ -294,7 +294,9 @@ Last updated: 2026-06-19
 - [ ] Fix stale patient profile panel remaining open after delete.
 - [ ] Fix/define related appointment behavior after patient delete.
 - [ ] Format appointment row phone display as friendly phone where possible.
+- [ ] Format Appointments calendar/detail drawer phone display as friendly phone where possible.
 - [ ] Format patient profile appointment time without trailing seconds.
+- [ ] Audit Appointments detail actions: Confirm, Cancel, Send Reminder, Add to Google Calendar, with no live sends/calendar writes until approved.
 - [x] Create Lovable handoff 014 for patient delete related-record behavior and appointment display polish.
 - [ ] Send Lovable handoff 014 in Plan mode.
 - [x] Document patient profile direction for the Patients side panel.

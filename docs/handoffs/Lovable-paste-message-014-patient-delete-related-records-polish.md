@@ -84,17 +84,35 @@ Observed:
 
 - Patient profile Appointments tab shows `Jun 20, 2026 at 15:30:00`.
 - Appointment row shows phone as raw E.164: `+12135550199`.
+- Appointments Calendar/detail drawer can also show raw E.164, for example `+15005550111` for the older `CPX TEST Lead June 11` appointment.
 
 Expected:
 
 - Staff-facing time should display as `3:30 PM` or `15:30`, not `15:30:00`.
 - Staff-facing phone should display as `+1 (213) 555-0199` where possible, while storage remains E.164.
+- Apply this display formatting consistently across:
+  - Appointments list rows.
+  - Calendar view appointment detail drawer.
+  - Patient profile Appointments tab.
 
 Likely files:
 
 - `src/pages/Appointments.tsx`
 - `src/components/patients/PatientDetailPanel.tsx`
 - Shared phone/date/time formatting helper if available
+
+### Issue 4: Appointment Detail Actions Need Safe QA Treatment
+
+The Appointments calendar/detail drawer shows action buttons such as:
+
+- `Confirm`
+- `Cancel`
+- `Send Reminder`
+- `Add to Google Calendar`
+
+Do not activate live reminder sends or calendar integrations as part of this fix.
+
+If these buttons are touched in any future Appointments QA/build pass, they need explicit TEST-mode behavior, visible no-send safeguards, and Codex approval first.
 
 ## Safety
 
@@ -118,4 +136,3 @@ Please respond in Plan mode only with:
 6. Manual QA checklist after build.
 
 Do not build until Ross sends your plan back to Codex and Codex approves it.
-
