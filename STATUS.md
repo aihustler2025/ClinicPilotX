@@ -817,3 +817,47 @@ New roadmap document:
 `docs/patient-profile-and-leads-intake-roadmap.md`
 
 Current next step remains: fresh browser QA pass for patient-profile `Book Appointment`, then continue Appointments and Communication Hub audit before connecting live actions.
+
+## 2026-06-20 Patient Profile Booking / Delete QA
+
+Codex created a disposable dummy patient:
+
+- `CPX TEST Disposable Patient Delete QA 20260620`
+- `cpx.test+delete-qa-20260620@example.com`
+- UI patient ID `#PT00028`
+
+Verified:
+
+- Add Patient still works.
+- Saved phone displays as `+1 (213) 555-0199`.
+- Patient profile side panel opens.
+- Profile shows email, formatted phone, notes, Appointments tab, Transactions tab, and actions.
+- `Book Appointment` from the patient profile navigates to `/appointments`.
+- Booking modal opens with the disposable patient prefilled.
+- TEST checkbox is on before submit and the no-send warning is visible.
+
+Blocking issue:
+
+- Saving the TEST appointment fails with `Invalid time format (HH:MM)` even after Codex enters and verifies native time input value `15:30`.
+- Appointment count stayed `27`; the test appointment was not created.
+
+Delete QA:
+
+- Row action menu shows `View Details`, `Edit Patient`, and `Delete Patient`.
+- `Delete Patient` triggers a native browser confirmation.
+- The native confirmation froze the browser automation connector again before cancel/confirm could be safely verified.
+- Codex did not intentionally accept deletion.
+
+Reconfirmed:
+
+- Patients can briefly show `No Plan` / `No patients found`; reload restored `Professional` and the real patient list.
+
+New QA report:
+
+`09-exports/patient-profile-booking-delete-qa-2026-06-20.md`
+
+New Lovable plan-mode handoff:
+
+`docs/handoffs/Lovable-paste-message-013-patient-profile-booking-delete-fixes.md`
+
+Current next step: send Request 013 to Lovable in Plan mode only. Do not continue Appointments module completion until the patient-profile booking time validation bug is fixed.

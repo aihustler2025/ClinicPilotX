@@ -279,10 +279,13 @@ Last updated: 2026-06-19
 - [x] Retest valid Add Patient regression after Request 012 publish.
 - [x] Retest Leads invalid phone regression after Request 012 publish.
 - [x] Test Patients search, status filters, sort controls, and detail panel in broader Patients QA pass.
-- [ ] Retest patient-detail `Book Appointment` path after latest Patients phone/export fixes.
-- [ ] Test Patients delete cancel behavior on a disposable dummy patient.
+- [x] Retest patient-detail `Book Appointment` path after latest Patients phone/export fixes.
+- [ ] Fix patient-profile `Book Appointment` time validation bug: valid `15:30` is rejected as invalid `HH:MM`.
+- [ ] Test Patients delete cancel behavior on a disposable dummy patient after native confirm is replaced.
 - [ ] Test Patients delete confirm behavior only on a disposable dummy patient after Ross approval.
-- [ ] Consider replacing native browser delete confirm with an in-app confirmation modal for better admin UX and QA reliability.
+- [x] Create Lovable handoff 013 for patient-profile booking time validation and delete confirmation UX.
+- [ ] Send Lovable handoff 013 in Plan mode.
+- [ ] Replace native browser delete confirm with an in-app confirmation modal for better admin UX and QA reliability.
 - [x] Document patient profile direction for the Patients side panel.
 - [ ] Expand Patient Profile QA checklist: profile sections, appointments tab, transactions tab, notes, edit persistence, and future files/communications placeholders.
 - [ ] Define patient profile build requirements before connecting Call, Message, Video, files, or live communications.

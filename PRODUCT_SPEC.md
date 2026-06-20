@@ -384,6 +384,27 @@ Planning document:
 
 `docs/patient-profile-and-leads-intake-roadmap.md`
 
+## Patient Profile Booking / Delete QA - 2026-06-20
+
+Verified:
+
+- Patient profile `Book Appointment` opens the Appointments booking modal.
+- The selected patient is prefilled.
+- TEST mode is on by default for the patient-profile booking path.
+- TEST warning copy is visible.
+
+Current bug:
+
+- A valid native time value `15:30` is rejected with `Invalid time format (HH:MM)`.
+- The TEST appointment is not created.
+- Patient-profile booking cannot be treated as complete until this is fixed.
+
+Current delete UX note:
+
+- Patients row delete currently uses a native browser confirmation.
+- This protects against instant deletion, but it blocks reliable automated QA.
+- Product direction is to replace it with an in-app confirmation modal showing the selected patient and explicit Cancel/Delete actions.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

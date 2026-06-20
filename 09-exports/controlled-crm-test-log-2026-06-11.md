@@ -271,6 +271,39 @@ Delete QA:
 - Codex did not intentionally accept the deletion.
 - Browser automation became unstable after the native confirmation, so delete cancel/confirm verification and downstream patient-to-appointment regression remain pending.
 
+## Patient Profile Booking / Delete QA - 2026-06-20
+
+Detailed note: `09-exports/patient-profile-booking-delete-qa-2026-06-20.md`.
+
+Created disposable patient:
+
+- `CPX TEST Disposable Patient Delete QA 20260620`
+- `cpx.test+delete-qa-20260620@example.com`
+- `#PT00028`
+
+Verified:
+
+- Disposable patient creation succeeded.
+- Patient phone displayed as `+1 (213) 555-0199`.
+- Patient profile side panel opened and showed expected contact details, notes, tabs, and actions.
+- `Book Appointment` from profile opened `/appointments` with patient prefilled.
+- TEST checkbox was checked and no-send warning was visible.
+
+Failed:
+
+- TEST appointment save failed with `Invalid time format (HH:MM)` even after `15:30` was entered and verified in the native time input.
+- Appointment count stayed `27`; appointment was not created.
+
+Delete:
+
+- Disposable patient's row menu showed `View Details`, `Edit Patient`, and `Delete Patient`.
+- Clicking `Delete Patient` triggered a native browser confirmation and again froze browser automation before cancel/confirm could be verified.
+- Codex did not intentionally accept deletion.
+
+Reconfirmed:
+
+- Patients page can briefly show `No Plan` and `No patients found`; reload restored `Professional` and real patient data.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.
