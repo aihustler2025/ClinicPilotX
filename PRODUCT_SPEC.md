@@ -442,6 +442,28 @@ Still pending:
 - Patients with no related records may be hard-deleted only after clear in-app confirmation.
 - Appointment calendar/detail drawer polish still needs live visual QA.
 
+## Request 014 Live QA - 2026-06-21
+
+Core archive-vs-delete behavior is verified:
+
+- Patients with no related appointments/payments can be hard-deleted only after a clear `Delete patient?` confirmation.
+- Patients with related appointments/payments are archived instead of deleted after a clear `Archive patient?` confirmation.
+- Related-record archive dialog shows related appointment/payment counts and does not expose a `Delete anyway` option.
+- Archived patients are hidden under Active filter and visible under Archived filter.
+- Related appointments remain visible after archive to preserve clinic history.
+
+Appointments display polish is verified in list and calendar/detail drawer for tested rows:
+
+- Friendly U.S./Canada phone display.
+- Friendly time display without trailing seconds.
+
+Follow-up polish still needed:
+
+- Booking modal disabled patient phone should use friendly display formatting.
+- Appointment drawer should label patient appointments as `Patient`, not `Lead`.
+- Appointment drawer should not leak stray `0` text near action buttons.
+- Patients page entitlement/data-load flicker still needs diagnosis.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

@@ -347,6 +347,33 @@ Not verified:
 
 No live communication, payment, calendar, workflow, or reminder action was triggered.
 
+## Request 014 Live QA - 2026-06-21
+
+Detailed note: `09-exports/request-014-live-qa-2026-06-21.md`.
+
+Result: pass for core archive-vs-delete behavior.
+
+Verified:
+
+- Zero-related patient `CPX TEST Zero Related Delete QA 20260621` showed `Delete patient?`, Cancel worked, and confirm removed the patient.
+- Related-record patient `CPX TEST Archive Related QA 20260621` had a TEST appointment created with TEST checked.
+- Related-record delete action showed `Archive patient?`, including `1 appointment` and `0 payments`.
+- Archive cancel worked.
+- Archive confirm changed status to `archived`.
+- Active filter hid the archived patient.
+- Archived filter showed the archived patient.
+- Related TEST appointment remained visible with friendly phone/time formatting.
+- Calendar drawer showed friendly phone/time formatting.
+
+Follow-up issues:
+
+- Booking modal disabled phone field showed raw `+12135550102`.
+- Calendar/detail drawer labeled the patient-created appointment as `Lead`.
+- Calendar/detail drawer showed stray `0` text near action buttons.
+- Patients page still has intermittent `No Plan` / `No patients found` state.
+
+No live communication, payment, calendar, workflow, reminder, or integration action was triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

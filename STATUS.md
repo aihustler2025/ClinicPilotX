@@ -925,3 +925,32 @@ QA note saved at:
 `09-exports/request-014-partial-qa-2026-06-21.md`
 
 Current next step: re-run Request 014 destructive archive/delete QA only when reliable browser control is available. Do not ask Ross to do this manually; Codex should perform the QA directly.
+
+## 2026-06-21 Request 014 Live QA Complete
+
+Codex restored in-app browser control using the current installed browser plugin path and completed the live Request 014 QA directly.
+
+Core Request 014 result: pass.
+
+Verified:
+
+- Appointments list and calendar/detail drawer now show friendly phone and time formatting for the tested rows.
+- Zero-related patient hard-delete path works with the correct `Delete patient?` dialog, cancel behavior, and confirm behavior.
+- Related-record patient path archives instead of deleting with the correct `Archive patient?` dialog, related record counts, cancel behavior, and confirm behavior.
+- No `Delete anyway` option appears when related records exist.
+- Archived patient is hidden under Active filter and visible under Archived filter.
+- Related TEST appointment remains visible after archive, preserving history.
+
+New follow-up polish found:
+
+- Booking modal disabled patient phone field still shows raw E.164.
+- Appointment calendar/detail drawer labeled a patient-created appointment as `Lead`.
+- Appointment drawer shows stray `0` text near action buttons.
+- Patients page can still intermittently load as `No Plan` / `No patients found` before routing through Dashboard restores `Professional`.
+
+New files:
+
+- `09-exports/request-014-live-qa-2026-06-21.md`
+- `docs/handoffs/Lovable-paste-message-015-request-014-followup-polish.md`
+
+Current next step: send Lovable Request 015 in Plan mode only for the remaining polish issues.
