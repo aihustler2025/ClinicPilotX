@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-19
+Last updated: 2026-06-21
 
 ## In Progress
 
@@ -298,7 +298,14 @@ Last updated: 2026-06-19
 - [ ] Format patient profile appointment time without trailing seconds.
 - [ ] Audit Appointments detail actions: Confirm, Cancel, Send Reminder, Add to Google Calendar, with no live sends/calendar writes until approved.
 - [x] Create Lovable handoff 014 for patient delete related-record behavior and appointment display polish.
-- [ ] Send Lovable handoff 014 in Plan mode.
+- [x] Send Lovable handoff 014 in Plan mode.
+- [x] Approve and publish Lovable Request 014 after revised archive-only plan.
+- [x] Partially QA Request 014 appointment list display polish after publish.
+- [ ] Re-run Request 014 delete/archive branching QA with reliable browser control.
+- [ ] Verify zero-related patient hard-delete dialog/cancel/confirm behavior.
+- [ ] Verify related-record patient archive-only dialog/cancel/confirm behavior.
+- [ ] Verify stale patient profile panel closes after archive/delete.
+- [ ] Verify Archived status filter contains archived patient after archive.
 - [x] Document patient profile direction for the Patients side panel.
 - [ ] Expand Patient Profile QA checklist: profile sections, appointments tab, transactions tab, notes, edit persistence, and future files/communications placeholders.
 - [ ] Define patient profile build requirements before connecting Call, Message, Video, files, or live communications.

@@ -328,6 +328,25 @@ New issues found:
 - Appointment row phone display remains raw E.164 for the test patient.
 - Patient profile appointment time displays with trailing seconds.
 
+## Request 014 Partial QA - 2026-06-21
+
+Detailed note: `09-exports/request-014-partial-qa-2026-06-21.md`.
+
+Verified from live Chrome Appointments list:
+
+- `CPX TEST Disposable Patient Delete QA 20260620` displays phone as `+1 (213) 555-0199`.
+- `CPX TEST Lead June 11` displays phone as `+1 (500) 555-0111`.
+- Appointment list times display as `3:30 PM` and `2:45 PM`, not trailing-second values.
+
+Not verified:
+
+- Zero-related patient hard delete.
+- Related-record patient archive-only path.
+- Stale panel close after archive/delete.
+- Calendar/detail drawer display polish.
+
+No live communication, payment, calendar, workflow, or reminder action was triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

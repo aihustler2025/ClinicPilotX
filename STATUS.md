@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-19
+Last updated: 2026-06-21
 
 ## Current State
 
@@ -898,3 +898,30 @@ New Lovable plan-mode handoff:
 `docs/handoffs/Lovable-paste-message-014-patient-delete-related-records-polish.md`
 
 Current next step: send Request 014 to Lovable in Plan mode only. Need a product-safe decision on whether deleting patients with related appointments should be blocked, archived, or cascade/anonymize related records.
+
+## 2026-06-21 Request 014 Partial QA
+
+Ross approved and published Lovable's Request 014 archive-vs-delete and appointment display polish build.
+
+Codex verified the live Appointments list through Chrome after the in-app browser control runtime failed to attach to the logged-in tabs.
+
+Verified:
+
+- Appointments list loads with 28 total appointments.
+- The `CPX TEST Disposable Patient Delete QA 20260620` appointment now displays phone as `+1 (213) 555-0199`, not raw E.164.
+- The older `CPX TEST Lead June 11` appointment from Ross's screenshot now displays phone as `+1 (500) 555-0111`, not raw E.164.
+- Appointment list times display as friendly times such as `3:30 PM` and `2:45 PM`, not `15:30:00`.
+
+Not yet verified:
+
+- Patient hard-delete path for zero related records.
+- Patient archive-only path for related appointments/payments.
+- Stale patient profile panel closure after archive/delete.
+- Archived patient filter behavior.
+- Appointments calendar/detail drawer display polish.
+
+QA note saved at:
+
+`09-exports/request-014-partial-qa-2026-06-21.md`
+
+Current next step: re-run Request 014 destructive archive/delete QA only when reliable browser control is available. Do not ask Ross to do this manually; Codex should perform the QA directly.

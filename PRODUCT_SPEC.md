@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-19
+Last updated: 2026-06-21
 
 ## Product Purpose
 
@@ -427,6 +427,20 @@ Polish issues:
 - Appointment calendar/detail drawer can show raw E.164, for example `+150055501111`.
 - Patient profile appointment time can show trailing seconds, for example `15:30:00`.
 - Appointment detail actions such as `Send Reminder` and `Add to Google Calendar` must remain gated until Appointments/Communication/Integration safety is reviewed.
+
+## Request 014 Partial QA - 2026-06-21
+
+After Lovable's Request 014 publish, Appointments list display polish is partially verified:
+
+- Parseable U.S./Canada appointment phones display in friendly format, for example `+1 (213) 555-0199` and `+1 (500) 555-0111`.
+- Appointment list times display as friendly times, for example `3:30 PM` and `2:45 PM`.
+
+Still pending:
+
+- Patient delete/archive branching must be verified directly before the Patients module is considered complete.
+- Patients with related appointments/payments should archive rather than hard-delete.
+- Patients with no related records may be hard-deleted only after clear in-app confirmation.
+- Appointment calendar/detail drawer polish still needs live visual QA.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
