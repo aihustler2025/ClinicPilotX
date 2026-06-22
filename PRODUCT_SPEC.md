@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-21
+Last updated: 2026-06-22
 
 ## Product Purpose
 
@@ -463,6 +463,23 @@ Follow-up polish still needed:
 - Appointment drawer should label patient appointments as `Patient`, not `Lead`.
 - Appointment drawer should not leak stray `0` text near action buttons.
 - Patients page entitlement/data-load flicker still needs diagnosis.
+
+## Request 015 Live QA - 2026-06-22
+
+Request 015 resolves the immediate polish issues from Request 014.
+
+Verified:
+
+- Patient-profile `Book Appointment` prefill now displays disabled phone fields in friendly phone format.
+- Appointments Calendar View detail drawer uses `Patient` for appointments linked to `patient_id`.
+- Appointment drawer no longer leaks a stray standalone `0` around the action button area.
+- Appointment list and drawer continue to display friendly phone/time values for tested rows.
+
+Current Appointments status:
+
+- Appointments remains partially verified overall.
+- Next QA should focus on Appointments as its own module: safe TEST-only status actions, search, filters, date range, export, calendar/list consistency, detail drawer behavior, and dashboard/analytics impact.
+- `Send Reminder` and `Add to Google Calendar` remain gated until live side-effect safety is explicitly approved.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

@@ -374,6 +374,25 @@ Follow-up issues:
 
 No live communication, payment, calendar, workflow, reminder, or integration action was triggered.
 
+## Request 015 Live QA - 2026-06-22
+
+Detailed note: `09-exports/request-015-live-qa-2026-06-22.md`.
+
+Result: pass for the tested Request 015 polish scope.
+
+Verified:
+
+- Patient-profile `Book Appointment` prefilled an active patient's disabled phone field as `+1 (213) 555-0199`, not raw E.164.
+- Appointments list still showed `CPX TEST Archive Related QA 20260621` with friendly phone `+1 (213) 555-0102` and time `3:45 PM`.
+- Appointments Calendar View drawer labeled the same appointment as `Patient`, not `Lead`.
+- Drawer phone/time remained friendly.
+- The stray standalone `0` no longer appeared near the drawer action buttons.
+
+Safety:
+
+- No `Confirm`, `Cancel`, `Send Reminder`, or `Add to Google Calendar` action was clicked.
+- No live communication, payment, calendar, workflow, reminder, or integration action was triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

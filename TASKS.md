@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-21
+Last updated: 2026-06-22
 
 ## In Progress
 
@@ -308,14 +308,20 @@ Last updated: 2026-06-21
 - [x] Verify Archived status filter contains archived patient after archive.
 - [x] Verify Appointments calendar/detail drawer phone and time formatting after Request 014.
 - [x] Create Lovable handoff 015 for Request 014 follow-up polish.
-- [ ] Send Lovable handoff 015 in Plan mode.
-- [ ] Fix booking modal disabled patient phone display from raw E.164 to friendly display format.
-- [ ] Fix appointment drawer patient type label showing `Lead` for patient-created appointments.
-- [ ] Remove stray `0` text from appointment drawer action area.
+- [x] Send Lovable handoff 015 in Plan mode.
+- [x] Fix booking modal disabled patient phone display from raw E.164 to friendly display format.
+- [x] Fix appointment drawer patient type label showing `Lead` for patient-created appointments.
+- [x] Remove stray `0` text from appointment drawer action area.
+- [x] Retest Request 015 after publish.
 - [ ] Diagnose Patients `No Plan` / `No patients found` transient state.
 - [x] Document patient profile direction for the Patients side panel.
 - [ ] Expand Patient Profile QA checklist: profile sections, appointments tab, transactions tab, notes, edit persistence, and future files/communications placeholders.
 - [ ] Define patient profile build requirements before connecting Call, Message, Video, files, or live communications.
+- [ ] Begin broader Appointments module QA with TEST appointments only.
+- [ ] Define safe status-action behavior for Appointments `Confirm` and `Cancel`.
+- [ ] Verify Appointments search, filters, date range, export, list/calendar consistency, and detail drawer behavior.
+- [ ] Verify Dashboard and Analytics updates after safe TEST appointment changes.
+- [ ] Keep `Send Reminder` and `Add to Google Calendar` untested until live-send/calendar-write safety is approved.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 

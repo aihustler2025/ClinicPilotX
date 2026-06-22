@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-21
+Last updated: 2026-06-22
 
 ## Current State
 
@@ -954,3 +954,27 @@ New files:
 - `docs/handoffs/Lovable-paste-message-015-request-014-followup-polish.md`
 
 Current next step: send Lovable Request 015 in Plan mode only for the remaining polish issues.
+
+## 2026-06-22 Request 015 Live QA Complete
+
+Ross approved and published Lovable's Request 015 follow-up polish build.
+
+Codex retested the live authenticated app directly.
+
+Result: pass for the tested Request 015 scope.
+
+Verified:
+
+- Booking modal disabled phone field now displays active patient phone in friendly format, for example `+1 (213) 555-0199`, not raw E.164.
+- Appointments list still displays the archived QA appointment phone/time as `+1 (213) 555-0102` and `3:45 PM`.
+- Appointments Calendar View drawer now labels the patient-linked appointment as `Patient`, not `Lead`.
+- Appointment drawer no longer shows the stray standalone `0` near action buttons.
+- Appointment drawer still shows friendly phone/time formatting.
+
+No live communication, payment, reminder, calendar, workflow, or webhook action was triggered.
+
+New QA report:
+
+`09-exports/request-015-live-qa-2026-06-22.md`
+
+Current next step: begin broader Appointments module QA using TEST appointments only, starting with safe status-action rules for `Confirm` and `Cancel`, then filters/search/export/calendar consistency. Do not test reminders or Google Calendar writes without explicit safety approval.
