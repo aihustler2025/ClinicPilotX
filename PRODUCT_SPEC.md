@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-23
+Last updated: 2026-06-24
 
 ## Product Purpose
 
@@ -527,6 +527,34 @@ Still gated:
 - Accepting Confirm/Cancel status changes should be tested only as part of a controlled TEST-only status-action QA plan.
 - Reminder, calendar, payment, SMS, email, and workflow paths remain off-limits until explicitly approved.
 - Export file contents still need one normal Chrome download verification.
+
+## Dashboard / Analytics QA - 2026-06-24
+
+Dashboard status: partially verified, follow-up required.
+
+Current issue:
+
+- Dashboard shows all-zero/empty-state metrics even though source CRM modules contain data.
+- During QA, Dashboard showed `Total Leads 0`, `Leads by Source No leads data available`, and `Recent Leads No leads yet`.
+- The Leads module showed `17` total leads with real rows and source/status data.
+- The Patients module showed populated patient records.
+- The Appointments module showed `29 total appointments`.
+
+Product requirement:
+
+- Dashboard cards must use trustworthy data sources or clearly indicate that a metric is not yet connected.
+- Each Dashboard metric must have an obvious scope, such as today, this week, this month, all time, selected date range, current org, or current branch.
+- Empty-state copy should not appear when the corresponding module contains records.
+
+Analytics status: partially verified.
+
+- Analytics currently exposes a date range, observed as `Jun 01 - Jun 30`.
+- Its `3` appointments value appears plausible for visible June TEST appointments.
+- Analytics needs deeper validation after Dashboard data-source/scope logic is clarified.
+
+QA report:
+
+`09-exports/dashboard-analytics-qa-2026-06-24.md`
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

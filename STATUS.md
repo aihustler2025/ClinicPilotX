@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-23
+Last updated: 2026-06-24
 
 ## Current State
 
@@ -1050,3 +1050,28 @@ New QA report:
 `09-exports/request-016-appointments-qa-2026-06-23.md`
 
 Current next step: continue Appointments completion with a controlled TEST-only status-action QA plan, or move to Dashboard / Analytics verification to confirm metrics reflect CRM data correctly. Keep reminders, payment, calendar, SMS, email, and workflow sends gated.
+
+## 2026-06-24 Dashboard / Analytics QA
+
+Codex performed a read-only authenticated Dashboard / Analytics pass after Request 016 Appointments QA.
+
+Result: partial pass / Dashboard follow-up required.
+
+Verified source module data:
+
+- Leads page shows `17` total leads, including `9` new, `5` contacted, and `3` qualified.
+- Patients page shows populated patient records.
+- Appointments page shows `29 total appointments`, including `6` pending, `13` confirmed, and `4` completed.
+- Analytics page is scoped to `Jun 01 - Jun 30` and shows `3` appointments, which appears plausible from visible June TEST appointments.
+
+Issue:
+
+- Dashboard still shows all-zero/empty-state values such as `Total Leads 0`, `Leads by Source No leads data available`, and `Recent Leads No leads yet`, despite the source modules containing data.
+
+New files:
+
+- `09-exports/dashboard-analytics-qa-2026-06-24.md`
+- `docs/handoffs/Lovable-paste-message-017-dashboard-analytics-qa-fixes.md`
+- `docs/qa/dashboard-analytics-human-qa-script.md`
+
+Current next step: send Lovable Request 017 in Plan mode only. Do not approve build until Lovable explains Dashboard data sources, metric scopes, and whether the recurring `Error fetching settings: Object` console error is related to empty Dashboard data or prior context flicker.

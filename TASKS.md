@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-23
+Last updated: 2026-06-24
 
 ## In Progress
 
@@ -329,7 +329,14 @@ Last updated: 2026-06-23
 - [x] Diagnose and fix Appointments-specific `No Plan` / zero-data flicker.
 - [x] Retest Request 016 after publish.
 - [ ] Verify Appointments exported CSV file contents through a normal Chrome download path.
-- [ ] Verify Dashboard and Analytics updates after safe TEST appointment changes.
+- [x] Verify Dashboard and Analytics updates after safe TEST appointment changes.
+- [x] Create Dashboard / Analytics QA report.
+- [x] Create Dashboard / Analytics human QA script.
+- [x] Create Lovable handoff 017 for Dashboard metrics/data-source fixes.
+- [ ] Send Lovable handoff 017 in Plan mode.
+- [ ] Diagnose why Dashboard metrics show all-zero/empty data while Leads, Patients, and Appointments contain records.
+- [ ] Fix Dashboard metric data sources and visible date/scope labels.
+- [ ] Retest Dashboard / Analytics after Request 017 publish.
 - [ ] Keep `Send Reminder` and `Add to Google Calendar` untested until live-send/calendar-write safety is approved.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12

@@ -455,6 +455,29 @@ Caveat:
 - Controlled browser did not capture a CSV download event after `Download CSV`; verify file contents later in normal Chrome.
 - Known console error `Error fetching settings: Object` still appears.
 
+## Dashboard / Analytics QA - 2026-06-24
+
+Detailed note: `09-exports/dashboard-analytics-qa-2026-06-24.md`.
+
+Result: partial pass / Dashboard follow-up required.
+
+Verified source module data:
+
+- Leads shows `17` total leads, `9` new, `5` contacted, `3` qualified, and `17` unassigned.
+- Patients shows populated patient records and formatted phone values.
+- Appointments shows `29 total appointments`, `6` pending, `13` confirmed, and `4` completed.
+- Analytics shows range `Jun 01 - Jun 30` and `3` appointments, which appears plausible from the visible June TEST appointments.
+
+Issue:
+
+- Dashboard still shows all-zero/empty-state values including `Total Leads 0`, `Leads by Source No leads data available`, and `Recent Leads No leads yet`.
+- This does not match the Leads/Patients/Appointments source modules.
+
+Safety:
+
+- Read-only QA only.
+- No live sends, calls, reminders, payments, calendar writes, workflows, webhooks, edits, deletes, or credential actions were triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.
