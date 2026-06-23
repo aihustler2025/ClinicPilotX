@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 ## Current State
 
@@ -978,3 +978,38 @@ New QA report:
 `09-exports/request-015-live-qa-2026-06-22.md`
 
 Current next step: begin broader Appointments module QA using TEST appointments only, starting with safe status-action rules for `Confirm` and `Cancel`, then filters/search/export/calendar consistency. Do not test reminders or Google Calendar writes without explicit safety approval.
+
+## 2026-06-23 Appointments Broader QA
+
+Codex completed a safe broader QA pass on the live authenticated Appointments module.
+
+Result: partial pass / follow-up required.
+
+Verified:
+
+- Appointments list loads real data after the known `No Plan` flicker is cleared by routing through Dashboard.
+- Search works for known QA text such as `Archive Related`.
+- Keyboard clearing search restores the full list.
+- Filter dialog opens with Status, Consultation Type, and Payment Status controls.
+- Consultation Type and Payment Status dropdown options are present.
+- Sort options are present, and `Date Ascending` changes list order.
+- Calendar View shows the June 2026 TEST appointments.
+- Calendar drawer still shows friendly phone/time, `Patient` label, and no stray `0`.
+
+Issues found:
+
+- Initial Appointments load can still show `No Plan` and `0 total appointments`.
+- Appointment Status filter is missing `Pending` even though visible rows and summary cards use `Pending`.
+- Status labels are inconsistent, including raw `Payment_pending` and casing mismatch like `Checked in` vs `Checked In`.
+- `Date Range` expands but no visible date picker/dialog appears.
+- `Export` shows a success toast but no Appointments export dialog, and no download event was captured in the controlled browser.
+- Some legacy phone values still display as unformatted invalid fallback, for example `+1 234567890`.
+
+No live communication, payment, reminder, calendar, workflow, webhook, Confirm, or Cancel action was triggered.
+
+New files:
+
+- `09-exports/appointments-broader-qa-2026-06-23.md`
+- `docs/handoffs/Lovable-paste-message-016-appointments-broader-qa-fixes.md`
+
+Current next step: send Lovable Request 016 in Plan mode only. Do not approve build mode until Lovable explains the files/components/functions it will inspect or edit and confirms no live-send/calendar/payment/workflow paths will be activated.

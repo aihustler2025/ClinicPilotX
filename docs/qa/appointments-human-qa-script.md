@@ -1,7 +1,7 @@
 # Appointments Module Human QA Script
 
 Status: draft for assistant/human tester confirmation.
-Last updated: 2026-06-12.
+Last updated: 2026-06-23.
 
 ## Purpose
 
@@ -141,6 +141,53 @@ These require workflow-safety confirmation before full testing.
 Expected improvement:
 
 - Appointments export should eventually offer scope, filters, date range, columns, and filename preview, similar to Leads export.
+
+### 9. Search
+
+1. In `List View`, search for a known test appointment such as `Archive Related`.
+2. Confirm the table narrows to the expected matching row.
+3. Clear the search field.
+4. Confirm the full appointment list returns.
+
+Pass if search narrows and clearing restores the list.
+
+Fail if clearing the field does not work or stale search remains.
+
+### 10. Filters
+
+1. Click `Filters`.
+2. Confirm the dialog opens.
+3. Record available `Status` options.
+4. Record available `Consultation Type` options.
+5. Record available `Payment Status` options.
+6. Close the dialog without changing live data.
+
+Expected current follow-up:
+
+- Appointment Status filter should include real statuses such as `Pending` and `Completed`.
+- Labels should not show raw values such as `Payment_pending`.
+
+### 11. Date Range
+
+1. Click `Date Range`.
+2. Confirm whether a date picker or dialog appears.
+3. Record whether there are start/end date fields, presets, Apply, and Clear.
+
+Expected current follow-up:
+
+- Date Range should open a visible date-range picker/dialog.
+- If no picker appears, mark this as a fail.
+
+### 12. Calendar Drawer Read-Only Check
+
+1. Click `Calendar View`.
+2. Open a known TEST appointment.
+3. Confirm the drawer shows patient/lead label, patient name, time, status, service, consultation type, phone, email, and notes.
+4. Do not click `Confirm`, `Cancel`, `Send Reminder`, or `Add to Google Calendar`.
+
+Pass if drawer details match the list row and no strange text artifacts appear.
+
+Fail if phone/time formatting regresses, label is wrong, or stray numeric text appears.
 
 ## Findings Format
 

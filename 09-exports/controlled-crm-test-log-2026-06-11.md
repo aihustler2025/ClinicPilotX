@@ -393,6 +393,37 @@ Safety:
 - No `Confirm`, `Cancel`, `Send Reminder`, or `Add to Google Calendar` action was clicked.
 - No live communication, payment, calendar, workflow, reminder, or integration action was triggered.
 
+## Appointments Broader QA - 2026-06-23
+
+Detailed note: `09-exports/appointments-broader-qa-2026-06-23.md`.
+
+Result: partial pass / follow-up required.
+
+Verified:
+
+- Appointments recovered from transient `No Plan` to `Professional` and `29 total appointments` after routing through Dashboard.
+- Search for `Archive Related` narrowed the list to one expected TEST appointment.
+- Keyboard clearing search restored the full `All Appointments (29)` list.
+- Filter dialog opened with Status, Consultation Type, and Payment Status controls.
+- Consultation Type and Payment Status options were present.
+- Sort options were present, and `Date Ascending` changed row ordering.
+- Calendar View showed June 2026 TEST appointments on June 12, 20, and 21.
+- Calendar drawer for `CPX TEST Archive Related QA 20260621` showed `Patient`, `3:45 PM`, `Pending`, `In-Person`, friendly phone, email, and notes.
+
+Issues:
+
+- Initial Appointments load can still show `No Plan`, `0 total appointments`, disabled Refresh, and empty table.
+- Appointment Status filter is missing `Pending`.
+- Status labels are inconsistent: examples include `Payment_pending` and `Checked in`.
+- Date Range expands but no visible picker/dialog appears.
+- Export shows `Appointments exported to CSV` toast but no scoped export dialog.
+- Some legacy phone values still show invalid/unformatted fallback such as `+1 234567890`.
+
+Safety:
+
+- No `Confirm`, `Cancel`, `Send Reminder`, or `Add to Google Calendar` action was clicked.
+- No live communication, payment, calendar, workflow, reminder, webhook, or integration action was triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

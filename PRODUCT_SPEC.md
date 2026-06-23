@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 ## Product Purpose
 
@@ -480,6 +480,31 @@ Current Appointments status:
 - Appointments remains partially verified overall.
 - Next QA should focus on Appointments as its own module: safe TEST-only status actions, search, filters, date range, export, calendar/list consistency, detail drawer behavior, and dashboard/analytics impact.
 - `Send Reminder` and `Add to Google Calendar` remain gated until live side-effect safety is explicitly approved.
+
+## Appointments Broader QA - 2026-06-23
+
+Appointments remains partially verified.
+
+Verified:
+
+- List View can load real appointments after valid subscription/context state is restored.
+- Search can isolate a known appointment.
+- Sort options are present and Date Ascending works.
+- Calendar View shows expected TEST appointments.
+- Calendar drawer displays tested appointment details consistently and safely.
+
+Current Appointments issues:
+
+- CRM route context can still briefly show `No Plan` and zero appointment data.
+- Appointment Status filter does not include `Pending`, despite pending appointments being visible and counted.
+- Status vocabulary needs normalization across stored values, filters, badges, and summary cards.
+- `Date Range` does not expose a visible picker/dialog after click.
+- Export is immediate/toast-only and should be upgraded to scoped export UX consistent with Leads and Patients.
+- Invalid legacy phone values need a deliberate display fallback/data-quality treatment.
+
+Status/action safety remains gated:
+
+- `Confirm`, `Cancel`, `Send Reminder`, and `Add to Google Calendar` should not be tested or documented as safe until Lovable confirms whether they trigger only local status changes or external sends/calendar writes.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

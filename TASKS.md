@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 ## In Progress
 
@@ -317,9 +317,16 @@ Last updated: 2026-06-22
 - [x] Document patient profile direction for the Patients side panel.
 - [ ] Expand Patient Profile QA checklist: profile sections, appointments tab, transactions tab, notes, edit persistence, and future files/communications placeholders.
 - [ ] Define patient profile build requirements before connecting Call, Message, Video, files, or live communications.
-- [ ] Begin broader Appointments module QA with TEST appointments only.
+- [x] Begin broader Appointments module QA with TEST appointments only.
 - [ ] Define safe status-action behavior for Appointments `Confirm` and `Cancel`.
-- [ ] Verify Appointments search, filters, date range, export, list/calendar consistency, and detail drawer behavior.
+- [x] Verify Appointments search, filters, date range, export, list/calendar consistency, and detail drawer behavior.
+- [x] Create Lovable handoff 016 for Appointments broader QA fixes.
+- [ ] Send Lovable handoff 016 in Plan mode.
+- [ ] Fix Appointments status filter so it includes real statuses such as `Pending` and `Completed`.
+- [ ] Normalize Appointments status display labels, including `Payment_pending` and `Checked in`.
+- [ ] Fix Appointments Date Range control so a visible date picker/dialog appears.
+- [ ] Upgrade Appointments export to a scoped dialog matching Leads/Patients export quality.
+- [ ] Diagnose Appointments/CRM `No Plan` / zero-data flicker.
 - [ ] Verify Dashboard and Analytics updates after safe TEST appointment changes.
 - [ ] Keep `Send Reminder` and `Add to Google Calendar` untested until live-send/calendar-write safety is approved.
 
