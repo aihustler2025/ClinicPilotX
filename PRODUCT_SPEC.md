@@ -506,6 +506,28 @@ Status/action safety remains gated:
 
 - `Confirm`, `Cancel`, `Send Reminder`, and `Add to Google Calendar` should not be tested or documented as safe until Lovable confirms whether they trigger only local status changes or external sends/calendar writes.
 
+## Request 016 Appointments QA - 2026-06-23
+
+Request 016 resolves the main Appointments polish issues found during broader QA.
+
+Verified:
+
+- Appointments direct load no longer shows the old `No Plan` / `0 total appointments` state before data resolves.
+- Appointment Status filter includes real visible statuses, including `Pending`, `Completed`, and `Payment Pending`.
+- Status labels are friendlier, including `Payment Pending`.
+- Date Range exposes visible presets plus Clear and Apply.
+- Appointments Export now uses a scoped export dialog with column picker and row preview.
+- Export includes both Display Phone and E.164 Phone columns.
+- Invalid legacy phone fallback is visible as `(unverified)`.
+- Drawer Confirm/Cancel actions now require confirmation and state that no external SMS/email/calendar/refund action will be sent.
+- Send Reminder and Add to Google Calendar are disabled.
+
+Still gated:
+
+- Accepting Confirm/Cancel status changes should be tested only as part of a controlled TEST-only status-action QA plan.
+- Reminder, calendar, payment, SMS, email, and workflow paths remain off-limits until explicitly approved.
+- Export file contents still need one normal Chrome download verification.
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

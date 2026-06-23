@@ -1013,3 +1013,40 @@ New files:
 - `docs/handoffs/Lovable-paste-message-016-appointments-broader-qa-fixes.md`
 
 Current next step: send Lovable Request 016 in Plan mode only. Do not approve build mode until Lovable explains the files/components/functions it will inspect or edit and confirms no live-send/calendar/payment/workflow paths will be activated.
+
+## 2026-06-23 Request 016 Appointments QA
+
+Ross approved and published Lovable's Request 016 Appointments polish build.
+
+Codex retested the live authenticated Appointments module.
+
+Result: pass for the tested Request 016 UI and safety scope, with one CSV download caveat.
+
+Verified:
+
+- Direct `/appointments` navigation no longer showed the previous `No Plan` / `0 total appointments` state.
+- The page loaded real data after a neutral loading state.
+- Appointment Status filter now includes `Pending`, `Completed`, `Payment Pending`, and other aligned status labels.
+- `Payment Pending` filter returned the expected row and displays friendly text.
+- Date Range now exposes presets, Clear, and Apply.
+- Appointments Export now opens a scoped dialog with column picker, row count preview, Display Phone, and E.164 Phone columns.
+- Legacy invalid phone fallback now shows `+1234567890 (unverified)`.
+- Calendar drawer still shows friendly phone/time, `Patient` label, and no stray `0`.
+- `Send Reminder` and `Add to Google Calendar` are disabled.
+- `Confirm` and `Cancel` each open explicit confirmation dialogs stating no SMS/email/calendar/refund side effects.
+
+Not accepted:
+
+- Codex did not accept Confirm or Cancel status changes.
+- Codex did not trigger reminders, Google Calendar, Request Payment, SMS, email, workflows, or webhooks.
+
+Caveat:
+
+- The controlled browser did not capture a CSV download event after `Download CSV`; verify actual file contents later through a normal Chrome download path.
+- The known `Error fetching settings: Object` console error still appears.
+
+New QA report:
+
+`09-exports/request-016-appointments-qa-2026-06-23.md`
+
+Current next step: continue Appointments completion with a controlled TEST-only status-action QA plan, or move to Dashboard / Analytics verification to confirm metrics reflect CRM data correctly. Keep reminders, payment, calendar, SMS, email, and workflow sends gated.

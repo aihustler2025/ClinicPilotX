@@ -424,6 +424,37 @@ Safety:
 - No `Confirm`, `Cancel`, `Send Reminder`, or `Add to Google Calendar` action was clicked.
 - No live communication, payment, calendar, workflow, reminder, webhook, or integration action was triggered.
 
+## Request 016 Appointments QA - 2026-06-23
+
+Detailed note: `09-exports/request-016-appointments-qa-2026-06-23.md`.
+
+Result: pass for tested Appointments UI and safety scope, with CSV download caveat.
+
+Verified:
+
+- Direct `/appointments` navigation used neutral loading and then real appointment data; the old `No Plan` / `0 total appointments` state did not recur during this pass.
+- Status filter includes `Pending`, `Completed`, `Payment Pending`, and other aligned statuses.
+- `Payment Pending` filter returned the expected Amanda Lee row.
+- `Payment Pending` displays as friendly text.
+- Date Range exposes presets, Clear, and Apply.
+- Export opens `Export Appointments to CSV` with scope, column picker, row count preview, Phone Display, and Phone E.164 columns.
+- Legacy phone fallback now shows `+1234567890 (unverified)`.
+- Calendar drawer still shows `Patient`, friendly phone/time, and no stray `0`.
+- Send Reminder and Add to Google Calendar are disabled.
+- Confirm and Cancel show confirmation dialogs that explicitly state no SMS/email/calendar/refund side effects.
+
+Not accepted:
+
+- Confirm status change.
+- Cancel status change.
+- Request Payment.
+- Reminder/calendar/payment/SMS/email/workflow/webhook actions.
+
+Caveat:
+
+- Controlled browser did not capture a CSV download event after `Download CSV`; verify file contents later in normal Chrome.
+- Known console error `Error fetching settings: Object` still appears.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

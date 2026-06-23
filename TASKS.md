@@ -321,12 +321,14 @@ Last updated: 2026-06-23
 - [ ] Define safe status-action behavior for Appointments `Confirm` and `Cancel`.
 - [x] Verify Appointments search, filters, date range, export, list/calendar consistency, and detail drawer behavior.
 - [x] Create Lovable handoff 016 for Appointments broader QA fixes.
-- [ ] Send Lovable handoff 016 in Plan mode.
-- [ ] Fix Appointments status filter so it includes real statuses such as `Pending` and `Completed`.
-- [ ] Normalize Appointments status display labels, including `Payment_pending` and `Checked in`.
-- [ ] Fix Appointments Date Range control so a visible date picker/dialog appears.
-- [ ] Upgrade Appointments export to a scoped dialog matching Leads/Patients export quality.
-- [ ] Diagnose Appointments/CRM `No Plan` / zero-data flicker.
+- [x] Send Lovable handoff 016 in Plan mode.
+- [x] Fix Appointments status filter so it includes real statuses such as `Pending` and `Completed`.
+- [x] Normalize Appointments status display labels, including `Payment_pending` and `Checked in`.
+- [x] Fix Appointments Date Range control so a visible date picker/dialog appears.
+- [x] Upgrade Appointments export to a scoped dialog matching Leads/Patients export quality.
+- [x] Diagnose and fix Appointments-specific `No Plan` / zero-data flicker.
+- [x] Retest Request 016 after publish.
+- [ ] Verify Appointments exported CSV file contents through a normal Chrome download path.
 - [ ] Verify Dashboard and Analytics updates after safe TEST appointment changes.
 - [ ] Keep `Send Reminder` and `Add to Google Calendar` untested until live-send/calendar-write safety is approved.
 
