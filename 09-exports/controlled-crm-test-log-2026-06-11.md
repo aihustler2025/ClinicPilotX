@@ -478,6 +478,27 @@ Safety:
 - Read-only QA only.
 - No live sends, calls, reminders, payments, calendar writes, workflows, webhooks, edits, deletes, or credential actions were triggered.
 
+## Request 017 Dashboard QA - 2026-06-24
+
+Detailed note: `09-exports/request-017-dashboard-qa-2026-06-24.md`.
+
+Result: pass for the tested Request 017 Dashboard scope.
+
+Verified:
+
+- Dashboard no longer stays at all-zero/empty values.
+- After auth/data readiness, Dashboard shows `Total Leads 20`, `Today's Appointments 0`, `Conversion Rate 15%`, and real Leads by Source counts.
+- Dashboard Recent Leads shows actual lead rows.
+- Follow-ups shows `Coming soon`, not a fabricated number.
+- Revenue is labeled `Revenue (MTD)` and shows `$0`.
+- Leads page active pipeline count remains `17`; Dashboard `20` appears to include converted/all-time leads and is consistent with the source breakdown.
+- Appointments page shows `6` pending including TEST rows; Dashboard shows `3` pending, which is plausible because Request 017 excludes TEST rows from headline metrics.
+
+Safety:
+
+- Read-only QA only.
+- No live sends, calls, reminders, payments, calendar writes, workflows, webhooks, edits, deletes, or credential actions were triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

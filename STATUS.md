@@ -1075,3 +1075,32 @@ New files:
 - `docs/qa/dashboard-analytics-human-qa-script.md`
 
 Current next step: send Lovable Request 017 in Plan mode only. Do not approve build until Lovable explains Dashboard data sources, metric scopes, and whether the recurring `Error fetching settings: Object` console error is related to empty Dashboard data or prior context flicker.
+
+## 2026-06-24 Request 017 Dashboard QA
+
+Ross approved and published Lovable's Request 017 Dashboard metrics build. Codex retested the live app.
+
+Result: pass for the tested Dashboard scope.
+
+Verified:
+
+- Dashboard no longer shows the old permanent all-zero/empty-state metrics.
+- Dashboard resolves to real/scoped values after auth/session/data readiness.
+- `Total Leads` shows `20`; this appears to be all-time leads, including converted leads.
+- Leads page still shows `17` active pipeline leads, so the difference is explainable by scope.
+- Leads by Source sums to `20`.
+- `Conversion Rate 15%` is consistent with 3 converted leads out of 20 total leads.
+- Dashboard `Pending 3` is plausible because Request 017 excludes TEST rows, while Appointments shows `6` pending including 3 TEST pending appointments.
+- `Follow-ups` now shows `Coming soon` instead of a fabricated number.
+- `Revenue (MTD)` shows `$0`.
+- `Recent Leads` now displays real lead rows.
+
+Known remaining note:
+
+- The recurring `Error fetching settings: Object` console error still appears after visiting Appointments and remains a separate follow-up ticket.
+
+New QA report:
+
+`09-exports/request-017-dashboard-qa-2026-06-24.md`
+
+Current next step: continue Appointments completion with controlled TEST-only status-action QA for Confirm and Cancel. Keep Send Reminder, Google Calendar, Request Payment, SMS, email, workflows, and webhooks gated.

@@ -556,6 +556,37 @@ QA report:
 
 `09-exports/dashboard-analytics-qa-2026-06-24.md`
 
+## Request 017 Dashboard QA - 2026-06-24
+
+Request 017 resolves the main Dashboard metrics issue.
+
+Verified:
+
+- Dashboard waits for session/data readiness and no longer gets stuck in permanent zero/empty-state values.
+- Dashboard shows real/scoped metrics:
+  - `Total Leads 20`
+  - `Today's Appointments 0`
+  - `Conversion Rate 15%`
+  - `New Patients (this week) 1`
+  - `Pending 3`
+  - `Completed Today 0`
+  - `Cancelled Today 0`
+  - `Follow-ups Coming soon`
+  - `Revenue (MTD) $0`
+- Leads by Source now shows real source counts and sums to total leads.
+- Recent Leads now shows actual recent leads.
+- The difference between Dashboard total leads and Leads page active pipeline count is explainable by scope: Dashboard appears all-time, while Leads page shows active pipeline leads.
+- Dashboard appointment headline counts exclude TEST rows where supported, while the Appointments module still shows TEST rows for QA visibility.
+
+Current Dashboard status:
+
+- Dashboard is partially verified and substantially improved.
+- Remaining deeper work includes validating revenue with real paid test/payment-safe records later and adding a future global date range if desired.
+
+QA report:
+
+`09-exports/request-017-dashboard-qa-2026-06-24.md`
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

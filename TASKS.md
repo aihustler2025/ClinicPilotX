@@ -333,10 +333,14 @@ Last updated: 2026-06-24
 - [x] Create Dashboard / Analytics QA report.
 - [x] Create Dashboard / Analytics human QA script.
 - [x] Create Lovable handoff 017 for Dashboard metrics/data-source fixes.
-- [ ] Send Lovable handoff 017 in Plan mode.
-- [ ] Diagnose why Dashboard metrics show all-zero/empty data while Leads, Patients, and Appointments contain records.
-- [ ] Fix Dashboard metric data sources and visible date/scope labels.
-- [ ] Retest Dashboard / Analytics after Request 017 publish.
+- [x] Send Lovable handoff 017 in Plan mode.
+- [x] Diagnose why Dashboard metrics show all-zero/empty data while Leads, Patients, and Appointments contain records.
+- [x] Fix Dashboard metric data sources and visible date/scope labels.
+- [x] Retest Dashboard / Analytics after Request 017 publish.
+- [x] Document Request 017 Dashboard QA result.
+- [ ] Create controlled TEST-only Appointments status-action QA plan for Confirm and Cancel.
+- [ ] Test Confirm status change only on a disposable TEST appointment after safety review.
+- [ ] Test Cancel status change only on a disposable TEST appointment after safety review.
 - [ ] Keep `Send Reminder` and `Add to Google Calendar` untested until live-send/calendar-write safety is approved.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
