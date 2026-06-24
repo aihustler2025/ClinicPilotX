@@ -669,6 +669,39 @@ QA report:
 
 `09-exports/communication-hub-readonly-audit-2026-06-24.md`
 
+## Automation Center Read-Only Audit - 2026-06-24
+
+Automation Center status: present, partially functional, and high-risk because some workflows are active and send-capable.
+
+Verified:
+
+- Current plan shows `Professional`.
+- Workflow count shows `7 / 13 Active`.
+- Activity Logs show workflow execution history.
+- Active/send-capable workflows include Lead Acknowledgment, Smart Follow-up Sequence, Follow-up After Visit, Follow-Up Sequences, No-Show Recovery, Appointment Confirmation, and Appointment Reminders.
+
+Key findings:
+
+- Lead Acknowledgment has SMS/email templates and test-send buttons.
+- Appointment Confirmation has SMS/email templates, timing rules, test-send buttons, and `Executions 21`.
+- Smart Follow-up and No-Show Recovery are SMS-style outbound workflows.
+- Lead Scoring & Assignment is not configurable yet.
+- No visible email AI sorting or inbound email-to-lead workflow exists yet.
+- No visible external chatbot/contact-form lead intake workflow exists yet.
+
+Product implication:
+
+- The Dr. Hong demo needs a new planned foundation around inbound intake, not existing outbound send workflows.
+- Existing send-capable workflows must remain gated until live/test credential behavior, consent, and TEST suppression are fully verified.
+
+QA report:
+
+`09-exports/automation-center-readonly-audit-2026-06-24.md`
+
+Next Lovable handoff:
+
+`docs/handoffs/Lovable-paste-message-018-dr-hong-demo-foundation.md`
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

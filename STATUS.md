@@ -1170,3 +1170,44 @@ New files:
 - `docs/qa/communication-hub-human-qa-script.md`
 
 Current next step: audit Automation Center read-only, with focus on email filtering, lead intake, appointment request detection, and workflow safety. After Automation Center audit, create a Lovable plan-mode request for the Dr. Hong demo foundation.
+
+## 2026-06-24 Automation Center Read-Only Audit
+
+Codex completed a read-only Automation Center audit.
+
+Result: partial / high-risk area.
+
+Verified:
+
+- Automation Center loads behind authentication.
+- Current plan shows `Professional`.
+- Active workflow count shows `7 / 13 Active`.
+- Workflows and Activity Logs tabs are present.
+- Activity Logs show real workflow execution history, including Smart Follow-up, Lead Acknowledgment, and Appointment Confirmation.
+- Several active workflows are send-capable.
+
+Important findings:
+
+- `Lead Acknowledgment` is active and has SMS/email templates plus `Send Test SMS` and `Send Test Email`.
+- `Appointment Confirmation` is active, shows `Executions 21`, has send templates, and says confirmations are currently sent 5 minutes after appointments are booked.
+- `Smart Follow-up Sequence` is active and SMS-style lead nurture oriented.
+- `No-Show Recovery` is active and SMS-oriented, with copy indicating it can send immediately if delay is 0.
+- `Lead Scoring & Assignment` configure panel is only a placeholder: `Configuration not available for this workflow yet.`
+- No visible workflow currently handles incoming email AI sorting, spam filtering, email-to-lead conversion, external chatbot intake, website contact form intake, or client knowledge base setup.
+
+Not clicked:
+
+- Send Test SMS.
+- Send Test Email.
+- Save Configuration.
+- Workflow switches.
+- Upgrade.
+- Credentials.
+
+New files:
+
+- `09-exports/automation-center-readonly-audit-2026-06-24.md`
+- `docs/qa/automation-center-human-qa-script.md`
+- `docs/handoffs/Lovable-paste-message-018-dr-hong-demo-foundation.md`
+
+Current next step: send Lovable Request 018 in Plan mode only. Do not approve build until Lovable explains the client/clinic setup, test inbox email AI sorting, lead intake API/webhook, Automation Center relationship, Communication Hub relationship, and no-live-send safeguards.

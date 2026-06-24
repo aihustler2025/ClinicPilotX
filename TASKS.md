@@ -345,7 +345,10 @@ Last updated: 2026-06-24
 - [x] Document Dr. Colin Hong near-term demo roadmap.
 - [x] Audit Communication Hub read-only: inbox/messages/internal chat, send buttons, mock vs real data, and safety risks.
 - [x] Create Communication Hub human QA script.
-- [ ] Audit Automation Center read-only with focus on email filtering, lead intake, appointment request handling, and workflow safety.
+- [x] Audit Automation Center read-only with focus on email filtering, lead intake, appointment request handling, and workflow safety.
+- [x] Create Automation Center human QA script.
+- [x] Create Lovable handoff 018 for Dr. Hong demo foundation.
+- [ ] Send Lovable handoff 018 in Plan mode.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
 - [ ] Design lead intake API/webhook path for external chatbots, ConvoCore, website forms, and future ClinicPilotX chatbot.
 - [ ] Design email AI sorting demo using a test inbox before connecting any real client inbox.

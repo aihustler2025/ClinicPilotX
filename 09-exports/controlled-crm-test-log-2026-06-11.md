@@ -551,6 +551,32 @@ Safety:
 - Read-only audit only.
 - No outbound messages, SMS, email, WhatsApp, Messenger, internal chat, payment, calendar, workflow, webhook, or credential action was triggered.
 
+## Automation Center Read-Only Audit - 2026-06-24
+
+Detailed note: `09-exports/automation-center-readonly-audit-2026-06-24.md`.
+
+Result: partial / high-risk area.
+
+Verified:
+
+- Automation Center shows `Professional`.
+- Workflow count shows `7 / 13 Active`.
+- Activity Logs show completed/failed workflow executions.
+- Lead Acknowledgment, Smart Follow-up, No-Show Recovery, Appointment Confirmation, and Appointment Reminders are visible.
+- Lead Acknowledgment has SMS/email templates and `Send Test SMS` / `Send Test Email`.
+- Appointment Confirmation has SMS/email templates, timing rules, `Send Test SMS`, `Send Test Email`, and `Executions 21`.
+- Lead Scoring configuration is not available yet.
+
+Issue for Dr. Hong demo:
+
+- No visible email AI sorting, spam filtering, email-to-lead, chatbot lead intake, contact-form intake, or client knowledge base workflow exists yet.
+
+Safety:
+
+- Read-only audit only.
+- No switches toggled.
+- No Send Test SMS, Send Test Email, Save Configuration, workflow activation, payment, calendar, webhook, or credential action was triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.
