@@ -1237,3 +1237,45 @@ New handoff:
 `docs/handoffs/Lovable-paste-message-018-product-foundation-client-onboarding-automation.md`
 
 Current next step: send the revised Request 018 in Plan mode only.
+
+## 2026-06-24 Request 018 Phase 1A Tenant Root QA
+
+Ross approved and published Lovable's Phase 1A tenant root foundation.
+
+Lovable reported:
+
+- pilot clinic `Dr. Colin Hong (Pilot)` created,
+- `teambuzzooka@gmail.com` seeded as owner and platform admin,
+- `kizha.buzzooka@gmail.com` seeded as admin,
+- `profiles.active_clinic_id` set for both users,
+- no existing app table, policy, or app code touched.
+
+Codex retested the live app and performed read-only Supabase API checks.
+
+Result: partial pass / follow-up required before Phase 1B.
+
+Verified:
+
+- Dashboard, Leads, Patients, Appointments, Communication Hub, and Automation Center still load behind authentication.
+- Professional plan state remained visible during the pass.
+- No Dashboard zero-data regression was observed.
+- New tables `clinics`, `clinic_members`, `clinic_invitations`, `platform_admins`, and `platform_admin_audit` exist on live Supabase project `imuyfbvsombbpgdgkhrb`.
+- Anonymous reads to those new tables return zero rows.
+- New profile columns `active_clinic_id` and `onboarding_completed_at` exist.
+- Helper functions exist and return safe anonymous values (`false`/`null`).
+- No live sends, workflow actions, calendar writes, payment writes, or webhook calls were triggered during QA.
+
+Issue:
+
+- Settings remains stuck at `Loading settings...` with console error `Error fetching settings: Object`. This appears pre-existing, but it should be fixed before clinic onboarding/setup work.
+
+Limitation:
+
+- Codex cannot independently verify exact seeded member/profile rows from the current UI because Phase 1A has no UI and RLS correctly hides tenant/admin rows from anonymous reads. Lovable/Supabase should confirm with read-only SQL before Phase 1B.
+
+New files:
+
+- `09-exports/request-018-phase-1a-tenant-root-qa-2026-06-24.md`
+- `docs/handoffs/Lovable-paste-message-019-phase-1a-qa-followup-settings.md`
+
+Current next step: send Request 019 to Lovable in Plan mode only. Do not begin Phase 1B until the Phase 1A seed rows are confirmed and the Settings fetch error is diagnosed/fixed.

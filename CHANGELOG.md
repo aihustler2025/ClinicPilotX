@@ -139,3 +139,13 @@
 - Logged Leads status filter and export UX concerns, including confusing `Show Converted` count behavior.
 - Added Lovable handoff 004 for Leads module improvements: phone formatting, service selector, source fields, richer details/timeline, export dialog, and future chatbot/email/contact-form intake readiness.
 - Added two more controlled dummy leads for future chatbot/email intake testing and confirmed status/temperature can mutate unexpectedly after later lead creation.
+
+## 2026-06-24 Phase 1A Tenant Root QA
+
+- QA-tested Lovable's published Phase 1A tenant root foundation.
+- Verified core CRM routes still load after publish and the Dashboard still shows real metrics.
+- Verified new tenant root tables exist on the live Supabase project and anonymous reads return no rows.
+- Verified new profile columns exist and helper functions return safe anonymous values.
+- Logged the remaining Settings fetch error as a blocker before onboarding/setup work.
+- Added `09-exports/request-018-phase-1a-tenant-root-qa-2026-06-24.md`.
+- Added `docs/handoffs/Lovable-paste-message-019-phase-1a-qa-followup-settings.md`.

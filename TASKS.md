@@ -349,7 +349,14 @@ Last updated: 2026-06-24
 - [x] Create Automation Center human QA script.
 - [x] Create Lovable handoff 018 for Dr. Hong demo foundation.
 - [x] Rewrite Lovable handoff 018 to frame ClinicPilotX as a multi-client subscription product, with Dr. Hong as first pilot workspace only.
-- [ ] Send revised Lovable handoff 018 in Plan mode.
+- [x] Send revised Lovable handoff 018 in Plan mode.
+- [x] Approve and publish Phase 1A tenant root foundation after Lovable narrowed scope to additive root tables only.
+- [x] QA Phase 1A tenant root foundation after publish.
+- [x] Create Lovable handoff 019 for Phase 1A SQL verification and Settings fetch-error follow-up.
+- [ ] Send Lovable handoff 019 in Plan mode.
+- [ ] Get Lovable/Supabase SQL confirmation that Phase 1A seeded pilot clinic, members, platform admin, and active clinic profile fields correctly.
+- [ ] Diagnose and fix Settings page `Error fetching settings: Object` before onboarding/setup work.
+- [ ] Do not start Phase 1B existing-table `clinic_id` migration until Phase 1A seed verification and Settings follow-up pass.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
 - [ ] Design clinic onboarding/setup wizard: profile, logo, website, business hours, services, team, permissions, templates, integrations, and plan gates.
 - [ ] Design per-clinic knowledge base for services, FAQs, hours, policies, pricing, provider bios, and AI-safe business facts.
