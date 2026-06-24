@@ -353,9 +353,15 @@ Last updated: 2026-06-24
 - [x] Approve and publish Phase 1A tenant root foundation after Lovable narrowed scope to additive root tables only.
 - [x] QA Phase 1A tenant root foundation after publish.
 - [x] Create Lovable handoff 019 for Phase 1A SQL verification and Settings fetch-error follow-up.
-- [ ] Send Lovable handoff 019 in Plan mode.
-- [ ] Get Lovable/Supabase SQL confirmation that Phase 1A seeded pilot clinic, members, platform admin, and active clinic profile fields correctly.
-- [ ] Diagnose and fix Settings page `Error fetching settings: Object` before onboarding/setup work.
+- [x] Send Lovable handoff 019 in Plan mode.
+- [x] Get Lovable/Supabase SQL confirmation that Phase 1A seeded pilot clinic, members, platform admin, and active clinic profile fields correctly.
+- [x] Approve and publish Request 019 frontend-only Settings fix.
+- [x] QA Request 019 Settings fix after publish.
+- [x] Create Lovable handoff 020 for Settings row missing follow-up.
+- [ ] Send Lovable handoff 020 in Plan mode.
+- [ ] Diagnose and fix Settings page `Settings row missing - contact support` before onboarding/setup work.
+- [ ] Re-run Settings save/revert QA after the real Settings form renders.
+- [ ] Confirm `Error fetching settings: Object` no longer appears after visiting Appointments/Automation.
 - [ ] Do not start Phase 1B existing-table `clinic_id` migration until Phase 1A seed verification and Settings follow-up pass.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
 - [ ] Design clinic onboarding/setup wizard: profile, logo, website, business hours, services, team, permissions, templates, integrations, and plan gates.

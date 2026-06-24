@@ -1279,3 +1279,41 @@ New files:
 - `docs/handoffs/Lovable-paste-message-019-phase-1a-qa-followup-settings.md`
 
 Current next step: send Request 019 to Lovable in Plan mode only. Do not begin Phase 1B until the Phase 1A seed rows are confirmed and the Settings fetch error is diagnosed/fixed.
+
+## 2026-06-24 Request 019 Settings Fix QA
+
+Ross approved and published Lovable's frontend-only Settings fix.
+
+Lovable also reported live Phase 1A evidence passed:
+
+- pilot clinic `Dr. Colin Hong (Pilot)` / `dr-colin-hong`,
+- `teambuzzooka@gmail.com` owner and platform admin,
+- `kizha.buzzooka@gmail.com` admin,
+- both profiles have the pilot `active_clinic_id`,
+- helper/RLS checks passed.
+
+Codex retested `/settings`.
+
+Result: failed / follow-up required before Phase 1B.
+
+Observed:
+
+- `/settings` still does not render the Settings form.
+- The page first shows `Loading settings...`.
+- After waiting, it shows `Settings row missing - contact support.`
+- No Settings tabs or form controls are visible.
+- The requested notification toggle save/revert QA could not be performed.
+- `Error fetching settings: Object` still appeared after visiting Appointments and Automation Center.
+
+Core page spot checks:
+
+- Leads, Patients, Appointments, and Automation Center still load.
+- Appointments still shows `29 total appointments`.
+- Automation Center still shows `Professional` and `7 / 13 Active`.
+
+New files:
+
+- `09-exports/request-019-settings-fix-qa-2026-06-24.md`
+- `docs/handoffs/Lovable-paste-message-020-settings-row-missing-followup.md`
+
+Current next step: send Request 020 to Lovable in Plan mode only. Do not approve Phase 1B until Settings renders and the save/revert QA passes.

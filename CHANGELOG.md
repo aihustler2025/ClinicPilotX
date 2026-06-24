@@ -149,3 +149,12 @@
 - Logged the remaining Settings fetch error as a blocker before onboarding/setup work.
 - Added `09-exports/request-018-phase-1a-tenant-root-qa-2026-06-24.md`.
 - Added `docs/handoffs/Lovable-paste-message-019-phase-1a-qa-followup-settings.md`.
+
+## 2026-06-24 Request 019 Settings Fix QA
+
+- QA-tested Lovable's frontend-only Settings fix after publish.
+- Confirmed the original indefinite spinner no longer remains forever, but Settings still fails because it renders `Settings row missing — contact support.`
+- Confirmed no Settings form controls or tabs render, so the reversible notification toggle/save/revert QA could not be performed.
+- Logged that `Error fetching settings: Object` still appears after visiting Appointments/Automation.
+- Added `09-exports/request-019-settings-fix-qa-2026-06-24.md`.
+- Added `docs/handoffs/Lovable-paste-message-020-settings-row-missing-followup.md`.
