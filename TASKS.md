@@ -359,10 +359,13 @@ Last updated: 2026-06-24
 - [x] QA Request 019 Settings fix after publish.
 - [x] Create Lovable handoff 020 for Settings row missing follow-up.
 - [ ] Send Lovable handoff 020 in Plan mode.
-- [ ] Diagnose and fix Settings page `Settings row missing - contact support` before onboarding/setup work.
-- [ ] Re-run Settings save/revert QA after the real Settings form renders.
-- [ ] Confirm `Error fetching settings: Object` no longer appears after visiting Appointments/Automation.
-- [ ] Do not start Phase 1B existing-table `clinic_id` migration until Phase 1A seed verification and Settings follow-up pass.
+- [x] Send Lovable handoff 020 in Plan mode.
+- [x] Diagnose and fix Settings page `Settings row missing - contact support` before onboarding/setup work.
+- [x] Re-run Settings save/revert QA after the real Settings form renders.
+- [x] Confirm `Error fetching settings: Object` no longer appears after visiting Appointments/Automation.
+- [x] Create Lovable handoff 021 for Phase 1B planning only.
+- [ ] Send Lovable handoff 021 in Plan mode.
+- [ ] Do not approve Phase 1B build until Lovable provides a reviewed table inventory, migration sequence, RLS strategy, QA plan, and rollback plan.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
 - [ ] Design clinic onboarding/setup wizard: profile, logo, website, business hours, services, team, permissions, templates, integrations, and plan gates.
 - [ ] Design per-clinic knowledge base for services, FAQs, hours, policies, pricing, provider bios, and AI-safe business facts.

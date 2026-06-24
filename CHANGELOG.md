@@ -158,3 +158,13 @@
 - Logged that `Error fetching settings: Object` still appears after visiting Appointments/Automation.
 - Added `09-exports/request-019-settings-fix-qa-2026-06-24.md`.
 - Added `docs/handoffs/Lovable-paste-message-020-settings-row-missing-followup.md`.
+
+## 2026-06-24 Request 020 Settings Grant QA
+
+- QA-tested Lovable's narrowed Settings grant fix after publish.
+- Verified Settings now renders the real Settings UI after hard reload.
+- Verified the reversible Call Notifications off/save/on/save QA path.
+- Verified Audit Log records both settings saves with actor `teambuzzooka@gmail.com`.
+- Verified Dashboard, Leads, Patients, Appointments, Payments, Communication Hub, and Automation Center still load.
+- Added `09-exports/request-020-settings-grant-qa-2026-06-24.md`.
+- Added `docs/handoffs/Lovable-paste-message-021-phase-1b-planning-only.md`.

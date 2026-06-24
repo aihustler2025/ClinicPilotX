@@ -1317,3 +1317,41 @@ New files:
 - `docs/handoffs/Lovable-paste-message-020-settings-row-missing-followup.md`
 
 Current next step: send Request 020 to Lovable in Plan mode only. Do not approve Phase 1B until Settings renders and the save/revert QA passes.
+
+## 2026-06-24 Request 020 Settings Grant QA
+
+Ross approved and published Lovable's narrowed Settings grant fix.
+
+Lovable reported:
+
+- `authenticated` now has `SELECT` on `public.settings`,
+- no new schema/table/RLS/app-code changes,
+- linter warnings are pre-existing permissive-RLS findings on other tables.
+
+Codex retested the live app.
+
+Result: pass for the tested Settings grant scope.
+
+Verified:
+
+- `/settings` hard reload renders the real Settings UI.
+- No `Loading settings...` hang.
+- No `Settings row missing - contact support` fallback.
+- No Settings console errors observed.
+- General, Notifications, Integrations, Profile, Email Logs, and Audit Log tabs render.
+- Approved reversible QA rider passed:
+  - Call Notifications toggled off,
+  - save succeeded with `Settings updated successfully`,
+  - Call Notifications toggled back on,
+  - save succeeded again,
+  - reload confirmed notification switches restored on.
+- Audit Log shows both QA updates with actor `teambuzzooka@gmail.com`.
+- Dashboard, Leads, Patients, Appointments, Payments, Communication Hub, and Automation Center still load.
+- No live sends, workflows, payment actions, or calendar actions were triggered.
+
+New files:
+
+- `09-exports/request-020-settings-grant-qa-2026-06-24.md`
+- `docs/handoffs/Lovable-paste-message-021-phase-1b-planning-only.md`
+
+Current next step: send Request 021 to Lovable in Plan mode only. Phase 1B should be planned carefully before any build because it will likely touch existing CRM data tables and tenant scoping.
