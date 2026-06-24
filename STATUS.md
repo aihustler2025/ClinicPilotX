@@ -1104,3 +1104,38 @@ New QA report:
 `09-exports/request-017-dashboard-qa-2026-06-24.md`
 
 Current next step: continue Appointments completion with controlled TEST-only status-action QA for Confirm and Cancel. Keep Send Reminder, Google Calendar, Request Payment, SMS, email, workflows, and webhooks gated.
+
+## 2026-06-24 Appointments Status Actions QA
+
+Ross approved continuing Appointments internal status testing after clarifying the near-term demo goal.
+
+Codex tested status changes on a TEST appointment only:
+
+- `CPX TEST Archive Related QA 20260621`
+- `CPX TEST Archive Appointment 20260621`
+
+Result: pass for the tested internal status-action scope.
+
+Verified:
+
+- `Confirm` opens a safety dialog saying the action only updates status and sends no SMS, email, or calendar invite.
+- Accepting Confirm changed the TEST appointment from `Pending` to `Confirmed`.
+- `Cancel` opens a safety dialog saying the action only updates status and sends no cancellation SMS, email, or refund.
+- Accepting Cancel changed the same TEST appointment from `Confirmed` to `Cancelled`.
+- The appointment remained visible with the TEST badge.
+- Appointments list showed the row as `Cancelled`.
+- Pending summary dropped from `6` to `5`.
+
+Not clicked:
+
+- Send Reminder.
+- Add to Google Calendar.
+- Payments.
+- SMS/email/workflows/webhooks.
+
+New files:
+
+- `09-exports/appointments-status-actions-qa-2026-06-24.md`
+- `docs/dr-hong-demo-roadmap.md`
+
+Current next step: begin read-only Communication Hub audit, then Automation Center audit focused on email intake/lead workflows. The near-term demo priority is Dr. Colin Hong client setup, email AI filtering, and chatbot/API lead intake. Payments, video, WhatsApp, Messenger, Viber, Telegram, Google Calendar writes, and live SMS remain deferred.

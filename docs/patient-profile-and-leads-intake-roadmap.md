@@ -1,6 +1,6 @@
 # Patient Profile and Leads Intake Roadmap
 
-Last updated: 2026-06-19
+Last updated: 2026-06-24
 
 ## Purpose
 
@@ -215,13 +215,18 @@ Still pending:
 
 ## Recommended Order
 
-1. Finish safe Patients profile QA and patient-to-appointment regression.
-2. Finish Appointments module QA with TEST mode.
-3. Audit Communication Hub before activating message/call actions.
-4. Audit Automation Center settings and workflow safety.
-5. Design the lead intake API/webhook contract.
-6. Build one safe intake source first, likely website/contact email or chatbot test payload.
-7. Add additional channels only after the first intake path is stable.
+1. Finish Appointments internal status QA with TEST mode.
+2. Audit Communication Hub before activating message/call actions.
+3. Audit Automation Center settings and workflow safety, especially email filtering and lead intake automations.
+4. Design client/clinic account setup for the Dr. Colin Hong demo.
+5. Design the lead intake API/webhook contract for ConvoCore, outside chatbots, website forms, and the future ClinicPilotX chatbot.
+6. Build one safe intake source first, likely email AI sorting through a test inbox or chatbot/contact-form test payload.
+7. Add SMS later if the first intake path is stable and consent/safety rules are clear.
+8. Add WhatsApp, Messenger, Viber, Telegram, payments, and video consultation only after the core demo path is stable.
+
+Near-term Dr. Hong demo roadmap:
+
+`docs/dr-hong-demo-roadmap.md`
 
 ## Not Yet Approved
 

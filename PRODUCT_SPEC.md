@@ -587,6 +587,57 @@ QA report:
 
 `09-exports/request-017-dashboard-qa-2026-06-24.md`
 
+## Appointments Status Actions QA - 2026-06-24
+
+Appointments internal status actions are now verified for the tested TEST-only path.
+
+Verified:
+
+- A pending TEST appointment can be confirmed after an in-app confirmation dialog.
+- The Confirm dialog explicitly states that no SMS, email, or calendar invite will be sent.
+- A confirmed TEST appointment can be cancelled after an in-app confirmation dialog.
+- The Cancel dialog explicitly states that no cancellation SMS, email, or refund will be sent.
+- After cancellation, the appointment remains visible with the TEST badge and `Cancelled` status.
+
+Still gated:
+
+- Send Reminder.
+- Add to Google Calendar.
+- Request Payment.
+- SMS/email sends.
+- Workflows/webhooks.
+
+QA report:
+
+`09-exports/appointments-status-actions-qa-2026-06-24.md`
+
+## Dr. Colin Hong Demo Direction - 2026-06-24
+
+Near-term development should prioritize a useful Dr. Colin Hong demo over lower-priority modules.
+
+Priority order:
+
+1. Communication Hub read-only audit.
+2. Automation Center read-only audit focused on email filtering and lead intake workflows.
+3. Client/clinic account setup so a clinic can have its own services, pricing, templates, inboxes, chatbot sources, and knowledge base.
+4. Lead intake API/webhook path for external chatbots, website forms, and future ClinicPilotX chatbot.
+5. Email AI sorting demo using a test inbox first.
+
+Deferred:
+
+- Payments/Billing.
+- Video Consultation.
+- WhatsApp.
+- Messenger.
+- Viber.
+- Telegram.
+- Google Calendar writes.
+- Live SMS/calling.
+
+Roadmap:
+
+`docs/dr-hong-demo-roadmap.md`
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

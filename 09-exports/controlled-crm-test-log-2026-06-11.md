@@ -499,6 +499,31 @@ Safety:
 - Read-only QA only.
 - No live sends, calls, reminders, payments, calendar writes, workflows, webhooks, edits, deletes, or credential actions were triggered.
 
+## Appointments Status Actions QA - 2026-06-24
+
+Detailed note: `09-exports/appointments-status-actions-qa-2026-06-24.md`.
+
+Result: pass for TEST-only internal status actions.
+
+Test appointment:
+
+- `CPX TEST Archive Related QA 20260621`
+- `CPX TEST Archive Appointment 20260621`
+- TEST badge present.
+
+Verified:
+
+- Confirm safety dialog said no SMS, email, or calendar invite would be sent.
+- Accepting Confirm changed status from `Pending` to `Confirmed`.
+- Cancel safety dialog said no cancellation SMS, email, or refund would be sent.
+- Accepting Cancel changed status from `Confirmed` to `Cancelled`.
+- The appointment remains visible in Appointments with status `Cancelled` and TEST badge.
+- Pending summary dropped from `6` to `5`.
+
+Safety:
+
+- No Send Reminder, Google Calendar, payment, SMS, email, workflow, webhook, or credential action was triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

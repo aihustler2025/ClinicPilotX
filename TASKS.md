@@ -338,9 +338,16 @@ Last updated: 2026-06-24
 - [x] Fix Dashboard metric data sources and visible date/scope labels.
 - [x] Retest Dashboard / Analytics after Request 017 publish.
 - [x] Document Request 017 Dashboard QA result.
-- [ ] Create controlled TEST-only Appointments status-action QA plan for Confirm and Cancel.
-- [ ] Test Confirm status change only on a disposable TEST appointment after safety review.
-- [ ] Test Cancel status change only on a disposable TEST appointment after safety review.
+- [x] Create controlled TEST-only Appointments status-action QA plan for Confirm and Cancel.
+- [x] Test Confirm status change only on a TEST appointment after safety review.
+- [x] Test Cancel status change only on a TEST appointment after safety review.
+- [x] Document Appointments status-action QA.
+- [x] Document Dr. Colin Hong near-term demo roadmap.
+- [ ] Audit Communication Hub read-only: inbox/messages/internal chat, send buttons, mock vs real data, and safety risks.
+- [ ] Audit Automation Center read-only with focus on email filtering, lead intake, appointment request handling, and workflow safety.
+- [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
+- [ ] Design lead intake API/webhook path for external chatbots, ConvoCore, website forms, and future ClinicPilotX chatbot.
+- [ ] Design email AI sorting demo using a test inbox before connecting any real client inbox.
 - [ ] Keep `Send Reminder` and `Add to Google Calendar` untested until live-send/calendar-write safety is approved.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
