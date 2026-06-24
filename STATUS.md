@@ -1211,3 +1211,29 @@ New files:
 - `docs/handoffs/Lovable-paste-message-018-dr-hong-demo-foundation.md`
 
 Current next step: send Lovable Request 018 in Plan mode only. Do not approve build until Lovable explains the client/clinic setup, test inbox email AI sorting, lead intake API/webhook, Automation Center relationship, Communication Hub relationship, and no-live-send safeguards.
+
+## 2026-06-24 Request 018 Reframed As Product Foundation
+
+Ross clarified that ClinicPilotX is a multi-client subscription product and that Dr. Colin Hong is the first pilot/test clinic workspace, not a custom-only build.
+
+Request 018 was rewritten to focus on product foundation:
+
+- multi-client clinic/workspace structure,
+- onboarding/setup wizard,
+- client knowledge base,
+- clinic branding/logo/business profile,
+- services/pricing/business hours,
+- staff/team roles and permissions,
+- subscription plan gates,
+- Google Calendar planning without live writes,
+- email AI sorting,
+- chatbot/contact-form/API lead intake,
+- Automation Center relationship,
+- Communication Hub relationship,
+- app-native Lovable/Supabase automation strategy instead of relying on expired n8n.
+
+New handoff:
+
+`docs/handoffs/Lovable-paste-message-018-product-foundation-client-onboarding-automation.md`
+
+Current next step: send the revised Request 018 in Plan mode only.

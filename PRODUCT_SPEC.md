@@ -700,7 +700,26 @@ QA report:
 
 Next Lovable handoff:
 
-`docs/handoffs/Lovable-paste-message-018-dr-hong-demo-foundation.md`
+`docs/handoffs/Lovable-paste-message-018-product-foundation-client-onboarding-automation.md`
+
+## Product Foundation Clarification - 2026-06-24
+
+ClinicPilotX is a multi-client subscription product.
+
+Dr. Colin Hong is the first pilot/test clinic workspace, not a custom-only build.
+
+Product foundation requirements:
+
+- Each clinic/client should have its own workspace/account.
+- Each clinic should have its own data, staff, patients, leads, appointments, messages, automations, templates, settings, and integrations.
+- Each clinic needs an onboarding/setup flow.
+- Each clinic needs a business profile and knowledge base for AI features.
+- Each clinic should be able to add logo/branding, website, business hours, services, pricing guidance, staff/team, permissions, templates, and policies.
+- Each clinic should be able to connect integrations such as inbox and Google Calendar later, with explicit safety gates.
+- Subscription plans should control which features and automations are included or locked.
+- Core production automations should be app-native in Lovable/Supabase/Lovable Cloud where practical; old n8n workflows are reference only unless a production-grade n8n plan is later approved.
+
+The revised Request 018 asks Lovable to plan this foundation before building.
 
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 

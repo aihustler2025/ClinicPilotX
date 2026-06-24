@@ -577,6 +577,23 @@ Safety:
 - No switches toggled.
 - No Send Test SMS, Send Test Email, Save Configuration, workflow activation, payment, calendar, webhook, or credential action was triggered.
 
+## Request 018 Product Foundation Reframe - 2026-06-24
+
+Ross clarified that ClinicPilotX is a multi-client subscription product. Dr. Colin Hong is the first pilot/test clinic workspace only, not a custom one-off build.
+
+Request 018 was rewritten to ask Lovable for a Plan-mode product foundation covering:
+
+- multi-client clinic/workspace structure,
+- clinic onboarding/setup wizard,
+- per-clinic knowledge base,
+- branding/logo/website/business hours/services/team/permissions,
+- subscription plan gates,
+- Google Calendar planning without live writes,
+- email AI sorting,
+- chatbot/contact-form/API lead intake,
+- Automation Center and Communication Hub relationships,
+- app-native automation strategy instead of relying on old/expired n8n.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

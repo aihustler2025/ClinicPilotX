@@ -348,8 +348,12 @@ Last updated: 2026-06-24
 - [x] Audit Automation Center read-only with focus on email filtering, lead intake, appointment request handling, and workflow safety.
 - [x] Create Automation Center human QA script.
 - [x] Create Lovable handoff 018 for Dr. Hong demo foundation.
-- [ ] Send Lovable handoff 018 in Plan mode.
+- [x] Rewrite Lovable handoff 018 to frame ClinicPilotX as a multi-client subscription product, with Dr. Hong as first pilot workspace only.
+- [ ] Send revised Lovable handoff 018 in Plan mode.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
+- [ ] Design clinic onboarding/setup wizard: profile, logo, website, business hours, services, team, permissions, templates, integrations, and plan gates.
+- [ ] Design per-clinic knowledge base for services, FAQs, hours, policies, pricing, provider bios, and AI-safe business facts.
+- [ ] Plan Google Calendar connection safely without activating live calendar writes.
 - [ ] Design lead intake API/webhook path for external chatbots, ConvoCore, website forms, and future ClinicPilotX chatbot.
 - [ ] Design email AI sorting demo using a test inbox before connecting any real client inbox.
 - [ ] Keep `Send Reminder` and `Add to Google Calendar` untested until live-send/calendar-write safety is approved.

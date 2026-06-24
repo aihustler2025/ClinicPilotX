@@ -1,14 +1,17 @@
-# Dr. Colin Hong Demo Roadmap
+# ClinicPilotX Pilot Demo Roadmap
 
 Last updated: 2026-06-24
 
 ## Purpose
 
-This is the near-term ClinicPilotX roadmap for preparing a practical demo for Dr. Colin Hong.
+This is the near-term ClinicPilotX roadmap for preparing a practical pilot demo using Dr. Colin Hong as the first real clinic workspace.
+
+ClinicPilotX remains the product. Dr. Hong is not a custom one-off build. He is the first pilot clinic we can use to prove the product with real-world clinic data, website/chatbot context, and email-intake workflows.
 
 The goal is not to finish every module. The goal is to show the highest-value pieces first:
 
 - A clinic/client account can exist inside ClinicPilotX.
+- Each clinic can personalize ClinicPilotX with its own setup, team, business facts, services, branding, and integrations.
 - Email inquiries can be filtered into useful categories.
 - Real leads can land in the Leads module.
 - Appointment requests can be recognized and routed safely.
@@ -61,16 +64,18 @@ Later:
 
 ### 3. Create Client / Clinic Account Setup
 
-Status: required before a real Dr. Hong demo.
+Status: required before a real pilot demo.
 
 What this means:
 
 Each clinic/client needs its own setup area so ClinicPilotX can know:
 
 - Clinic name.
+- Logo/branding.
 - Contact email.
 - Phone number.
 - Website.
+- Address/location.
 - Staff/users.
 - Services.
 - Pricing or consultation fee guidance.
@@ -79,11 +84,35 @@ Each clinic/client needs its own setup area so ClinicPilotX can know:
 - Templates.
 - Knowledge base / clinic facts.
 - Connected inboxes and chatbot sources.
+- Google Calendar connection status.
 - Automation settings.
+- Subscription plan / feature access.
 
 Why it matters:
 
-Dr. Hong should not feel like he is looking at a generic demo. We should be able to set up a Dr. Hong clinic profile and show how his own services, email, and lead flow would work.
+Each clinic should be able to make ClinicPilotX feel like its own operating system. Dr. Hong should be the first pilot workspace, but the same setup should work later for any subscribing clinic.
+
+### 3A. Client Knowledge Base
+
+Status: required for AI features.
+
+Each clinic needs a knowledge base/business profile that AI workflows can reference.
+
+It should include:
+
+- Services and descriptions.
+- Pricing ranges.
+- FAQs.
+- Hours of operation.
+- Booking rules.
+- Cancellation/no-show policies.
+- Provider bios.
+- Location/parking notes.
+- Business tone/brand voice.
+- Common patient instructions.
+- Things AI should never say.
+
+This knowledge base should be separated per clinic so one client's information never leaks into another client's automation.
 
 ### 4. Build Lead Intake API / Webhook Path
 
@@ -190,9 +219,9 @@ Not part of the immediate Dr. Hong demo unless Ross explicitly changes priority:
 1. Complete and document Appointments internal status QA.
 2. Audit Communication Hub read-only.
 3. Audit Automation Center read-only with special focus on email intake and lead workflows.
-4. Create a Lovable plan-mode request for client/clinic account setup and lead intake API design.
+4. Create a Lovable plan-mode request for product-wide clinic onboarding, knowledge base, plan gates, and lead intake API design.
 5. Create a Lovable plan-mode request for email AI sorting using a test inbox first.
-6. Build the Dr. Hong demo path around test data before connecting live credentials.
+6. Build the pilot demo path around test data before connecting live credentials.
 
 ## Demo Safety Rules
 
