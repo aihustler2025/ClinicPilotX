@@ -524,6 +524,33 @@ Safety:
 
 - No Send Reminder, Google Calendar, payment, SMS, email, workflow, webhook, or credential action was triggered.
 
+## Communication Hub Read-Only Audit - 2026-06-24
+
+Detailed note: `09-exports/communication-hub-readonly-audit-2026-06-24.md`.
+
+Result: partial / not ready for Dr. Hong demo yet.
+
+Verified:
+
+- Communication Hub loads.
+- External Messages tab shows 11 conversation records.
+- Visible channels include SMS, WhatsApp, and Messenger.
+- Visible contact labels include Patient and Lead.
+- Filters panel opens with Channel, Date Range, and Contact Type controls.
+- Search can narrow results for visible text such as `Brandon`.
+- Internal Chat tab loads and shows staff member `Kizha Kaye`.
+
+Issues:
+
+- Clicking an external conversation did not open the conversation detail pane.
+- Clicking `Kizha Kaye` in Internal Chat produced `Failed to create direct message channel`.
+- No email inbox or email AI sorting queue is visible in Communication Hub.
+
+Safety:
+
+- Read-only audit only.
+- No outbound messages, SMS, email, WhatsApp, Messenger, internal chat, payment, calendar, workflow, webhook, or credential action was triggered.
+
 ## Scope
 
 This log records safe dummy-data CRM testing after the first authenticated dashboard audit.

@@ -638,6 +638,37 @@ Roadmap:
 
 `docs/dr-hong-demo-roadmap.md`
 
+## Communication Hub Read-Only Audit - 2026-06-24
+
+Communication Hub status: present but incomplete.
+
+Verified:
+
+- The module has two top-level tabs:
+  - External Messages.
+  - Internal Chat.
+- External Messages shows a conversation list with 11 records.
+- Visible sample channels include SMS, WhatsApp, and Messenger.
+- Visible contact types include Patient and Lead.
+- Filters exist for Channel, Date Range, and Contact Type.
+- Search can narrow the visible conversation list.
+
+Current issues:
+
+- External conversation rows did not open a readable conversation detail pane during Codex QA.
+- Internal Chat direct message creation failed with `Failed to create direct message channel`.
+- No visible Email inbox, email triage, or email AI sorting queue exists yet.
+- Existing messages appear to be seeded/demo examples until Lovable confirms otherwise.
+
+Product implication:
+
+- Communication Hub is not yet the best place to demo Dr. Hong's email filtering.
+- The next step should be Automation Center audit, then a planned Dr. Hong demo foundation covering client setup, test inbox email classification, and lead intake.
+
+QA report:
+
+`09-exports/communication-hub-readonly-audit-2026-06-24.md`
+
 Old n8n workflow exports are reference blueprints only until imported into local n8n and reviewed. Keep all imported workflows inactive.
 
 Initial known old workflow categories:

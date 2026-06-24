@@ -343,7 +343,8 @@ Last updated: 2026-06-24
 - [x] Test Cancel status change only on a TEST appointment after safety review.
 - [x] Document Appointments status-action QA.
 - [x] Document Dr. Colin Hong near-term demo roadmap.
-- [ ] Audit Communication Hub read-only: inbox/messages/internal chat, send buttons, mock vs real data, and safety risks.
+- [x] Audit Communication Hub read-only: inbox/messages/internal chat, send buttons, mock vs real data, and safety risks.
+- [x] Create Communication Hub human QA script.
 - [ ] Audit Automation Center read-only with focus on email filtering, lead intake, appointment request handling, and workflow safety.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
 - [ ] Design lead intake API/webhook path for external chatbots, ConvoCore, website forms, and future ClinicPilotX chatbot.

@@ -1139,3 +1139,34 @@ New files:
 - `docs/dr-hong-demo-roadmap.md`
 
 Current next step: begin read-only Communication Hub audit, then Automation Center audit focused on email intake/lead workflows. The near-term demo priority is Dr. Colin Hong client setup, email AI filtering, and chatbot/API lead intake. Payments, video, WhatsApp, Messenger, Viber, Telegram, Google Calendar writes, and live SMS remain deferred.
+
+## 2026-06-24 Communication Hub Read-Only Audit
+
+Codex completed a read-only audit of the live Communication Hub.
+
+Result: partial / not ready for the Dr. Hong demo yet.
+
+Verified:
+
+- Communication Hub loads behind authentication.
+- External Messages tab is present.
+- Internal Chat tab is present.
+- External Messages shows 11 conversation records.
+- Visible channel labels include SMS, WhatsApp, and Messenger.
+- Visible contact labels include Patient and Lead.
+- Filters panel opens with Channel, Date Range, and Contact Type controls.
+- Search narrowed results for `Brandon`.
+
+Issues:
+
+- Clicking a visible external conversation did not open the detail pane; the pane stayed on `Select a conversation`.
+- Internal Chat shows `Kizha Kaye`, but clicking her produced `Failed to create direct message channel`.
+- No visible email inbox or email AI filtering surface exists in Communication Hub yet.
+- Some seeded/demo messages include appointment confirmation and payment request wording; treat as demo data until source and send-log behavior are confirmed.
+
+New files:
+
+- `09-exports/communication-hub-readonly-audit-2026-06-24.md`
+- `docs/qa/communication-hub-human-qa-script.md`
+
+Current next step: audit Automation Center read-only, with focus on email filtering, lead intake, appointment request detection, and workflow safety. After Automation Center audit, create a Lovable plan-mode request for the Dr. Hong demo foundation.
