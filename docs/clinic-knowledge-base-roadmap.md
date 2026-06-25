@@ -184,6 +184,30 @@ The interface should feel clean, simple, and operational:
 
 Avoid copying any competitor's exact design. Use ClinicPilotX's own visual system and keep it consistent with the current clean dashboard style.
 
+## Reference Screenshots From Ross
+
+Ross shared screenshots on 2026-06-25 from an ElevenLabs Knowledge Base workflow as a general product reference, not as a design to copy.
+
+Local screenshot references:
+
+- `C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2026-06-25 123031.png`
+- `C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2026-06-25 123009.png`
+- `C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2026-06-25 123108.png`
+- `C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2026-06-25 123048.png`
+
+Useful ideas to remember later:
+
+- top-level source actions such as Add URL, Add Files, Create Text, and Create Folder,
+- drag-and-drop upload modal,
+- parent folder selection,
+- accepted file-type chips,
+- source list with search and filters,
+- document preview panel,
+- source metadata such as sharing status, document ID, created date, last updated date, size, index status, and dependent agents/workflows,
+- update source, download/source file, and edit actions.
+
+Important: use these only as inspiration for product planning. Do not copy the exact ElevenLabs layout, wording, visual hierarchy, or styling.
+
 ## AI Safety Requirements
 
 Knowledge Base content should support medical/cosmetic clinic workflows, but AI must stay cautious:
