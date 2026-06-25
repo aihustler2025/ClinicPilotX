@@ -379,6 +379,8 @@ Last updated: 2026-06-24
 - [ ] Send Lovable handoff 023 in Plan mode.
 - [ ] Plan Phase 1B.1 app-code work: active clinic context, insert stamping, and read filtering.
 - [ ] Do not approve Phase 1B.1 build until Lovable provides a reviewed app-code plan with exact files, sequencing, QA, and rollback.
+- [x] Capture future per-clinic Knowledge Base product direction.
+- [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
 - [ ] Design clinic onboarding/setup wizard: profile, logo, website, business hours, services, team, permissions, templates, integrations, and plan gates.
 - [ ] Design per-clinic knowledge base for services, FAQs, hours, policies, pricing, provider bios, and AI-safe business facts.

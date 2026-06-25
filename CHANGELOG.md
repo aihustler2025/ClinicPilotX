@@ -180,3 +180,9 @@
 - Added `09-exports/request-021-phase-1b-migration-qa-2026-06-25.md`.
 - Added `docs/handoffs/Lovable-paste-message-022-phase-1b-evidence-and-app-scope-plan.md`.
 - Added `docs/handoffs/Lovable-paste-message-023-phase-1b1-app-scope-plan.md`.
+
+## 2026-06-25 Clinic Knowledge Base Roadmap
+
+- Captured Ross's future per-clinic Knowledge Base requirement.
+- Added `docs/clinic-knowledge-base-roadmap.md`.
+- Updated `PRODUCT_SPEC.md` and `TASKS.md` so the idea is parked without interrupting Phase 1B.1 work.

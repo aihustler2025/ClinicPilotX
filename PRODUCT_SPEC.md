@@ -739,6 +739,18 @@ Each workflow should be mapped to one of:
 - Retain as n8n orchestration only after a production-grade n8n plan is approved.
 - Discard if obsolete or duplicated by current Automation Center behavior.
 
+## Clinic Knowledge Base Direction - 2026-06-25
+
+Each ClinicPilotX subscriber should eventually have a per-clinic Knowledge Base for services, pricing guidance, hours, policies, provider bios, FAQs, website links, uploaded documents, and AI guardrails.
+
+This should support chatbot, email AI sorting, appointment request handling, future voice agents, and Automation Center workflows while keeping each clinic's facts isolated by `clinic_id`.
+
+Initial architecture direction: use Lovable/Supabase first, including Supabase Storage for source files and Postgres/pgvector or Supabase vector storage for searchable chunks/embeddings.
+
+Planning document:
+
+`docs/clinic-knowledge-base-roadmap.md`
+
 ## Source Material Review - 2026-06-02
 
 Ross provided old/source ClinicPilot documents from `D:\PROJECTS\CLINICPILOT X (Old)`. These were reviewed as reference material only. Review saved at `09-exports/source-material-review-2026-06-02.md`.
