@@ -370,11 +370,13 @@ Last updated: 2026-06-24
 - [x] Approve Phase 1B additive migration after exact SQL review.
 - [x] QA Phase 1B migration after publish.
 - [x] Create Lovable handoff 022 for Phase 1B evidence and Phase 1B.1 app-code planning.
-- [ ] Send Lovable handoff 022 in Plan mode.
-- [ ] Get Lovable's actual Phase 1B pre-check and post-check evidence.
-- [ ] Confirm all 23 tables have non-null `clinic_id` after Phase 1B.
-- [ ] Confirm all 23 Phase 1B indexes and FKs exist.
-- [ ] Confirm no new linter findings vs. pre-migration baseline.
+- [ ] Do not send Lovable handoff 022; superseded after correct evidence was provided.
+- [x] Get Lovable's actual Phase 1B pre-check and post-check evidence.
+- [x] Confirm all 23 tables have non-null `clinic_id` after Phase 1B.
+- [x] Confirm all 23 Phase 1B indexes and FKs exist.
+- [x] Confirm no new linter findings vs. pre-migration baseline.
+- [x] Create Lovable handoff 023 for Phase 1B.1 app-code planning only.
+- [ ] Send Lovable handoff 023 in Plan mode.
 - [ ] Plan Phase 1B.1 app-code work: active clinic context, insert stamping, and read filtering.
 - [ ] Do not approve Phase 1B.1 build until Lovable provides a reviewed app-code plan with exact files, sequencing, QA, and rollback.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.

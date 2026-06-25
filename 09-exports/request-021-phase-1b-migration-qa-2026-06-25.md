@@ -15,9 +15,9 @@ Important note: the attached DOCX labeled `CLINICPILOT LOVABLE TO CODEX 25.docx`
 
 ## Result
 
-Status: **partial pass / evidence follow-up required**.
+Status: **pass for the tested Phase 1B migration scope**.
 
-The live app still loads normally after the Phase 1B migration. No visible CRM regression was found in this pass. Read-only API checks show `clinic_id` is selectable on 20 of the 23 expected tables. The remaining 3 are internal chat tables blocked by the already-known RLS recursion on `internal_channel_members`, so Codex could not verify those columns through anonymous REST.
+The live app still loads normally after the Phase 1B migration. No visible CRM regression was found in this pass. Lovable's actual completion evidence confirms all 23 expected tables received `clinic_id`, all existing rows were backfilled, row counts were unchanged, and the planned indexes/FKs exist.
 
 ## Live App Smoke QA
 
@@ -79,30 +79,52 @@ Observed error:
 
 This internal chat issue was previously observed before Phase 1B and remains a separate follow-up item.
 
-## What Codex Could Not Verify
+## Lovable Completion Evidence Received
 
-Because the provided DOCX was the prior SQL-review document, not Lovable's actual completion output, Codex could not independently confirm from Lovable's report:
+Ross later provided the correct Lovable completion response. Lovable reported:
 
-- exact pre-migration row counts,
-- exact post-migration row counts,
-- zero NULL `clinic_id` counts for all 23 tables,
-- all 23 indexes,
-- all 23 foreign keys,
-- linter baseline comparison,
-- whether Lovable's transaction guard passed exactly as planned.
+- Exactly one clinic exists: `Dr. Colin Hong (Pilot)`.
+- All 23 tenant tables have `clinic_id`.
+- All 23 tenant tables have `0` NULL `clinic_id` rows.
+- 23 `idx_<table>_clinic_id` indexes exist.
+- 27 total FKs to `public.clinics` exist, including the 23 new tenant-table FKs plus 4 pre-existing clinic membership/subscription FKs.
+- Linter returned 26 warnings, all pre-existing permissive-RLS findings unrelated to Phase 1B.
+- No RLS policies, app code, edge functions, workflows, Settings rows, sends, payments, calendars, webhooks, or integrations were touched.
+
+Row counts reported unchanged:
+
+| Table | Before | After |
+| --- | ---: | ---: |
+| leads | 20 | 20 |
+| patients | 28 | 28 |
+| appointments | 29 | 29 |
+| payments | 16 | 16 |
+| payment_items | 0 | 0 |
+| messages | 37 | 37 |
+| conversations | 8 | 8 |
+| conversation_notes | 0 | 0 |
+| call_logs | 0 | 0 |
+| lead_activity | 6 | 6 |
+| reminders | 41 | 41 |
+| scheduled_messages | 3 | 3 |
+| scheduled_confirmations | 18 | 18 |
+| workflows | 19 | 19 |
+| workflow_executions | 58 | 58 |
+| automation_logs | 28 | 28 |
+| audit_logs | 5 | 5 |
+| email_delivery_logs | 45 | 45 |
+| services | 10 | 10 |
+| quick_responses | 13 | 13 |
+| internal_channels | 3 | 3 |
+| internal_messages | 0 | 0 |
+| internal_channel_members | 3 | 3 |
+
+## Codex Verification Limitations
+
+Read-only REST checks confirmed `clinic_id` is selectable on 20 of 23 tables. The 3 internal chat tables could not be checked through anonymous REST because of the known pre-existing RLS recursion on `internal_channel_members`. Lovable's completion evidence states those 3 tables did receive `clinic_id` and retained unchanged row counts.
 
 ## Recommendation
 
-Do not approve the next build phase yet.
+Phase 1B can be treated as complete for the approved additive migration scope.
 
-Next Lovable request should ask for:
-
-1. the actual Phase 1B migration completion report,
-2. pre-check output,
-3. post-check output,
-4. confirmation row counts did not change,
-5. confirmation all 23 tables have zero NULL `clinic_id`,
-6. confirmation indexes and FKs exist,
-7. linter baseline comparison,
-8. acknowledgement that internal chat RLS recursion remains a pre-existing known issue,
-9. Phase 1B.1 planning only for app-level active clinic context and safe `clinic_id` stamping/filtering.
+Next step: ask Lovable for **Phase 1B.1 planning only** for app-level active clinic context, safe `clinic_id` stamping on new inserts, and read filtering. Do not approve app-code build until Lovable provides exact files, sequencing, QA, and rollback.

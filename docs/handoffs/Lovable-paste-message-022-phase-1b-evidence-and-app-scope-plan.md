@@ -1,5 +1,7 @@
 # Lovable Paste Message 022 - Phase 1B Evidence And App Scope Plan
 
+Status: superseded by `Lovable-paste-message-023-phase-1b1-app-scope-plan.md` after Ross provided the correct Phase 1B completion evidence.
+
 Please read this Phase 1B post-migration QA result and respond in **Plan mode only**. Do not build yet.
 
 Codex performed live QA after Ross reported the Phase 1B migration was run and published.

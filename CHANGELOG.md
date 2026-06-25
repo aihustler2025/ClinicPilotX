@@ -176,5 +176,7 @@
 - Verified no visible `No Plan`, permission, missing-table, or Settings errors in the checked routes.
 - Confirmed `clinic_id` is selectable through read-only REST on 20 of the 23 expected tables.
 - Logged that internal chat tables could not be verified through REST because of the known `internal_channel_members` RLS recursion.
+- Received corrected Lovable completion evidence confirming all 23 tables were backfilled with non-null `clinic_id`, row counts were unchanged, and 23 indexes/FKs exist.
 - Added `09-exports/request-021-phase-1b-migration-qa-2026-06-25.md`.
 - Added `docs/handoffs/Lovable-paste-message-022-phase-1b-evidence-and-app-scope-plan.md`.
+- Added `docs/handoffs/Lovable-paste-message-023-phase-1b1-app-scope-plan.md`.

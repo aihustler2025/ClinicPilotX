@@ -1364,7 +1364,7 @@ The attached DOCX labeled `CLINICPILOT LOVABLE TO CODEX 25.docx` extracted as th
 
 Codex performed live QA anyway.
 
-Result: partial pass / evidence follow-up required.
+Result: pass for the approved additive Phase 1B migration scope.
 
 Verified:
 
@@ -1384,18 +1384,20 @@ Read-only API shape check:
 - `clinic_id` is selectable on 20 of the 23 expected tables.
 - `internal_channels`, `internal_messages`, and `internal_channel_members` could not be verified through anon REST because of the known pre-existing `internal_channel_members` RLS recursion.
 
-Not yet verified:
+Ross later provided the correct Lovable completion evidence:
 
-- Lovable's actual pre-check output.
-- Lovable's actual post-check output.
-- Exact zero-NULL `clinic_id` counts for all 23 tables.
-- Exact row-count unchanged evidence.
-- All 23 indexes and FKs.
-- Linter baseline comparison.
+- All 23 tables have `clinic_id`.
+- All 23 tables have `0` NULL `clinic_id` rows.
+- Row counts were unchanged.
+- 23 `idx_<table>_clinic_id` indexes exist.
+- 23 new FKs to `public.clinics(id)` exist.
+- Linter warnings remain pre-existing permissive-RLS findings with no Phase 1B-attributable new findings.
+- No app code, RLS, Settings, edge functions, sends, workflows, integrations, payments, calendar, or webhooks were touched.
 
 New files:
 
 - `09-exports/request-021-phase-1b-migration-qa-2026-06-25.md`
 - `docs/handoffs/Lovable-paste-message-022-phase-1b-evidence-and-app-scope-plan.md`
+- `docs/handoffs/Lovable-paste-message-023-phase-1b1-app-scope-plan.md`
 
-Current next step: send Request 022 to Lovable in Plan mode only. Do not approve the next build phase until Lovable provides the real Phase 1B evidence and a separate Phase 1B.1 app-code plan.
+Current next step: send Request 023 to Lovable in Plan mode only for Phase 1B.1 app-code planning. Do not approve app-code build until Lovable provides exact files, sequencing, QA, and rollback.
