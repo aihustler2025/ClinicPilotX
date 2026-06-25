@@ -194,3 +194,12 @@
 - Found blocker: Add Patient is blocked by `No active clinic selected. Contact an admin.`
 - Added `09-exports/request-024-phase-1b1a-active-clinic-qa-2026-06-25.md`.
 - Added `docs/handoffs/Lovable-paste-message-025-phase-1b1a-patient-active-clinic-fix.md`.
+
+## 2026-06-25 Phase 1B.1a Fix Retest
+
+- Retested Lovable's patient active-clinic provider fix after publish.
+- Confirmed Patient create now succeeds with a safe QA email.
+- Confirmed Lead create still succeeds with a safe QA email.
+- Found new safety blocker: Automation Center Activity Logs showed `Smart Follow-up Sequence` and `Lead Acknowledgment` activity immediately after QA lead creation.
+- Added `09-exports/request-025-phase-1b1a-fix-retest-2026-06-25.md`.
+- Added `docs/handoffs/Lovable-paste-message-026-phase-1b1a-workflow-safety-followup.md`.

@@ -1441,3 +1441,52 @@ New files:
 - `docs/handoffs/Lovable-paste-message-025-phase-1b1a-patient-active-clinic-fix.md`
 
 Current next step: send Lovable handoff 025 as a custom fix request. Do not proceed to Phase 1B.1b until Patients create succeeds and Lovable provides SQL evidence that both Lead and Patient inserts are stamped with the pilot `clinic_id`.
+
+## 2026-06-25 Request 025 Phase 1B.1a Fix Retest
+
+Ross published Lovable's Phase 1B.1a patient active-clinic fix.
+
+Lovable reported the root cause:
+
+- `ClinicProvider` was mounted inside `AppLayout`.
+- Page components such as Patients called `useActiveClinic()` before rendering `AppLayout`, so the hook ran outside the provider tree.
+- LeadFormDialog worked because it was a child component rendered inside `AppLayout`.
+
+Lovable reported the fix:
+
+- moved `ClinicProvider` to wrap `Routes` in `src/App.tsx`,
+- removed duplicate provider from `AppLayout`,
+- added loading guards to Patients and LeadFormDialog,
+- no RLS, migration, edge function, workflow, useSubscription, or other module changes.
+
+Codex retested the live app.
+
+Result: partial pass / workflow safety follow-up required.
+
+Verified:
+
+- Dashboard hard reload renders real metrics.
+- New Lead create succeeds:
+  - `QA TEST 1B1A LEAD FIX 20260625-1439`
+  - `cpx.test+1b1a-lead-fix-20260625-1439@example.com`
+  - Leads active count increased from `18` to `19`.
+- New Patient create succeeds:
+  - `QA TEST 1B1A PATIENT FIX 20260625-1441`
+  - `cpx.test+1b1a-patient-fix-20260625-1441@example.com`
+  - UI showed `Success` and `Patient added successfully`.
+- The previous Patient `No active clinic selected. Contact an admin.` blocker did not appear.
+
+Safety issue:
+
+- Automation Center Activity Logs showed new/recent activity after the QA lead creation:
+  - `Completed` - `Smart Follow-up Sequence` - `1 minute ago`
+  - `Failed` - `Lead Acknowledgment` - `1 minute ago`
+- Codex did not click any send/test/payment/calendar/workflow/integration action.
+- This appears to be automatic workflow activity from creating the QA lead, so Codex cannot certify no workflow side effects.
+
+New files:
+
+- `09-exports/request-025-phase-1b1a-fix-retest-2026-06-25.md`
+- `docs/handoffs/Lovable-paste-message-026-phase-1b1a-workflow-safety-followup.md`
+
+Current next step: send Lovable handoff 026 in Plan mode only. Do not proceed to Phase 1B.1b until Lovable explains the workflow activity and proposes a safe test-data strategy.

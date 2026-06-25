@@ -382,8 +382,17 @@ Last updated: 2026-06-24
 - [x] Send Lovable handoff 024 as a custom response approving only Phase 1B.1a.
 - [x] QA Phase 1B.1a after Lovable publish.
 - [x] Create Lovable handoff 025 for Phase 1B.1a patient active-clinic blocker.
-- [ ] Send Lovable handoff 025 as custom fix request.
-- [ ] Do not proceed to Phase 1B.1b until Patients create succeeds with stamped `clinic_id`.
+- [x] Send Lovable handoff 025 as custom fix request.
+- [x] Confirm Patients create succeeds after active-clinic provider fix.
+- [ ] Do not proceed to Phase 1B.1b until workflow safety for QA/test leads is explained and controlled.
+- [x] Retest Phase 1B.1a patient active-clinic fix after publish.
+- [x] Confirm Patient create no longer shows `No active clinic`.
+- [x] Identify workflow side-effect activity after QA Lead create.
+- [x] Create Lovable handoff 026 for Phase 1B.1a workflow safety follow-up.
+- [ ] Send Lovable handoff 026 in Plan mode only.
+- [ ] Get Lovable SQL evidence for QA Lead and QA Patient `clinic_id` values.
+- [ ] Get Lovable explanation of Smart Follow-up / Lead Acknowledgment workflow activity during QA window.
+- [ ] Define safe test-data strategy before additional lead-create QA.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
