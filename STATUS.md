@@ -1580,3 +1580,39 @@ New file:
 - `09-exports/request-028-phase-1b1b-appointments-payments-qa-2026-06-25.md`
 
 Current next step: Phase 1B.1b can be treated as passed for the tested scope. Ask Lovable for a Plan-mode Phase 1B.1c proposal covering messages, scheduled_messages, and conversation_notes active-clinic stamping only. Continue keeping live-send and Communication Hub send actions out of scope until separately reviewed.
+
+## 2026-06-25 Request 031 Phase 1B.1c Internal Messages QA
+
+Ross approved and published Lovable's revised Phase 1B.1c build after scheduled-message paths were removed from scope.
+
+Lovable reported:
+
+- `ConversationNotesPanel` stamps `clinic_id` with active-clinic readiness guard,
+- `InternalChat` stamps `clinic_id` on `internal_messages` and `internal_channels` inserts,
+- no `scheduled_messages`, live sends, payment links, edge functions, RLS, migrations, or external channels were touched.
+
+Codex retested the live app.
+
+Result: partial fail / follow-up required.
+
+Verified:
+
+- Communication Hub renders.
+- Internal Chat tab renders.
+- Staff member `Kizha Kaye` appears.
+- Automation Center Activity Logs stayed quiet after the failed internal-chat attempt; newest visible workflow rows remained about 6 hours old.
+- No live sends, payment links, calendar writes, workflows, or external-channel actions were triggered.
+
+Issues:
+
+- Clicking a visible external conversation still does not open the detail pane, so `ConversationNotesPanel` could not be reached for UI QA.
+- Clicking `Kizha Kaye` in Internal Chat still shows `Failed to create direct message channel`.
+- Console shows `Error fetching channels: Object`.
+- No internal channel opens, so Codex could not send a safe internal-only test message.
+
+New files:
+
+- `09-exports/request-031-phase-1b1c-internal-messages-qa-2026-06-25.md`
+- `docs/handoffs/Lovable-paste-message-032-phase-1b1c-internal-chat-followup.md`
+
+Current next step: send Lovable handoff 032 in Plan mode only. Do not proceed to scheduled messages, email intake, chatbot/API intake, or Automation Center builds until internal chat/channel creation is fixed and QA passes.

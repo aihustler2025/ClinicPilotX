@@ -408,7 +408,16 @@ Last updated: 2026-06-24
 - [x] Confirm TEST appointment create still avoids visible workflow activity.
 - [x] Confirm QA invoice create avoids visible workflow activity.
 - [x] Prepare Phase 1B.1c Plan-mode request for messages, scheduled_messages, and conversation_notes active-clinic stamping only.
-- [ ] Send Lovable handoff 029 in Plan mode only.
+- [x] Send Lovable handoff 029 in Plan mode only.
+- [x] Review Lovable Phase 1B.1c plan and reject scheduled_messages as too risky for this phase.
+- [x] Approve revised Phase 1B.1c internal-only clinic_id stamping plan.
+- [x] QA Phase 1B.1c after publish.
+- [x] Confirm Phase 1B.1c safety check: failed internal-chat attempt did not create visible workflow activity.
+- [ ] Fix Phase 1B.1c internal chat: clicking Kizha Kaye still fails with `Failed to create direct message channel`.
+- [ ] Fix or diagnose Communication Hub external conversation selection so ConversationNotesPanel can be reached for QA.
+- [x] Create Lovable handoff 032 for Phase 1B.1c internal-chat follow-up.
+- [ ] Send Lovable handoff 032 in Plan mode only.
+- [ ] Retest Phase 1B.1c after Lovable fixes internal chat/channel creation.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
