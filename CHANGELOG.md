@@ -203,3 +203,11 @@
 - Found new safety blocker: Automation Center Activity Logs showed `Smart Follow-up Sequence` and `Lead Acknowledgment` activity immediately after QA lead creation.
 - Added `09-exports/request-025-phase-1b1a-fix-retest-2026-06-25.md`.
 - Added `docs/handoffs/Lovable-paste-message-026-phase-1b1a-workflow-safety-followup.md`.
+
+## 2026-06-25 Phase 1B.1a Safety Patch QA
+
+- Approved Lovable's Phase 1B.1a safety patch after exact SQL/function-body review.
+- QA-tested creation of `QA TEST SAFETY 20260625-A` and `QA TEST SAFETY PT 20260625-A`.
+- Confirmed the QA lead and patient created successfully.
+- Confirmed Automation Center Activity Logs did not show fresh Lead Acknowledgment or Smart Follow-up workflow rows after the QA records.
+- Added `09-exports/request-026-phase-1b1a-safety-qa-2026-06-25.md`.

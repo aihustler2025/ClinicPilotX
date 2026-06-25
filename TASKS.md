@@ -395,8 +395,14 @@ Last updated: 2026-06-24
 - [ ] Define safe test-data strategy before additional lead-create QA.
 - [x] Review Lovable's proposed Phase 1B.1a workflow-safety plan.
 - [x] Create Lovable handoff 027 requesting exact SQL/function-body review before build.
-- [ ] Send Lovable handoff 027 as custom Plan-mode response.
-- [ ] Review exact SQL/function bodies before approving Phase 1B.1a workflow-safety build.
+- [x] Send Lovable handoff 027 as custom Plan-mode response.
+- [x] Review exact SQL/function bodies before approving Phase 1B.1a workflow-safety build.
+- [x] Approve Phase 1B.1a workflow-safety build after exact SQL/function review.
+- [x] QA Phase 1B.1a safety patch after publish.
+- [x] Confirm QA Lead create no longer creates visible workflow activity.
+- [x] Confirm QA Patient create still succeeds.
+- [x] Prepare Phase 1B.1b Plan-mode request for Appointments and Payments active-clinic stamping only.
+- [ ] Send Lovable handoff 028 in Plan mode only.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.

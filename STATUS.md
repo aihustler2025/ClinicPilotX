@@ -1490,3 +1490,45 @@ New files:
 - `docs/handoffs/Lovable-paste-message-026-phase-1b1a-workflow-safety-followup.md`
 
 Current next step: send Lovable handoff 026 in Plan mode only. Do not proceed to Phase 1B.1b until Lovable explains the workflow activity and proposes a safe test-data strategy.
+
+## 2026-06-25 Request 026 Phase 1B.1a Safety QA
+
+Ross approved and published Lovable's Phase 1B.1a workflow-safety patch after exact SQL/function review.
+
+Lovable reported:
+
+- `is_test` added to Leads and Patients,
+- existing QA rows backfilled,
+- Lead Acknowledgment trigger now short-circuits for QA/test leads,
+- Smart Follow-up trigger now short-circuits for QA/test leads,
+- Lead and Smart Follow-up edge functions now have direct-invocation guards,
+- Lead and Patient create forms auto-flag QA rows.
+
+Codex retested the live app.
+
+Result: pass for the tested UI and Activity Logs safety scope.
+
+Verified:
+
+- Automation Center Activity Logs baseline had no fresh workflow rows; newest rows were about 5 hours old.
+- Created QA lead:
+  - `QA TEST SAFETY 20260625-A`
+  - `cpx.test+safety-A@example.com`
+  - Leads active count increased from `19` to `20`.
+- Created QA patient:
+  - `QA TEST SAFETY PT 20260625-A`
+  - `cpx.test+safety-pt-A@example.com`
+  - Patient appeared in the Patients list.
+- Rechecked Automation Center Activity Logs after creating both records.
+- No fresh Lead Acknowledgment, Smart Follow-up, Appointment Confirmation, or other workflow rows appeared.
+- Dashboard, Leads, Patients, Appointments, Payments, Communication Hub, Automation Center, and Settings rendered in a smoke pass.
+
+Known note:
+
+- Codex still cannot independently run authenticated SQL from the browser environment, so DB-level `is_test` and `clinic_id` assertions rely on Lovable's SQL evidence plus UI/Activity Log behavior.
+
+New file:
+
+- `09-exports/request-026-phase-1b1a-safety-qa-2026-06-25.md`
+
+Current next step: Phase 1B.1a can be treated as passed for the tested scope. Ask Lovable for a Plan-mode Phase 1B.1b proposal covering Appointments and Payments active-clinic stamping only, with no live send/payment/calendar behavior.
