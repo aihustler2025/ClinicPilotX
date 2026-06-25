@@ -393,6 +393,10 @@ Last updated: 2026-06-24
 - [ ] Get Lovable SQL evidence for QA Lead and QA Patient `clinic_id` values.
 - [ ] Get Lovable explanation of Smart Follow-up / Lead Acknowledgment workflow activity during QA window.
 - [ ] Define safe test-data strategy before additional lead-create QA.
+- [x] Review Lovable's proposed Phase 1B.1a workflow-safety plan.
+- [x] Create Lovable handoff 027 requesting exact SQL/function-body review before build.
+- [ ] Send Lovable handoff 027 as custom Plan-mode response.
+- [ ] Review exact SQL/function bodies before approving Phase 1B.1a workflow-safety build.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
