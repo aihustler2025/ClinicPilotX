@@ -402,7 +402,13 @@ Last updated: 2026-06-24
 - [x] Confirm QA Lead create no longer creates visible workflow activity.
 - [x] Confirm QA Patient create still succeeds.
 - [x] Prepare Phase 1B.1b Plan-mode request for Appointments and Payments active-clinic stamping only.
-- [ ] Send Lovable handoff 028 in Plan mode only.
+- [x] Send Lovable handoff 028 in Plan mode only.
+- [x] Approve Phase 1B.1b Appointments/Payments active-clinic stamping build after plan review.
+- [x] QA Phase 1B.1b after publish.
+- [x] Confirm TEST appointment create still avoids visible workflow activity.
+- [x] Confirm QA invoice create avoids visible workflow activity.
+- [x] Prepare Phase 1B.1c Plan-mode request for messages, scheduled_messages, and conversation_notes active-clinic stamping only.
+- [ ] Send Lovable handoff 029 in Plan mode only.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.

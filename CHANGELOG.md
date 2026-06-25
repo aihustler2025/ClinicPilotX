@@ -211,3 +211,11 @@
 - Confirmed the QA lead and patient created successfully.
 - Confirmed Automation Center Activity Logs did not show fresh Lead Acknowledgment or Smart Follow-up workflow rows after the QA records.
 - Added `09-exports/request-026-phase-1b1a-safety-qa-2026-06-25.md`.
+
+## 2026-06-25 Phase 1B.1b Appointments and Payments QA
+
+- Approved and QA-tested Lovable's Phase 1B.1b active-clinic stamping build.
+- Created TEST appointment `QA TEST 1B1B APPOINTMENT 20260625-A`.
+- Created QA invoice `INV00017` for `QA TEST SAFETY PT 20260625-A`.
+- Confirmed Automation Center Activity Logs did not show fresh workflow rows after the TEST appointment or QA invoice.
+- Added `09-exports/request-028-phase-1b1b-appointments-payments-qa-2026-06-25.md`.

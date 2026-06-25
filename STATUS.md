@@ -1532,3 +1532,51 @@ New file:
 - `09-exports/request-026-phase-1b1a-safety-qa-2026-06-25.md`
 
 Current next step: Phase 1B.1a can be treated as passed for the tested scope. Ask Lovable for a Plan-mode Phase 1B.1b proposal covering Appointments and Payments active-clinic stamping only, with no live send/payment/calendar behavior.
+
+## 2026-06-25 Request 028 Phase 1B.1b QA
+
+Ross approved and published Lovable's Phase 1B.1b active-clinic stamping build for Appointments and Payments.
+
+Lovable reported:
+
+- Appointments create path stamps `clinic_id`,
+- RescheduleDialog has active-clinic readiness guard,
+- QuickBookingSheet stamps `clinic_id` and auto-flags test appointments from test patients,
+- CreateInvoiceForm stamps `clinic_id` on payments and payment_items.
+
+Codex retested the live app.
+
+Result: pass for the tested UI and Automation Center Activity Logs scope.
+
+Verified:
+
+- Automation Center Activity Logs baseline had no fresh workflow rows.
+- Created TEST appointment:
+  - `QA TEST 1B1B APPOINTMENT 20260625-A`
+  - `cpx.test+1b1b-appt-A@example.com`
+  - `QA TEST 1B1B Consultation`
+  - June 25, 2026 at 3:45 PM
+- Appointment count increased from `29` to `30`.
+- New appointment showed `Pending` and `TEST`.
+- Toast explicitly included `(TEST - no sends)`.
+- Created QA invoice:
+  - `INV00017`
+  - patient `QA TEST SAFETY PT 20260625-A`
+  - description `QA TEST 1B1B invoice for clinic_id stamping`
+  - amount `$1.00 CAD`
+  - status `pending`.
+- Pending Payments and Outstanding Balance increased by `$1.00`.
+- Rechecked Automation Center Activity Logs after QA; no fresh workflow rows appeared.
+- Dashboard, Appointments, Payments, Patients, Automation Center, and Settings rendered in smoke testing.
+
+No payment link, Stripe checkout, send button, email, SMS, calendar, webhook, or integration action was clicked.
+
+Known note:
+
+- Codex still cannot independently run authenticated SQL from the browser environment, so DB-level `clinic_id` assertions rely on Lovable's implementation claim plus successful UI behavior and visible Activity Logs safety check.
+
+New file:
+
+- `09-exports/request-028-phase-1b1b-appointments-payments-qa-2026-06-25.md`
+
+Current next step: Phase 1B.1b can be treated as passed for the tested scope. Ask Lovable for a Plan-mode Phase 1B.1c proposal covering messages, scheduled_messages, and conversation_notes active-clinic stamping only. Continue keeping live-send and Communication Hub send actions out of scope until separately reviewed.
