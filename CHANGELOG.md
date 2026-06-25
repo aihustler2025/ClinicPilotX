@@ -186,3 +186,11 @@
 - Captured Ross's future per-clinic Knowledge Base requirement.
 - Added `docs/clinic-knowledge-base-roadmap.md`.
 - Updated `PRODUCT_SPEC.md` and `TASKS.md` so the idea is parked without interrupting Phase 1B.1 work.
+
+## 2026-06-25 Phase 1B.1a Active Clinic QA
+
+- QA-tested Lovable's Phase 1B.1a active-clinic app-code slice after publish.
+- Confirmed Lead creation works from the UI with a safe test email.
+- Found blocker: Add Patient is blocked by `No active clinic selected. Contact an admin.`
+- Added `09-exports/request-024-phase-1b1a-active-clinic-qa-2026-06-25.md`.
+- Added `docs/handoffs/Lovable-paste-message-025-phase-1b1a-patient-active-clinic-fix.md`.

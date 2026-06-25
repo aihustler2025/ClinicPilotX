@@ -1401,3 +1401,43 @@ New files:
 - `docs/handoffs/Lovable-paste-message-023-phase-1b1-app-scope-plan.md`
 
 Current next step: send Request 023 to Lovable in Plan mode only for Phase 1B.1 app-code planning. Do not approve app-code build until Lovable provides exact files, sequencing, QA, and rollback.
+
+## 2026-06-25 Request 024 Phase 1B.1a Active Clinic QA
+
+Ross approved and published Lovable's narrowed Phase 1B.1a active-clinic app-code slice.
+
+Lovable reported:
+
+- new `src/hooks/useActiveClinic.tsx`,
+- `ClinicProvider` wrapper in `AppLayout`,
+- Leads create path stamps `clinic_id`,
+- Patients create path stamps `clinic_id`,
+- no Appointments, Payments, Messages, Settings, RLS, migrations, edge functions, workflows, integrations, or useSubscription edits.
+
+Codex retested the live app.
+
+Result: failed / follow-up required before Phase 1B.1b.
+
+Verified:
+
+- Dashboard hard reload renders real data.
+- Leads page renders.
+- Add Lead with blank email/phone is rejected by current validation, so Lovable's blank-contact QA step is not valid unless validation is intentionally changed.
+- Add Lead with safe `example.com` QA email succeeds.
+- Leads total increased from `17` to `18`.
+- New lead row appeared: `QA TEST 1B1A LEAD 20260625-1255`.
+- Patients page renders.
+- Add Patient with blank email/phone is rejected by current validation.
+
+Blocking issue:
+
+- Add Patient with safe `example.com` QA email is blocked by the new active-clinic guard.
+- The UI shows `No active clinic` and `No active clinic selected. Contact an admin.`
+- The same blocker repeats after reloading `/patients` and retrying.
+
+New files:
+
+- `09-exports/request-024-phase-1b1a-active-clinic-qa-2026-06-25.md`
+- `docs/handoffs/Lovable-paste-message-025-phase-1b1a-patient-active-clinic-fix.md`
+
+Current next step: send Lovable handoff 025 as a custom fix request. Do not proceed to Phase 1B.1b until Patients create succeeds and Lovable provides SQL evidence that both Lead and Patient inserts are stamped with the pilot `clinic_id`.

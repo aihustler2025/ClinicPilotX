@@ -379,7 +379,11 @@ Last updated: 2026-06-24
 - [ ] Send Lovable handoff 023 in Plan mode.
 - [ ] Plan Phase 1B.1 app-code work: active clinic context, insert stamping, and read filtering.
 - [ ] Do not approve Phase 1B.1 build until Lovable provides a reviewed app-code plan with exact files, sequencing, QA, and rollback.
-- [ ] Send Lovable handoff 024 as a custom response approving only Phase 1B.1a.
+- [x] Send Lovable handoff 024 as a custom response approving only Phase 1B.1a.
+- [x] QA Phase 1B.1a after Lovable publish.
+- [x] Create Lovable handoff 025 for Phase 1B.1a patient active-clinic blocker.
+- [ ] Send Lovable handoff 025 as custom fix request.
+- [ ] Do not proceed to Phase 1B.1b until Patients create succeeds with stamped `clinic_id`.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
