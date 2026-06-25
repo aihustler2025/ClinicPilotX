@@ -168,3 +168,13 @@
 - Verified Dashboard, Leads, Patients, Appointments, Payments, Communication Hub, and Automation Center still load.
 - Added `09-exports/request-020-settings-grant-qa-2026-06-24.md`.
 - Added `docs/handoffs/Lovable-paste-message-021-phase-1b-planning-only.md`.
+
+## 2026-06-25 Request 021 Phase 1B Migration QA
+
+- QA-tested the live app after Ross reported Lovable ran the approved Phase 1B additive migration.
+- Verified Dashboard, Leads, Patients, Appointments, Payments, Communication Hub, Automation Center, and Settings still load.
+- Verified no visible `No Plan`, permission, missing-table, or Settings errors in the checked routes.
+- Confirmed `clinic_id` is selectable through read-only REST on 20 of the 23 expected tables.
+- Logged that internal chat tables could not be verified through REST because of the known `internal_channel_members` RLS recursion.
+- Added `09-exports/request-021-phase-1b-migration-qa-2026-06-25.md`.
+- Added `docs/handoffs/Lovable-paste-message-022-phase-1b-evidence-and-app-scope-plan.md`.

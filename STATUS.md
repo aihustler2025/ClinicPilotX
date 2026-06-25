@@ -1355,3 +1355,47 @@ New files:
 - `docs/handoffs/Lovable-paste-message-021-phase-1b-planning-only.md`
 
 Current next step: send Request 021 to Lovable in Plan mode only. Phase 1B should be planned carefully before any build because it will likely touch existing CRM data tables and tenant scoping.
+
+## 2026-06-25 Request 021 Phase 1B Migration QA
+
+Ross reported Lovable ran the approved Phase 1B migration and published.
+
+The attached DOCX labeled `CLINICPILOT LOVABLE TO CODEX 25.docx` extracted as the prior exact SQL review document, not the actual migration completion/post-check report.
+
+Codex performed live QA anyway.
+
+Result: partial pass / evidence follow-up required.
+
+Verified:
+
+- Dashboard loads with real metrics (`Total Leads 20`, `Conversion Rate 15%`, `Revenue (MTD) $0`, Recent Leads populated).
+- Leads loads and shows `17` active pipeline leads.
+- Patients loads with populated patient records.
+- Appointments loads and shows `29 total appointments`.
+- Payments loads with invoice/payment rows.
+- Communication Hub loads.
+- Automation Center loads with `Professional` and `7 / 13 Active`.
+- Settings still renders.
+- No `No Plan` state observed.
+- No visible permission-denied/missing-table/settings errors observed in the checked routes.
+
+Read-only API shape check:
+
+- `clinic_id` is selectable on 20 of the 23 expected tables.
+- `internal_channels`, `internal_messages`, and `internal_channel_members` could not be verified through anon REST because of the known pre-existing `internal_channel_members` RLS recursion.
+
+Not yet verified:
+
+- Lovable's actual pre-check output.
+- Lovable's actual post-check output.
+- Exact zero-NULL `clinic_id` counts for all 23 tables.
+- Exact row-count unchanged evidence.
+- All 23 indexes and FKs.
+- Linter baseline comparison.
+
+New files:
+
+- `09-exports/request-021-phase-1b-migration-qa-2026-06-25.md`
+- `docs/handoffs/Lovable-paste-message-022-phase-1b-evidence-and-app-scope-plan.md`
+
+Current next step: send Request 022 to Lovable in Plan mode only. Do not approve the next build phase until Lovable provides the real Phase 1B evidence and a separate Phase 1B.1 app-code plan.

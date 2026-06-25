@@ -365,7 +365,18 @@ Last updated: 2026-06-24
 - [x] Confirm `Error fetching settings: Object` no longer appears after visiting Appointments/Automation.
 - [x] Create Lovable handoff 021 for Phase 1B planning only.
 - [ ] Send Lovable handoff 021 in Plan mode.
-- [ ] Do not approve Phase 1B build until Lovable provides a reviewed table inventory, migration sequence, RLS strategy, QA plan, and rollback plan.
+- [x] Send Lovable handoff 021 in Plan mode.
+- [x] Review exact Phase 1B migration SQL.
+- [x] Approve Phase 1B additive migration after exact SQL review.
+- [x] QA Phase 1B migration after publish.
+- [x] Create Lovable handoff 022 for Phase 1B evidence and Phase 1B.1 app-code planning.
+- [ ] Send Lovable handoff 022 in Plan mode.
+- [ ] Get Lovable's actual Phase 1B pre-check and post-check evidence.
+- [ ] Confirm all 23 tables have non-null `clinic_id` after Phase 1B.
+- [ ] Confirm all 23 Phase 1B indexes and FKs exist.
+- [ ] Confirm no new linter findings vs. pre-migration baseline.
+- [ ] Plan Phase 1B.1 app-code work: active clinic context, insert stamping, and read filtering.
+- [ ] Do not approve Phase 1B.1 build until Lovable provides a reviewed app-code plan with exact files, sequencing, QA, and rollback.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
 - [ ] Design clinic onboarding/setup wizard: profile, logo, website, business hours, services, team, permissions, templates, integrations, and plan gates.
 - [ ] Design per-clinic knowledge base for services, FAQs, hours, policies, pricing, provider bios, and AI-safe business facts.
