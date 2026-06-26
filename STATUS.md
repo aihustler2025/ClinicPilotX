@@ -1716,3 +1716,30 @@ Next planning step:
 New handoff:
 
 - `docs/handoffs/Lovable-paste-message-034-clinic-workspace-setup-knowledge-base-plan.md`
+
+## 2026-06-26 Request 034 Clinic Workspace Plan Review
+
+Ross provided Lovable's Clinic Workspace Setup + Per-Clinic Knowledge Base plan.
+
+Codex reviewed it and found the product direction strong:
+
+- no new main left-nav item,
+- top-bar ClinicSwitcher concept,
+- Settings > Clinic Workspace placement,
+- Phase A setup UI and structured metadata,
+- Phase B/C knowledge source uploads/indexing deferred,
+- live integrations and send-capable paths out of scope.
+
+Codex did not approve the build yet because the plan includes migrations, RLS policies, grants, enum checks, and table changes without exact SQL.
+
+Answers to Lovable's open questions were documented:
+
+- do not extend `clinic_role` blindly; provide current enum/type evidence first,
+- use integer cents plus currency column from day one, default CAD for the pilot clinic,
+- show Knowledge Base Sources disabled with a "Coming in Phase B" banner.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-035-clinic-workspace-exact-sql-request.md`
+
+Current next step: send handoff 035 to Lovable in Plan mode only. Do not click the approve/build button until Lovable returns exact forward SQL, rollback SQL, schema pre-checks, RLS policies, grants, frontend file list, and Codex reviews them.

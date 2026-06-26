@@ -434,8 +434,12 @@ Last updated: 2026-06-24
 - [x] Create human QA script for Communication Hub Internal Chat.
 - [x] Decide UX direction for Clinic Workspace / Knowledge Base: top-bar workspace switcher plus Settings-based admin setup, not a new main left-nav item.
 - [x] Create Lovable handoff 034 for Clinic Workspace Setup + Per-Clinic Knowledge Base plan.
-- [ ] Send Lovable handoff 034 in Plan mode only.
-- [ ] Review Lovable plan before approving any Clinic Workspace / Knowledge Base build.
+- [x] Send Lovable handoff 034 in Plan mode only.
+- [x] Review Lovable plan before approving any Clinic Workspace / Knowledge Base build.
+- [x] Decide open questions for Clinic Workspace Phase A: no blind enum extension, cents+currency, disabled Sources tab.
+- [x] Create Lovable handoff 035 requesting exact SQL before build approval.
+- [ ] Send Lovable handoff 035 in Plan mode only.
+- [ ] Review exact Clinic Workspace forward SQL, rollback SQL, RLS policies, and grants before approving build.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
