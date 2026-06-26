@@ -1687,3 +1687,32 @@ Updated:
 - `docs/dr-hong-demo-roadmap.md`
 
 Current next step: document the current build control map for Ross, then prepare the next Lovable Plan-mode request. Recommended next build planning target is clinic workspace/setup plus per-clinic Knowledge Base, because this is required for the Dr. Hong pilot and for email/chatbot automations to use the right clinic facts safely.
+
+## 2026-06-26 Phase 1B.1c SQL Evidence Accepted
+
+Lovable provided SQL evidence for the internal chat QA row:
+
+- `internal_channels` DM row exists for `DM: Kizha Kaye`,
+- DM row has pilot clinic id `8ed615bf...7db3`,
+- two `internal_channel_members` rows exist: caller and Kizha,
+- `internal_messages` row exists for `QA TEST INTERNAL CHAT 20260626-A`,
+- message row has the same pilot clinic id,
+- zero new rows appeared in `messages`, `scheduled_messages`, `workflow_executions`, `automation_logs`, `email_delivery_logs`, and `reminders`.
+
+Codex rechecked the live UI:
+
+- Internal Chat still renders.
+- `DM: Kizha Kaye` persists.
+- `QA TEST INTERNAL CHAT 20260626-A` persists in the DM thread.
+- Automation Center Activity Logs remain quiet; newest visible workflow rows are still `7 days ago`.
+
+Result: Phase 1B.1c can be treated as passed for the tested scope.
+
+Next planning step:
+
+- Clinic Workspace Setup + Per-Clinic Knowledge Base.
+- UX direction: do not add Knowledge Base as a main left-nav item yet; place setup/admin controls under Settings, with a top-bar clinic/workspace selector for switching clients.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-034-clinic-workspace-setup-knowledge-base-plan.md`

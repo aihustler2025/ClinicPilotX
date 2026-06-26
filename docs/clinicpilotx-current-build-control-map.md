@@ -216,7 +216,7 @@ Finish the remaining small blockers that affect trust:
 
 Build the client workspace concept Ross described:
 
-- workspace switcher similar in spirit to the provided BuzzForge screenshot,
+- top-bar workspace/clinic switcher similar in spirit to the provided BuzzForge screenshot,
 - create/select clinic workspace,
 - clinic profile,
 - logo,
@@ -226,6 +226,31 @@ Build the client workspace concept Ross described:
 - team/users/roles,
 - integrations status,
 - knowledge base status.
+
+UX decision for the next plan:
+
+- Do not add Knowledge Base as a new main left-nav item yet.
+- Keep the left nav focused on daily CRM work.
+- Put clinic setup under Settings as an owner/admin area.
+- Add a top-bar clinic/workspace selector for switching clients.
+- Add dashboard setup/knowledge-health cards later for quick visibility.
+
+Likely Settings structure:
+
+- Settings > General
+- Settings > Notifications
+- Settings > Integrations
+- Settings > Profile
+- Settings > Clinic Workspace
+  - Overview / Setup Checklist
+  - Business Profile
+  - Branding
+  - Business Hours
+  - Services & Pricing
+  - Team / Roles
+  - Knowledge Base
+  - AI Guardrails
+  - Integrations Status
 
 This is the product foundation for multiple subscribers.
 
@@ -293,4 +318,3 @@ The checklist should include:
 - what not to click,
 - screenshots or notes to capture,
 - pass/fail fields.
-

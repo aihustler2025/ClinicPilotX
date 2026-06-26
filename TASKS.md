@@ -426,11 +426,16 @@ Last updated: 2026-06-24
 - [x] Confirm Kizha direct message opens.
 - [x] Send safe internal-only QA message in Kizha DM.
 - [x] Confirm no fresh Automation Center workflow rows after internal chat QA.
-- [ ] Get Lovable SQL evidence for the new internal channel/member/message clinic_id values.
+- [x] Get Lovable SQL evidence for the new internal channel/member/message clinic_id values.
+- [x] Accept Phase 1B.1c Internal Chat as passed for tested scope.
 - [ ] Fix or plan subscription display inconsistency: `No Plan` / `7 / 5 Active`.
 - [ ] Fix or plan external conversation detail selection so ConversationNotesPanel can be QA-tested.
 - [x] Create build control map so Ross can see current stage and module status.
 - [x] Create human QA script for Communication Hub Internal Chat.
+- [x] Decide UX direction for Clinic Workspace / Knowledge Base: top-bar workspace switcher plus Settings-based admin setup, not a new main left-nav item.
+- [x] Create Lovable handoff 034 for Clinic Workspace Setup + Per-Clinic Knowledge Base plan.
+- [ ] Send Lovable handoff 034 in Plan mode only.
+- [ ] Review Lovable plan before approving any Clinic Workspace / Knowledge Base build.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.
