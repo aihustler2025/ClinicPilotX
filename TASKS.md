@@ -419,9 +419,18 @@ Last updated: 2026-06-24
 - [x] Send Lovable handoff 032 in Plan mode only.
 - [x] Review Lovable's Phase 1B.1c internal chat SQL/RPC fix plan.
 - [x] Create Lovable handoff 033 requesting safer exact SQL before build approval.
-- [ ] Send Lovable handoff 033 in Plan mode only.
-- [ ] Review revised exact SQL before approving Phase 1B.1c internal chat fix.
-- [ ] Retest Phase 1B.1c after Lovable fixes internal chat/channel creation.
+- [x] Send Lovable handoff 033 in Plan mode only.
+- [x] Review revised exact SQL before approving Phase 1B.1c internal chat fix.
+- [x] Retest Phase 1B.1c after Lovable fixes internal chat/channel creation.
+- [x] Confirm Internal Chat group channels render after RLS/RPC fix.
+- [x] Confirm Kizha direct message opens.
+- [x] Send safe internal-only QA message in Kizha DM.
+- [x] Confirm no fresh Automation Center workflow rows after internal chat QA.
+- [ ] Get Lovable SQL evidence for the new internal channel/member/message clinic_id values.
+- [ ] Fix or plan subscription display inconsistency: `No Plan` / `7 / 5 Active`.
+- [ ] Fix or plan external conversation detail selection so ConversationNotesPanel can be QA-tested.
+- [x] Create build control map so Ross can see current stage and module status.
+- [x] Create human QA script for Communication Hub Internal Chat.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.

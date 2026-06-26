@@ -1642,3 +1642,48 @@ New handoff:
 - `docs/handoffs/Lovable-paste-message-033-phase-1b1c-sql-review-response.md`
 
 Current next step: send handoff 033 to Lovable in Plan mode only. Do not approve the internal chat SQL/RPC build until Lovable provides revised exact SQL for Codex review.
+
+## 2026-06-26 Request 033 Internal Chat Fix QA
+
+Ross approved and published Lovable's revised internal chat SQL/RPC fix.
+
+Lovable reported:
+
+- migration applied,
+- `InternalChat.tsx` updated to use the new RPC,
+- clinic-scoped initialization added.
+
+Codex retested the live app.
+
+Result: pass for the tested Internal Chat fix scope.
+
+Verified:
+
+- Communication Hub loads.
+- Internal Chat tab loads.
+- Group channels now render: `All Staff`, `Doctors`, and `Front Desk`.
+- No console errors appeared after the internal chat test.
+- Clicking `Kizha Kaye` created/opened `DM: Kizha Kaye`.
+- Sent safe internal-only message `QA TEST INTERNAL CHAT 20260626-A`.
+- Message appeared in the DM thread with timestamp `10:41:49 AM`.
+- Automation Center Activity Logs stayed quiet after the message; newest visible workflow rows remained `7 days ago`.
+- No live SMS, email, WhatsApp, Messenger, Viber, Telegram, payment, Stripe, calendar, scheduled-message, or Automation Center test-send action was triggered.
+
+Remaining issues:
+
+- Automation Center/header plan state showed `No Plan` and `7 / 5 Active` during this pass.
+- External conversation selection still does not open the detail pane, so `ConversationNotesPanel` remains untested from the UI.
+- DB-level row verification still needs Lovable/Supabase SQL evidence.
+
+New files:
+
+- `09-exports/request-033-phase-1b1c-internal-chat-fix-qa-2026-06-26.md`
+- `docs/clinicpilotx-current-build-control-map.md`
+- `docs/qa/communication-hub-internal-chat-human-qa-script.md`
+
+Updated:
+
+- `docs/clinic-knowledge-base-roadmap.md`
+- `docs/dr-hong-demo-roadmap.md`
+
+Current next step: document the current build control map for Ross, then prepare the next Lovable Plan-mode request. Recommended next build planning target is clinic workspace/setup plus per-clinic Knowledge Base, because this is required for the Dr. Hong pilot and for email/chatbot automations to use the right clinic facts safely.

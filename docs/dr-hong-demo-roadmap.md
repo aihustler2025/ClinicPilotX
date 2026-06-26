@@ -1,6 +1,6 @@
 # ClinicPilotX Pilot Demo Roadmap
 
-Last updated: 2026-06-24
+Last updated: 2026-06-26
 
 ## Purpose
 
@@ -216,12 +216,24 @@ Not part of the immediate Dr. Hong demo unless Ross explicitly changes priority:
 
 ## Recommended Next Steps
 
-1. Complete and document Appointments internal status QA.
-2. Audit Communication Hub read-only.
-3. Audit Automation Center read-only with special focus on email intake and lead workflows.
-4. Create a Lovable plan-mode request for product-wide clinic onboarding, knowledge base, plan gates, and lead intake API design.
-5. Create a Lovable plan-mode request for email AI sorting using a test inbox first.
-6. Build the pilot demo path around test data before connecting live credentials.
+1. Finish the current foundation follow-ups:
+   - get Lovable SQL evidence for Internal Chat clinic_id rows,
+   - fix/plan the `No Plan` subscription display issue,
+   - fix/plan external conversation selection so notes can be tested.
+2. Create a Lovable Plan-mode request for the clinic workspace/setup concept:
+   - workspace switcher,
+   - Dr. Colin Hong pilot workspace,
+   - clinic profile,
+   - team/users,
+   - website,
+   - services/pricing,
+   - hours,
+   - integration status,
+   - Knowledge Base entry point.
+3. Create a Lovable Plan-mode request for the per-clinic Knowledge Base.
+4. Create a Lovable Plan-mode request for safe lead intake API/webhook.
+5. Create a Lovable Plan-mode request for email AI sorting using a test inbox first.
+6. Build the Dr. Hong demo path around test data before connecting live credentials.
 
 ## Demo Safety Rules
 

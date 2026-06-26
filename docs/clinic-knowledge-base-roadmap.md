@@ -1,6 +1,6 @@
 # ClinicPilotX Clinic Knowledge Base Roadmap
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
 
 ## Purpose
 
@@ -22,6 +22,10 @@ ClinicPilotX will need accurate clinic-specific facts for:
 - future Automation Center workflows.
 
 The Knowledge Base should prevent one clinic's services, pricing, hours, policies, or brand voice from leaking into another clinic's automation.
+
+Ross clarified on 2026-06-26 that this should become the clinic/subscriber's **single source of truth**. It should eventually power the main ClinicPilotX app, the future ClinicPilotX chatbot, email AI sorting, communication workflows, future mobile app, and future APIs.
+
+Each clinic should be able to update its own truth over time: change pricing, replace old documents, add new service pages, update FAQs, change hours, and mark what is approved for AI use.
 
 ## Reference Patterns
 
@@ -48,9 +52,20 @@ or:
 
 `Settings -> Clinic Knowledge`
 
+Ross also provided a workspace-switcher reference pattern from BuzzForge. ClinicPilotX should eventually have a similar product concept, adapted to clinics:
+
+- top bar current clinic/workspace selector,
+- list of available clinic workspaces,
+- create new clinic/workspace action,
+- per-workspace profile and knowledge state,
+- strict data isolation by `clinic_id`.
+
+This should not be copied visually from BuzzForge, but the product concept is important: Ross should be able to switch between Dr. Colin Hong and future subscribed clinic clients the way the reference app switches between workspaces.
+
 Recommended sections:
 
 - Overview
+- Setup Checklist
 - Website Sources
 - Uploaded Files
 - Services & Pricing
@@ -60,6 +75,9 @@ Recommended sections:
 - Provider Bios
 - Brand Voice
 - AI Guardrails
+- AI Approved Answers
+- Escalation Rules
+- Connected Workflows
 - Review & Gaps
 
 ## Subscriber Onboarding Inputs
@@ -88,6 +106,14 @@ During setup, each clinic should be guided to add:
 - things AI must not say,
 - escalation rules for urgent or medical-risk questions.
 
+For medical/cosmetic clinics, the onboarding must clearly separate:
+
+- factual business information AI may use,
+- marketing copy that needs staff approval,
+- medical/safety rules,
+- legal disclaimers,
+- topics that must be escalated to a human.
+
 ## Supported Source Types
 
 Initial source types to plan:
@@ -109,6 +135,18 @@ Potential future source types:
 - Prior email/chat conversations.
 - Approved marketing content.
 - Video transcript imports.
+
+Ross's requested user-friendly input modes:
+
+- upload files by drag-and-drop,
+- add one URL,
+- add multiple URLs,
+- add a sitemap,
+- create text manually,
+- create folders/categories,
+- enter FAQs manually,
+- enter services and prices manually,
+- let AI organize uploaded material into suggested categories for staff approval.
 
 ## Storage Direction
 
@@ -182,6 +220,41 @@ The interface should feel clean, simple, and operational:
 - preview drawer for each source,
 - warning for unapproved or stale content.
 
+Possible dashboard cards:
+
+- Setup completion.
+- Knowledge Base health.
+- Number of sources.
+- Approved vs needs-review sources.
+- Stale sources.
+- Missing critical sections, such as hours, services, prices, FAQs, policies, or escalation rules.
+
+Source list columns:
+
+- Source.
+- Category.
+- Status.
+- Last updated.
+- Used by workflows/agents.
+
+Example status chips:
+
+- Approved.
+- Needs Review.
+- Draft.
+- Stale.
+- Disabled.
+
+Derived insight sections:
+
+- Safe claims.
+- Banned claims.
+- Price guidance.
+- Escalation triggers.
+- Missing knowledge gaps.
+
+The AI should not automatically make all uploaded content live. Clinic staff should approve important facts before chatbots or automations rely on them.
+
 Avoid copying any competitor's exact design. Use ClinicPilotX's own visual system and keep it consistent with the current clean dashboard style.
 
 ## Reference Screenshots From Ross
@@ -195,6 +268,15 @@ Local screenshot references:
 - `C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2026-06-25 123108.png`
 - `C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2026-06-25 123048.png`
 
+Ross shared additional screenshots on 2026-06-26:
+
+- BuzzForge workspace selector and dashboard pattern:
+  - `C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2026-06-26 101523.png`
+  - `C:\Users\user\OneDrive\Pictures\Screenshots\Screenshot 2026-06-26 101544.png`
+- BuzzForge Knowledge Base page:
+  - `C:\Users\user\Downloads\Knowledge-Base-—-BuzzForge-06-26-2026_10_25_AM.png`
+  - `C:\Users\user\Downloads\Knowledge-Base-—-BuzzForge-06-26-2026_10_25_AM (1).png`
+
 Useful ideas to remember later:
 
 - top-level source actions such as Add URL, Add Files, Create Text, and Create Folder,
@@ -205,6 +287,9 @@ Useful ideas to remember later:
 - document preview panel,
 - source metadata such as sharing status, document ID, created date, last updated date, size, index status, and dependent agents/workflows,
 - update source, download/source file, and edit actions.
+- workspace selector for switching between multiple clients/clinics.
+- health/status cards that show whether the knowledge base is complete enough to use.
+- source approval workflow before AI uses a fact.
 
 Important: use these only as inspiration for product planning. Do not copy the exact ElevenLabs layout, wording, visual hierarchy, or styling.
 
@@ -218,6 +303,31 @@ Knowledge Base content should support medical/cosmetic clinic workflows, but AI 
 - AI should escalate urgent or medical-risk messages.
 - AI should identify uncertainty and route to staff.
 - AI should cite or link the source internally for staff review where possible.
+- AI should use a narrower "approved answer set" for patient-facing chatbot/email replies than it uses for staff-facing summaries.
+- AI should escalate to staff when a question touches diagnosis, urgent symptoms, complications, medical risk, legal questions, final pricing, or treatment suitability.
+- AI should never invent clinic policies or service prices.
+
+## Knowledge Scope Layers
+
+Ross described the need for a larger clinic brain and smaller controlled brains for specific tools.
+
+Recommended layers:
+
+1. Full Clinic Knowledge Base
+   - All approved and draft clinic materials.
+   - Used by staff/admin review and internal tools.
+
+2. Patient-Facing Approved Knowledge
+   - Narrower set of approved answers for chatbot, email replies, and public-facing automation.
+   - Excludes unapproved drafts and internal-only notes.
+
+3. Workflow-Specific Knowledge
+   - Smaller subsets for a specific automation, such as email lead sorting, appointment request detection, or no-show recovery.
+
+4. Escalation Rules
+   - Rules that tell AI when to stop answering and route to staff.
+
+This structure helps protect ClinicPilotX, the clinic, and the patient.
 
 ## Future Lovable Prompt Draft
 
@@ -227,6 +337,8 @@ Use this later, not during the current Phase 1B.1 work:
 Please plan a ClinicPilotX per-clinic Knowledge Base module in Plan mode only.
 
 The Knowledge Base should let each subscriber/clinic upload and manage business facts that AI workflows can safely use. It should support website URLs, service-page URLs, sitemap URLs, manual text, PDFs, DOCX, TXT/Markdown, FAQs, services/pricing, hours, policies, provider bios, brand voice, and AI guardrails.
+
+It should support a multi-clinic workspace model. Ross should be able to switch between clinic workspaces, and each clinic should have its own isolated knowledge base scoped by clinic_id.
 
 Keep the UI clean, light, organized, and consistent with the current ClinicPilotX dashboard. Do not copy any competitor UI exactly.
 
@@ -246,6 +358,8 @@ Please propose:
 6. How chatbot, email AI sorting, voice, and Automation Center would consume the Knowledge Base later.
 7. QA checklist.
 8. Risks and open questions.
+9. How to separate full internal clinic knowledge from patient-facing approved knowledge.
+10. How to support Dr. Colin Hong as the first pilot clinic without making this a one-off custom build.
 
 Plan only. Do not build yet.
 ```
