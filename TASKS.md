@@ -416,7 +416,11 @@ Last updated: 2026-06-24
 - [ ] Fix Phase 1B.1c internal chat: clicking Kizha Kaye still fails with `Failed to create direct message channel`.
 - [ ] Fix or diagnose Communication Hub external conversation selection so ConversationNotesPanel can be reached for QA.
 - [x] Create Lovable handoff 032 for Phase 1B.1c internal-chat follow-up.
-- [ ] Send Lovable handoff 032 in Plan mode only.
+- [x] Send Lovable handoff 032 in Plan mode only.
+- [x] Review Lovable's Phase 1B.1c internal chat SQL/RPC fix plan.
+- [x] Create Lovable handoff 033 requesting safer exact SQL before build approval.
+- [ ] Send Lovable handoff 033 in Plan mode only.
+- [ ] Review revised exact SQL before approving Phase 1B.1c internal chat fix.
 - [ ] Retest Phase 1B.1c after Lovable fixes internal chat/channel creation.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.

@@ -1616,3 +1616,29 @@ New files:
 - `docs/handoffs/Lovable-paste-message-032-phase-1b1c-internal-chat-followup.md`
 
 Current next step: send Lovable handoff 032 in Plan mode only. Do not proceed to scheduled messages, email intake, chatbot/API intake, or Automation Center builds until internal chat/channel creation is fixed and QA passes.
+
+## 2026-06-26 Request 032 Internal Chat Fix Plan Review
+
+Ross provided Lovable's Phase 1B.1c internal chat fix plan.
+
+Lovable diagnosed:
+
+- `internal_channel_members` RLS recursion causes `Error fetching channels: Object`,
+- direct-message channel creation fails because the new `internal_channels` row has no member rows before `.select().single()`,
+- adding the other staff member to a DM is blocked by the current self-only `internal_channel_members` insert policy.
+
+Codex agreed with the direction but did not approve the plan as-is because the proposed SQL needs tightening before it is run.
+
+Required revisions:
+
+- use a safer one-argument `is_internal_channel_member(channel_id)` helper that checks `auth.uid()` internally,
+- explicitly verify the caller is a member of `current_clinic_id()` inside `create_dm_channel`,
+- make `internal_messages` insert policy require `clinic_id` to match the referenced channel's `clinic_id`,
+- use `DROP POLICY IF EXISTS` where appropriate,
+- provide revised exact SQL before build approval.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-033-phase-1b1c-sql-review-response.md`
+
+Current next step: send handoff 033 to Lovable in Plan mode only. Do not approve the internal chat SQL/RPC build until Lovable provides revised exact SQL for Codex review.
