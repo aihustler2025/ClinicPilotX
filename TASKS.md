@@ -438,8 +438,12 @@ Last updated: 2026-06-24
 - [x] Review Lovable plan before approving any Clinic Workspace / Knowledge Base build.
 - [x] Decide open questions for Clinic Workspace Phase A: no blind enum extension, cents+currency, disabled Sources tab.
 - [x] Create Lovable handoff 035 requesting exact SQL before build approval.
-- [ ] Send Lovable handoff 035 in Plan mode only.
-- [ ] Review exact Clinic Workspace forward SQL, rollback SQL, RLS policies, and grants before approving build.
+- [x] Send Lovable handoff 035 in Plan mode only.
+- [x] Review exact Clinic Workspace forward SQL, rollback SQL, RLS policies, and grants before approving build.
+- [x] Identify Clinic Workspace SQL/RLS blockers: clinics UPDATE policy not truly tightened, policy evidence missing, rerun-safety gaps.
+- [x] Create Lovable handoff 036 requesting revised SQL and policy evidence.
+- [ ] Send Lovable handoff 036 in Plan mode only.
+- [ ] Review revised Clinic Workspace exact SQL before approving build.
 - [x] Capture future per-clinic Knowledge Base product direction.
 - [ ] Plan per-clinic Knowledge Base module after active-clinic basics are stable.
 - [ ] Design client/clinic account setup requirements for Dr. Colin Hong demo.

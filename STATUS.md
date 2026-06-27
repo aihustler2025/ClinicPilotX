@@ -1743,3 +1743,29 @@ New handoff:
 - `docs/handoffs/Lovable-paste-message-035-clinic-workspace-exact-sql-request.md`
 
 Current next step: send handoff 035 to Lovable in Plan mode only. Do not click the approve/build button until Lovable returns exact forward SQL, rollback SQL, schema pre-checks, RLS policies, grants, frontend file list, and Codex reviews them.
+
+## 2026-06-27 Request 035 Clinic Workspace Exact SQL Review
+
+Ross provided Lovable's exact SQL response for Clinic Workspace Setup + Per-Clinic Knowledge Base Phase A.
+
+Codex reviewed the SQL and did not approve build yet.
+
+The product direction remains approved:
+
+- no new main left-nav item,
+- Settings > Clinic Workspace placement,
+- Phase A setup UI and structured metadata only,
+- Phase B/C knowledge sources, uploads, crawling, embeddings, email AI sorting, chatbot/API intake, and live integrations out of scope.
+
+Blocking SQL/RLS concerns:
+
+- Lovable proposed adding a new `clinics` UPDATE policy "alongside existing ones" and described it as tightening access. In Postgres/Supabase, permissive policies are OR'd together, so adding another policy does not tighten access if an older broader UPDATE policy still exists.
+- Need current `public.clinics` and `public.services` policy evidence.
+- Need revised SQL that drops/replaces any broader clinic UPDATE policy if required.
+- Need rerun-safe service constraints, triggers, and policies.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-036-clinic-workspace-sql-review-fixes.md`
+
+Current next step: send handoff 036 to Lovable in Plan mode only. Do not approve the build until Lovable provides revised exact SQL and policy evidence.
