@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-24
+Last updated: 2026-06-27
 
 ## In Progress
 
@@ -453,6 +453,25 @@ Last updated: 2026-06-24
 - [ ] Design lead intake API/webhook path for external chatbots, ConvoCore, website forms, and future ClinicPilotX chatbot.
 - [ ] Design email AI sorting demo using a test inbox before connecting any real client inbox.
 - [ ] Keep `Send Reminder` and `Add to Google Calendar` untested until live-send/calendar-write safety is approved.
+- [x] Approve and publish Clinic Workspace Phase A after revised exact SQL/RLS review.
+- [x] QA Clinic Workspace Phase A after publish.
+- [x] Confirm Clinic Workspace is under Settings, not the main left nav.
+- [x] Verify Business Profile save/reload persistence.
+- [x] Verify Services & Pricing add/reload persistence.
+- [x] Verify Knowledge FAQs add/reload persistence.
+- [x] Verify Knowledge Sources Phase B placeholder.
+- [x] Verify AI Guardrails save/reload persistence.
+- [x] Verify Team & Roles read-only display.
+- [x] Verify Integrations Status renders without connecting anything live.
+- [x] Create Clinic Workspace Phase A human QA script.
+- [x] Create Lovable handoff 037 for Clinic Workspace QA follow-up.
+- [ ] Send Lovable handoff 037 in Plan mode only.
+- [ ] Fix/polish Services & Pricing row action labels and delete confirmation.
+- [ ] Fix Overview checklist false `0 of 6` loading state.
+- [ ] Clarify Integrations Status labels so `Configured` does not imply live/verified connection.
+- [ ] Get Lovable SQL evidence for Clinic Workspace Phase A QA rows and unchanged send-capable tables.
+- [ ] Replace QA Business Profile / Guardrail values with real Dr. Colin Hong pilot clinic values after Ross provides/approves them.
+- [ ] Plan safe test-inbox Email AI Sorting demo after Clinic Workspace Phase A follow-up is complete.
 
 ## Leads v2 Fix QA Tasks Added 2026-06-12
 

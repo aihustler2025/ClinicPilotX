@@ -1,12 +1,49 @@
 # ClinicPilotX Clinic Knowledge Base Roadmap
 
-Last updated: 2026-06-26
+Last updated: 2026-06-27
 
 ## Purpose
 
 Each ClinicPilotX subscriber should eventually have a clean, per-clinic Knowledge Base that stores the business facts AI workflows can safely use.
 
 This is not part of the current Phase 1B.1 active-clinic build. It is parked here so the product direction is not lost.
+
+## Phase A Status - 2026-06-27
+
+The first Clinic Workspace / Knowledge Base foundation is now live under:
+
+`Settings -> Clinic Workspace`
+
+Phase A includes:
+
+- Business Profile
+- Branding
+- Business Hours
+- Services & Pricing
+- Team & Roles read-only view
+- Knowledge: FAQs
+- Knowledge: Sources placeholder
+- AI Guardrails
+- Integrations Status
+
+Codex QA verified that Business Profile, Services & Pricing, Knowledge FAQs, and AI Guardrails can save and persist after reload.
+
+Still not built:
+
+- file uploads,
+- URL/sitemap ingestion,
+- source preview,
+- document parsing,
+- embeddings/vector storage,
+- source approval workflow,
+- chatbot consumption,
+- email AI sorting consumption.
+
+Next near-term need:
+
+- fill real Dr. Hong pilot clinic facts,
+- fix small Clinic Workspace polish issues,
+- then plan safe test-inbox email AI sorting using this workspace context.
 
 ## Why It Matters
 

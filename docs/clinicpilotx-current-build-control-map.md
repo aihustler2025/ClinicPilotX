@@ -1,6 +1,6 @@
 # ClinicPilotX Current Build Control Map
 
-Last updated: 2026-06-26
+Last updated: 2026-06-27
 
 ## Purpose
 
@@ -61,12 +61,24 @@ Completed or mostly completed:
 - Payment/invoice creation stamps active `clinic_id`.
 - Internal staff chat channels/messages now open and send safely for tested DM path.
 
+Completed or partially completed in the latest pass:
+
+- Settings now has a `Clinic Workspace` tab.
+- Clinic Workspace is not added to the main left nav.
+- Business Profile saves clinic facts.
+- Services & Pricing can add clinic services/prices.
+- Knowledge FAQs can add structured Q&A.
+- Knowledge Sources shows a Phase B placeholder.
+- AI Guardrails can save safety/tone/escalation rules.
+- Team & Roles shows owner/admin members read-only.
+- Integrations Status renders.
+
 Still pending:
 
 - Phase 1B.2 read filtering across existing modules.
 - Workspace/clinic switcher UI.
-- Clinic onboarding/setup wizard.
-- Per-clinic Knowledge Base.
+- Full clinic onboarding/setup wizard.
+- Per-clinic Knowledge Base file/URL/text source uploads and indexing.
 - External conversation detail pane fix.
 - Subscription/plan display consistency.
 
@@ -193,11 +205,26 @@ Not done:
 
 ### Settings / Subscription
 
-Status: Settings renders after previous fixes.
+Status: Settings renders and now includes Clinic Workspace Phase A.
+
+Completed:
+
+- Business Profile.
+- Branding.
+- Business Hours.
+- Services & Pricing.
+- Team & Roles read-only view.
+- Knowledge FAQs.
+- Knowledge Sources placeholder.
+- AI Guardrails.
+- Integrations Status mirror.
 
 Known issue:
 
 - Plan/subscription state still appears inconsistent: `Professional` in some passes, `No Plan` in others.
+- Automation Center can show `No Plan` and `7 / 5 Active`.
+- Clinic Workspace Overview can briefly show a false setup score before data finishes loading.
+- Services & Pricing delete action needs labels/tooltips and confirmation.
 
 This should be fixed before plan-gated features are trusted.
 
@@ -214,7 +241,17 @@ Finish the remaining small blockers that affect trust:
 
 ### Priority 2 - Clinic Workspace / Client Setup
 
-Build the client workspace concept Ross described:
+Current status: Phase A is built and QA-passed with small follow-up fixes required.
+
+Next small fixes:
+
+- label plus/delete service icons,
+- add service delete confirmation,
+- avoid false `0 of 6` loading state,
+- clarify integration status labels,
+- get Lovable SQL evidence for Phase A QA rows.
+
+Broader client workspace concept Ross described:
 
 - top-bar workspace/clinic switcher similar in spirit to the provided BuzzForge screenshot,
 - create/select clinic workspace,
@@ -291,6 +328,8 @@ Build the first demo automation using a test inbox:
 - route uncertain/medical-risk items to staff.
 
 Do not connect Dr. Hong's real inbox until the test inbox flow works and Ross approves.
+
+Clinic Workspace Phase A is the foundation for this. The demo should use the active clinic's business profile, services, FAQs, and AI guardrails so the email AI can classify messages using the right clinic context.
 
 ## What Ross Should See After Each Lovable Build
 

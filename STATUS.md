@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-24
+Last updated: 2026-06-27
 
 ## Current State
 
@@ -1769,3 +1769,51 @@ New handoff:
 - `docs/handoffs/Lovable-paste-message-036-clinic-workspace-sql-review-fixes.md`
 
 Current next step: send handoff 036 to Lovable in Plan mode only. Do not approve the build until Lovable provides revised exact SQL and policy evidence.
+
+## 2026-06-27 Request 037 Clinic Workspace Phase A QA
+
+Ross approved and published Lovable's Clinic Workspace Phase A build.
+
+Lovable reported:
+
+- typecheck clean,
+- migration applied,
+- RLS replaced as planned,
+- Settings now includes a gated `Clinic Workspace` tab,
+- sub-nav includes Overview, Business Profile, Branding, Business Hours, Services & Pricing, Team & Roles, Knowledge FAQs, Knowledge Sources, AI Guardrails, and Integrations Status,
+- sections are URL-deep-linkable with `?tab=clinic-workspace&section=...`,
+- editable only by clinic owner/admin or platform admin.
+
+Codex performed live QA.
+
+Result: pass with follow-up polish required.
+
+Verified:
+
+- Clinic Workspace is correctly under Settings, not the main left nav.
+- Business Profile saved QA values and persisted after reload.
+- Services & Pricing added `QA TEST Service 20260627` and persisted after reload.
+- Knowledge FAQs added `QA TEST FAQ 20260627` and persisted after reload.
+- Knowledge Sources correctly shows a Phase B placeholder.
+- AI Guardrails saved QA safety rules and persisted after reload.
+- Team & Roles renders read-only with teambuzzooka as owner and Kizha as admin.
+- Integrations Status renders.
+- Dashboard, Leads, Patients, Appointments, Communication Hub, and Settings smoke routes render.
+- No live send, SMS, payment, calendar, workflow test-send, upload, chatbot/API, or integration action was clicked.
+- No visible fresh Automation Center workflow activity appeared during the workspace QA pass.
+
+Follow-up issues:
+
+- Services & Pricing row actions are icon-only; existing rows use a trash icon with no visible label/tooltip/confirmation.
+- Overview checklist can briefly show a false `0 of 6` while workspace data is loading before correcting.
+- Integrations Status says several channels are `Configured`; wording should distinguish connected/verified from configured/not tested.
+- Subscription/plan display still shows `No Plan` and `7 / 5 Active` in the header/Automation Center.
+- Lovable still needs to provide SQL evidence for the QA service, FAQ, guardrails, clinic row, and unchanged send-capable/workflow tables.
+
+New files:
+
+- `09-exports/request-037-clinic-workspace-phase-a-qa-2026-06-27.md`
+- `docs/qa/clinic-workspace-phase-a-human-qa-script.md`
+- `docs/handoffs/Lovable-paste-message-037-clinic-workspace-phase-a-qa-followup.md`
+
+Current next step: send Lovable handoff 037 in Plan mode only. After the small follow-up is planned/fixed, fill Dr. Hong's real clinic workspace data and begin planning the safe test-inbox Email AI Sorting demo. Do not connect Dr. Hong's real inbox yet.
