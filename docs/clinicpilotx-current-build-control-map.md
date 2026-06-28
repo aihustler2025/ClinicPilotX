@@ -253,7 +253,7 @@ Latest small fixes now QA-passed:
 Still needed:
 
 - get Lovable SQL evidence for Phase A QA rows,
-- fix subscription/entitlement display (`No Plan`, `7 / 5 Active`).
+- fix subscription/entitlement display. Latest state: old `7 / 5 Active` changed to `4 / 5 Active`, but header, Automation Center, and Subscription page still show `No active plan` instead of `Professional`.
 
 Broader client workspace concept Ross described:
 

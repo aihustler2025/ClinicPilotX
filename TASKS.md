@@ -479,6 +479,12 @@ Last updated: 2026-06-28
 - [ ] Send Lovable handoff 038 in Plan mode only.
 - [ ] Get Lovable SQL evidence promised in the Clinic Workspace polish plan.
 - [ ] Plan subscription/entitlement display reconciliation for `No Plan` and `7 / 5 Active`.
+- [x] Approve and publish Phase 1B.x subscription / entitlement display reconciliation.
+- [x] QA Phase 1B.x subscription / entitlement display after publish.
+- [x] Confirm old `7 / 5 Active` counter no longer appears.
+- [ ] Fix remaining subscription display blocker: header, Automation Center, and Subscription page still show `No active plan` instead of `Professional`.
+- [x] Create Lovable handoff 039 for subscription display follow-up.
+- [ ] Send Lovable handoff 039 as focused fix request.
 - [ ] Replace QA Business Profile / Guardrail values with real Dr. Colin Hong pilot clinic values after Ross provides/approves them.
 - [ ] Plan safe test-inbox Email AI Sorting demo after Clinic Workspace Phase A follow-up is complete.
 

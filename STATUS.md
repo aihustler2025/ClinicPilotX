@@ -1850,3 +1850,42 @@ New files:
 - `docs/handoffs/Lovable-paste-message-038-clinic-workspace-polish-evidence-and-subscription-plan.md`
 
 Current next step: send Lovable handoff 038 in Plan mode only. Ask for the missing SQL evidence and a separate subscription/entitlement display reconciliation plan. Do not start the Dr. Hong email AI sorting demo until evidence is accepted and the plan display is no longer misleading.
+
+## 2026-06-28 Request 039 Subscription Display QA
+
+Ross approved and published Lovable's Phase 1B.x subscription / entitlement display reconciliation build.
+
+Lovable reported:
+
+- pilot clinic now has an active Professional subscription,
+- `useSubscription` is scoped by `clinicId` with tri-state status,
+- Automation Center counter only counts plan-allowed enabled workflows,
+- old `7 / 5` counter should be gone.
+
+Codex performed live QA.
+
+Result: fail / follow-up required.
+
+Verified:
+
+- Dashboard/header still shows `No active plan`.
+- Dashboard/header does not show `Professional`.
+- Automation Center shows `Current Plan: No active plan`.
+- Automation Center counter changed from `7 / 5 Active` to `4 / 5 Active`.
+- Subscription page says `Current Plan: No active plan`.
+- Subscription page still lists Professional only under available plans, not as current plan.
+- Settings -> Clinic Workspace still loads.
+- Team & Roles still shows teambuzzooka as owner and Kizha as admin.
+- No console errors/warnings appeared in the final checks.
+
+Conclusion:
+
+- The old impossible counter is improved, but the main subscription lookup still fails.
+- Either the seeded subscription row is not visible to the frontend query, the query filters do not match it, RLS hides it, the plan join shape is wrong, or `useSubscription` is not using the same active clinic id as the pilot workspace.
+
+New files:
+
+- `09-exports/request-039-subscription-display-reconciliation-qa-2026-06-28.md`
+- `docs/handoffs/Lovable-paste-message-039-subscription-display-followup.md`
+
+Current next step: send Lovable handoff 039 as a focused fix request. Do not proceed to Dr. Hong email AI sorting until Dashboard, Automation Center, and Subscription page all show Professional for the pilot clinic.
