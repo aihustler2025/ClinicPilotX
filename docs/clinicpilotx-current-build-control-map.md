@@ -1,6 +1,6 @@
 # ClinicPilotX Current Build Control Map
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
 
 ## Purpose
 
@@ -243,13 +243,17 @@ Finish the remaining small blockers that affect trust:
 
 Current status: Phase A is built and QA-passed with small follow-up fixes required.
 
-Next small fixes:
+Latest small fixes now QA-passed:
 
-- label plus/delete service icons,
-- add service delete confirmation,
-- avoid false `0 of 6` loading state,
-- clarify integration status labels,
-- get Lovable SQL evidence for Phase A QA rows.
+- plus/delete service icons have accessible labels,
+- service delete has confirmation,
+- false `0 of 6` checklist flash was not seen in the retest,
+- integration status labels now avoid implying live verification.
+
+Still needed:
+
+- get Lovable SQL evidence for Phase A QA rows,
+- fix subscription/entitlement display (`No Plan`, `7 / 5 Active`).
 
 Broader client workspace concept Ross described:
 

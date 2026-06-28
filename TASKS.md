@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
 
 ## In Progress
 
@@ -470,6 +470,15 @@ Last updated: 2026-06-27
 - [ ] Fix Overview checklist false `0 of 6` loading state.
 - [ ] Clarify Integrations Status labels so `Configured` does not imply live/verified connection.
 - [ ] Get Lovable SQL evidence for Clinic Workspace Phase A QA rows and unchanged send-capable tables.
+- [x] Approve and publish Clinic Workspace Phase A polish pass.
+- [x] QA Services & Pricing accessible labels and delete confirmation.
+- [x] QA Overview checklist no longer flashes false `0 of 6` in observed load.
+- [x] QA Integrations Status safer wording.
+- [x] Confirm no fresh visible Automation Center workflow activity during polish QA.
+- [x] Create Lovable handoff 038 for missing SQL evidence and subscription display plan.
+- [ ] Send Lovable handoff 038 in Plan mode only.
+- [ ] Get Lovable SQL evidence promised in the Clinic Workspace polish plan.
+- [ ] Plan subscription/entitlement display reconciliation for `No Plan` and `7 / 5 Active`.
 - [ ] Replace QA Business Profile / Guardrail values with real Dr. Colin Hong pilot clinic values after Ross provides/approves them.
 - [ ] Plan safe test-inbox Email AI Sorting demo after Clinic Workspace Phase A follow-up is complete.
 

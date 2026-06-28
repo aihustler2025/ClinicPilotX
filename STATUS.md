@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
 
 ## Current State
 
@@ -1817,3 +1817,36 @@ New files:
 - `docs/handoffs/Lovable-paste-message-037-clinic-workspace-phase-a-qa-followup.md`
 
 Current next step: send Lovable handoff 037 in Plan mode only. After the small follow-up is planned/fixed, fill Dr. Hong's real clinic workspace data and begin planning the safe test-inbox Email AI Sorting demo. Do not connect Dr. Hong's real inbox yet.
+
+## 2026-06-28 Request 038 Clinic Workspace Polish QA
+
+Ross approved and published Lovable's Clinic Workspace Phase A polish pass.
+
+Codex performed live QA.
+
+Result: UI polish passed, SQL evidence still missing.
+
+Verified:
+
+- Services & Pricing delete buttons now have accessible label `Delete service`.
+- New service plus button has accessible label `Add service`.
+- Delete opens an in-app confirmation dialog naming the service.
+- Cancel keeps the service row.
+- Confirm Delete removed disposable service `QA TEST DELETE SERVICE 20260628` after reload.
+- Overview no longer showed a false `0 of 6`; final state showed `4 of 6 steps complete`.
+- Integrations Status now says `Configured, not tested`, `Enabled (not verified)`, `Not connected`, and `Coming later`.
+- No fresh visible Automation Center workflow activity appeared during QA.
+- Browser console showed no errors/warnings during the final Automation Center check.
+
+Known notes:
+
+- Deleted disposable service row still appeared immediately after toast, but was gone after reload.
+- Subscription/entitlement issue remains: header and Automation Center show `No Plan`, and Automation Center shows `7 / 5 Active`.
+- Lovable's completion message did not include the promised read-only SQL evidence.
+
+New files:
+
+- `09-exports/request-038-clinic-workspace-polish-qa-2026-06-28.md`
+- `docs/handoffs/Lovable-paste-message-038-clinic-workspace-polish-evidence-and-subscription-plan.md`
+
+Current next step: send Lovable handoff 038 in Plan mode only. Ask for the missing SQL evidence and a separate subscription/entitlement display reconciliation plan. Do not start the Dr. Hong email AI sorting demo until evidence is accepted and the plan display is no longer misleading.
