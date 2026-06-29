@@ -517,3 +517,14 @@ Last updated: 2026-06-29
 - [ ] Send Lovable handoff 040 in Plan mode only.
 - [ ] Review Lovable's proposed workspace/onboarding UX direction with Ross before build approval.
 - [ ] Do not proceed to Dr. Hong email AI sorting until the workspace setup direction is clarified and approved.
+
+## Visual Refresh / UX Planning Tasks Added 2026-06-29
+
+- [x] Save Ross's Metronic/Vykins/Clerivo visual references into GitHub-accessible design-reference folder.
+- [x] Create Lovable handoff 041 for workspace setup, dashboard refresh, integrations/API, and Automation Center visual direction.
+- [ ] Send Lovable handoff 041 in Plan mode only.
+- [ ] Review Lovable's proposed UX/IA plan before build approval.
+- [ ] Decide whether Clinic Workspace remains inside Settings, moves to a dedicated Workspace Setup area, or becomes part of onboarding.
+- [ ] Decide dashboard/homepage refresh scope without introducing fake data.
+- [ ] Decide integrations/API/webhook visual direction without connecting live credentials.
+- [ ] Keep Dr. Hong safe test-inbox Email AI Sorting as the next major functional priority after UX direction is approved.

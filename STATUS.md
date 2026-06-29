@@ -1925,3 +1925,27 @@ New files:
 - `docs/handoffs/Lovable-paste-message-040-workspace-ux-reset-plan.md`
 
 Current next step: send Lovable handoff 040 in Plan mode only. Do not approve build until Lovable proposes a better subscriber workspace/onboarding UX and Ross/Codex review it.
+
+## 2026-06-29 Visual Refresh References Added
+
+Ross provided design references for a ClinicPilotX workspace/dashboard visual refresh. The references include Metronic-style account/profile/integrations/API/notifications/team screens, Vykins-style dashboard screens, and a Clerivo-style integrations grid.
+
+Direction clarified:
+
+- These are inspiration references only, not designs to copy exactly.
+- Lovable should own UX/UI proposal and visual interpretation.
+- Codex should define product outcomes, safety constraints, backend implications, and QA requirements without over-prescribing layout.
+- The current Clinic Workspace setup may need to become a better subscriber onboarding/workspace setup experience rather than a buried Settings subtab.
+- Dashboard/homepage should be refreshed after plan review, but without fake production metrics.
+- Integrations/API/webhook surfaces should be planned visually, but no live credentials or sends should be connected yet.
+- After this UX planning pass, the priority should return to Dr. Hong demo preparation and safe test-inbox Email AI Sorting.
+
+New reference folder:
+
+- `docs/design-references/clinic-workspace-dashboard-refresh-2026-06-29/`
+
+New Lovable handoff:
+
+- `docs/handoffs/Lovable-paste-message-041-visual-refresh-workspace-dashboard-plan.md`
+
+Current next step: send handoff 041 to Lovable in Plan mode only and review Lovable's UX/IA proposal before build approval.
