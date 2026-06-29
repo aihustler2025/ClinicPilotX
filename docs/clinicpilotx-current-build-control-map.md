@@ -1,6 +1,6 @@
-# ClinicPilotX Current Build Control Map
+﻿# ClinicPilotX Current Build Control Map
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
 
 ## Purpose
 
@@ -361,3 +361,24 @@ The checklist should include:
 - what not to click,
 - screenshots or notes to capture,
 - pass/fail fields.
+
+## 2026-06-29 Control Map Update
+
+Subscription display is now passing in live QA:
+
+- Dashboard/header shows `Professional`.
+- Automation Center shows `Professional` and no longer shows `No active plan` / `No Plan`.
+- Subscription page shows `Current Plan: Professional` and `Status: Active`.
+
+Auto-Assignment remains broken:
+
+- `/auto-assignment` is stuck on `Loading assignment rules...`.
+- Console shows `Error fetching rules: Object`.
+
+Workspace UX reset:
+
+Ross correctly flagged that the current Clinic Workspace setup experience feels buried inside Settings and too developer/admin-like for a subscriber product.
+
+Going forward, Codex should not prescribe detailed UI layout to Lovable. Codex should define the product outcomes and safety/backend constraints, then let Lovable propose the best subscriber-facing UX.
+
+The next Lovable request should be Plan mode only and should ask for a better clinic workspace onboarding/setup experience before more automation demo work proceeds.

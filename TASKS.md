@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
 
 ## In Progress
 
@@ -502,3 +502,18 @@ Last updated: 2026-06-28
 - [ ] Update Leads main table phone display to use friendly formatted phone numbers instead of raw E.164.
 - [x] Retest Export dialog UI with scope and column selection.
 - [ ] Retest Export downloaded CSV contents in a browser that supports downloads.
+
+## Workspace UX Reset Tasks Added 2026-06-29
+
+- [x] QA Lovable subscription RLS fix after publish.
+- [x] Confirm Dashboard/header shows `Professional`.
+- [x] Confirm Automation Center shows `Professional` and no longer shows `No active plan`.
+- [x] Confirm Subscription page shows `Current Plan: Professional` and `Status: Active`.
+- [x] Confirm old `7 / 5 Active` counter is gone in the observed pass.
+- [x] Re-check Auto-Assignment route after subscription fix.
+- [ ] Fix `/auto-assignment` stuck at `Loading assignment rules...` with console error `Error fetching rules: Object`.
+- [x] Record Ross's UX correction: Clinic Workspace setup must feel like subscriber onboarding, not a developer/admin settings dump.
+- [x] Create Lovable handoff 040 requesting a Plan-mode workspace UX reset with Lovable owning the UX proposal.
+- [ ] Send Lovable handoff 040 in Plan mode only.
+- [ ] Review Lovable's proposed workspace/onboarding UX direction with Ross before build approval.
+- [ ] Do not proceed to Dr. Hong email AI sorting until the workspace setup direction is clarified and approved.

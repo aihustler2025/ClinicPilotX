@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
 
 ## Current State
 
@@ -1889,3 +1889,39 @@ New files:
 - `docs/handoffs/Lovable-paste-message-039-subscription-display-followup.md`
 
 Current next step: send Lovable handoff 039 as a focused fix request. Do not proceed to Dr. Hong email AI sorting until Dashboard, Automation Center, and Subscription page all show Professional for the pilot clinic.
+
+## 2026-06-29 Request 040 Subscription Fix QA and Workspace UX Reset
+
+Ross approved and published Lovable's subscription RLS fix.
+
+Codex performed live QA in the in-app browser.
+
+Result: subscription display fix passed.
+
+Verified:
+
+- Dashboard/header now shows `Professional`.
+- Automation Center shows `Professional` and no longer shows `No active plan` or `No Plan`.
+- Subscription page shows `Current Plan: Professional` and `Status: Active`.
+- The old broken `7 / 5 Active` counter is gone; Automation Center showed `7 / 13 Active` in this pass.
+- No live send/payment/calendar/workflow/integration action was clicked.
+
+Separate existing issue still present:
+
+- `/auto-assignment` remains stuck at `Loading assignment rules...`.
+- Console shows `Error fetching rules: Object`.
+
+Ross also raised a valid product/UX concern: Clinic Workspace currently feels buried and overly developer/admin-like for a subscription product. Codex's prior Lovable prompts were too prescriptive about UI placement and may have constrained Lovable's design strengths.
+
+Corrected operating direction:
+
+- Codex defines product outcomes, safety rules, backend/data constraints, QA, and documentation.
+- Lovable should propose the subscriber-facing UX/UI for workspace setup and onboarding.
+- Future Lovable prompts should avoid prescribing detailed layout unless safety, compliance, or data integrity requires it.
+
+New files:
+
+- `09-exports/request-040-subscription-pass-workspace-ux-reset-2026-06-29.md`
+- `docs/handoffs/Lovable-paste-message-040-workspace-ux-reset-plan.md`
+
+Current next step: send Lovable handoff 040 in Plan mode only. Do not approve build until Lovable proposes a better subscriber workspace/onboarding UX and Ross/Codex review it.
