@@ -546,7 +546,7 @@ Last updated: 2026-06-29
 - [x] Create Lovable handoff 042 for Auto-Assignment Phase A follow-up.
 - [ ] Send Lovable handoff 042 in Plan mode only.
 - [x] Retest Auto-Assignment after follow-up fix.
-- [ ] Do not start visual refresh Phase B until Auto-Assignment Phase A passes.
+- [x] Do not start visual refresh Phase B until Auto-Assignment Phase A passes.
 
 ## Request 043 Auto-Assignment Follow-Up QA Added 2026-06-30
 
@@ -560,6 +560,20 @@ Last updated: 2026-06-29
 - [x] Document subscription display regression after follow-up publish.
 - [x] Create Lovable handoff 043 for subscription display regression.
 - [ ] Send Lovable handoff 043 in Plan mode only.
-- [ ] Fix subscription display regression so Dashboard/header, Auto-Assignment, Automation Center, and Subscription show Professional again.
-- [ ] Re-test subscription display after Lovable fix.
-- [ ] Do not start visual refresh Phase B or Dr. Hong email AI sorting until subscription display is stable again.
+- [x] Fix subscription display regression so Dashboard/header, Auto-Assignment, Automation Center, and Subscription show Professional again.
+- [x] Re-test subscription display after Lovable fix.
+- [x] Do not start visual refresh Phase B or Dr. Hong email AI sorting until subscription display is stable again.
+
+## Request 044 Subscription Safe View QA Added 2026-06-30
+
+- [x] QA Lovable subscription safe-view fix after publish.
+- [x] Confirm Dashboard/header shows Professional.
+- [x] Confirm Auto-Assignment/header shows Professional.
+- [x] Confirm Auto-Assignment still loads after subscription fix.
+- [x] Confirm Automation Center shows Professional.
+- [x] Confirm Automation Center counter is restored to `7 / 13 Active`.
+- [x] Confirm Subscription page shows `Current Plan: Professional` and `Status: Active`.
+- [x] Confirm no fresh Automation Center workflow activity from read-only QA.
+- [ ] Resume Lovable visual refresh / workspace UX planning path.
+- [ ] Review Lovable visual refresh / workspace UX proposal with Ross before build approval.
+- [ ] After UX direction is approved, resume Dr. Hong demo preparation and safe test-inbox Email AI Sorting.

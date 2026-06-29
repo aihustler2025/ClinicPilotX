@@ -807,4 +807,18 @@ Verified:
 - Delete confirmation is labelled, Cancel preserves the rule, and Delete removes it immediately and after reload.
 - No fresh Automation Center workflow activity appeared during QA.
 
-Current blocker is not Auto-Assignment CRUD. The blocker is subscription display: the live app again shows `No active plan` where the pilot clinic should show Professional. This must be corrected before demo work and plan-gated UX can be trusted.
+Auto-Assignment CRUD passed. The temporary subscription display regression observed after Request 043 was fixed in Request 044; the tested pages again show Professional for the pilot clinic.
+
+## Request 044 Subscription Safe View QA - 2026-06-30
+
+The subscription display regression from Request 043 is resolved for the tested live pages.
+
+Verified:
+
+- Dashboard/header shows `Professional`.
+- Auto-Assignment/header shows `Professional`.
+- Automation Center shows `Professional` and `7 / 13 Active`.
+- Subscription page shows `Current Plan: Professional` and `Status: Active`.
+- No fresh workflow activity appeared during read-only QA.
+
+Current product direction: with Auto-Assignment and subscription display stable again, the next planning step should return to the workspace/dashboard visual refresh and subscriber onboarding UX direction before Dr. Hong email AI sorting work begins.

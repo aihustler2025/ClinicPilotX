@@ -2020,3 +2020,35 @@ New files:
 - `docs/handoffs/Lovable-paste-message-043-subscription-display-regression-after-auto-assignment.md`
 
 Current next step: send Lovable handoff 043 in Plan mode only. Auto-Assignment Phase A can be treated as passed, but do not proceed to broad visual refresh or Dr. Hong email AI sorting until the subscription display again shows Professional consistently.
+
+## 2026-06-30 Request 044 Subscription Safe View QA
+
+Ross approved and published Lovable's subscription safe-view fix.
+
+Lovable reported:
+
+- `useSubscription` now reads from `clinic_subscriptions_safe`,
+- the safe view is visible to every clinic member,
+- Stripe IDs remain restricted on the base subscription table,
+- the pilot owner should again see Professional across header, Auto-Assignment, Automation Center, and Subscription pages.
+
+Codex performed live read-only QA.
+
+Result: pass.
+
+Verified:
+
+- Dashboard/header shows `Professional`.
+- Auto-Assignment/header shows `Professional`.
+- Auto-Assignment still loads with `Assignment Rules (0)` and `Staff Configuration (2)`.
+- Automation Center shows `Professional` and `7 / 13 Active`.
+- Subscription page shows `Current Plan: Professional` and `Status: Active`.
+- The Request 043 `No active plan` regression is no longer visible in the tested pages.
+- Automation Center Activity Logs showed no fresh workflow executions from this read-only QA; newest visible rows started at 10 days ago.
+- Browser console showed no warnings/errors during the final check.
+
+New file:
+
+- `09-exports/request-044-subscription-safe-view-qa-2026-06-30.md`
+
+Current next step: resume the visual refresh / workspace UX planning path before starting Dr. Hong email AI sorting. Lovable should own the UX/UI proposal while Codex constrains product outcomes, safety, data integrity, and QA.
