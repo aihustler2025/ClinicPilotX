@@ -528,3 +528,22 @@ Last updated: 2026-06-29
 - [ ] Decide dashboard/homepage refresh scope without introducing fake data.
 - [ ] Decide integrations/API/webhook visual direction without connecting live credentials.
 - [ ] Keep Dr. Hong safe test-inbox Email AI Sorting as the next major functional priority after UX direction is approved.
+
+## Auto-Assignment Phase A Follow-Up Tasks Added 2026-06-29
+
+- [x] QA Auto-Assignment Phase A after publish.
+- [x] Confirm `/auto-assignment` no longer spins forever.
+- [x] Confirm staff rows render.
+- [x] Create disposable QA assignment rule.
+- [x] Confirm QA assignment rule persists after reload.
+- [x] Delete disposable QA assignment rule.
+- [x] Confirm QA assignment rule is gone after reload.
+- [x] Confirm no fresh Automation Center workflow activity after Auto-Assignment QA.
+- [ ] Fix Auto-Assignment create/delete list refresh so count/rows update without reload.
+- [ ] Fix Auto-Assignment active/inactive toggle so it updates and persists.
+- [ ] Fix staff max active conversations save so it updates and persists, or disable it until wired.
+- [ ] Add accessible label/description for Auto-Assignment delete action and dialogs.
+- [x] Create Lovable handoff 042 for Auto-Assignment Phase A follow-up.
+- [ ] Send Lovable handoff 042 in Plan mode only.
+- [ ] Retest Auto-Assignment after follow-up fix.
+- [ ] Do not start visual refresh Phase B until Auto-Assignment Phase A passes.

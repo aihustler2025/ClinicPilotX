@@ -1949,3 +1949,36 @@ New Lovable handoff:
 - `docs/handoffs/Lovable-paste-message-041-visual-refresh-workspace-dashboard-plan.md`
 
 Current next step: send handoff 041 to Lovable in Plan mode only and review Lovable's UX/IA proposal before build approval.
+
+## 2026-06-29 Request 042 Auto-Assignment Phase A QA
+
+Ross approved and published Lovable's standalone Auto-Assignment Phase A fix.
+
+Codex performed live QA.
+
+Result: partial pass / follow-up required.
+
+Passed:
+
+- `/auto-assignment` no longer hangs on `Loading assignment rules...`.
+- Page shows `Assignment Rules (0)` and `Staff Configuration (2)`.
+- Staff rows render.
+- A disposable QA rule can be created and persists after reload.
+- The disposable QA rule can be deleted and is gone after reload.
+- Automation Center Activity Logs showed no fresh workflow executions during QA.
+
+Failed / follow-up needed:
+
+- Create rule shows success but the list/count do not update until reload.
+- Delete rule shows success but the list/count do not update until reload.
+- Active/inactive switch does not toggle; it remains checked/Active.
+- Staff max-conversations save shows success but does not persist after reload.
+- Delete action is icon-only/unlabeled.
+- Dialog warning appears: missing description / aria-describedby.
+
+New files:
+
+- `09-exports/request-042-auto-assignment-phase-a-qa-2026-06-29.md`
+- `docs/handoffs/Lovable-paste-message-042-auto-assignment-phase-a-followup.md`
+
+Current next step: send Lovable handoff 042 in Plan mode only. Do not proceed to visual refresh Phase B until Auto-Assignment's core CRUD behavior is fixed.
