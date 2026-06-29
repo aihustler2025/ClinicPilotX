@@ -1982,3 +1982,41 @@ New files:
 - `docs/handoffs/Lovable-paste-message-042-auto-assignment-phase-a-followup.md`
 
 Current next step: send Lovable handoff 042 in Plan mode only. Do not proceed to visual refresh Phase B until Auto-Assignment's core CRUD behavior is fixed.
+
+## 2026-06-30 Request 043 Auto-Assignment Follow-Up QA
+
+Ross approved and published Lovable's Auto-Assignment Phase A follow-up.
+
+Lovable reported:
+
+- `clinic_staff_settings` migration applied,
+- `AutoAssignment.tsx` refetches after every write,
+- toasts are gated on confirmed row writes,
+- max conversations reads from the clinic-scoped table,
+- delete confirmation is labelled,
+- DialogDescriptions clear the Radix warning.
+
+Codex performed live QA.
+
+Result: Auto-Assignment follow-up passed for the tested CRUD scope.
+
+Verified:
+
+- `/auto-assignment` loads and no longer hangs.
+- Creating `QA TEST AUTO ASSIGN 20260630-A` updated the list/count immediately and persisted after reload.
+- Active/inactive toggle updated immediately and persisted after reload.
+- Kizha Kaye max conversations changed from 10 to 12, persisted after reload, and was restored to 10.
+- Delete confirmation names the QA rule, Cancel preserves it, and Delete removes it immediately and after reload.
+- Browser console showed no warnings/errors during final checks.
+- Automation Center Activity Logs showed no fresh workflow executions from QA; newest visible rows started at 10 days ago.
+
+New blocker:
+
+- Subscription display regressed after this publish. Header, Auto-Assignment, Automation Center, and Subscription page show `No active plan`; Subscription still lists Professional as an available plan but not as current. Automation Center shows `4 / 5 Active`, which appears to be the wrong entitlement path for the pilot clinic.
+
+New files:
+
+- `09-exports/request-043-auto-assignment-phase-a-followup-qa-2026-06-30.md`
+- `docs/handoffs/Lovable-paste-message-043-subscription-display-regression-after-auto-assignment.md`
+
+Current next step: send Lovable handoff 043 in Plan mode only. Auto-Assignment Phase A can be treated as passed, but do not proceed to broad visual refresh or Dr. Hong email AI sorting until the subscription display again shows Professional consistently.

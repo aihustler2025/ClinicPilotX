@@ -539,11 +539,27 @@ Last updated: 2026-06-29
 - [x] Delete disposable QA assignment rule.
 - [x] Confirm QA assignment rule is gone after reload.
 - [x] Confirm no fresh Automation Center workflow activity after Auto-Assignment QA.
-- [ ] Fix Auto-Assignment create/delete list refresh so count/rows update without reload.
-- [ ] Fix Auto-Assignment active/inactive toggle so it updates and persists.
-- [ ] Fix staff max active conversations save so it updates and persists, or disable it until wired.
-- [ ] Add accessible label/description for Auto-Assignment delete action and dialogs.
+- [x] Fix Auto-Assignment create/delete list refresh so count/rows update without reload.
+- [x] Fix Auto-Assignment active/inactive toggle so it updates and persists.
+- [x] Fix staff max active conversations save so it updates and persists, or disable it until wired.
+- [x] Add accessible label/description for Auto-Assignment delete action and dialogs.
 - [x] Create Lovable handoff 042 for Auto-Assignment Phase A follow-up.
 - [ ] Send Lovable handoff 042 in Plan mode only.
-- [ ] Retest Auto-Assignment after follow-up fix.
+- [x] Retest Auto-Assignment after follow-up fix.
 - [ ] Do not start visual refresh Phase B until Auto-Assignment Phase A passes.
+
+## Request 043 Auto-Assignment Follow-Up QA Added 2026-06-30
+
+- [x] QA Lovable Auto-Assignment follow-up after publish.
+- [x] Confirm create rule updates list/count immediately.
+- [x] Confirm create rule persists after reload.
+- [x] Confirm active/inactive toggle updates and persists.
+- [x] Confirm staff max conversations updates, persists, and is reverted to original QA value.
+- [x] Confirm delete confirmation is labelled and Cancel/Delete paths work.
+- [x] Confirm no fresh Automation Center workflow rows after Auto-Assignment QA.
+- [x] Document subscription display regression after follow-up publish.
+- [x] Create Lovable handoff 043 for subscription display regression.
+- [ ] Send Lovable handoff 043 in Plan mode only.
+- [ ] Fix subscription display regression so Dashboard/header, Auto-Assignment, Automation Center, and Subscription show Professional again.
+- [ ] Re-test subscription display after Lovable fix.
+- [ ] Do not start visual refresh Phase B or Dr. Hong email AI sorting until subscription display is stable again.

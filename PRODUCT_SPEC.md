@@ -91,7 +91,7 @@ First authenticated read-only module audit completed on 2026-06-11. See:
 | Analytics & Reporting | Partially verified | Authenticated browser audit | Reporting UI visible; values require validation against source data. |
 | Staff Management | Partially verified | Authenticated browser audit | Staff list and role controls visible; permissions/invites not tested. |
 | Automation Center | Partially verified / high priority | Authenticated browser audit | Workflows and Activity Logs tabs open; activity logs show completed Appointment Confirmation runs. |
-| Auto-Assignment Rules | Broken / blocked | Authenticated browser audit | Route remains on `Loading assignment rules...`, consistent with missing/unavailable backend table. |
+| Auto-Assignment Rules | Partially verified | Authenticated browser audit + Request 043 QA | Route now loads, staff rows render, assignment rule create/toggle/delete and staff max conversations persist after follow-up QA. Subscription/plan display regression still affects page chrome. |
 | Subscription | Partially verified | Authenticated browser audit | Professional plan UI visible; entitlement consistency still suspect. |
 | Settings | Partially verified | Authenticated browser audit | General, Notifications, Integrations, Profile, Email Logs verified; Audit Log needs retest. |
 | Profile | Incomplete | Authenticated browser audit | Main route shows `Coming Soon`. |
@@ -793,3 +793,18 @@ Current left-nav modules found in deployed bundle:
 - Profile
 
 Status: module presence is verified from the deployed bundle, but live behavior is not yet verified because login is required. See `09-exports/live-app-inventory-prelogin-2026-06-02.md`.
+
+## Request 043 Auto-Assignment Follow-Up QA - 2026-06-30
+
+Auto-Assignment is no longer blocked for the tested Phase A CRUD scope.
+
+Verified:
+
+- Assignment rules page loads.
+- Disposable QA assignment rule can be created, appears immediately, and persists after reload.
+- Rule active/inactive toggle updates and persists.
+- Staff max conversations updates through the clinic-scoped settings table and persists.
+- Delete confirmation is labelled, Cancel preserves the rule, and Delete removes it immediately and after reload.
+- No fresh Automation Center workflow activity appeared during QA.
+
+Current blocker is not Auto-Assignment CRUD. The blocker is subscription display: the live app again shows `No active plan` where the pilot clinic should show Professional. This must be corrected before demo work and plan-gated UX can be trusted.
