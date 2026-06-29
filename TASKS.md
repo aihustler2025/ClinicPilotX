@@ -577,3 +577,14 @@ Last updated: 2026-06-29
 - [ ] Resume Lovable visual refresh / workspace UX planning path.
 - [ ] Review Lovable visual refresh / workspace UX proposal with Ross before build approval.
 - [ ] After UX direction is approved, resume Dr. Hong demo preparation and safe test-inbox Email AI Sorting.
+
+## Request 045 Visual Refresh / Workspace UX Planning Added 2026-06-30
+
+- [x] Create refreshed current-state Lovable handoff for visual refresh / workspace UX planning.
+- [ ] Send Lovable handoff 045 in Plan mode only.
+- [ ] Review Lovable's UX/IA proposal with Ross before any build approval.
+- [ ] Confirm proposed location/flow for subscriber workspace setup.
+- [ ] Confirm proposed dashboard refresh scope uses truthful data only.
+- [ ] Confirm proposed integrations/API/webhook area does not connect live credentials.
+- [ ] Confirm proposed Automation Center visual refresh does not trigger workflows.
+- [ ] After UX/IA plan is accepted, decide whether to build Phase A visual refresh or move directly to Dr. Hong safe test-inbox Email AI Sorting.

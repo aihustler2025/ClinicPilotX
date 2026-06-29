@@ -2052,3 +2052,20 @@ New file:
 - `09-exports/request-044-subscription-safe-view-qa-2026-06-30.md`
 
 Current next step: resume the visual refresh / workspace UX planning path before starting Dr. Hong email AI sorting. Lovable should own the UX/UI proposal while Codex constrains product outcomes, safety, data integrity, and QA.
+
+## 2026-06-30 Request 045 Visual Refresh / Workspace UX Current-State Handoff
+
+With Auto-Assignment and subscription display stable again, Codex prepared a refreshed Lovable Plan-mode handoff for the visual refresh / workspace UX planning path.
+
+The older Request 041 handoff was still useful but stale because it listed Auto-Assignment as broken. The new handoff keeps Ross's Metronic/Vykins/Clerivo visual references and product direction, but updates the current verified state:
+
+- Dashboard/header shows `Professional`.
+- Auto-Assignment loads and passed CRUD/persistence QA.
+- Automation Center shows `Professional` and `7 / 13 Active`.
+- Subscription page shows `Current Plan: Professional` and `Status: Active`.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-045-visual-refresh-workspace-dashboard-current-state.md`
+
+Current next step: send handoff 045 to Lovable in Plan mode only. Lovable should propose the UX/IA plan; do not approve build until Ross and Codex review the proposal.
