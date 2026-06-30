@@ -605,3 +605,18 @@ Last updated: 2026-06-30
 - [ ] Send Lovable handoff 046 in Build mode for the small polish fix only.
 - [ ] Re-QA desktop/mobile after Lovable fixes the overflow.
 - [ ] Do not start Phase 2 workspace/home rebuild until Request 046 overflow fix passes.
+
+## Request 047 Visual Refresh Mobile Overflow Fix QA Added 2026-06-30
+
+- [x] QA Lovable mobile overflow fix after publish.
+- [x] Confirm mobile dashboard no longer has horizontal scrollbar.
+- [x] Confirm mobile dashboard cards load correctly after data readiness.
+- [x] Confirm desktop Dashboard still shows Professional.
+- [x] Confirm Automation Center still shows Professional and `7 / 13 Active`.
+- [x] Confirm Auto-Assignment still loads.
+- [x] Confirm Subscription still shows `Current Plan: Professional` and `Status: Active`.
+- [x] Confirm final dashboard console has no warnings/errors.
+- [x] Create Lovable handoff 047 for Phase 2 Workspace Home Plan mode request.
+- [ ] Send Lovable handoff 047 in Plan mode only.
+- [ ] Review Lovable's Phase 2 Workspace Home / onboarding UX proposal with Ross before build approval.
+- [ ] Do not approve Phase 2 build until IA, affected files, safety boundaries, and QA plan are clear.

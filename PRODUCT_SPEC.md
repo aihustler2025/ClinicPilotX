@@ -845,3 +845,20 @@ Current status:
 Important boundary:
 
 - Visual refresh must not create fake metrics, activate integrations, change send-capable workflows, alter RLS/migrations, or move subscriber workspace setup without a reviewed plan.
+
+## Visual Direction Phase 1 QA Pass - 2026-06-30
+
+The Phase 1 visual refresh is now verified for the tested scope after the mobile overflow follow-up.
+
+Verified:
+
+- Desktop dashboard/header/sidebar visual direction renders correctly.
+- Mobile dashboard no longer has horizontal overflow.
+- Plus Jakarta Sans, slate background, indigo accent, sticky header, refreshed sidebar, and refreshed dashboard cards remain in place.
+- Professional subscription display remains stable across key tested surfaces.
+
+Next product-design step:
+
+- Plan Phase 2 as a subscriber-facing Workspace Home / clinic setup experience.
+- Lovable should propose the IA and UI direction in Plan mode first.
+- Phase 2 should make clinic setup easier for subscribers without introducing fake metrics, live credentials, workflow side effects, migrations, RLS changes, or integration activation.

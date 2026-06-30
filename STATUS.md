@@ -2106,3 +2106,37 @@ New Lovable follow-up:
 - `docs/handoffs/Lovable-paste-message-046-visual-refresh-phase-1-mobile-overflow-fix.md`
 
 Current next step: send Request 046 to Lovable as a small Build-mode polish fix. Do not start Phase 2 until the mobile overflow is fixed and re-QA passes.
+
+## 2026-06-30 Request 047 Visual Refresh Mobile Overflow Fix QA
+
+Ross approved and published Lovable's small Phase 1 mobile overflow fix.
+
+Lovable reported one changed file:
+
+- `src/components/layout/AppLayout.tsx`
+
+Codex performed read-only mobile and desktop QA.
+
+Result: pass.
+
+Verified:
+
+- At phone viewport `390x844`, Dashboard no longer has horizontal overflow.
+- Document/client width and scroll width matched at `375 / 375` in the browser QA pass.
+- Dashboard cards load correctly on mobile after data readiness.
+- Desktop Dashboard still renders the Phase 1 visual direction and shows `PROFESSIONAL`.
+- Automation Center still shows `Professional` and `7 / 13 Active`.
+- Auto-Assignment still loads with `Assignment Rules (0)` and `Staff Configuration (2)`.
+- Subscription still shows `Current Plan: Professional` and `Status: Active`.
+- Settings still loads.
+- Final dashboard console check showed no warnings/errors.
+
+New QA report:
+
+- `09-exports/request-047-visual-refresh-mobile-overflow-fix-qa-2026-06-30.md`
+
+New next-step handoff:
+
+- `docs/handoffs/Lovable-paste-message-047-visual-refresh-phase-2-workspace-home-plan.md`
+
+Current next step: send Request 047 to Lovable in Plan mode only. Phase 2 should focus on a subscriber-facing Workspace Home / onboarding setup proposal. Do not approve Phase 2 build until Ross and Codex review the plan.
