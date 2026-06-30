@@ -2175,3 +2175,22 @@ New next-step handoff:
 - `docs/handoffs/Lovable-paste-message-048-test-inbox-email-ai-sorting-plan.md`
 
 Current next step: send Request 048 to Lovable in Plan mode only. The next functional priority is safe test-inbox Email AI Sorting for the Dr. Hong pilot workspace. Do not connect a real inbox, live OAuth, credentials, sends, workflow triggers, n8n production, or calendar/payment actions in this planning phase.
+
+## 2026-06-30 Request 049 Email AI Sorting Plan Revision
+
+Lovable returned a safe Phase A Email AI Sorting plan centered on paste/import test emails, AI classification, review, and test Lead creation. Codex reviewed the response and found it generally safe, but Ross clarified that the product direction must also account for Dr. Hong's accessible Gmail / Google Workspace customer-care inbox and Gmail-label sorting.
+
+Important clarification:
+
+- ClinicPilotX remains the product.
+- Dr. Colin Hong is the first pilot clinic workspace.
+- The near-term build should still start with safe test intake.
+- The plan must also show a future Gmail-label path for a connected inbox, using labels such as Lead, Appointment Request, Spam or Solicitation, Questionable, and Processed.
+- Inbound email sorting must stay separate from outbound email sending. Resend or similar providers are for future outbound sending, not for reading the inbox.
+- No real inbox, OAuth, credentials, sends, deletes, archives, calls, calendar writes, payments, or workflow executions should be connected in the first build.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-049-email-ai-sorting-gmail-label-revision.md`
+
+Current next step: send handoff 049 to Lovable in Plan mode only. Do not approve the Email AI Sorting build until Lovable revises the plan around safe Phase A testing plus a clear future Gmail-label connected-inbox path.

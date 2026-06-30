@@ -640,3 +640,11 @@ Last updated: 2026-06-30
 - [ ] Send Lovable handoff 048 in Plan mode only.
 - [ ] Review Lovable's Email AI Sorting Phase A plan before approving any build.
 - [ ] Do not connect Dr. Hong's real inbox until the test-inbox/simulation path passes QA.
+
+## Request 049 Email AI Sorting Plan Revision Added 2026-06-30
+
+- [x] Review Lovable's first Email AI Sorting Phase A plan.
+- [x] Capture Ross's clarification that Dr. Hong's pilot should eventually sort Gmail-accessed customer-care inbox mail using labels.
+- [x] Create Lovable handoff 049 requesting a revised Plan-mode response for safe test intake plus future Gmail-label triage.
+- [ ] Send Lovable handoff 049 in Plan mode only.
+- [ ] Do not approve the Email AI Sorting build until Gmail-label future path, credentials/scopes, RLS, workflow suppression, and QA boundaries are clear.
