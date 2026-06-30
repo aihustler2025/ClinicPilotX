@@ -2193,4 +2193,10 @@ New handoff:
 
 - `docs/handoffs/Lovable-paste-message-049-email-ai-sorting-gmail-label-revision.md`
 
+New onboarding guide:
+
+- `docs/email-inbox-connection-onboarding-guide.md`
+
+This guide captures the step-by-step setup model for future subscribers using Gmail/Google Workspace, Microsoft 365, GoDaddy, cPanel/hosting email, forwarding, managed setup, and later outbound sending. It also explains the Dr. Hong pilot path and keeps inbound sorting separate from outbound sending.
+
 Current next step: send handoff 049 to Lovable in Plan mode only. Do not approve the Email AI Sorting build until Lovable revises the plan around safe Phase A testing plus a clear future Gmail-label connected-inbox path.
