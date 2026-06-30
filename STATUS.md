@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-29
+Last updated: 2026-06-30
 
 ## Current State
 
@@ -2069,3 +2069,40 @@ New handoff:
 - `docs/handoffs/Lovable-paste-message-045-visual-refresh-workspace-dashboard-current-state.md`
 
 Current next step: send handoff 045 to Lovable in Plan mode only. Lovable should propose the UX/IA plan; do not approve build until Ross and Codex review the proposal.
+
+## 2026-06-30 Request 046 Visual Refresh Phase 1 QA
+
+Ross approved and published Lovable's Phase 1 visual/chrome refresh.
+
+Lovable reported the change was limited to visual tokens, Plus Jakarta Sans, header/sidebar chrome, and dashboard card components. No routes, information architecture, CRM logic, migrations, RLS, edge functions, integrations, live credentials, sends, payments, calendar actions, workflows, or Settings > Clinic Workspace were touched.
+
+Codex performed read-only desktop and mobile QA.
+
+Desktop result: pass.
+
+Verified:
+
+- Dashboard/header/sidebar render with the refreshed V1 visual direction.
+- Slate page background and Plus Jakarta Sans are live.
+- Dashboard metric cards and widgets render.
+- Sidebar navigation still contains the expected modules.
+- Dashboard, Leads, Patients, Appointments, Automation Center, Auto-Assignment, Subscription, and Settings all load.
+- Automation Center still shows Professional and `7 / 13 Active`.
+- Auto-Assignment still shows `Assignment Rules (0)` and `Staff Configuration (2)`.
+- Subscription still shows `Current Plan: Professional` and `Status: Active`.
+- Console showed no errors/warnings during the final dashboard check.
+
+Mobile result: pass with one polish fix required.
+
+- Dashboard renders and cards load after data readiness.
+- A horizontal scrollbar appears on mobile; observed client width `375`, scroll width `401` at a `390x844` viewport.
+
+New QA report:
+
+- `09-exports/request-046-visual-refresh-phase-1-qa-2026-06-30.md`
+
+New Lovable follow-up:
+
+- `docs/handoffs/Lovable-paste-message-046-visual-refresh-phase-1-mobile-overflow-fix.md`
+
+Current next step: send Request 046 to Lovable as a small Build-mode polish fix. Do not start Phase 2 until the mobile overflow is fixed and re-QA passes.

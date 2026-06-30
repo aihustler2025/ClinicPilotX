@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-24
+Last updated: 2026-06-30
 
 ## Product Purpose
 
@@ -822,3 +822,26 @@ Verified:
 - No fresh workflow activity appeared during read-only QA.
 
 Current product direction: with Auto-Assignment and subscription display stable again, the next planning step should return to the workspace/dashboard visual refresh and subscriber onboarding UX direction before Dr. Hong email AI sorting work begins.
+
+## Visual Direction Phase 1 - 2026-06-30
+
+Phase 1 visual refresh direction is now partially verified.
+
+Verified live style direction:
+
+- Professional light dashboard shell using slate-50 page background.
+- Plus Jakarta Sans typography.
+- Indigo primary accent.
+- Softer white dashboard cards.
+- Sticky app header.
+- Refreshed sidebar active state and group labels.
+- Dashboard metric cards remain data-backed and avoid fake values.
+
+Current status:
+
+- Desktop visual/chrome QA passed for the tested scope.
+- Mobile dashboard has a horizontal overflow polish issue that must be fixed before continuing to the larger workspace/dashboard Phase 2 build.
+
+Important boundary:
+
+- Visual refresh must not create fake metrics, activate integrations, change send-capable workflows, alter RLS/migrations, or move subscriber workspace setup without a reviewed plan.

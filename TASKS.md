@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-29
+Last updated: 2026-06-30
 
 ## In Progress
 
@@ -588,3 +588,20 @@ Last updated: 2026-06-29
 - [ ] Confirm proposed integrations/API/webhook area does not connect live credentials.
 - [ ] Confirm proposed Automation Center visual refresh does not trigger workflows.
 - [ ] After UX/IA plan is accepted, decide whether to build Phase A visual refresh or move directly to Dr. Hong safe test-inbox Email AI Sorting.
+
+## Request 046 Visual Refresh Phase 1 QA Added 2026-06-30
+
+- [x] QA Lovable Phase 1 visual/chrome refresh after publish.
+- [x] Confirm Plus Jakarta Sans and slate background are live.
+- [x] Confirm Dashboard/header/sidebar render on desktop.
+- [x] Confirm sidebar navigation remains intact.
+- [x] Confirm Dashboard metric cards/widgets still render with truthful states.
+- [x] Confirm Automation Center still shows Professional and `7 / 13 Active`.
+- [x] Confirm Auto-Assignment still loads after visual refresh.
+- [x] Confirm Subscription still shows `Current Plan: Professional` and `Status: Active`.
+- [x] Run mobile dashboard smoke QA.
+- [x] Document mobile horizontal overflow issue.
+- [x] Create Lovable handoff 046 for Phase 1 mobile overflow fix.
+- [ ] Send Lovable handoff 046 in Build mode for the small polish fix only.
+- [ ] Re-QA desktop/mobile after Lovable fixes the overflow.
+- [ ] Do not start Phase 2 workspace/home rebuild until Request 046 overflow fix passes.
