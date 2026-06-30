@@ -620,3 +620,23 @@ Last updated: 2026-06-30
 - [ ] Send Lovable handoff 047 in Plan mode only.
 - [ ] Review Lovable's Phase 2 Workspace Home / onboarding UX proposal with Ross before build approval.
 - [ ] Do not approve Phase 2 build until IA, affected files, safety boundaries, and QA plan are clear.
+
+## Request 048 Workspace Home Phase 2 QA Added 2026-06-30
+
+- [x] QA Lovable Phase 2 Workspace Home after publish.
+- [x] Confirm `/workspace` route loads.
+- [x] Confirm sidebar shows Workspace at top of CRM group.
+- [x] Confirm header clinic switcher shows Dr. Colin Hong pilot workspace.
+- [x] Confirm Workspace Home setup progress and checklist render.
+- [x] Confirm Workspace section deep links render after data readiness.
+- [x] Confirm Settings > Clinic Workspace compatibility remains live.
+- [x] Confirm header clinic switcher dropdown opens.
+- [x] Confirm mobile Workspace has no horizontal overflow.
+- [x] Confirm Automation Center still shows Professional and `7 / 13 Active`.
+- [x] Confirm Auto-Assignment still loads.
+- [x] Confirm Subscription still shows `Current Plan: Professional` and `Status: Active`.
+- [x] Confirm no fresh visible Automation Center workflow activity from read-only Workspace QA.
+- [x] Create Lovable handoff 048 for safe test-inbox Email AI Sorting Plan mode request.
+- [ ] Send Lovable handoff 048 in Plan mode only.
+- [ ] Review Lovable's Email AI Sorting Phase A plan before approving any build.
+- [ ] Do not connect Dr. Hong's real inbox until the test-inbox/simulation path passes QA.

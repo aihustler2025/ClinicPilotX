@@ -862,3 +862,26 @@ Next product-design step:
 - Plan Phase 2 as a subscriber-facing Workspace Home / clinic setup experience.
 - Lovable should propose the IA and UI direction in Plan mode first.
 - Phase 2 should make clinic setup easier for subscribers without introducing fake metrics, live credentials, workflow side effects, migrations, RLS changes, or integration activation.
+
+## Workspace Home Phase 2 - 2026-06-30
+
+Workspace Home is now verified for the tested scope.
+
+Current verified behavior:
+
+- Subscriber-facing Workspace route exists at `/workspace`.
+- Workspace appears at the top of the CRM nav group.
+- Header clinic switcher shows the active clinic and setup progress.
+- Workspace Home gives a clearer clinic setup path than burying setup only in Settings.
+- Existing Settings > Clinic Workspace remains live for compatibility.
+- Mobile Workspace layout has no horizontal overflow.
+
+The Workspace Home is now suitable as the starting point for pilot clinic setup and later knowledge-base/integration onboarding.
+
+Next functional product priority:
+
+- Safe test-inbox Email AI Sorting demo for the Dr. Hong pilot workspace.
+- Start with test/simulated input before real inbox connections.
+- Store classifications safely and allow human review before converting to Leads.
+- Preserve `clinic_id` isolation and `is_test` safeguards.
+- No outbound sends or workflow side effects during QA.

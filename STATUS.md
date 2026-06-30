@@ -2140,3 +2140,38 @@ New next-step handoff:
 - `docs/handoffs/Lovable-paste-message-047-visual-refresh-phase-2-workspace-home-plan.md`
 
 Current next step: send Request 047 to Lovable in Plan mode only. Phase 2 should focus on a subscriber-facing Workspace Home / onboarding setup proposal. Do not approve Phase 2 build until Ross and Codex review the plan.
+
+## 2026-06-30 Request 048 Workspace Home Phase 2 QA
+
+Ross approved and published Lovable's Phase 2 Workspace Home build.
+
+Codex performed read-only desktop, mobile, deep-link, Settings compatibility, subscription, and Automation Center activity QA.
+
+Result: pass for tested scope.
+
+Verified:
+
+- `/workspace` loads behind authenticated session.
+- Sidebar now shows `Workspace` at the top of the CRM group.
+- Header clinic switcher shows `Dr. Colin Hong (Pilot)` and setup progress.
+- Header plan chip still shows `PROFESSIONAL`.
+- Workspace Home shows `5 of 9` setup progress, next-step card, and setup checklist.
+- Workspace sections render: business profile, branding, business hours, services, team, knowledge FAQs, knowledge sources placeholder, AI guardrails, and integrations status.
+- Settings compatibility remains: `/settings?tab=clinic-workspace` and `/settings?tab=clinic-workspace&section=branding` still work.
+- Header clinic switcher opens and includes active clinic, View workspace, and Add clinic.
+- Mobile `/workspace` has no horizontal overflow; observed client/scroll width was `375 / 375`.
+- Automation Center still shows Professional and `7 / 13 Active`.
+- Auto-Assignment still loads with `Assignment Rules (0)` and `Staff Configuration (2)`.
+- Subscription still shows `Current Plan: Professional` and `Status: Active`.
+- Automation Center Activity Logs showed no fresh workflow activity from the Workspace QA pass.
+- Final `/workspace` console check showed no warnings/errors.
+
+New QA report:
+
+- `09-exports/request-048-workspace-home-phase-2-qa-2026-06-30.md`
+
+New next-step handoff:
+
+- `docs/handoffs/Lovable-paste-message-048-test-inbox-email-ai-sorting-plan.md`
+
+Current next step: send Request 048 to Lovable in Plan mode only. The next functional priority is safe test-inbox Email AI Sorting for the Dr. Hong pilot workspace. Do not connect a real inbox, live OAuth, credentials, sends, workflow triggers, n8n production, or calendar/payment actions in this planning phase.
