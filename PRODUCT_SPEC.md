@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
 
 ## Product Purpose
 
@@ -885,3 +885,47 @@ Next functional product priority:
 - Store classifications safely and allow human review before converting to Leads.
 - Preserve `clinic_id` isolation and `is_test` safeguards.
 - No outbound sends or workflow side effects during QA.
+
+## Email Inbox / AI Sorting - Phase B Setup UX - 2026-07-01
+
+The Email Inbox feature now has a visible subscriber-facing setup path under `Workspace > Email inbox`.
+
+Product intent:
+
+- Let a clinic understand how email sorting will work before any live connection.
+- Make the Dr. Colin Hong pilot demo visible and understandable.
+- Keep all real-inbox work read-only and human-reviewed until safety, authorization, and provider/data-processing review are complete.
+
+Verified setup UX:
+
+- Guardrail banner: read-only pilot, no sends, human review required, no workflow triggers, no automation.
+- Chronological setup wizard:
+  1. Choose connection method.
+  2. Verify mailbox / forwarding.
+  3. Run safe test scan.
+  4. Review classifications.
+  5. Approve leads manually.
+  6. Enable automation, locked in this phase.
+- Connection method options: Forwarding, Gmail / Google Workspace, Microsoft 365 / Outlook, Concierge.
+- Gmail and Microsoft 365 are marked as planned and require later pilot approval.
+- Forwarding setup is placeholder-only and does not connect a live inbound provider.
+- Help instructions exist for Gmail, Google Workspace, Microsoft 365 / Outlook, GoDaddy, SiteGround, cPanel / hosting mail, Forwarding-only, and Concierge.
+- Data controls for export/delete/retention are visible only as disabled/planned stubs.
+
+Verified safety:
+
+- Choosing Forwarding creates one `clinic_email_connections` setup row for the pilot clinic.
+- The row is `read_only = true` and `automation_enabled = false`.
+- The intake address is a placeholder, not a real routed domain.
+- No edge function, OAuth, inbound webhook, send, SMS, call, payment, calendar write, attachment ingestion, or workflow trigger was connected.
+- Lovable read-only SQL evidence showed zero rows created in send/workflow side-effect tables during the Phase B QA window.
+
+Real inbox rule:
+
+Dr. Hong's real customer-care mailbox must not be connected to ClinicPilotX until Ross/client authorization, provider selection, and data-processing/legal review are complete. Until then, the approved demo path is manual paste/import of sanitized email samples into the existing classifier and manual review before any Lead creation.
+
+Future path:
+
+- Real forwarding or OAuth ingestion should be planned separately.
+- ConvoCore chatbot lead intake should be planned separately as a secure per-clinic API/webhook path.
+- Knowledge Base content should be populated next with clinic-approved facts: services, pricing guidance, FAQs, policies/disclaimers, hours, locations, team/provider bios, website links, and AI guardrails.

@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
 
 ## Current State
 
@@ -2261,3 +2261,75 @@ New handoff:
 - `docs/handoffs/Lovable-paste-message-052-email-ai-sorting-final-schema-safety-fixes.md`
 
 Current next step: send handoff 052 to Lovable in Plan mode only. If the revised response is clean, Codex expects Phase A Build mode can be approved.
+
+## 2026-07-01 Request 053 Email Inbox Phase B Setup UX QA
+
+Codex moved from test-only Email AI Sorting into a visible pilot-product setup path for Dr. Colin Hong (Pilot).
+
+Phase A Email Inbox was previously QA-passed with sample/paste classification, manual approve-to-lead, `is_test=true` leads, and zero send/workflow side effects.
+
+Phase B goal:
+
+- Make `Workspace > Email inbox` feel like a real subscriber setup area.
+- Support the Dr. Hong pilot demo without connecting a real inbox yet.
+- Keep the product read-only, human-reviewed, and safe before real email/PHI processing.
+
+Lovable initially proposed an inbound-provider direction that mentioned Cloudflare. Codex rejected that plan because standing ClinicPilotX rules say not to recommend Cloudflare, Oracle, VPS, paid hosting, or unrelated backend platforms unless Ross explicitly approves. Lovable revised the plan to remove Cloudflare as a recommendation and keep provider selection deferred.
+
+Ross authorized removing himself from routine Lovable courier work. Codex therefore used the in-app Lovable browser directly to:
+
+- send the Phase B Plan-mode request,
+- review/reject the first plan,
+- approve the corrected plan,
+- publish the build,
+- QA the published app,
+- send a focused bug-fix request,
+- publish the fix,
+- QA again,
+- request read-only SQL evidence from Lovable.
+
+Verified after publish:
+
+- `Workspace > Email inbox` now shows a chronological setup wizard.
+- Guardrails are visible: read-only pilot, no sends, human review required, no workflow triggers, no automation.
+- Connection method picker exists for Forwarding, Gmail/Google Workspace, Microsoft 365/Outlook, and Concierge.
+- Gmail and Microsoft 365 are clearly marked planned / pilot approval required.
+- Forwarding setup is placeholder-only and does not connect a real inbound provider.
+- Help instructions exist for Gmail, Google Workspace, Microsoft 365/Outlook, GoDaddy, SiteGround, cPanel/hosting mail, Forwarding-only, and Concierge.
+- Phase A paste/sample classifier remains available inside Step 3.
+- Review queue remains available inside Step 4.
+- Step 6 automation remains locked.
+
+First QA blocker found and fixed:
+
+- Clicking Forwarding > Choose initially did nothing.
+- Lovable found root cause: `supabase.auth.getUser()` failed with a network fetch error before insert.
+- Fix replaced it with cached `getSession()` and added a visible toast for non-manager/role-denied cases.
+
+Verified after fix:
+
+- Choosing Forwarding creates the setup state.
+- Header shows method `Forwarding`.
+- Connection status shows `draft`, `Read-only`, and `Automation off`.
+- Step 1 shows `Done`.
+- Step 2 opens the forwarding setup copy and placeholder intake address.
+- No real OAuth, inbound webhook, edge function, provider, send, workflow, payment, calendar write, or attachment ingestion was connected.
+
+Lovable read-only SQL evidence:
+
+- Exactly one `clinic_email_connections` row exists for the Dr. Colin Hong pilot clinic.
+- Method: `forwarding`.
+- Status: `draft`.
+- `read_only = true`.
+- `automation_enabled = false`.
+- `mailbox_hint = null` because no real address has been entered.
+- `intake_address` is a placeholder: `intake+8ed615bf@in.[pilot-domain]`.
+- Existing Phase A `email_intake` rows remain unlinked with `connection_id = NULL`, as expected.
+- `email_intake_audit` has `0` rows because post-fix QA only selected the connection method and did not re-run classify/approve/spam actions.
+- Last 24h side-effect counts were all zero for `workflow_executions`, `automation_logs`, `email_delivery_logs`, `reminders`, `scheduled_messages`, `messages`, `scheduled_confirmations`, and `call_logs`.
+
+Current next step:
+
+- Treat Email Inbox Phase B setup UX as passed for the visible setup scope.
+- Next product step should be Dr. Hong demo data setup: populate real/sanitized clinic workspace and knowledge-base content, then run safe manual email samples through the inbox classifier.
+- Do not connect Dr. Hong's real customer-care mailbox, OAuth, forwarding, inbound webhook, or PHI-containing live ingestion until Ross/client authorization and provider/data-processing review are complete.

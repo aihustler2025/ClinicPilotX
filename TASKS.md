@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
 
 ## In Progress
 
@@ -678,3 +678,27 @@ Last updated: 2026-06-30
 - [x] Create Lovable handoff 052 requesting same-clinic constraints/checks, `has_clinic_role` helper evidence, and lead activity confirmation.
 - [ ] Send Lovable handoff 052 in Plan mode only.
 - [ ] If Request 052 response is clean, approve Email AI Sorting Phase A Build mode.
+
+## Request 053 Email Inbox Phase B Setup UX Added 2026-07-01
+
+- [x] Send Phase B Email Inbox real-pilot setup UX request to Lovable in Plan mode using the in-app browser.
+- [x] Reject first Phase B plan because it recommended Cloudflare Email Routing despite ClinicPilotX guardrails.
+- [x] Request revised plan that keeps inbound provider selection deferred and prefers Lovable/Supabase-first constraints.
+- [x] Approve revised Phase B setup UX plan after Cloudflare/outside provider recommendation was removed.
+- [x] Publish Phase B build.
+- [x] QA `Workspace > Email inbox` wizard, guardrail banner, setup steps, provider help, and locked automation step.
+- [x] Identify blocker: Forwarding `Choose` button did not persist method selection.
+- [x] Send focused Lovable fix request directly from the in-app browser.
+- [x] Publish Lovable fix.
+- [x] Re-QA Forwarding selection after fix.
+- [x] Confirm Method shows `Forwarding`, status shows `draft`, read-only is on, and automation is off.
+- [x] Confirm Phase A paste/sample classifier remains available inside the new wizard.
+- [x] Confirm Step 4 review queue still shows Phase A rows.
+- [x] Confirm Step 6 automation remains locked.
+- [x] Request and review read-only SQL evidence from Lovable.
+- [x] Confirm zero side effects in send/workflow/message/reminder/calendar-like tables.
+- [ ] Create/commit a formal QA report file for Request 053.
+- [ ] Prepare the next Lovable Plan-mode request for Dr. Hong demo data setup and per-clinic knowledge-base population.
+- [ ] Add sanitized Dr. Hong services/pricing/FAQ/policy/hours content only after Ross provides or approves the source material.
+- [ ] Run manual/sanitized customer-care email samples through Email Inbox classifier.
+- [ ] Do not connect a real customer-care mailbox, forwarding rule, OAuth, inbound webhook, attachment ingestion, auto-replies, SMS/calls, calendar writes, or workflow triggers until separately approved.
