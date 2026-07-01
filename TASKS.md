@@ -647,5 +647,6 @@ Last updated: 2026-06-30
 - [x] Capture Ross's clarification that Dr. Hong's pilot should eventually sort Gmail-accessed customer-care inbox mail using labels.
 - [x] Create Lovable handoff 049 requesting a revised Plan-mode response for safe test intake plus future Gmail-label triage.
 - [x] Create reusable client onboarding guide for email inbox connection, Gmail labels, forwarding, provider scenarios, and outbound-send separation.
+- [x] Add requirement for user-friendly in-app setup guidance under `Workspace > Integrations > Email Inbox`.
 - [ ] Send Lovable handoff 049 in Plan mode only.
 - [ ] Do not approve the Email AI Sorting build until Gmail-label future path, credentials/scopes, RLS, workflow suppression, and QA boundaries are clear.

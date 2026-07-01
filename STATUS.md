@@ -2197,6 +2197,8 @@ New onboarding guide:
 
 - `docs/email-inbox-connection-onboarding-guide.md`
 
-This guide captures the step-by-step setup model for future subscribers using Gmail/Google Workspace, Microsoft 365, GoDaddy, cPanel/hosting email, forwarding, managed setup, and later outbound sending. It also explains the Dr. Hong pilot path and keeps inbound sorting separate from outbound sending.
+This guide captures the step-by-step setup model for future subscribers using Gmail/Google Workspace, Microsoft 365, GoDaddy, SiteGround, cPanel/hosting email, forwarding, managed setup, and later outbound sending. It also explains the Dr. Hong pilot path and keeps inbound sorting separate from outbound sending.
+
+On 2026-07-01, Codex expanded the Email Inbox guidance to require an approachable in-app setup flow under `Workspace > Integrations > Email Inbox`, including provider choice cards, safety explanation, setup instructions, label/review queue explanation, test classification, and an advanced/IT help area.
 
 Current next step: send handoff 049 to Lovable in Plan mode only. Do not approve the Email AI Sorting build until Lovable revises the plan around safe Phase A testing plus a clear future Gmail-label connected-inbox path.

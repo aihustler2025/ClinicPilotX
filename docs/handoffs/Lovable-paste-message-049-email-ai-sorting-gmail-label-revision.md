@@ -42,6 +42,48 @@ For Gmail specifically, plan around labels rather than destructive folders:
 
 Do not delete, archive, send replies, mark as read, or move mail out of the inbox in the first connected-inbox phase unless Ross explicitly approves.
 
+## Required In-App Setup Guidance
+
+The Email Inbox area must be easy enough for a nontechnical clinic owner to understand.
+
+Recommended future location:
+
+`Workspace > Integrations > Email Inbox`
+
+Please include a setup experience in the plan, not just the database/AI logic.
+
+The UI should explain the three possible setup paths in plain language:
+
+1. **Connect Gmail / Google Workspace**
+   - Best when the clinic reads mail in Gmail or Google Workspace.
+   - Explains that the clinic signs in securely and does not share a password.
+   - Phase A should show this as planned/disabled if OAuth is not being built yet.
+
+2. **Connect Microsoft 365 / Outlook**
+   - Best when the clinic reads mail in Outlook or Microsoft 365.
+   - Explains that the clinic signs in securely and does not share a password.
+   - Phase A should show this as planned/disabled if OAuth is not being built yet.
+
+3. **Use Forwarding / Intake Address**
+   - Best when the clinic uses GoDaddy, SiteGround, cPanel, hosting email, or an unknown provider.
+   - ClinicPilotX should eventually generate a clinic-specific intake address.
+   - The UI should show copyable forwarding instructions and a "Send test email" verification step.
+
+The setup guide should include:
+
+- a provider choice screen,
+- a short "What this will do" explanation,
+- a short "What this will not do" safety explanation,
+- clear next-step cards,
+- copyable forwarding instructions for forwarding-based setup,
+- Gmail label names that ClinicPilotX will use later,
+- a test connection / test classification path,
+- a review queue link,
+- an "Advanced / IT help" area for MX, forwarding, SPF/DKIM/DMARC explanations,
+- a clear statement that inbound sorting is separate from outbound sending.
+
+For Phase A, if only paste/import test email is built, the same page should still preview the future connection options as disabled/planned. The clinic owner should understand where real Gmail/Microsoft/forwarding setup will happen later.
+
 ## Revise The Phase Plan
 
 Please revise your plan into these phases:
@@ -136,12 +178,14 @@ Please return a revised Plan-mode response with:
 
 1. Updated phased plan.
 2. Exact proposed UI surfaces.
-3. Exact proposed schema/RLS, if any.
-4. How Gmail labels would work in the future.
-5. How test intake converts to Leads safely.
-6. How `is_test` and workflow suppression are guaranteed.
-7. What credentials/scopes would eventually be needed, but not connected now.
-8. QA checklist for Codex.
-9. Clear build boundary for Phase A only.
+3. Exact in-app setup guidance for `Workspace > Integrations > Email Inbox`.
+4. Exact proposed schema/RLS, if any.
+5. How Gmail labels would work in the future.
+6. How GoDaddy/SiteGround/cPanel/unknown-provider forwarding would work in the future.
+7. How test intake converts to Leads safely.
+8. How `is_test` and workflow suppression are guaranteed.
+9. What credentials/scopes would eventually be needed, but not connected now.
+10. QA checklist for Codex.
+11. Clear build boundary for Phase A only.
 
 Wait for Codex/Ross approval before any build.

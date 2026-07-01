@@ -1,6 +1,6 @@
 # ClinicPilotX Email Inbox Connection and Sorting Onboarding Guide
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
 
 ## Purpose
 
@@ -91,6 +91,115 @@ The first version should be clear and calm:
 - "Open review queue"
 
 Do not expose technical words like OAuth, MX, SPF, DKIM, or DMARC as the first thing a clinic sees. Those should be behind help text or an advanced setup section.
+
+## Recommended In-App Setup Flow
+
+The Email Inbox setup should feel like a guided setup wizard, not an IT control panel.
+
+Recommended path:
+
+`Workspace > Integrations > Email Inbox`
+
+### Screen 1: Choose Setup Method
+
+Show three setup cards:
+
+1. **Connect Gmail**
+   - Use this if your clinic reads email in Gmail or Google Workspace.
+   - Secure sign-in. No password sharing.
+   - Best future path for Dr. Hong if the customer-care inbox is Google Workspace/Gmail.
+
+2. **Connect Microsoft 365**
+   - Use this if your clinic reads email in Outlook or Microsoft 365.
+   - Secure sign-in. No password sharing.
+
+3. **Use Forwarding**
+   - Use this if your email is hosted by GoDaddy, SiteGround, cPanel, your website host, or you are not sure.
+   - ClinicPilotX gives you an intake address.
+   - You forward a copy of messages to that address.
+
+### Screen 2: Safety Explanation
+
+Before connecting anything, show a plain-language safety box:
+
+> ClinicPilotX will only sort incoming messages in this setup. It will not send replies, delete emails, archive emails, call patients, send texts, create payments, or update calendars.
+
+For test mode:
+
+> Test mode creates test leads only. These will not trigger follow-up workflows.
+
+### Screen 3: Setup Instructions
+
+Show different instructions based on the selected method.
+
+For Gmail:
+
+1. Click `Connect Gmail`.
+2. Choose the clinic inbox.
+3. Approve read/label access.
+4. ClinicPilotX creates or checks labels.
+5. Choose whether to process only a test label first.
+6. Send or label a test email.
+7. Run test classification.
+
+For Microsoft:
+
+1. Click `Connect Microsoft 365`.
+2. Choose the clinic mailbox.
+3. Approve read/category access.
+4. Choose a test folder/category first.
+5. Run test classification.
+
+For forwarding:
+
+1. Copy the ClinicPilotX intake address.
+2. Open the clinic's email provider.
+3. Create a forwarding rule to that intake address.
+4. Keep a copy in the original mailbox if possible.
+5. Send a test message.
+6. Click `Check for test email`.
+7. Run test classification.
+
+### Screen 4: Labels and Review Queue
+
+Show the labels/buckets ClinicPilotX will use:
+
+- Lead
+- Appointment Request
+- Spam or Solicitation
+- Questionable
+- Processed
+
+Explain:
+
+> Anything uncertain goes to Questionable for human review.
+
+### Screen 5: Test Classification
+
+The clinic should be able to submit a test email and see:
+
+- original email,
+- AI category,
+- confidence,
+- extracted lead fields,
+- reason for the decision,
+- approve/reject buttons,
+- create lead preview.
+
+### Screen 6: Advanced / IT Help
+
+Hide technical details behind an advanced panel:
+
+- how to identify email provider,
+- MX records,
+- forwarding,
+- Gmail labels,
+- Microsoft folders/categories,
+- outbound sender verification,
+- SPF/DKIM/DMARC,
+- when to contact ClinicPilotX support.
+
+This keeps the main setup approachable while still helping technical staff.
 
 ## Phase A: Safe Test Intake
 
