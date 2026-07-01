@@ -668,3 +668,13 @@ Last updated: 2026-06-30
 - [x] Create Lovable handoff 051 requesting corrected rollback, rerun-safe policies, RLS helper evidence, and narrowed edge function list.
 - [ ] Send Lovable handoff 051 in Plan mode only.
 - [ ] Do not approve Email AI Sorting Phase A Build mode until Request 051 blockers are resolved.
+
+## Request 052 Email AI Sorting Final Schema Safety Fixes Added 2026-07-01
+
+- [x] Review Lovable's revised Phase A exact build pack after Request 051.
+- [x] Confirm major Request 051 blockers were addressed: rollback no longer drops `leads.is_test`, edge-function blast radius narrowed, appointment/payment/calendar functions untouched.
+- [x] Identify final schema safety gap: `email_intake_classifications.clinic_id` is not DB-enforced to match the parent `email_intake.clinic_id`.
+- [x] Identify final schema safety question: `leads.intake_id` should not link across clinics.
+- [x] Create Lovable handoff 052 requesting same-clinic constraints/checks, `has_clinic_role` helper evidence, and lead activity confirmation.
+- [ ] Send Lovable handoff 052 in Plan mode only.
+- [ ] If Request 052 response is clean, approve Email AI Sorting Phase A Build mode.

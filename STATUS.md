@@ -2234,3 +2234,30 @@ New handoff:
 - `docs/handoffs/Lovable-paste-message-051-email-ai-sorting-build-pack-safety-revisions.md`
 
 Current next step: send handoff 051 to Lovable in Plan mode only. Do not approve Build mode until Lovable returns a corrected exact pack with safe rollback, narrower edge function changes, RLS helper evidence, and rerun-safe policies.
+
+## 2026-07-01 Request 052 Email AI Sorting Final Schema Safety Fixes
+
+Lovable returned a revised Phase A exact build pack that resolved the major Request 051 blockers:
+
+- `leads.is_test` is now treated as pre-existing and is not dropped in rollback,
+- `public.is_platform_admin()` is used for platform-admin bypass,
+- policies are rerun-safe,
+- edge-function blast radius is narrowed,
+- appointment/payment/calendar functions are not touched,
+- only `classify-email-intake` is new, with `trigger_calculate_lead_score` proposed as the only existing function-body replacement.
+
+Codex found one final multi-tenant schema safety issue before Build approval:
+
+- `email_intake_classifications` references `email_intake(id)` and separately stores `clinic_id`, but the database does not enforce that the classification's `clinic_id` matches the parent intake row's `clinic_id`.
+
+Codex also requested:
+
+- same-clinic protection for `leads.intake_id`,
+- exact `has_clinic_role` helper evidence,
+- confirmation that approved Email Intake leads write a lead activity/timeline entry.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-052-email-ai-sorting-final-schema-safety-fixes.md`
+
+Current next step: send handoff 052 to Lovable in Plan mode only. If the revised response is clean, Codex expects Phase A Build mode can be approved.
