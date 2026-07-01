@@ -2333,3 +2333,36 @@ Current next step:
 - Treat Email Inbox Phase B setup UX as passed for the visible setup scope.
 - Next product step should be Dr. Hong demo data setup: populate real/sanitized clinic workspace and knowledge-base content, then run safe manual email samples through the inbox classifier.
 - Do not connect Dr. Hong's real customer-care mailbox, OAuth, forwarding, inbound webhook, or PHI-containing live ingestion until Ross/client authorization and provider/data-processing review are complete.
+
+## 2026-07-01 Request 054 Site Import Assistant C1 QA
+
+Ross approved the next Website Enrichment direction: add a plain-English `Auto-Fill From Website` path, while keeping email inbox work read/classify/label/review-only until fully tested.
+
+Codex used the in-app Lovable project browser directly to plan, review, approve, publish, QA, request a polish fix, publish again, and collect evidence.
+
+Result: pass for the safe C1 foundation.
+
+Verified in `Workspace > Knowledge sources`:
+
+- `Site Import Assistant` renders for the Dr. Colin Hong pilot workspace.
+- Guardrails are visible: draft only, human review required, no chatbot/email/voice activation until approval.
+- Disabled automated button now says `Auto-Fill From Website`.
+- Automatic website scanning remains disabled and explicitly marked as a later phase.
+- Entering `https://www.drcolinhong.com` enables `Create draft run`.
+- Creating a draft run works.
+- Adding a manual draft fact works.
+- Rejecting the QA fact works and does not apply anything to the clinic profile.
+
+Lovable SQL evidence confirmed:
+
+- QA run exists for `https://www.drcolinhong.com`.
+- QA fact `QA TEST Site Import Clinic Name 20260701` is `rejected`.
+- `clinics.name` remains `Dr. Colin Hong (Pilot)`.
+- Same-clinic FK protection and terminal guard exist.
+- Side-effect counts were zero for send/workflow/message/reminder/call/email-intake/lead paths during the QA window.
+
+QA report:
+
+`09-exports/request-054-site-import-assistant-c1-qa-2026-07-01.md`
+
+Current next step: decide whether to plan C2 public website scanning/AI extraction or first populate Dr. Hong's workspace manually with approved/sanitized clinic facts. Do not connect live inboxes, crawlers, AI extraction, sends, or workflow triggers without separate approval.

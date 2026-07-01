@@ -702,3 +702,24 @@ Last updated: 2026-07-01
 - [ ] Add sanitized Dr. Hong services/pricing/FAQ/policy/hours content only after Ross provides or approves the source material.
 - [ ] Run manual/sanitized customer-care email samples through Email Inbox classifier.
 - [ ] Do not connect a real customer-care mailbox, forwarding rule, OAuth, inbound webhook, attachment ingestion, auto-replies, SMS/calls, calendar writes, or workflow triggers until separately approved.
+
+## Request 054 Site Import Assistant C1 Added 2026-07-01
+
+- [x] Send Website Enrichment / Auto-Fill From Website direction to Lovable from the in-app browser.
+- [x] Reject early plan versions that were too broad or had schema safety gaps.
+- [x] Approve C1-only plan after same-clinic FK, rerun safety, and terminal-guard concerns were addressed.
+- [x] Publish C1 Site Import Assistant build.
+- [x] QA `Workspace > Knowledge sources` visible flow.
+- [x] Verify guardrail banner and disabled future automation behavior.
+- [x] Verify `https://www.drcolinhong.com` enables `Create draft run`.
+- [x] Create a safe manual draft run.
+- [x] Add QA draft fact `QA TEST Site Import Clinic Name 20260701`.
+- [x] Reject QA draft fact so clinic profile is not overwritten.
+- [x] Identify UI copy issue: disabled button said `Run import` instead of plain-English `Auto-Fill From Website`.
+- [x] Send focused Lovable polish fix directly.
+- [x] Publish polish fix.
+- [x] Verify disabled button now says `Auto-Fill From Website`.
+- [x] Review Lovable SQL evidence for QA run, rejected fact, unchanged clinic name, same-clinic FK protection, terminal guard, and zero side effects.
+- [x] Create formal QA report for Request 054.
+- [ ] Decide next: C2 public website scanning/AI extraction plan vs. manual Dr. Hong knowledge-base population first.
+- [ ] Do not approve website crawling, AI extraction, external crawler providers, OAuth, real inboxes, Gmail label writing, automatic lead creation, or chatbot/email/voice use of facts until separately planned and approved.

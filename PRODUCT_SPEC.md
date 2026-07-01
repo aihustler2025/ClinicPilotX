@@ -929,3 +929,39 @@ Future path:
 - Real forwarding or OAuth ingestion should be planned separately.
 - ConvoCore chatbot lead intake should be planned separately as a secure per-clinic API/webhook path.
 - Knowledge Base content should be populated next with clinic-approved facts: services, pricing guidance, FAQs, policies/disclaimers, hours, locations, team/provider bios, website links, and AI guardrails.
+
+## Site Import Assistant / Website Enrichment C1 - 2026-07-01
+
+ClinicPilotX now has a safe first foundation for website-derived knowledge capture under:
+
+`Workspace > Knowledge sources`
+
+Product intent:
+
+- Help clinics start their workspace and knowledge base faster from their public website.
+- Eventually extract public business facts such as profile details, hours, services, FAQs, policies, contact information, and social links.
+- Keep all imported/extracted facts as drafts until a clinic owner/admin reviews and approves them.
+
+Verified C1 behavior:
+
+- `Site Import Assistant` renders under Knowledge sources.
+- Disabled automated button uses the plain-English label `Auto-Fill From Website`.
+- Automatic website scanning is explicitly parked for a later phase.
+- Current C1 path supports manual draft runs and manual draft facts only.
+- Facts can be reviewed and rejected without touching production workspace fields.
+- The Dr. Hong QA fact was rejected and did not change `clinics.name`.
+
+Safety requirements:
+
+- Imported facts must remain isolated by `clinic_id`.
+- Same-clinic database constraints are required for runs, sources, and facts.
+- Approved/rejected facts must not be reopenable through ordinary authenticated client paths.
+- Team facts are draft-only until a later approved target model exists.
+- Website crawling, AI extraction, Firecrawl or other external crawler providers, AI Gateway/Gemini calls, inbox/OAuth, sends, workflows, and automatic lead creation are not part of C1.
+
+Future C2 direction:
+
+- Public-pages-only website scanning for approved clinic URLs.
+- Clear crawl limits and legal/robots review.
+- AI-generated facts should be stored as `needs_review`.
+- No automatic application to clinic profile, services, FAQs, guardrails, chatbot, email, or voice until owner/admin approval.
