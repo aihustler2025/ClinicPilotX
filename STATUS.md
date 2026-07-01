@@ -2216,3 +2216,21 @@ New handoff:
 - `docs/handoffs/Lovable-paste-message-050-email-ai-sorting-phase-a-exact-build-pack-request.md`
 
 Current next step: send handoff 050 to Lovable in Plan mode only. Do not approve Email AI Sorting Phase A Build mode until Lovable clarifies whether schema/RLS is included and provides exact SQL, exact edge function changes, exact UI file list, and QA evidence expectations.
+
+## 2026-07-01 Request 051 Email AI Sorting Build Pack Safety Revisions
+
+Lovable returned the requested Phase A exact build pack and clarified that Phase A does include schema/RLS. Codex reviewed it and found the plan directionally strong but not yet approvable.
+
+Blocking issues:
+
+- rollback SQL would drop `leads.is_test`, which already exists from prior workflow-safety work and must not be removed,
+- edge function blast radius is too broad for Phase A because Lovable proposed touching 13 functions, including appointment/payment/scheduled confirmation paths,
+- RLS uses `public.has_role(auth.uid(), 'admin')` and needs evidence that this is the existing app platform/admin pattern,
+- policy creation is not fully rerun-safe after partial failures,
+- QA evidence should distinguish zero external sends from optional skipped guard logs.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-051-email-ai-sorting-build-pack-safety-revisions.md`
+
+Current next step: send handoff 051 to Lovable in Plan mode only. Do not approve Build mode until Lovable returns a corrected exact pack with safe rollback, narrower edge function changes, RLS helper evidence, and rerun-safe policies.

@@ -658,3 +658,13 @@ Last updated: 2026-06-30
 - [x] Create Lovable handoff 050 requesting exact Phase A build pack, SQL/RLS, edge function changes, AI classifier details, UI files, lead safety, and QA evidence.
 - [ ] Send Lovable handoff 050 in Plan mode only.
 - [ ] Do not approve Email AI Sorting Phase A Build mode until exact SQL/RLS and affected send-capable function list are reviewed.
+
+## Request 051 Email AI Sorting Build Pack Safety Revisions Added 2026-07-01
+
+- [x] Review Lovable's Phase A exact build pack.
+- [x] Identify rollback blocker: proposed rollback drops pre-existing `leads.is_test`.
+- [x] Identify blast-radius blocker: proposed build touches 13 edge functions including appointment/payment paths.
+- [x] Identify RLS helper evidence need for `public.has_role(auth.uid(), 'admin')`.
+- [x] Create Lovable handoff 051 requesting corrected rollback, rerun-safe policies, RLS helper evidence, and narrowed edge function list.
+- [ ] Send Lovable handoff 051 in Plan mode only.
+- [ ] Do not approve Email AI Sorting Phase A Build mode until Request 051 blockers are resolved.
