@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Product Spec
 
-Last updated: 2026-07-01
+Last updated: 2026-07-02
 
 ## Product Purpose
 
@@ -965,3 +965,42 @@ Future C2 direction:
 - Clear crawl limits and legal/robots review.
 - AI-generated facts should be stored as `needs_review`.
 - No automatic application to clinic profile, services, FAQs, guardrails, chatbot, email, or voice until owner/admin approval.
+
+## Workspace IA / Setup UX D1 - 2026-07-02
+
+Workspace is the primary subscriber setup area for each clinic.
+
+Product rule:
+
+- `Auto-Fill From Website` should be the first obvious setup action, before manual profile, hours, services, pricing, team, FAQ, and knowledge-source editing.
+- Manual setup sections should feel like review/edit destinations after ClinicPilotX drafts what it can, not the first burden placed on a subscriber.
+
+Verified D1 behavior:
+
+- `/workspace` starts with an `Auto-Fill From Website` hero.
+- The hero explains that ClinicPilotX can draft Business Profile, Hours, Services, and FAQs from the clinic website.
+- Guardrails make clear that draft facts require human review and that no sends or automations occur.
+- Workspace setup sections remain available below the hero.
+- Workspace section navigation is a horizontal chip row rather than a persistent second left rail.
+- Main sidebar focuses on daily work modules:
+  - Workspace
+  - Dashboard
+  - Leads
+  - Patients
+  - Appointments
+  - Communication Hub
+  - Video Consultation
+  - Payments & Billing
+  - Analytics & Reporting
+  - Automation Center
+- Lower-frequency admin/account areas moved to the header account menu:
+  - Profile
+  - Settings
+  - Team & access
+  - Billing & subscription
+  - Logout
+- Direct routes for Staff, Auto-Assignment, Subscription, Settings, and Profile remain accessible.
+
+Open D1 item:
+
+- Real mobile-width QA still needs to be completed in a browser session with working viewport control.

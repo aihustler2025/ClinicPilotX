@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Tasks
 
-Last updated: 2026-07-01
+Last updated: 2026-07-02
 
 ## In Progress
 
@@ -723,3 +723,22 @@ Last updated: 2026-07-01
 - [x] Create formal QA report for Request 054.
 - [ ] Decide next: C2 public website scanning/AI extraction plan vs. manual Dr. Hong knowledge-base population first.
 - [ ] Do not approve website crawling, AI extraction, external crawler providers, OAuth, real inboxes, Gmail label writing, automatic lead creation, or chatbot/email/voice use of facts until separately planned and approved.
+
+## Request 055 Workspace IA/UX D1 Added 2026-07-02
+
+- [x] Capture Ross's UX correction that `Auto-Fill From Website` belongs at the top of Workspace Home.
+- [x] Send Lovable Plan-mode request for Workspace IA/UX cleanup using the in-app browser.
+- [x] Review Lovable's D1 plan.
+- [x] Approve frontend-only D1 build after confirming no backend/integration scope.
+- [x] Publish D1 using `Publish` -> `Update`.
+- [x] QA live `/workspace` after publish.
+- [x] Confirm `Auto-Fill From Website` is the first visible Workspace block.
+- [x] Confirm main sidebar is slimmed and no longer shows Staff, Auto-Assignment, Subscription, Settings, or Profile.
+- [x] Confirm account menu contains Profile, Settings, Team & access, Billing & subscription, and Logout.
+- [x] Confirm direct routes still work for `/staff`, `/auto-assignment`, `/subscription`, `/settings`, and `/profile`.
+- [x] Confirm Workspace section navigation is a horizontal chip row, not a persistent second left rail.
+- [x] Confirm Settings compatibility path still works.
+- [x] Create formal Request 055 QA report.
+- [ ] Complete a real mobile-width Workspace D1 QA pass.
+- [ ] Decide whether next step is Dr. Hong manual workspace/knowledge-base population or C2 website scanning/AI extraction planning.
+- [ ] Do not approve actual website crawling, AI extraction, live inbox connections, sends, workflows, payments, calendar writes, or live integrations without separate reviewed plan.

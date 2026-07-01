@@ -1,6 +1,6 @@
 ﻿# ClinicPilotX Status
 
-Last updated: 2026-07-01
+Last updated: 2026-07-02
 
 ## Current State
 
@@ -2366,3 +2366,31 @@ QA report:
 `09-exports/request-054-site-import-assistant-c1-qa-2026-07-01.md`
 
 Current next step: decide whether to plan C2 public website scanning/AI extraction or first populate Dr. Hong's workspace manually with approved/sanitized clinic facts. Do not connect live inboxes, crawlers, AI extraction, sends, or workflow triggers without separate approval.
+
+## 2026-07-02 Request 055 Workspace IA/UX D1 QA
+
+Ross identified a major Workspace UX issue: `Auto-Fill From Website` was buried under Knowledge Sources even though it should be the first thing a new clinic sees before manually filling profile, hours, services, pricing, team, FAQs, and knowledge data.
+
+Codex used the in-app Lovable browser directly to request a Plan-mode IA/UX cleanup, reviewed the plan, approved the frontend-only build, and published it using `Publish` -> `Update`.
+
+Result: pass for tested D1 scope.
+
+Verified on the live app:
+
+- `/workspace` now starts with `Auto-Fill From Website`.
+- The hero explains that ClinicPilotX can draft Business Profile, Hours, Services, and FAQs from the clinic website, with human review before anything is published.
+- Guardrails are visible: draft only, human review required, no sends, no automation.
+- The previous persistent Workspace secondary left rail is gone from Workspace Home.
+- Workspace section navigation is now a horizontal chip row.
+- Main sidebar is slimmed to daily modules and no longer shows Staff, Auto-Assignment, Subscription, Settings, or Profile.
+- Header account menu now contains Profile, Settings, Team & access, Billing & subscription, and Logout.
+- Direct routes still work for `/staff`, `/auto-assignment`, `/subscription`, `/settings`, and `/profile`.
+- Workspace and Settings deep links remain compatible.
+
+QA report:
+
+`09-exports/request-055-workspace-ia-ux-d1-qa-2026-07-02.md`
+
+Remaining limitation: the current in-app browser session did not expose a working mobile viewport control after reconnection, so real mobile-width D1 QA remains pending.
+
+Current next step: either complete mobile D1 QA, then begin Dr. Hong workspace/knowledge-base population with approved/sanitized facts, or plan C2 public website scanning/AI extraction separately. Do not approve actual crawling, AI extraction, real inbox connection, sends, workflows, or live integrations without a separate reviewed plan.
