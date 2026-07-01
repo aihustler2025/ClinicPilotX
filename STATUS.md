@@ -2202,3 +2202,17 @@ This guide captures the step-by-step setup model for future subscribers using Gm
 On 2026-07-01, Codex expanded the Email Inbox guidance to require an approachable in-app setup flow under `Workspace > Integrations > Email Inbox`, including provider choice cards, safety explanation, setup instructions, label/review queue explanation, test classification, and an advanced/IT help area.
 
 Current next step: send handoff 049 to Lovable in Plan mode only. Do not approve the Email AI Sorting build until Lovable revises the plan around safe Phase A testing plus a clear future Gmail-label connected-inbox path.
+
+## 2026-07-01 Request 050 Email AI Sorting Exact Build Pack
+
+Lovable returned a revised Email AI Sorting plan that is directionally strong and now includes the requested user-friendly `Workspace > Integrations > Email Inbox` setup concept.
+
+Codex found one approval blocker before Build mode:
+
+- Lovable says the proposed schema/RLS is `NOT executed in Phase A`, but Phase A requires persisted intake rows, classifications, review actions, feedback rows, created lead links, and RLS QA.
+
+New handoff:
+
+- `docs/handoffs/Lovable-paste-message-050-email-ai-sorting-phase-a-exact-build-pack-request.md`
+
+Current next step: send handoff 050 to Lovable in Plan mode only. Do not approve Email AI Sorting Phase A Build mode until Lovable clarifies whether schema/RLS is included and provides exact SQL, exact edge function changes, exact UI file list, and QA evidence expectations.

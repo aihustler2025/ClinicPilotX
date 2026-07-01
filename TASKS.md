@@ -650,3 +650,11 @@ Last updated: 2026-06-30
 - [x] Add requirement for user-friendly in-app setup guidance under `Workspace > Integrations > Email Inbox`.
 - [ ] Send Lovable handoff 049 in Plan mode only.
 - [ ] Do not approve the Email AI Sorting build until Gmail-label future path, credentials/scopes, RLS, workflow suppression, and QA boundaries are clear.
+
+## Request 050 Email AI Sorting Exact Build Pack Added 2026-07-01
+
+- [x] Review Lovable's revised Email AI Sorting plan.
+- [x] Identify blocker: Phase A says schema/RLS is not executed, but persistence/RLS are required for intake/review/feedback QA.
+- [x] Create Lovable handoff 050 requesting exact Phase A build pack, SQL/RLS, edge function changes, AI classifier details, UI files, lead safety, and QA evidence.
+- [ ] Send Lovable handoff 050 in Plan mode only.
+- [ ] Do not approve Email AI Sorting Phase A Build mode until exact SQL/RLS and affected send-capable function list are reviewed.
