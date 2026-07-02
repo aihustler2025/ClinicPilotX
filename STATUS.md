@@ -2418,3 +2418,33 @@ QA report:
 `09-exports/request-056-workspace-left-rail-restore-qa-2026-07-02.md`
 
 Current Workspace direction: keep the two-panel Workspace layout. Avoid replacing the Workspace section sidebar with top chip navigation unless Ross explicitly approves that direction again.
+
+## 2026-07-02 Request 057 Website Enrichment C2a QA
+
+Ross asked whether the current Auto-Fill From Website path was the real enrichment agent. Codex clarified that C1 was only a safe foundation, then used the in-app Lovable browser to request, review, refine, approve, publish, and QA Website Enrichment C2a.
+
+Lovable implemented a bounded public website scanner and Branding/logo upload:
+
+- `Auto-Fill From Website` now invokes a real scan against public same-host pages.
+- The scan is bounded to 15 pages, depth 3, 8 seconds per page, and a 55-second wall-clock limit.
+- Scanner stores no full raw HTML; it stores capped public-source summaries and source metadata.
+- Rule extraction is always on; AI extraction is optional, off by default, and marked with a credit/cost warning.
+- Facts remain `needs_review` and require manual approval before application.
+- Branding & logo now has a PNG/JPG/WEBP upload area; SVG is rejected in C2a.
+
+Codex QA passed on the live app:
+
+- `/workspace` keeps the preferred two-left-panel layout.
+- `Auto-Fill From Website` remains the first Workspace Home block.
+- A scan of `https://www.drcolinhong.com` completed and produced 7 draft facts: profile name, phone, email, and social links.
+- Draft facts showed source URL, snippet, confidence, extractor, and manual review actions.
+- No leads, sends, workflows, email intake, calls, calendar writes, payments, or automations were triggered through the visible flow.
+- Branding & logo shows the new private clinic logo upload area and SVG rejection copy.
+
+QA report:
+
+`09-exports/request-057-website-enrichment-c2a-qa-2026-07-02.md`
+
+Minor polish to consider later: import run status said `reviewed` while facts were still `needs_review`; safer user-facing language would be `Awaiting review`.
+
+Current next step: review/approve/reject the extracted Dr. Hong draft facts, then return to the Email Inbox / Email AI Sorting safe demo path. Do not connect a real inbox, enable AI extraction, approve facts into chatbot/email/voice use, or activate automations without separate approval.

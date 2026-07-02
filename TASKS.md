@@ -756,3 +756,23 @@ Last updated: 2026-07-02
 - [x] Confirm `/workspace?section=knowledge-sources` still works.
 - [x] Create formal Request 056 QA report.
 - [ ] Keep Workspace two-panel layout unless Ross explicitly approves another IA direction.
+
+## Request 057 Website Enrichment C2a Added 2026-07-02
+
+- [x] Ask Lovable for a Plan-mode Website Enrichment C2 + Branding/logo upload proposal.
+- [x] Reject/refine first C2 plan to tighten AI cost language, raw content storage, SVG upload security, domain rules, phasing, and QA evidence.
+- [x] Approve revised C2a plan after AI was made optional/off-by-default and SVG was rejected.
+- [x] Publish C2a using `Publish` -> `Update`.
+- [x] QA live `/workspace` after publish.
+- [x] Confirm preferred Workspace two-panel layout remains intact.
+- [x] Run first real bounded website scan for `https://www.drcolinhong.com`.
+- [x] Confirm scan produces draft facts with source URL, snippets, confidence, extractor, and manual review actions.
+- [x] Confirm facts are not automatically approved or applied.
+- [x] Confirm visible flow did not create leads or trigger sends/workflows/automations.
+- [x] Confirm Branding & logo has PNG/JPG/WEBP clinic logo upload area and SVG rejection copy.
+- [x] Create formal Request 057 QA report.
+- [ ] Review Dr. Hong extracted draft facts with Ross/assistant and approve/reject manually.
+- [ ] Polish import run status wording from `reviewed` to `Awaiting review` when facts are still pending.
+- [ ] Test logo upload with an approved safe raster logo file when Ross provides it.
+- [ ] Keep AI extraction disabled until Ross explicitly approves testing Lovable AI usage/credits.
+- [ ] Return to Email Inbox / Email AI Sorting safe demo after Website Enrichment C2a QA is documented.

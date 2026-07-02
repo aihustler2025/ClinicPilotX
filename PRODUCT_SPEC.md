@@ -1010,3 +1010,31 @@ Correction after Ross review:
 Open D1 item:
 
 - Real mobile-width QA still needs to be completed in a browser session with working viewport control.
+
+## Website Enrichment C2a - 2026-07-02
+
+ClinicPilotX now has a real first-pass `Auto-Fill From Website` scanner for public clinic websites.
+
+Verified behavior:
+
+- Workspace Home starts with `Auto-Fill From Website`.
+- A clinic can enter a public website URL.
+- The system scans a bounded number of same-host public pages.
+- The system extracts draft facts using rule-based extraction.
+- Facts remain review-gated as `needs_review` and show source URL, snippet, confidence, and extractor.
+- No extracted fact is automatically applied to the Workspace, chatbot, email, voice, automations, or leads.
+- AI extraction is optional and off by default; it warns that Lovable AI credits/usage may apply.
+- The first Dr. Hong pilot scan generated draft profile and social facts from `https://www.drcolinhong.com`.
+
+Branding update:
+
+- `Workspace > Branding & logo` now includes private clinic logo upload UI.
+- Accepted formats are PNG, JPG, and WEBP up to 2 MB.
+- SVG upload is rejected in C2a for security.
+- Suggested logo colors must be applied and saved by the user; colors are not auto-written.
+
+Current boundary:
+
+- Website Enrichment C2a is for public marketing-site facts only.
+- No patient portals, login pages, private data, PHI, forms, inboxes, sends, workflow triggers, calendar writes, payments, or lead creation are part of this phase.
+- Extracted facts must be reviewed and approved by a clinic owner/admin before later product areas can use them.
