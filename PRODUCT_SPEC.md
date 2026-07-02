@@ -1038,3 +1038,39 @@ Current boundary:
 - Website Enrichment C2a is for public marketing-site facts only.
 - No patient portals, login pages, private data, PHI, forms, inboxes, sends, workflow triggers, calendar writes, payments, or lead creation are part of this phase.
 - Extracted facts must be reviewed and approved by a clinic owner/admin before later product areas can use them.
+
+## Website Enrichment C2b - 2026-07-02
+
+ClinicPilotX now has a deeper draft-only public website enrichment path for the pilot clinic workspace.
+
+Verified C2b behavior:
+
+- `Auto-Fill From Website` can run a sitemap-first same-site crawl against a public clinic website.
+- The crawler can process a run in slices and recover/resume instead of hanging silently.
+- The Review Center shows run status, completeness, page count, discovered URL count, slice count, fact origin legend, category queues, and manual review controls.
+- The Dr. Hong pilot scan reached `120 pages` and `4546 URLs discovered`.
+- Extracted facts remain `needs_review` until a clinic owner/admin approves or rejects them.
+- Fact cards show source URL, snippet, confidence, extractor, origin, target table hint, and version history access.
+- Homepage-derived draft facts include profile/contact-style fields and weekday hours.
+- Article/knowledge pages such as `/learn/` and `/uncategorized/` are no longer emitted as confirmed service facts.
+- AI and external research remain off by default and should stay separate from rule-based public-site extraction.
+
+Current final scan counts for Dr. Hong after QA fixes:
+
+- Profile: `7 draft`.
+- Hours: `5 draft`.
+- Social: `4 draft`.
+- Services: `0 draft` after conservative service-pollution fix.
+- Pricing/FAQ/Team/Locations require future extraction work or approved source material.
+
+Important product boundary:
+
+Website enrichment is not an autopilot knowledge base. It is an assistant that drafts facts from public sources. Every fact must remain review-gated before use by Workspace fields, chatbot, email AI, voice AI, SMS, automations, or lead intake.
+
+Remaining C2b/C2c direction:
+
+- Improve true service/procedure page detection without treating education/blog/article pages as services.
+- Generate FAQ candidates only with clear `website`, `ai_from_approved`, or future `external_research` origin labels.
+- Add pricing only from approved pricing pages/files or explicit user-entered source material.
+- Extract provider/team facts into a provider/team review model, separate from app login/staff accounts.
+- Keep medical/legal guardrails prominent: ClinicPilotX is not a medical device, does not provide medical advice, and clinic owners/admins are responsible for review and approval.

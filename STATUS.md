@@ -2448,3 +2448,32 @@ QA report:
 Minor polish to consider later: import run status said `reviewed` while facts were still `needs_review`; safer user-facing language would be `Awaiting review`.
 
 Current next step: review/approve/reject the extracted Dr. Hong draft facts, then return to the Email Inbox / Email AI Sorting safe demo path. Do not connect a real inbox, enable AI extraction, approve facts into chatbot/email/voice use, or activate automations without separate approval.
+
+## 2026-07-02 Request 058 Website Enrichment C2b QA
+
+Ross clarified that C2a was not enough: the real `Auto-Fill From Website` assistant must crawl the public clinic site deeply, use the sitemap, gather draft business facts, separate source/origin labels, and keep all medical/clinic facts review-gated.
+
+Codex used the in-app Lovable project browser directly to request, approve, publish, QA, and iterate on C2b. Three QA loops were required:
+
+1. Initial C2b build stalled at `crawling`, `20 pages`, `sitemap.xml`.
+2. Lovable fixed sliced crawl resume/status handling; the run reached `120 pages`, `4508 URLs`, `slice 6`.
+3. Codex found service pollution from `/learn/` and `/uncategorized/` article URLs; Lovable made service extraction more conservative and added homepage contact/hours/address extraction.
+4. Codex found a fresh-scan regression that returned only `1 page`; Lovable fixed sitemap URL normalization/discovery and challenge-like page handling.
+
+Final live QA passed for the safe C2b infrastructure:
+
+- Latest run status: `awaiting_review`.
+- Completeness: `35% complete`.
+- Pages fetched: `120`.
+- URLs discovered: `4546`.
+- Slice count: `6`.
+- Draft facts visible: Profile `7`, Hours `5`, Social `4`, Services `0` after conservative pollution fix.
+- Profile/address/hours facts are source-cited from the public homepage and remain `needs_review`.
+- All facts remain draft-only with manual Approve/Reject/Delete controls.
+- No leads, sends, workflows, email intake, calls, payments, appointments, messages, calendar writes, chatbot grounding, embeddings, or live automations were connected through this visible flow.
+
+QA report:
+
+`09-exports/request-058-website-enrichment-c2b-qa-2026-07-02.md`
+
+Current next step: review Dr. Hong profile/hours/social draft facts manually, then plan the next enrichment pass for true service/procedure detection, FAQ candidates, pricing source handling, and team/provider extraction. Return to Email Inbox / Email AI Sorting demo afterward unless Ross prioritizes more website-enrichment polish.

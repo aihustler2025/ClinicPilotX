@@ -776,3 +776,30 @@ Last updated: 2026-07-02
 - [ ] Test logo upload with an approved safe raster logo file when Ross provides it.
 - [ ] Keep AI extraction disabled until Ross explicitly approves testing Lovable AI usage/credits.
 - [ ] Return to Email Inbox / Email AI Sorting safe demo after Website Enrichment C2a QA is documented.
+
+## Request 058 Website Enrichment C2b Added 2026-07-02
+
+- [x] Ask Lovable for C2b deep website enrichment plan using the in-app browser.
+- [x] Approve C2b after confirming draft-only safety boundaries.
+- [x] Publish C2b using `Publish` -> `Update`.
+- [x] QA live Workspace after C2b publish.
+- [x] Identify sliced crawl bug where run stalled at `crawling`, `20 pages`.
+- [x] Send focused Lovable fix for crawl resume/status handling.
+- [x] Publish crawl-resume fix.
+- [x] Verify run reaches `awaiting_review`, `120 pages`, and thousands of discovered URLs.
+- [x] Identify service pollution from `/learn/` and `/uncategorized/` article URLs.
+- [x] Send focused Lovable extraction-quality fix.
+- [x] Publish extraction-quality fix.
+- [x] Identify fresh-scan discovery regression returning only `1 page` and no facts.
+- [x] Send focused Lovable discovery-regression fix.
+- [x] Publish final discovery fix.
+- [x] Verify final live run shows `120 pages`, `4546 URLs`, `slice 6`, Profile `7`, Hours `5`, Social `4`, and Services `0` after conservative pollution fix.
+- [x] Verify facts remain `needs_review` and are not auto-applied.
+- [x] Verify visible flow does not create leads or trigger sends/workflows/automations.
+- [x] Create formal Request 058 QA report.
+- [ ] Review Profile, Hours, and Social draft facts with Ross/assistant and manually approve/reject them.
+- [ ] Plan next enrichment pass for true service/procedure detection without article pollution.
+- [ ] Plan FAQ candidate generation with clear source/origin labels and human approval.
+- [ ] Plan pricing source handling from approved URLs/files only.
+- [ ] Plan team/provider extraction separately from app staff/user accounts.
+- [ ] Keep optional AI extraction, external research, chatbot grounding, real inbox ingestion, automatic fact approval, sends, workflows, payments, calls, and calendar writes disabled until separately approved.
