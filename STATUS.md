@@ -2394,3 +2394,27 @@ QA report:
 Remaining limitation: the current in-app browser session did not expose a working mobile viewport control after reconnection, so real mobile-width D1 QA remains pending.
 
 Current next step: either complete mobile D1 QA, then begin Dr. Hong workspace/knowledge-base population with approved/sanitized facts, or plan C2 public website scanning/AI extraction separately. Do not approve actual crawling, AI extraction, real inbox connection, sends, workflows, or live integrations without a separate reviewed plan.
+
+## 2026-07-02 Request 056 Workspace Left Rail Restore QA
+
+Ross reviewed the D1 Workspace result and disliked the new top/horizontal Workspace menu. He preferred the earlier Workspace layout with the main app sidebar plus a dedicated Workspace section sidebar.
+
+Codex inspected Ross's reference screenshots, then asked Lovable for a targeted frontend-only correction rather than a full version revert.
+
+Result: pass for tested correction scope.
+
+Verified live after `Publish` -> `Update`:
+
+- `/workspace` again shows the dedicated Workspace left sidebar.
+- The top/horizontal `Jump to a section` chip menu is removed.
+- `Auto-Fill From Website` remains the first content block on Workspace Home.
+- Workspace section links are back in the left panel: Home, Business profile, Branding & logo, Hours of operation, Services & pricing, Team & roles, Knowledge FAQs, Knowledge sources, AI guardrails, Integrations status, and Email inbox.
+- `/workspace?section=business-profile` still loads Business Profile.
+- `/workspace?section=knowledge-sources` still loads Knowledge Sources and the Site Import Assistant.
+- No backend/integration files were touched per Lovable's report.
+
+QA report:
+
+`09-exports/request-056-workspace-left-rail-restore-qa-2026-07-02.md`
+
+Current Workspace direction: keep the two-panel Workspace layout. Avoid replacing the Workspace section sidebar with top chip navigation unless Ross explicitly approves that direction again.

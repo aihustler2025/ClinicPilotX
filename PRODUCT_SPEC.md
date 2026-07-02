@@ -1001,6 +1001,12 @@ Verified D1 behavior:
   - Logout
 - Direct routes for Staff, Auto-Assignment, Subscription, Settings, and Profile remain accessible.
 
+Correction after Ross review:
+
+- Ross prefers the two-panel Workspace layout with the dedicated Workspace section sidebar.
+- The top/horizontal chip navigation tested in D1 should not be used as the primary Workspace navigation.
+- `Auto-Fill From Website` should remain prominent on Workspace Home, but the Workspace section menu should live in the left Workspace rail.
+
 Open D1 item:
 
 - Real mobile-width QA still needs to be completed in a browser session with working viewport control.

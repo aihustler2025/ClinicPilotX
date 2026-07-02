@@ -742,3 +742,17 @@ Last updated: 2026-07-02
 - [ ] Complete a real mobile-width Workspace D1 QA pass.
 - [ ] Decide whether next step is Dr. Hong manual workspace/knowledge-base population or C2 website scanning/AI extraction planning.
 - [ ] Do not approve actual website crawling, AI extraction, live inbox connections, sends, workflows, payments, calendar writes, or live integrations without separate reviewed plan.
+
+## Request 056 Workspace Left Rail Restore Added 2026-07-02
+
+- [x] Inspect Ross's reference screenshots for the preferred Workspace two-left-panel layout.
+- [x] Ask Lovable for a targeted frontend-only Workspace navigation correction.
+- [x] Restore dedicated Workspace section sidebar.
+- [x] Remove top/horizontal `Jump to a section` chip menu.
+- [x] Preserve `Auto-Fill From Website` as the first Workspace Home content block.
+- [x] Publish fix using `Publish` -> `Update`.
+- [x] QA live `/workspace` after publish.
+- [x] Confirm `/workspace?section=business-profile` still works.
+- [x] Confirm `/workspace?section=knowledge-sources` still works.
+- [x] Create formal Request 056 QA report.
+- [ ] Keep Workspace two-panel layout unless Ross explicitly approves another IA direction.
